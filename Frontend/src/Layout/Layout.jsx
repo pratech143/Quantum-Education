@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
+import ScrollToTop from "../Components/ScrollToTop";
 const Layout = () => {
     return (
         <div
@@ -10,6 +11,7 @@ const Layout = () => {
                 minHeight: "100vh",
             }}
         >
+            <ScrollToTop />
             {/* Top Navigation */}
             <NavBar />
 

@@ -1,16 +1,54 @@
-# React + Vite
+# Quantum Education Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the frontend repository for Quantum Education and Career Counselling. This project is built using React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Before running the project locally, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (Version 18 or higher recommended)
+- [npm](https://www.npmjs.com/) (usually comes with Node.js)
 
-## React Compiler
+## Getting Started Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Follow these steps to get the project up and running on your machine:
 
-## Expanding the ESLint configuration
+### 1. Clone the Repository
+```bash
+git clone https://github.com/pratech143/Quantum-Education.git
+cd Quantum-Education
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Navigate to the Frontend Directory
+```bash
+cd Frontend
+```
+
+### 3. Install Dependencies
+```bash
+npm install
+```
+
+### 4. Run the Development Server
+```bash
+npm run dev
+```
+Once the server starts, you'll see a local URL (typically `http://localhost:5173`). Open this in your browser to view the application.
+
+### 5. Build for Production
+To create a production-ready bundle:
+```bash
+npm run build
+```
+
+## Tech Stack
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Icons**: Material Symbols Outlined & Lucide React
+
+## Project Structure
+- `src/Components`: Reusable UI components.
+- `src/Pages`: Top-level page components (Home, Contact, etc.).
+- `src/Layout`: Layout wrappers (Navbar, Footer).
+- `src/index.css`: Global styles and Tailwind theme configuration.
