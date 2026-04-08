@@ -1,10 +1,24 @@
 import React from 'react';
+import HeroSection from '../Components/HomePage/HeroSection';
+import TrustSection from '../Components/HomePage/TrustSection';
+import DestinationsSection from '../Components/HomePage/DestinationsSection';
+import ServicesSection from '../Components/HomePage/ServicesSection';
+import TestPrepSection from '../Components/HomePage/TestPrepSection';
+import ProcessSection from '../Components/HomePage/ProcessSection';
+import TestimonialsSection from '../Components/HomePage/TestimonialsSection';
+import FinalCTASection from '../Components/HomePage/FinalCTASection';
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-20">
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to Quantum Education</h1>
-      <p className="text-xl text-gray-600">Your journey to global education starts here.</p>
+    <div className="flex flex-col w-full bg-background overflow-x-hidden">
+      <HeroSection />
+      <TrustSection />
+      <DestinationsSection />
+      <ServicesSection />
+      <TestPrepSection />
+      <ProcessSection />
+      <TestimonialsSection />
+      <FinalCTASection />
     </div>
   );
 };

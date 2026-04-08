@@ -14,15 +14,7 @@ const Layout = () => {
             <NavBar />
 
             {/* Page Content */}
-            <main
-                style={{
-                    flex: 1,
-                    padding: "1.5rem",
-                    maxWidth: "1200px",
-                    margin: "0 auto",
-                    width: "100%",
-                }}
-            >
+            <main className="flex-1 w-full">
                 <Outlet />
             </main>
 

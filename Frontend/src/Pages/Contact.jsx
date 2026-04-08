@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import ContactHero from '../Components/Contact/ContactHero';
+import ContactCards from '../Components/Contact/ContactCards';
+import ContactFormSection from '../Components/Contact/ContactFormSection';
+import MapSection from '../Components/Contact/MapSection';
 
-function Contact() {
+const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <>
+      <ContactHero />
+      <ContactCards />
+      <ContactFormSection />
+      <MapSection />
+    </>
+  );
+};
 
-export default Contact
+export default Contact;
