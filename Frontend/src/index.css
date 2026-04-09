@@ -76,6 +76,16 @@
     display: inline-block;
     vertical-align: middle;
   }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+  }
+
+  .tonal-shift-no-border {
+    background-color: #ffffffcc;
+    backdrop-filter: blur(20px);
+  }
 }
 
 /* Utilities */

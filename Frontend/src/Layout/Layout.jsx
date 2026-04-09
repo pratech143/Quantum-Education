@@ -2,11 +2,14 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import ScrollToTop from "../Components/ScrollToTop";
+import SmoothScroll from "../Components/UX/SmoothScroll";
+
 const Layout = () => {
     return (
-        <div
-            style={{
-                display: "flex",
+        <SmoothScroll>
+            <div
+                style={{
+                    display: "flex",
                 flexDirection: "column",
                 minHeight: "100vh",
             }}
@@ -23,6 +26,7 @@ const Layout = () => {
             {/* Footer */}
             <Footer />
         </div>
+    </SmoothScroll>
     );
 };
 

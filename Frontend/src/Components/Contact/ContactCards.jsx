@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from '../UX/Reveal';
 
 const ContactCards = () => {
   const cards = [
@@ -38,21 +39,22 @@ const ContactCards = () => {
     <section className="py-24 px-12 bg-surface-container-low">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {cards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-surface-container-lowest p-10 rounded-2xl transition-transform duration-300 hover:-translate-y-2 group shadow-xl shadow-black/5 text-center"
-          >
-            <div className={`w-14 h-14 ${card.colors.bg} rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform mx-auto`}>
-              <span className={`material-symbols-outlined ${card.colors.text} text-3xl`}>
-                {card.icon}
-              </span>
+          <Reveal key={index} delay={index * 0.1}>
+            <div
+              className="bg-surface-container-lowest p-10 rounded-2xl transition-transform duration-300 hover:-translate-y-2 group shadow-xl shadow-black/5 text-center h-full"
+            >
+              <div className={`w-14 h-14 ${card.colors.bg} rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform mx-auto`}>
+                <span className={`material-symbols-outlined ${card.colors.text} text-3xl`}>
+                  {card.icon}
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-primary font-headline mb-4">{card.title}</h3>
+              <p className="text-on-surface-variant font-body leading-relaxed mb-4">
+                {card.description}
+              </p>
+              <p className="text-primary font-semibold font-body">{card.info}</p>
             </div>
-            <h3 className="text-2xl font-bold text-primary font-headline mb-4">{card.title}</h3>
-            <p className="text-on-surface-variant font-body leading-relaxed mb-4">
-              {card.description}
-            </p>
-            <p className="text-primary font-semibold font-body">{card.info}</p>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>
