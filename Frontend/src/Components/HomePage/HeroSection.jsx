@@ -1,12 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import heroImage from '../../assets/homepage/hero-scholar.webp';
+import HeroGlobe from './HeroGlobe'
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] lg:min-h-[870px] flex items-center overflow-hidden" style={{ background: '#F9F9F9' }}>
+    <section className="relative min-h-[560px] lg:min-h-[760px] flex items-center overflow-hidden" style={{ background: '#F9F9F9' }}>
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-12 gap-8 items-center relative z-10 w-full">
-        <div className="col-span-12 lg:col-span-7 py-12">
+        <div className="col-span-12 lg:col-span-6 py-8 lg:py-6">
           <span className="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-wider mb-6">
             ESTABLISHED EXCELLENCE
           </span>
@@ -26,31 +24,14 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <div className="col-span-12 lg:col-span-5 relative">
-          <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
-            <img 
-              className="w-full h-full object-cover" 
-              src={heroImage} 
-              alt="Diverse group of international students walking through a sunlit historic university courtyard"
-            />
-            <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-white/80 backdrop-blur-md shadow-lg">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
-                  <span className="material-symbols-outlined">school</span>
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Next Intake</p>
-                  <p className="text-lg font-bold text-primary">September 2024</p>
-                </div>
-              </div>
-            </div>
+        <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
+          <div className="aspect-square w-full max-w-[340px] sm:max-w-[450px] lg:max-w-[530px]">
+            <HeroGlobe />
           </div>
-          {/* Decorative Element */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-tertiary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
