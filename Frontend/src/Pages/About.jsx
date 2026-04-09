@@ -1,11 +1,21 @@
-﻿import React from 'react';
+import React from 'react';
+import HeroSection from '../Components/About/HeroSection';
+import StorySection from '../Components/About/StorySection';
+import MissionVisionSection from '../Components/About/MissionVisionSection';
+import CoreValuesSection from '../Components/About/CoreValuesSection';
+import TeamSection from '../Components/About/TeamSection';
+import CTASection from '../Components/About/CTASection';
 
 const About = () => {
   return (
-    <div className='flex flex-col items-center justify-center p-20'>
-      <h1 className='text-4xl font-bold text-gray-800 mb-4'>About</h1>
-      <p className='text-xl text-gray-600'>Welcome to the About page.</p>
-    </div>
+    <main className="bg-surface">
+      <HeroSection />
+      <StorySection />
+      <MissionVisionSection />
+      <CoreValuesSection />
+      <TeamSection />
+      <CTASection />
+    </main>
   );
 };
 
