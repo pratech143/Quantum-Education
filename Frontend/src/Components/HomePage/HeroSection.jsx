@@ -25,7 +25,7 @@ const HeroSection = () => {
         </div>
         
         <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
-          <div className="aspect-square w-full max-w-[340px] sm:max-w-[450px] lg:max-w-[530px]">
+          <div className="aspect-square w-full max-w-[430px] translate-x-3 sm:max-w-[600px] lg:max-w-[700px]">
             <HeroGlobe />
           </div>
         </div>
