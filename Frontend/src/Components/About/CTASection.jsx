@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from '../UX/Reveal';
 
 const CTASection = () => {
   return (
@@ -10,17 +11,23 @@ const CTASection = () => {
           </span>
         </div>
         <div className="relative z-10 max-w-3xl mx-auto space-y-8">
-          <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-white leading-tight tracking-tighter">
-            Ready to write your <br /> global story?
-          </h2>
-          <p className="text-on-primary-container text-xl font-body">
-            The world's best classrooms are waiting. Start your application today with the experts who care.
-          </p>
-          <div className="pt-4">
-            <button className="bg-white text-primary px-10 py-5 rounded-xl font-headline font-extrabold text-lg uppercase tracking-wider hover:bg-surface-container-low transition-all shadow-2xl hover:scale-105 active:scale-95">
-              Book a Consultation
-            </button>
-          </div>
+          <Reveal>
+            <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-white leading-tight tracking-tighter">
+              Ready to write your <br /> global story?
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-on-primary-container text-xl font-body">
+              The world's best classrooms are waiting. Start your application today with the experts who care.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="pt-4">
+              <button className="bg-white text-primary px-10 py-5 rounded-xl font-headline font-extrabold text-lg uppercase tracking-wider hover:bg-surface-container-low transition-all shadow-2xl hover:scale-105 active:scale-95">
+                Book a Consultation
+              </button>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

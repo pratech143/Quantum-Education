@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from '../UX/Reveal';
 
 const CoreValuesSection = () => {
   const values = [
@@ -28,27 +29,32 @@ const CoreValuesSection = () => {
     <section className="py-24 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-8 text-center space-y-16">
         <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-4xl font-headline font-extrabold text-primary">Our Core Values</h2>
-          <p className="text-on-surface-variant font-body">The pillars that define every interaction and recommendation we make.</p>
+          <Reveal>
+            <h2 className="text-4xl font-headline font-extrabold text-primary">Our Core Values</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-on-surface-variant font-body">The pillars that define every interaction and recommendation we make.</p>
+          </Reveal>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-8 rounded-xl space-y-6 text-left group hover:bg-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-            >
-              <div className="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container transition-colors">
-                <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors">
-                  {value.icon}
-                </span>
+            <Reveal key={index} delay={index * 0.1}>
+              <div 
+                className="bg-white p-8 rounded-xl space-y-6 text-left group hover:bg-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer h-full"
+              >
+                <div className="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container transition-colors">
+                  <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors">
+                    {value.icon}
+                  </span>
+                </div>
+                <h4 className="text-xl font-headline font-bold text-primary group-hover:text-white transition-colors">
+                  {value.title}
+                </h4>
+                <p className="text-on-surface-variant group-hover:text-primary-fixed-dim transition-colors font-body leading-relaxed">
+                  {value.description}
+                </p>
               </div>
-              <h4 className="text-xl font-headline font-bold text-primary group-hover:text-white transition-colors">
-                {value.title}
-              </h4>
-              <p className="text-on-surface-variant group-hover:text-primary-fixed-dim transition-colors font-body leading-relaxed">
-                {value.description}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

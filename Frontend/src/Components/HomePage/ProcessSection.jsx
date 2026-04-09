@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from '../UX/Reveal';
 
 const ProcessSection = () => {
   const steps = [
@@ -32,9 +33,13 @@ const ProcessSection = () => {
   return (
     <section className="py-16 lg:py-24 overflow-hidden font-body" style={{ background: '#F7F6F3' }}>
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="text-center mb-20 animate-in fade-in slide-in-from-top-4 duration-700">
-          <h2 className="font-headline text-4xl font-bold text-primary mb-4 tracking-tight">Your Journey to Success</h2>
-          <p className="text-on-surface-variant text-lg">Five simple steps to secure your international future.</p>
+        <div className="text-center mb-20 space-y-4">
+          <Reveal>
+            <h2 className="font-headline text-4xl font-bold text-primary tracking-tight">Your Journey to Success</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-on-surface-variant text-lg">Five simple steps to secure your international future.</p>
+          </Reveal>
         </div>
         <div className="relative">
           {/* Progress Line (Desktop) */}
@@ -45,17 +50,19 @@ const ProcessSection = () => {
           
           <div className="flex flex-col md:grid md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-8 relative z-10">
             {steps.map((step, index) => (
-              <div key={index} className="group flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-6 md:gap-0">
-                <div className="flex-shrink-0 w-24 h-24 rounded-full bg-white shadow-lg flex items-center justify-center mb-0 md:mb-6 group-hover:scale-110 transition-transform duration-300 border border-black/5 ring-4 ring-transparent group-hover:ring-primary/10 relative z-20">
-                  <span className="material-symbols-outlined text-4xl text-primary">{step.icon}</span>
+              <Reveal key={index} delay={index * 0.1} direction={index % 2 === 0 ? 'up' : 'down'}>
+                <div className="group flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-6 md:gap-0">
+                  <div className="flex-shrink-0 w-24 h-24 rounded-full bg-white shadow-lg flex items-center justify-center mb-0 md:mb-6 group-hover:scale-110 transition-transform duration-300 border border-black/5 ring-4 ring-transparent group-hover:ring-primary/10 relative z-20">
+                    <span className="material-symbols-outlined text-4xl text-primary">{step.icon}</span>
+                  </div>
+                  <div className="pt-2 md:pt-0">
+                    <h4 className="font-bold text-primary text-xl mb-2">{step.title}</h4>
+                    <p className="text-sm text-on-surface-variant leading-relaxed max-w-[200px] md:mx-auto">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="pt-2 md:pt-0">
-                  <h4 className="font-bold text-primary text-xl mb-2">{step.title}</h4>
-                  <p className="text-sm text-on-surface-variant leading-relaxed max-w-[200px] md:mx-auto">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
