@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import HeroGlobe from './HeroGlobe'
 
 const HeroSection = () => {
@@ -15,17 +16,21 @@ const HeroSection = () => {
             Join thousands of Nepali students achieving their dreams in the world's most prestigious universities. Expert guidance for a brighter global future.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="hero-gradient px-8 py-4 rounded-xl text-white font-headline font-bold text-lg hover:scale-[1.02] transition-transform duration-200 shadow-xl shadow-primary/20">
-              Book Free Counseling
-            </button>
-            <button className="px-8 py-4 rounded-xl border-2 border-outline-variant text-primary font-headline font-bold text-lg hover:bg-surface-container-low transition-colors duration-200">
-              Explore Destinations
-            </button>
+            <Link to="/contact">
+              <button className="hero-gradient px-8 py-4 rounded-xl text-white font-headline font-bold text-lg hover:scale-[1.02] transition-transform duration-200 shadow-xl shadow-primary/20">
+                Book Free Counseling
+              </button>
+            </Link>
+            <Link to="/destinations">
+              <button className="px-8 py-4 rounded-xl border-2 border-outline-variant text-primary font-headline font-bold text-lg hover:bg-surface-container-low transition-colors duration-200">
+                Explore Destinations
+              </button>
+            </Link>
           </div>
         </div>
         
         <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
-          <div className="aspect-square w-full max-w-[430px] translate-x-3 sm:max-w-[600px] lg:max-w-[700px]">
+          <div className="aspect-square w-full max-w-[500px] translate-x-3 sm:max-w-[680px] lg:max-w-[850px]">
             <HeroGlobe />
           </div>
         </div>

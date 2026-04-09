@@ -5,7 +5,7 @@ const ContactFormSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center py-24 px-6 md:px-12 bg-surface">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center justify-center w-full">
-        
+
         {/* LEFT: Form card */}
         <div className="lg:col-span-7 order-2 lg:order-1">
           <Reveal direction="right">
@@ -70,7 +70,7 @@ const ContactFormSection = () => {
                   ></textarea>
                 </div>
                 <button
-                  className="w-full cta-gradient text-white py-5 rounded-xl font-bold text-lg font-manrope shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  className="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg font-headline shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
                   type="submit"
                 >
                   Send Message
@@ -96,7 +96,7 @@ const ContactFormSection = () => {
                 </p>
               </Reveal>
             </div>
-            
+
             <div className="space-y-8">
               <Reveal delay={0.2} direction="left">
                 <div className="flex items-start gap-4">
@@ -107,12 +107,12 @@ const ContactFormSection = () => {
                     <h4 className="font-bold text-primary font-headline">Main Corporate Office</h4>
                     <p className="text-on-surface-variant text-sm font-body">
                       Quantum Education Building, Level 2<br />
-                      Bagbazar, Kathmandu, NP
+                      Putalisadak, Kathmandu, NP
                     </p>
                   </div>
                 </div>
               </Reveal>
-              
+
               <Reveal delay={0.3} direction="left">
                 <div className="flex items-start gap-4">
                   <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">

@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import Globe from 'react-globe.gl'
 import { useNavigate } from 'react-router-dom'
-import * as THREE from 'three'
+import { Vector3, MathUtils } from 'three'
+import globeSkin from '../../assets/homepage/globe-skin.jpg'
 
 const destinations = [
   { id: 'usa', name: 'USA', lat: 38.9072, lng: -77.0369 },
@@ -131,7 +132,7 @@ const HeroGlobe = () => {
       }
 
       const coords = globe.getCoords(lat, lng, 0)
-      const pointNormal = new THREE.Vector3(coords.x, coords.y, coords.z).normalize()
+      const pointNormal = new Vector3(coords.x, coords.y, coords.z).normalize()
       const alignment = pointNormal.dot(cameraDirection)
 
       if (alignment < 0) {
@@ -140,15 +141,15 @@ const HeroGlobe = () => {
         return
       }
 
-      const targetLabelScale = THREE.MathUtils.clamp(0.58 + alignment * 0.62, 0.58, 1.2)
-      const currentLabelScale = THREE.MathUtils.lerp(
+      const targetLabelScale = MathUtils.clamp(0.58 + alignment * 0.62, 0.58, 1.2)
+      const currentLabelScale = MathUtils.lerp(
         labelState.currentScale,
         targetLabelScale,
         LABEL_LERP
       )
 
       labelState.currentScale = currentLabelScale
-      labelState.element.style.opacity = `${THREE.MathUtils.clamp(0.35 + alignment * 0.9, 0.35, 1)}`
+      labelState.element.style.opacity = `${MathUtils.clamp(0.35 + alignment * 0.9, 0.35, 1)}`
       labelState.element.style.pointerEvents = alignment > 0.12 ? 'auto' : 'none'
       labelState.element.style.transform = `translate(-50%, -112%) scale(${currentLabelScale})`
     })
@@ -220,7 +221,7 @@ const HeroGlobe = () => {
             backgroundColor="rgba(0,0,0,0)"
             waitForGlobeReady={false}
             animateIn={false}
-            globeImageUrl="https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+            globeImageUrl={globeSkin}
             pointsData={globePoints}
             pointLat="lat"
             pointLng="lng"
