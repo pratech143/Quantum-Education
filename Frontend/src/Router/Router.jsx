@@ -5,6 +5,7 @@ import Destinations from "../Pages/Destinations";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Alumni from "../Pages/Alumni";
+import Country from "../Pages/Country";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,8 @@ export const router = createBrowserRouter([
     children: [
       { path: "", element: <Home /> },
       { path: "destinations", element: <Destinations /> },
+      { path: "countries", element: <Destinations /> },
+      { path: "countries/:countryName", element: <Country /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "alumni", element: <Alumni /> },
