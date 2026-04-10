@@ -22,6 +22,7 @@ const NavBar = () => {
         { name: 'About', to: '/about' },
         { name: 'Destinations', to: '/destinations' },
         { name: 'Contact us', to: '/contact' },
+        { name: 'Alumni', to: '/alumni' },
     ];
 
     return (
@@ -71,9 +72,11 @@ const NavBar = () => {
 
                     {/* Desktop CTA */}
                     <div className="hidden shrink-0 lg:block">
-                        <button className="hero-gradient px-8 py-3 rounded-full text-white font-headline font-bold text-sm hover:scale-[1.05] transition-transform duration-200 active:scale-95 shadow-lg shadow-primary/20">
-                            Apply Now
-                        </button>
+                        <Link to="/contact">
+                            <button className="hero-gradient px-8 py-3 rounded-full text-white font-headline font-bold text-sm hover:scale-[1.05] transition-transform duration-200 active:scale-95 shadow-lg shadow-primary/20">
+                                Apply Now
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Mobile Hamburger Controls */}
@@ -132,9 +135,11 @@ const NavBar = () => {
                         style={{ transitionDelay: '300ms' }}
                         className={`mt-8 pt-8 border-t border-black/5 transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
                     >
-                        <button className="w-full rounded-2xl hero-gradient py-5 text-lg font-headline font-bold text-white shadow-xl transition-transform active:scale-[0.98]">
-                            Apply Now
-                        </button>
+                        <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                            <button className="w-full rounded-2xl hero-gradient py-5 text-lg font-headline font-bold text-white shadow-xl transition-transform active:scale-[0.98]">
+                                Apply Now
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

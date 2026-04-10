@@ -1,5 +1,6 @@
 import React from 'react';
 import Reveal from '../UX/Reveal';
+import storyFounder from '../../assets/about/story-founder.jpg';
 
 const StorySection = () => {
   return (
@@ -11,8 +12,9 @@ const StorySection = () => {
               <img 
                 alt="Founder talking to student" 
                 className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" 
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                src={storyFounder} 
               />
+ villages: true
             </Reveal>
             <Reveal delay={0.4} direction="up" distance={20} className="absolute -bottom-6 -right-6">
               <div className="bg-white p-4 rounded-xl shadow-md font-headline font-bold text-primary italic">

@@ -8,6 +8,7 @@ const ContactCards = () => {
       title: 'Visit Us',
       description: 'Drop by our main office for a face-to-face consultation.',
       info: 'Bagbazar, Kathmandu, Nepal',
+      link: 'https://maps.google.com/?q=Bagbazar,Kathmandu,Nepal',
       colors: {
         bg: 'bg-secondary-container',
         text: 'text-on-secondary-container',
@@ -18,6 +19,7 @@ const ContactCards = () => {
       title: 'Call Us',
       description: 'Speak directly with our expert education advisors.',
       info: '+977-9860185949',
+      link: 'tel:+9779860185949',
       colors: {
         bg: 'bg-primary-container',
         text: 'text-on-primary-container',
@@ -28,6 +30,7 @@ const ContactCards = () => {
       title: 'Email Us',
       description: "Send us your queries anytime, and we'll reply within 24 hours.",
       info: 'info@quantumeducation.com',
+      link: 'mailto:info@quantumeducation.com',
       colors: {
         bg: 'bg-tertiary-fixed',
         text: 'text-on-tertiary-fixed-variant',
@@ -52,7 +55,14 @@ const ContactCards = () => {
               <p className="text-on-surface-variant font-body leading-relaxed mb-4">
                 {card.description}
               </p>
-              <p className="text-primary font-semibold font-body">{card.info}</p>
+              <a 
+                href={card.link}
+                className="text-primary font-bold font-body hover:underline decoration-2 underline-offset-4"
+                target={card.title === 'Visit Us' ? '_blank' : undefined}
+                rel={card.title === 'Visit Us' ? 'noopener noreferrer' : undefined}
+              >
+                {card.info}
+              </a>
             </div>
           </Reveal>
         ))}
