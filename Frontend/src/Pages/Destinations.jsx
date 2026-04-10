@@ -16,9 +16,9 @@ const Destinations = () => {
   return (
     <main className="min-h-screen bg-surface selection:bg-primary-container selection:text-white pt-20">
       <HeroSection />
-      <GlobalMapSection />
       <DestinationsGrid />
       <DestinationHighlight />
+      <GlobalMapSection />
       <BenefitsSection />
       <ProcessTimeline />
       <StatsSection />
