@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[751px] flex items-center pt-20 overflow-hidden bg-surface">
+    <section className="relative min-h-[650px] flex items-center pt-8 overflow-hidden bg-surface">
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
-        <div className="space-y-8">
+        <div className="space-y-5">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-primary font-headline font-bold text-xs uppercase tracking-widest"
+            className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-primary font-headline font-bold text-xs uppercase tracking-widest shadow-sm"
           >
             Global Opportunities
           </motion.div>

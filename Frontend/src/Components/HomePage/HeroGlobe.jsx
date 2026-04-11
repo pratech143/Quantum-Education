@@ -34,7 +34,7 @@ const connectionArcs = destinations.map((destination, index) => ({
 
 const LABEL_LERP = 0.12
 
-const HeroGlobe = () => {
+const HeroGlobe = ({ onReady }) => {
   const containerRef = useRef(null)
   const globeRef = useRef(null)
   const controlsRef = useRef(null)
@@ -219,7 +219,10 @@ const HeroGlobe = () => {
             width={size.width}
             height={size.height}
             backgroundColor="rgba(0,0,0,0)"
-            waitForGlobeReady={false}
+            waitForGlobeReady={true}
+            onGlobeReady={() => {
+                if (onReady) onReady();
+            }}
             animateIn={false}
             globeImageUrl={globeSkin}
             pointsData={globePoints}

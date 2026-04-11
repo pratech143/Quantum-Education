@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
       name: 'Anjali Sharma',
       location: 'University of Sydney, Australia',
       image: anjaliImg,
-      text: '"The Global Scholar made a daunting process feel simple. Their visa guidance was impeccable, and I\'m now living my dream in Sydney!"',
+      text: '"Quantum Education made a daunting process feel simple. Their visa guidance was impeccable, and I\'m now living my dream in Sydney!"',
     },
     {
       name: 'Sandeep Koirala',

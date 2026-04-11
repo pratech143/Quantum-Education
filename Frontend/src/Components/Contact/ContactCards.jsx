@@ -7,8 +7,8 @@ const ContactCards = () => {
       icon: 'location_on',
       title: 'Visit Us',
       description: 'Drop by our main office for a face-to-face consultation.',
-      info: 'Bagbazar, Kathmandu, Nepal',
-      link: 'https://maps.google.com/?q=Bagbazar,Kathmandu,Nepal',
+      info: 'Putalisadak, Kathmandu, Nepal',
+      link: 'https://maps.google.com/?q=Putalisadak,Kathmandu,Nepal',
       colors: {
         bg: 'bg-secondary-container',
         text: 'text-on-secondary-container',

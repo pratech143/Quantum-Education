@@ -9,12 +9,11 @@ const StorySection = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1 relative">
             <Reveal direction="right" distance={40}>
-              <img 
-                alt="Founder talking to student" 
-                className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" 
-                src={storyFounder} 
+              <img
+                alt="Founder talking to student"
+                className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover"
+                src={storyFounder}
               />
- villages: true
             </Reveal>
             <Reveal delay={0.4} direction="up" distance={20} className="absolute -bottom-6 -right-6">
               <div className="bg-white p-4 rounded-xl shadow-md font-headline font-bold text-primary italic">
@@ -36,7 +35,7 @@ const StorySection = () => {
             </Reveal>
             <Reveal delay={0.3}>
               <p className="text-lg text-on-surface-variant leading-relaxed font-body">
-                The Global Scholar was born from a desire to democratize opportunity. We didn't just want to be consultants; we wanted to be architects of dreams. From a small office with two desks to a global network, our passion remains unchanged: ensuring no student’s ambition is limited by geography.
+                Quantum Education was born from a desire to democratize opportunity. We didn't just want to be consultants; we wanted to be architects of dreams. From a small office with two desks to a global network, our passion remains unchanged: ensuring no student’s ambition is limited by geography.
               </p>
             </Reveal>
             <div className="pt-4 grid grid-cols-2 gap-8">

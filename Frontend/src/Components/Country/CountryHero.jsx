@@ -11,9 +11,9 @@ const CountryHero = ({ data }) => {
           transition={{ duration: 0.8 }}
           src={data.image} 
           alt={data.title} 
-          className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+          className="w-full h-full object-cover transition-all duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-70"></div>
         
         <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
           <motion.div

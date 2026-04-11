@@ -36,7 +36,7 @@ const FeaturedStories = () => {
     {
       name: "Aaryav M.",
       university: "University of Oxford, UK",
-      quote: "The Global Scholar didn't just help with my visa; they helped me find a community. My time at Oxford has been transformative, both personally and professionally.",
+      quote: "Quantum Education didn't just help with my visa; they helped me find a community. My time at Oxford has been transformative, both personally and professionally.",
       image: storyAaryav,
       reversed: false
     },

@@ -61,7 +61,7 @@ const DestinationsSection = () => {
                   src={dest.image} 
                   alt={`${dest.name} skyline or landscape`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/5 to-transparent opacity-75"></div>
                 <div className="absolute bottom-0 p-8 w-full">
                   <h3 className="font-headline text-3xl font-bold text-white mb-2">{dest.name}</h3>
                   <p className="text-white/80 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
