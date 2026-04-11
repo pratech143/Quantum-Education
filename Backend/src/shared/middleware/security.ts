@@ -13,7 +13,8 @@ const createCorsOptions = () => ({
 
     const isAllowed = env.ALLOWED_ORIGINS.includes(origin);
     callback(isAllowed ? null : new Error('Origin not allowed by CORS'), isAllowed);
-  }
+  },
+  credentials: true
 });
 
 const createGeneralRateLimiter = () =>

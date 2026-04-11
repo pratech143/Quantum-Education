@@ -3,7 +3,7 @@ import cookieParser from 'cookie-parser';
 import { createHealthRouter } from './modules/health/presentation/health.routes.js';
 import { createContactRouter } from './modules/contact/presentation/contact.routes.js';
 import { createAdminRouter } from './modules/admin/presentation/admin.routes.js';
-import { InMemoryContactRequestRepository } from './modules/contact/infrastructure/repositories/in-memory-contact-request.repository.js';
+import { PrismaContactRequestRepository } from './modules/contact/infrastructure/repositories/prisma-contact-request.repository.js';
 import { CreateContactRequestUseCase } from './modules/contact/application/use-cases/create-contact-request.use-case.js';
 import { ContactController } from './modules/contact/presentation/contact.controller.js';
 import { env } from './shared/config/env.js';
@@ -20,7 +20,7 @@ export const createApp = () => {
   app.use(cookieParser());
   applySecurityMiddleware(app);
 
-  const contactRequestRepository = new InMemoryContactRequestRepository();
+  const contactRequestRepository = new PrismaContactRequestRepository();
   const createContactRequestUseCase = new CreateContactRequestUseCase(contactRequestRepository);
   const contactController = new ContactController(createContactRequestUseCase);
 

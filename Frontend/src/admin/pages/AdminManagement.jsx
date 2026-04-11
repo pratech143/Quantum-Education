@@ -47,6 +47,7 @@ const AdminManagement = () => {
   const [showEdit, setShowEdit] = useState(null);
   const [showResetPw, setShowResetPw] = useState(null);
   const [showDelete, setShowDelete] = useState(null);
+  const [showToggleActive, setShowToggleActive] = useState(null);
   const [submitting, setSubmitting] = useState(false);
 
   // Form states
@@ -121,18 +122,18 @@ const AdminManagement = () => {
     }
   };
 
-  const handleToggleActive = async (admin) => {
+  const handleToggleActive = async () => {
+    setSubmitting(true);
     try {
-      if (admin.isActive) {
-        await adminApi.deleteAdmin(admin.id);
-        toast.success('Admin deactivated');
-      } else {
-        await adminApi.updateAdmin(admin.id, { isActive: true });
-        toast.success('Admin activated');
-      }
+      const newStatus = !showToggleActive.isActive;
+      await adminApi.updateAdmin(showToggleActive.id, { isActive: newStatus });
+      toast.success(newStatus ? 'Admin activated' : 'Admin deactivated');
+      setShowToggleActive(null);
       loadAdmins();
     } catch (err) {
       toast.error(err.message);
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -140,7 +141,7 @@ const AdminManagement = () => {
     setSubmitting(true);
     try {
       await adminApi.deleteAdmin(showDelete.id);
-      toast.success('Admin deactivated');
+      toast.success('Admin deleted permanently');
       setShowDelete(null);
       loadAdmins();
     } catch (err) {
@@ -236,7 +237,7 @@ const AdminManagement = () => {
                     </td>
                     <td className="px-6 py-3.5">
                       <button
-                        onClick={() => handleToggleActive(a)}
+                        onClick={() => setShowToggleActive(a)}
                         disabled={a.id === currentAdmin?.id}
                         className="inline-flex items-center gap-1.5 text-xs font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                       >
@@ -274,7 +275,7 @@ const AdminManagement = () => {
                           <button
                             onClick={() => setShowDelete(a)}
                             className="p-2 rounded-lg text-on-surface-variant hover:bg-red-50 hover:text-red-600"
-                            title="Deactivate"
+                            title="Hard Delete"
                           >
                             <Trash2 className="w-4 h-4" />
                           </button>
@@ -374,9 +375,9 @@ const AdminManagement = () => {
       </Modal>
 
       {/* Delete Confirmation Modal */}
-      <Modal open={!!showDelete} onClose={() => setShowDelete(null)} title="Deactivate Admin">
+      <Modal open={!!showDelete} onClose={() => setShowDelete(null)} title="Delete Admin">
         <p className="text-sm text-on-surface-variant mb-6">
-          Are you sure you want to deactivate <strong>{showDelete?.name}</strong>? They will no longer be able to sign in.
+          Are you sure you want to permanently delete <strong>{showDelete?.name}</strong>? This action cannot be undone.
         </p>
         <div className="flex justify-end gap-3">
           <button onClick={() => setShowDelete(null)}
@@ -386,7 +387,29 @@ const AdminManagement = () => {
           <button onClick={handleDelete} disabled={submitting}
             className="px-4 py-2.5 rounded-xl bg-red-600 text-white text-sm font-semibold hover:bg-red-700 disabled:opacity-50 transition-colors flex items-center gap-2">
             {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
-            Deactivate
+            Delete
+          </button>
+        </div>
+      </Modal>
+
+      {/* Toggle Active Confirmation Modal */}
+      <Modal open={!!showToggleActive} onClose={() => setShowToggleActive(null)} title={showToggleActive?.isActive ? 'Deactivate Admin' : 'Reactivate Admin'}>
+        <p className="text-sm text-on-surface-variant mb-6">
+          {showToggleActive?.isActive
+            ? <>Are you sure you want to deactivate <strong>{showToggleActive?.name}</strong>? They will no longer be able to sign in.</>
+            : <>Are you sure you want to reactivate <strong>{showToggleActive?.name}</strong>? They will be able to sign in again.</>
+          }
+        </p>
+        <div className="flex justify-end gap-3">
+          <button onClick={() => setShowToggleActive(null)}
+            className="px-4 py-2.5 rounded-xl border border-outline-variant text-sm font-medium text-on-surface hover:bg-surface-container-high transition-colors">
+            Cancel
+          </button>
+          <button onClick={handleToggleActive} disabled={submitting}
+            className={`px-4 py-2.5 rounded-xl text-white text-sm font-semibold disabled:opacity-50 transition-colors flex items-center gap-2
+              ${showToggleActive?.isActive ? 'bg-amber-600 hover:bg-amber-700' : 'bg-green-600 hover:bg-green-700'}`}>
+            {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+            {showToggleActive?.isActive ? 'Deactivate' : 'Reactivate'}
           </button>
         </div>
       </Modal>

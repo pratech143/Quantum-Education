@@ -9,7 +9,8 @@ import {
   Menu,
   X,
   Shield,
-  ChevronLeft
+  ChevronLeft,
+  MessageSquare
 } from 'lucide-react';
 
 const Sidebar = ({ open, onClose }) => {
@@ -26,6 +27,7 @@ const Sidebar = ({ open, onClose }) => {
     ...(admin?.role === 'SUPERADMIN'
       ? [{ to: '/admin/admins', icon: Users, label: 'Admins' }]
       : []),
+    { to: '/admin/messages', icon: MessageSquare, label: 'Messages' },
     { to: '/admin/profile', icon: User, label: 'Profile' }
   ];
 

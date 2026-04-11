@@ -10,6 +10,7 @@ import AdminLayout from "../admin/AdminLayout";
 import Login from "../admin/pages/Login";
 import Dashboard from "../admin/pages/Dashboard";
 import AdminManagement from "../admin/pages/AdminManagement";
+import ContactMessages from "../admin/pages/ContactMessages";
 import Profile from "../admin/pages/Profile";
 import { AuthProvider } from "../admin/AuthContext";
 
@@ -50,6 +51,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Navigate to="/admin/dashboard" replace /> },
       { path: "dashboard", element: <Dashboard /> },
       { path: "admins", element: <AdminManagement /> },
+      { path: "messages", element: <ContactMessages /> },
       { path: "profile", element: <Profile /> },
     ],
   },

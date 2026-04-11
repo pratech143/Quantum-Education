@@ -37,6 +37,22 @@ export const createAdminRouter = () => {
   // Stats (authenticated)
   router.get('/stats', authenticateAdmin, managementController.stats);
 
+  // Contact requests (authenticated)
+  router.get('/contact-requests', authenticateAdmin, async (req, res) => {
+    const { prisma } = await import('../../../shared/database/prisma.js');
+    const requests = await prisma.contactRequest.findMany({
+      orderBy: { createdAt: 'desc' }
+    });
+    res.json({ success: true, data: requests, requestId: req.requestId });
+  });
+
+  router.delete('/contact-requests/:id', authenticateAdmin, async (req, res) => {
+    const { prisma } = await import('../../../shared/database/prisma.js');
+    const id = req.params['id'];
+    await prisma.contactRequest.delete({ where: { id } });
+    res.json({ success: true, message: 'Contact request deleted.', requestId: req.requestId });
+  });
+
   // Profile (own account)
   router.put('/profile', authenticateAdmin, profileController.update);
   router.put('/profile/password', authenticateAdmin, profileController.changePassword);

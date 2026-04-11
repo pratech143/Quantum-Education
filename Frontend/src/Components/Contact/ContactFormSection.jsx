@@ -1,7 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Reveal from '../UX/Reveal';
+import toast from 'react-hot-toast';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
 const ContactFormSection = () => {
+  const [form, setForm] = useState({
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    preferredDestination: '',
+    message: ''
+  });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    try {
+      const response = await fetch(`${API_BASE}/api/v1/contact-requests`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to send message');
+      }
+
+      toast.success('Message sent successfully! We\'ll get back to you soon.');
+      setForm({
+        fullName: '',
+        email: '',
+        phoneNumber: '',
+        preferredDestination: '',
+        message: ''
+      });
+    } catch (err) {
+      toast.error(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center py-24 px-6 md:px-12 bg-surface">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center justify-center w-full">
@@ -11,7 +59,7 @@ const ContactFormSection = () => {
           <Reveal direction="right">
             <div className="bg-surface-container-lowest p-8 md:p-12 rounded-2xl shadow-xl shadow-black/5">
               <h2 className="text-3xl font-bold text-primary font-headline mb-8">Send a Message</h2>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-on-secondary-fixed-variant uppercase tracking-wider block ml-1">
@@ -21,6 +69,12 @@ const ContactFormSection = () => {
                       className="w-full px-5 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary-container text-on-surface font-body transition-all"
                       placeholder="Pratik Chapagain"
                       type="text"
+                      name="fullName"
+                      value={form.fullName}
+                      onChange={handleChange}
+                      required
+                      minLength={2}
+                      maxLength={100}
                     />
                   </div>
                   <div className="space-y-2">
@@ -31,6 +85,10 @@ const ContactFormSection = () => {
                       className="w-full px-5 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary-container text-on-surface font-body transition-all"
                       placeholder="pratik@example.com"
                       type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
@@ -43,19 +101,27 @@ const ContactFormSection = () => {
                       className="w-full px-5 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary-container text-on-surface font-body transition-all"
                       placeholder="+977 98..."
                       type="tel"
+                      name="phoneNumber"
+                      value={form.phoneNumber}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-on-secondary-fixed-variant uppercase tracking-wider block ml-1">
                       Preferred Destination
                     </label>
-                    <select className="w-full px-5 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary-container text-on-surface font-body transition-all appearance-none">
-                      <option>Select Destination</option>
-                      <option>Australia</option>
-                      <option>USA</option>
-                      <option>United Kingdom</option>
-                      <option>Canada</option>
-                      <option>New Zealand</option>
+                    <select
+                      className="w-full px-5 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary-container text-on-surface font-body transition-all appearance-none"
+                      name="preferredDestination"
+                      value={form.preferredDestination}
+                      onChange={handleChange}
+                    >
+                      <option value="">Select Destination</option>
+                      <option value="Australia">Australia</option>
+                      <option value="USA">USA</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Canada">Canada</option>
+                      <option value="New Zealand">New Zealand</option>
                     </select>
                   </div>
                 </div>
@@ -67,13 +133,30 @@ const ContactFormSection = () => {
                     className="w-full px-5 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary-container text-on-surface font-body transition-all resize-none"
                     placeholder="How can we help you?"
                     rows="5"
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                    minLength={10}
+                    maxLength={2000}
                   ></textarea>
                 </div>
                 <button
-                  className="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg font-headline shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  className="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg font-headline shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                   type="submit"
+                  disabled={submitting}
                 >
-                  Send Message
+                  {submitting ? (
+                    <span className="flex items-center justify-center gap-3">
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </span>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </div>
