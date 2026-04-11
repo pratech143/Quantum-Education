@@ -19,13 +19,13 @@ const Destinations = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-surface relative pt-10">
+    <main className="min-h-screen bg-surface selection:bg-primary-container selection:text-white relative pt-20">
       {!isReady && <GenericPageSkeleton />}
       <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
         <HeroSection />
-        <GlobalMapSection />
         <DestinationsGrid />
         <DestinationHighlight />
+        <GlobalMapSection />
         <BenefitsSection />
         <ProcessTimeline />
         <StatsSection />
