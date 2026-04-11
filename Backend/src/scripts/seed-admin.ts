@@ -1,14 +1,16 @@
 import 'dotenv/config';
+import { PrismaPg } from '@prisma/adapter-pg';
 import bcrypt from 'bcrypt';
+import { Pool } from 'pg';
 import { PrismaClient } from '../generated/prisma/client.js';
 
-const prisma = new PrismaClient({
-  datasources: {
-    db: {
-      url: process.env['DATABASE_URL']!
-    }
-  }
+const pool = new Pool({
+  connectionString: process.env['DATABASE_URL']
 });
+
+const adapter = new PrismaPg(pool);
+
+const prisma = new PrismaClient({ adapter });
 
 const BCRYPT_ROUNDS = 12;
 
@@ -20,6 +22,7 @@ async function seed() {
   if (existing) {
     console.log(`Superadmin already exists: ${email}`);
     await prisma.$disconnect();
+    await pool.end();
     return;
   }
 
@@ -43,6 +46,7 @@ async function seed() {
   console.log(`  Force password change: true`);
 
   await prisma.$disconnect();
+  await pool.end();
 }
 
 seed().catch((error) => {
