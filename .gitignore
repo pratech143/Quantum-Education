@@ -16,6 +16,8 @@ Frontend/node_modules/
 Frontend/dist/
 Frontend/dist-ssr/
 Frontend/*.local
+Backend/node_modules/
+Backend/dist/
 
 # Build outputs
 dist/
