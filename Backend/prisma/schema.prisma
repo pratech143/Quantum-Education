@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum AdminRole {
+  SUPERADMIN
+  ADMIN
+}
+
+model AdminUser {
+  id                  String    @id @default(cuid())
+  name                String
+  email               String    @unique
+  password            String
+  role                AdminRole @default(ADMIN)
+  isActive            Boolean   @default(true)
+  forcePasswordChange Boolean   @default(false)
+  createdById         String?
+  createdBy           AdminUser?  @relation("AdminCreatedBy", fields: [createdById], references: [id])
+  createdAdmins       AdminUser[] @relation("AdminCreatedBy")
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  @@index([email])
+  @@index([role])
+}
