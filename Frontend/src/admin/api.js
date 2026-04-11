@@ -39,6 +39,10 @@ export const adminApi = {
   // Stats
   stats: () => request('/stats'),
 
+  // Contact requests
+  listContactRequests: () => request('/contact-requests'),
+  deleteContactRequest: (id) => request(`/contact-requests/${id}`, { method: 'DELETE' }),
+
   // Profile
   updateProfile: (data) => request('/profile', { method: 'PUT', body: JSON.stringify(data) }),
   changePassword: (data) => request('/profile/password', { method: 'PUT', body: JSON.stringify(data) })

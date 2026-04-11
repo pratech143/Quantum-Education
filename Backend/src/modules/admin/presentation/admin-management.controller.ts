@@ -114,14 +114,13 @@ export class AdminManagementController {
       });
     }
 
-    await prisma.adminUser.update({
-      where: { id },
-      data: { isActive: false }
+    await prisma.adminUser.delete({
+      where: { id }
     });
 
     response.json({
       success: true,
-      message: 'Admin deactivated successfully.',
+      message: 'Admin deleted successfully.',
       requestId: request.requestId
     });
   };

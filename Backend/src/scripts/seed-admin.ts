@@ -3,7 +3,11 @@ import bcrypt from 'bcrypt';
 import { PrismaClient } from '../generated/prisma/client.js';
 
 const prisma = new PrismaClient({
-  accelerateUrl: process.env['DATABASE_URL']!
+  datasources: {
+    db: {
+      url: process.env['DATABASE_URL']!
+    }
+  }
 });
 
 const BCRYPT_ROUNDS = 12;
