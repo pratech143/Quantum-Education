@@ -6,6 +6,7 @@ const destinationsData = [
     id: 1,
     name: "USA",
     title: "United States",
+    slug: "unitedstates",
     description: "The global hub for innovation, research, and high-impact career opportunities in STEM.",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAgk8jtxfec8wdY5FRTYk_tZ6WdcE6MUevsn3rzQDhWWb0V7qg1WRFnJlDQfJ794FWK8GzH5rFXQekCFu_iCbr7tCNPR8jXEAU-T80PTZbevYgBrJ9_UCX4yPFpP0UpO2yV5EfTTUBfqeNVe0VPTox4-diDF_5NlpjFLvglQd4_e58NGjBtsNYu2ETLUi_sXW66S0u9M1NkBPwqG8s01C6iS7GlUy5jyE8Uq-D8qT7P69WliqQs8Qx9IO82wcIsSEwn6_bXcHFHqqk",
     labels: ["Top Universities", "STEM OPT"]
@@ -14,6 +15,7 @@ const destinationsData = [
     id: 2,
     name: "UK",
     title: "United Kingdom",
+    slug: "unitedkingdom",
     description: "Centuries of academic excellence paired with a fast-tracked 2-year post-study work visa.",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDfR3N1kTvpcDYYD97nAeMDp6niL97PG_JLA_l8-rfuE300QIx_aG4ShJVAaaNqPiIv-erWyncQNjYxrxfBuFUKh2VMb3mDBzPR8DtKyIfRERB_qaYLaO90goe7g1XFSg2q7UcjqQmHQk_vOuZUStNpsXGsOpYgszmo0jn6KE1olE_3Ddr4OdrBBFEpDOcpI7EGl2rFL_axa1gwZsd-mh70S_NgKp7g_GM74UvPBe0sJFthTPfy3gq0nZb8-0Ihxo-NWHZR3qJJwO4",
     labels: ["Academic Heritage", "Graduate Route"]
@@ -22,6 +24,7 @@ const destinationsData = [
     id: 3,
     name: "AUSTRALIA",
     title: "Australia",
+    slug: "australia",
     description: "Dynamic cities, high quality of life, and exceptional work rights for international students.",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBYeS6A81EJPhL8TvP89v-ehgb13M6sTARrnY3Cd1TO_0ia1zmAql2OUgS5MPC63PAyhKXoQjf1IFGhtSw8g4RIPnpbs8hX1XZid9VJW3DODykSgeAqgnQyN6kqmZR8HcgiO9qLlSkuhw3WFouxad_vmd8n2ZEjYxEw3RHwL8wEpkA68C6KaO6g71gdtouMhky_1xVkWD7snPJRWIS-Gzc1Jdr6r0EhJ7KONZP741XWagcv33MhBOxOHiM6P9GjC7MZXeOYiIj0Fz4",
     labels: ["Lifestyle", "Post-Study Work"]
@@ -30,6 +33,7 @@ const destinationsData = [
     id: 4,
     name: "CANADA",
     title: "Canada",
+    slug: "canada",
     description: "Welcoming communities with clear pathways to permanent residency after graduation and excellent academic standards.",
     image: "https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&q=80&w=1000",
     labels: ["Immigration Friendly", "High Standard"]
@@ -38,6 +42,7 @@ const destinationsData = [
     id: 5,
     name: "NEW ZEALAND",
     title: "New Zealand",
+    slug: "newzealand",
     description: "Stunning landscapes, safe environments, and world-class educational institutions prioritizing student well-being.",
     image: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&q=80&w=1000",
     labels: ["Safe", "Scenic"]
@@ -46,6 +51,7 @@ const destinationsData = [
     id: 6,
     name: "EUROPE",
     title: "Europe (Schengen)",
+    slug: "germany",
     description: "Access to top schools across the EU, offering affordable tuition and rich cultural experiences across borders.",
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&q=80&w=1000",
     labels: ["Culture", "Affordable"]
