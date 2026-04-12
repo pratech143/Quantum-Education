@@ -17,7 +17,7 @@ const About = () => {
   }, []);
 
   return (
-    <main className="bg-surface relative min-h-screen">
+    <main className="bg-surface relative min-h-screen pt-0">
       {!isReady && <GenericPageSkeleton />}
       <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
         <HeroSection />

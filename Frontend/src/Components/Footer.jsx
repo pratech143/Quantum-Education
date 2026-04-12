@@ -71,6 +71,7 @@ const Footer = () => {
                         <ul className="flex flex-col gap-4 font-body">
                             <li><Link to="/privacy" className="text-gray-300 transition-colors hover:text-primary">Privacy Policy</Link></li>
                             <li><Link to="/terms" className="text-gray-300 transition-colors hover:text-primary">Terms of Service</Link></li>
+                            <li><Link to="/certifications" className="text-gray-300 transition-colors hover:text-primary">Certifications</Link></li>
                         </ul>
                     </div>
 

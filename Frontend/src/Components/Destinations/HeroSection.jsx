@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative px-6 py-8 md:pt-12 md:pb-20 overflow-hidden bg-surface">
+    <section className="relative px-6  pb-8 md:pt-0 md:pb-20 overflow-hidden bg-surface">
       <div className="max-w-7xl mx-auto flex flex-col">
         <motion.div
           id="dpill"
@@ -58,7 +58,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="aspect-[4/5] rounded-xl overflow-hidden editorial-image-mask shadow-2xl"
+              className="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl"
             >
               <img
                 className="w-full h-full object-cover"
@@ -67,19 +67,6 @@ const HeroSection = () => {
               />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="absolute -bottom-6 -left-6 glass-card p-6 rounded-xl shadow-xl max-w-[280px] border border-white/20"
-            >
-              <p className="text-sm font-medium text-primary mb-2 italic leading-relaxed">
-                "The transition was seamless, the guidance was unparalleled."
-              </p>
-              <p className="text-xs font-bold text-on-surface-variant uppercase tracking-wider">
-                — Aditi R., London School of Economics
-              </p>
-            </motion.div>
           </div>
         </div>
       </div>

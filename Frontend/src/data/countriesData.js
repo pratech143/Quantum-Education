@@ -27,9 +27,9 @@ export const countriesData = {
       ]
     },
     universities: [
-      { name: "University of Melbourne", location: "Melbourne, VIC", image: ausImg, icon: "school" },
-      { name: "Australian National Univ.", location: "Canberra, ACT", image: ausImg, icon: "account_balance" },
-      { name: "University of Sydney", location: "Sydney, NSW", image: ausImg, icon: "architecture" }
+      { name: "University of Melbourne", location: "Melbourne, VIC", image: ausImg, icon: "school", slug: "university-of-melbourne" },
+      { name: "Australian National Univ.", location: "Canberra, ACT", image: ausImg, icon: "account_balance", slug: "australian-national-university" },
+      { name: "University of Sydney", location: "Sydney, NSW", image: ausImg, icon: "architecture", slug: "university-of-sydney" }
     ],
     financials: {
       costs: [

@@ -12,7 +12,7 @@ const stats = [
 
 const AlumniHero = () => {
   return (
-    <section className="relative pt-16 pb-20 px-6 md:px-12 overflow-hidden bg-surface-container-low border-b border-outline-variant/30">
+    <section className="relative pt-0 pb-20 px-6 md:px-12 overflow-hidden bg-surface-container-low border-b border-outline-variant/30">
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-16">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

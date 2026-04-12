@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const UniversitySection = ({ universities }) => {
   return (
@@ -32,11 +33,6 @@ const UniversitySection = ({ universities }) => {
                 alt={uni.name} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               />
-              <div className="absolute top-5 left-5 tonal-shift-no-border p-3 rounded-2xl shadow-lg border border-white/20">
-                <span className="material-symbols-outlined text-primary text-2xl">
-                  {uni.icon}
-                </span>
-              </div>
             </div>
             
             <div className="p-8">
@@ -48,9 +44,11 @@ const UniversitySection = ({ universities }) => {
                 {uni.location}
               </p>
               
-              <button className="primary-gradient w-full text-on-primary py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
-                View Details
-              </button>
+              <Link to={`/universities/${uni.slug}`}>
+                <button className="primary-gradient w-full text-on-primary py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-primary/20 text-center">
+                  View Details
+                </button>
+              </Link>
             </div>
           </motion.div>
         ))}

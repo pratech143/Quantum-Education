@@ -19,7 +19,7 @@ const Home = () => {
       {!isGlobeLoaded && <HomeSkeleton />}
 
       {/* Real Content - Hidden until globe is ready */}
-      <div className={`flex flex-col w-full bg-background overflow-x-hidden transition-opacity duration-1000 ${isGlobeLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0 pointer-events-none'}`}>
+      <div className={`flex flex-col w-full bg-background overflow-x-hidden transition-opacity duration-1000 pt-0 ${isGlobeLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0 pointer-events-none'}`}>
         <HeroSection onGlobeReady={() => setIsGlobeLoaded(true)} />
         <TrustSection />
         <DestinationsSection />

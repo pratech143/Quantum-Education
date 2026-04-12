@@ -15,7 +15,7 @@ const Alumni = () => {
   }, []);
 
   return (
-    <main className="bg-background min-h-screen relative">
+    <main className="bg-background min-h-screen relative pt-0">
       {!isReady && <GenericPageSkeleton />}
       <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
         <AlumniHero />

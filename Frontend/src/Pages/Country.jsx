@@ -40,7 +40,7 @@ const Country = () => {
   }
 
   return (
-    <main className="min-h-screen bg-surface-container-lowest pt-10">
+    <main className="bg-background min-h-screen relative pt-0">
       <Breadcrumbs countryName={data.hero.title.replace('Study in ', '')} />
       
       <CountryHero data={data.hero} />

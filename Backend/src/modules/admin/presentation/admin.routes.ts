@@ -48,7 +48,7 @@ export const createAdminRouter = () => {
 
   router.delete('/contact-requests/:id', authenticateAdmin, async (req, res) => {
     const { prisma } = await import('../../../shared/database/prisma.js');
-    const id = req.params['id'];
+    const id = req.params['id'] as string;
     await prisma.contactRequest.delete({ where: { id } });
     res.json({ success: true, message: 'Contact request deleted.', requestId: req.requestId });
   });
