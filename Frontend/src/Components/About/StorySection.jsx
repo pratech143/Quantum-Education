@@ -4,9 +4,9 @@ import storyFounder from '../../assets/about/story-founder.jpg';
 
 const StorySection = () => {
   return (
-    <section className="py-24 bg-surface-container-low">
+    <section className="py-16 md:py-20 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 relative">
             <Reveal direction="right" distance={40}>
               <img

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { countriesData } from '../data/countriesData';
 import Breadcrumbs from '../Components/Country/Breadcrumbs';
@@ -10,13 +10,18 @@ import VisaAdmissionSection from '../Components/Country/VisaAdmissionSection';
 import StudentLife from '../Components/Country/StudentLife';
 import CountryFAQ from '../Components/Country/CountryFAQ';
 import CTASection from '../Components/Destinations/CTASection';
+import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 
 const Country = () => {
   const { countryName } = useParams();
   const data = countriesData[countryName?.toLowerCase()];
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setIsReady(false);
+    const timer = setTimeout(() => setIsReady(true), 10);
+    return () => clearTimeout(timer);
   }, [countryName]);
 
   if (!data) {
@@ -29,8 +34,8 @@ const Country = () => {
         <p className="text-on-surface-variant max-w-md mb-8 text-lg">
           We are currently expanding our reach. The destination you're looking for might be added soon!
         </p>
-        <Link 
-          to="/countries" 
+        <Link
+          to="/countries"
           className="primary-gradient text-on-primary px-8 py-4 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl"
         >
           View All Destinations
@@ -41,25 +46,28 @@ const Country = () => {
 
   return (
     <main className="bg-background min-h-screen relative pt-0">
-      <Breadcrumbs countryName={data.hero.title.replace('Study in ', '')} />
-      
-      <CountryHero data={data.hero} />
-      
-      <div className="space-y-12">
-        <CountryOverview data={data.overview} />
-        
-        <UniversitySection universities={data.universities} />
-        
-        <FinancialSection financials={data.financials} />
-        
-        <VisaAdmissionSection admission={data.admission} visa={data.visa} />
-        
-        <StudentLife items={data.studentLife} />
-        
-        <CountryFAQ faqs={data.faqs} />
-        
-        <div className="pb-20">
-           <CTASection />
+      {!isReady && <GenericPageSkeleton />}
+      <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
+        <Breadcrumbs countryName={data.hero.title.replace('Study in ', '')} />
+
+        <CountryHero data={data.hero} />
+
+        <div className="space-y-12">
+          <CountryOverview data={data.overview} />
+
+          <UniversitySection universities={data.universities} />
+
+          <FinancialSection financials={data.financials} />
+
+          <VisaAdmissionSection admission={data.admission} visa={data.visa} />
+
+          <StudentLife items={data.studentLife} />
+
+          <CountryFAQ faqs={data.faqs} />
+
+          <div className="pb-20">
+             <CTASection />
+          </div>
         </div>
       </div>
     </main>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
-    <section className="py-24 px-6 bg-surface">
+    <section className="py-16 md:py-20 px-6 bg-surface">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}

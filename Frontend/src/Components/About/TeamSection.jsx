@@ -27,8 +27,8 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface">
-      <div className="max-w-7xl mx-auto px-6 space-y-16">
+    <section className="py-16 md:py-20 bg-surface">
+      <div className="max-w-7xl mx-auto px-6 space-y-10">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="space-y-4">
             <motion.h2 
