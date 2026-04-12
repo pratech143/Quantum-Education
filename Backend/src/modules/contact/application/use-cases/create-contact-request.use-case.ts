@@ -4,6 +4,7 @@ import type {
   CreateContactRequestInput
 } from '../../domain/contact-request.js';
 import type { ContactRequestRepository } from '../ports/contact-request.repository.js';
+import type { ContactNotificationService } from '../ports/contact-notification.service.js';
 import { AppError } from '../../../../shared/errors/app-error.js';
 
 type CreateContactRequestResult = {
@@ -12,7 +13,10 @@ type CreateContactRequestResult = {
 };
 
 export class CreateContactRequestUseCase {
-  constructor(private readonly contactRequestRepository: ContactRequestRepository) {}
+  constructor(
+    private readonly contactRequestRepository: ContactRequestRepository,
+    private readonly contactNotificationService: ContactNotificationService
+  ) {}
 
   async execute(input: CreateContactRequestInput): Promise<CreateContactRequestResult> {
     const existingContactRequest = await this.contactRequestRepository.findByEmailAndMessage(
@@ -39,6 +43,7 @@ export class CreateContactRequestUseCase {
     };
 
     await this.contactRequestRepository.save(contactRequest);
+    await this.contactNotificationService.notifyNewContactRequest(contactRequest);
 
     return {
       id: contactRequest.id,
