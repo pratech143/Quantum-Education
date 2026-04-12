@@ -11,7 +11,9 @@
     "check": "tsc --noEmit -p tsconfig.json",
     "seed:admin": "tsx src/scripts/seed-admin.ts",
     "db:migrate": "npx prisma migrate dev",
-    "db:generate": "npx prisma generate"
+    "db:generate": "npx prisma generate",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@prisma/adapter-pg": "6.19.3",
@@ -24,6 +26,7 @@
     "express-rate-limit": "^8.1.0",
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^8.0.5",
     "pg": "^8.16.3",
     "zod": "^4.1.12"
   },
@@ -34,9 +37,13 @@
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.6.0",
+    "@types/nodemailer": "^8.0.0",
     "@types/pg": "^8.20.0",
+    "@types/supertest": "^7.2.0",
     "prisma": "6.19.3",
+    "supertest": "^7.2.2",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.4"
   }
 }

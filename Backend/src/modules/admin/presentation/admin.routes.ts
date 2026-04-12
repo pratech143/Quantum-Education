@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import rateLimit from 'express-rate-limit';
 import { authenticateAdmin, requireSuperAdmin } from '../../../shared/middleware/admin-auth.js';
+import { AppError } from '../../../shared/errors/app-error.js';
 import { AdminAuthController } from './admin-auth.controller.js';
 import { AdminManagementController } from './admin-management.controller.js';
 import { AdminProfileController } from './admin-profile.controller.js';
@@ -48,7 +49,14 @@ export const createAdminRouter = () => {
 
   router.delete('/contact-requests/:id', authenticateAdmin, async (req, res) => {
     const { prisma } = await import('../../../shared/database/prisma.js');
-    const id = req.params['id'] as string;
+    const id = req.params['id'];
+    if (typeof id !== 'string') {
+      throw new AppError({
+        statusCode: 400,
+        code: 'INVALID_CONTACT_REQUEST_ID',
+        message: 'A valid contact request id is required.'
+      });
+    }
     await prisma.contactRequest.delete({ where: { id } });
     res.json({ success: true, message: 'Contact request deleted.', requestId: req.requestId });
   });
