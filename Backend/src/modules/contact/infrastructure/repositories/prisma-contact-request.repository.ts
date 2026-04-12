@@ -43,7 +43,7 @@ export class PrismaContactRequestRepository implements ContactRequestRepository 
       orderBy: { createdAt: 'desc' }
     });
 
-    return results.map((r: any) => ({
+    return results.map((r) => ({
       id: r.id,
       fullName: r.fullName,
       email: r.email,

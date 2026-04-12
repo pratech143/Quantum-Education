@@ -43,3 +43,34 @@ model ContactRequest {
   @@index([email])
   @@index([createdAt])
 }
+
+model Country {
+  id           String   @id @default(uuid())
+  name         String   @unique
+  description  String
+  tuitionFees  Float
+  visaInfo     String
+  livingCost   Float
+  currency     String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  universities University[]
+
+  @@index([name])
+}
+
+model University {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  ranking     Int
+  website     String
+  countryId   String
+  country     Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([countryId])
+  @@index([name])
+}
