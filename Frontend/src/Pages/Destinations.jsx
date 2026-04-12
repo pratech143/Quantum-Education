@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import HeroSection from '../Components/Destinations/HeroSection';
 import GlobalMapSection from '../Components/Destinations/GlobalMapSection';
-import DestinationsGrid from '../Components/Destinations/DestinationsGrid';
-import DestinationHighlight from '../Components/Destinations/DestinationHighlight';
-import BenefitsSection from '../Components/Destinations/BenefitsSection';
-import ProcessTimeline from '../Components/Destinations/ProcessTimeline';
-import StatsSection from '../Components/Destinations/StatsSection';
+import DestinationsSection from '../Components/Destinations/DestinationsSection';
+import WhyAbroad from '../Components/Destinations/WhyAbroad';
+import JourneySection from '../Components/Destinations/JourneySection';
+import OutcomesSection from '../Components/Destinations/OutcomesSection';
 import CTASection from '../Components/Destinations/CTASection';
 import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 
@@ -23,12 +22,11 @@ const Destinations = () => {
       {!isReady && <GenericPageSkeleton />}
       <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
         <HeroSection />
-        <DestinationsGrid />
-        <DestinationHighlight />
+        <WhyAbroad />
+        <DestinationsSection />
         <GlobalMapSection />
-        <BenefitsSection />
-        <ProcessTimeline />
-        <StatsSection />
+        <JourneySection />
+        <OutcomesSection />
         <CTASection />
       </div>
     </main>
