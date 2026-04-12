@@ -1,50 +1,34 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
-const CountryHero = ({ data }) => {
+const CountryHero = ({ hero }) => {
   return (
-    <section className="relative px-6 mb-12">
-      <div className="relative h-[480px] w-full rounded-2xl overflow-hidden shadow-2xl group border border-white/10">
-        <motion.img 
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-          src={data.image} 
-          alt={data.title} 
-          className="w-full h-full object-cover transition-all duration-700"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-70"></div>
-        
-        <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-black text-on-primary font-headline mb-3 leading-tight tracking-tight">
-              {data.title}
-            </h1>
-            <p className="text-on-primary/80 text-lg md:text-xl mb-8 max-w-xl leading-snug font-body italic">
-              — {data.tagline}
-            </p>
-            
-            {/* Quick Stats Grid */}
-            <div className="grid grid-cols-3 gap-4 max-w-2xl">
-              {data.stats.map((stat, i) => (
-                <div key={i} className="tonal-shift-no-border p-4 rounded-2xl flex flex-col items-center justify-center text-center shadow-lg border border-white/20">
-                  <span className="text-primary font-black text-xl md:text-2xl font-headline tracking-tighter">
-                    {stat.value}
-                  </span>
-                  <span className="text-[10px] md:text-xs font-black text-on-surface-variant uppercase tracking-[0.2em]">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+    <header className="relative w-full h-[618px] flex items-center overflow-hidden">
+
+      <img 
+        className="absolute inset-0 w-full h-full object-cover" 
+        alt={hero.title} 
+        src={hero.image || 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=2670&auto=format&fit=crop'} 
+      />
+      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full">
+        <div className="max-w-2xl">
+          <h1 className="font-headline font-extrabold text-5xl md:text-7xl text-white leading-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+            {hero.title}
+          </h1>
+          <p className="text-[#f0f8ff] text-xl md:text-2xl font-bold mb-8 max-w-xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+            {hero.subtitle}
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {hero.stats.map((stat, index) => (
+              <div key={index} className="bg-black/20 backdrop-blur-sm border border-white/10 p-6 rounded-2xl shadow-xl">
+                <span className="block text-[#d0e8ff] text-sm font-label font-bold uppercase tracking-widest mb-1 drop-shadow-md">{stat.label}</span>
+                <span className="text-white text-3xl font-extrabold font-headline drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{stat.value}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 
