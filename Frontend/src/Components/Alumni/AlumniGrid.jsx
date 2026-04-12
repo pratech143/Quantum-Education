@@ -63,9 +63,9 @@ const AlumniGrid = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-surface-container-low">
+    <section className="py-16 md:py-20 px-6 bg-surface-container-low">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
           <div className="max-w-xl">
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
@@ -91,7 +91,7 @@ const AlumniGrid = () => {
           ))}
         </div>
 
-        <div className="mt-20 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

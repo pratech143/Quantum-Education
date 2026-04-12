@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import DestinationCard from './DestinationCard';
 
 const destinationsData = [
@@ -72,9 +73,14 @@ const DestinationsSection = () => {
   const visibleDestinations = showAll ? filteredDestinations : filteredDestinations.slice(0, 3);
 
   return (
-    <section className="py-24 px-6 bg-white border-y border-surface-container">
+    <section id="destinations" className="py-16 md:py-20 px-6 bg-white border-y border-surface-container">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6"
+        >
           <div className="w-full md:w-1/2">
             <h2 className="font-headline text-4xl md:text-6xl font-extrabold text-primary mb-6">Choose Your Path</h2>
             <p className="text-on-surface-variant max-w-md">Discover the distinct advantages of each major international study hub tailored to your career goals.</p>
@@ -91,11 +97,11 @@ const DestinationsSection = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-        </div>
+        </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {visibleDestinations.map(dest => (
-            <DestinationCard key={dest.id} {...dest} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+          {visibleDestinations.map((dest, index) => (
+            <DestinationCard key={dest.id} {...dest} index={index} />
           ))}
         </div>
         

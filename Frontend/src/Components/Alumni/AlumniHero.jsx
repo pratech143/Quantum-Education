@@ -12,76 +12,75 @@ const stats = [
 
 const AlumniHero = () => {
   return (
-    <section className="relative pt-0 pb-20 px-6 md:px-12 overflow-hidden bg-surface-container-low border-b border-outline-variant/30">
-      <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-16">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-3xl"
-        >
-          <motion.span 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider mb-4"
-          >
-            Alumni Excellence
-          </motion.span>
-          
-          <h1 className="font-headline font-extrabold text-5xl md:text-7xl text-primary leading-tight mb-4 tracking-tighter">
-            Celebrating <span className="text-secondary">Global Success</span>
-          </h1>
-          
-          <p className="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-            With over 5,000+ placements in prestigious universities worldwide, our alumni are shaping the future across industries. Your international journey begins where theirs did.
-          </p>
-          
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="hero-gradient text-white px-8 py-4 rounded-xl text-md font-bold uppercase tracking-wide transition-all shadow-xl shadow-primary/20 flex items-center gap-3"
-          >
-            Start Your Journey
-            <ArrowRight className="w-5 h-5" />
-          </motion.button>
-        </motion.div>
-
-        {/* Integrated Stats Bar */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat, index) => (
-            <motion.div 
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + index * 0.1 }}
-              className="flex flex-col group"
-            >
-              <div className="text-4xl md:text-5xl font-black text-primary tracking-tighter mb-2 group-hover:translate-x-1 transition-transform">
-                {stat.value}
-              </div>
-              <div className="h-1 w-8 bg-secondary/30 mb-2 rounded-full"></div>
-              <div className="text-on-surface-variant font-black tracking-widest uppercase text-[9px] md:text-[10px] opacity-70">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+    <section className="relative min-h-[520px] md:min-h-[600px] flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          className="w-full h-full object-cover"
+          alt="classic university campus facade"
+          src={heroCampus}
+        />
+        <div className="absolute inset-0 bg-primary/75"></div>
       </div>
 
-      {/* Decorative Editorial Element */}
-      <motion.div 
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 0.15, x: 0 }}
-        transition={{ duration: 1.2, delay: 0.4 }}
-        className="absolute top-0 right-0 w-1/2 h-full hidden lg:block pointer-events-none"
-      >
-        <img 
-          className="w-full h-full object-cover grayscale" 
-          alt="classic university campus facade" 
-          src={heroCampus} 
-        />
-      </motion.div>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-16 md:py-24">
+        <div className="flex flex-col gap-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-3xl"
+          >
+            <motion.span
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider mb-5"
+            >
+              Alumni Excellence
+            </motion.span>
+
+            <h1 className="font-headline font-extrabold text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-4 tracking-tighter">
+              Celebrating <span className="text-white/70">Global Success</span>
+            </h1>
+
+            <p className="text-white/85 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
+              With over 5,000+ placements in prestigious universities worldwide, our alumni are shaping the future across industries. Your international journey begins where theirs did.
+            </p>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-primary px-8 py-4 rounded-xl text-md font-bold uppercase tracking-wide transition-all shadow-lg flex items-center gap-3"
+            >
+              Start Your Journey
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </motion.div>
+
+          {/* Stats Bar */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                className="flex flex-col group"
+              >
+                <div className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-2 group-hover:translate-x-1 transition-transform">
+                  {stat.value}
+                </div>
+                <div className="h-1 w-8 bg-white/30 mb-2 rounded-full"></div>
+                <div className="text-white/70 font-black tracking-widest uppercase text-[9px] md:text-[10px]">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

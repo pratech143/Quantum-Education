@@ -4,7 +4,7 @@ import { Target, Eye } from 'lucide-react';
 
 const MissionVisionSection = () => {
   return (
-    <section className="py-24 bg-surface">
+    <section className="py-16 md:py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
         <motion.div 
           initial={{ opacity: 0, x: -30 }}

@@ -26,8 +26,8 @@ const CoreValuesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface-container-low">
-      <div className="max-w-7xl mx-auto px-8 text-center space-y-16">
+    <section className="py-16 md:py-20 bg-surface-container-low">
+      <div className="max-w-7xl mx-auto px-8 text-center space-y-10">
         <div className="max-w-2xl mx-auto space-y-4">
           <Reveal>
             <h2 className="text-4xl font-headline font-extrabold text-primary">Our Core Values</h2>

@@ -50,17 +50,17 @@ const FeaturedStories = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-surface">
+    <section className="py-16 md:py-20 px-6 bg-surface">
       <div className="max-w-7xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-headline font-bold text-3xl md:text-5xl text-primary mb-20 text-center tracking-tight"
+          className="font-headline font-bold text-3xl md:text-5xl text-primary mb-10 text-center tracking-tight"
         >
           Voices of Success
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12">
           {stories.map((story) => (
             <StoryCard key={story.name} {...story} />
           ))}

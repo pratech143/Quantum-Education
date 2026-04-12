@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const GlobalMapSection = () => {
   return (
-    <section className="py-24 bg-surface overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
+    <section className="py-16 md:py-20 bg-surface overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 text-center mb-10 relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
