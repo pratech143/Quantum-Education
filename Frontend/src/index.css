@@ -86,6 +86,11 @@
     backdrop-filter: blur(24px);
   }
 
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+  }
+
   .tonal-shift-no-border {
     background-color: #ffffffcc;
     backdrop-filter: blur(20px);
