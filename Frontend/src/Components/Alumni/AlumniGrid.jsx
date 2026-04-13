@@ -1,104 +1,97 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, ChevronDown } from 'lucide-react';
-import alumniAnjali from '../../assets/Alumni/alumni-anjali.jpg';
-import alumniSandeep from '../../assets/Alumni/alumni-sandeep.jpg';
-import alumniRitika from '../../assets/Alumni/alumni-ritika.jpg';
-import alumniDeepak from '../../assets/Alumni/alumni-deepak.jpg';
+import React, { useState } from 'react';
 
-const AlumniCard = ({ name, university, program, image, index }) => {
-  return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: (index % 4) * 0.1 }}
-      whileHover={{ y: -8 }}
-      className="bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group"
-    >
-      <div className="aspect-square rounded-xl overflow-hidden mb-6 relative">
-        <img 
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out" 
-          src={image} 
-          alt={name} 
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      </div>
-      <h3 className="font-headline font-bold text-xl text-primary mb-1">{name}</h3>
-      <p className="text-sm text-on-surface-variant mb-4 font-medium">{university}</p>
-      <div className="flex items-center gap-2 text-xs font-bold text-primary bg-secondary-container/40 px-3 py-2 rounded-full w-fit">
-        <MapPin className="w-3 h-3" />
-        {program}
-      </div>
-    </motion.div>
-  );
-};
+const AlumniGrid = ({ alumni = [], filters = [] }) => {
+  const [activeFilter, setActiveFilter] = useState('all');
 
-const AlumniGrid = () => {
-  const alumni = [
-    {
-      name: "Anjali S.",
-      university: "University of Sydney, Australia",
-      program: "Masters in Biotech",
-      image: alumniAnjali
-    },
-    {
-      name: "Sandeep K.",
-      university: "University of Toronto, Canada",
-      program: "MBA Finance",
-      image: alumniSandeep
-    },
-    {
-      name: "Ritika P.",
-      university: "Monash University, Australia",
-      program: "Nursing",
-      image: alumniRitika
-    },
-    {
-      name: "Deepak B.",
-      university: "Technical University of Munich, Germany",
-      program: "MEng Automotive",
-      image: alumniDeepak
-    }
-  ];
+  const visible = activeFilter === 'all'
+    ? alumni
+    : alumni.filter(a => a.country === activeFilter);
 
   return (
-    <section className="py-16 md:py-20 px-6 bg-surface-container-low">
+    <section className="py-24 px-6 bg-surface-container-low" id="alumni-network">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+        {/* Header + Filters */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
           <div className="max-w-xl">
-            <motion.h2 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="font-headline font-bold text-3xl md:text-4xl text-primary mb-4 tracking-tight"
-            >
-              Our Global Network
-            </motion.h2>
-            <p className="text-on-surface-variant text-lg">Explore the journeys of our scholars who are now making an impact across the globe.</p>
+            <h2 className="font-headline font-bold text-3xl text-primary mb-4">Our Global Network</h2>
+            <p className="text-on-surface-variant">
+              Explore the journeys of our scholars who are now making an impact across the globe.
+            </p>
           </div>
-          <motion.button 
-            whileHover={{ x: 8 }}
-            className="text-primary font-bold uppercase text-xs tracking-[0.2em] flex items-center gap-2 hover:text-secondary transition-colors"
-          >
-            Filter by Country <ChevronDown className="w-4 h-4" />
-          </motion.button>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {alumni.map((person, index) => (
-            <AlumniCard key={person.name} {...person} index={index} />
-          ))}
+
+          {/* Filter chips */}
+          <div className="w-full md:w-auto overflow-x-auto no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+            <div className="flex gap-3 pb-2">
+              {filters.map((f) => (
+                <button
+                  key={f.value}
+                  onClick={() => setActiveFilter(f.value)}
+                  className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all border whitespace-nowrap ${
+                    activeFilter === f.value
+                      ? 'bg-primary text-on-primary border-primary'
+                      : 'bg-surface-container-lowest text-on-surface-variant border-outline hover:border-primary hover:text-primary'
+                  }`}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="border-2 border-outline-variant text-primary px-10 py-4 rounded-xl font-headline font-bold hover:bg-white hover:border-primary transition-all uppercase text-sm tracking-widest"
-          >
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {visible.map((alumni) => (
+            <div
+              key={alumni.name + alumni.country}
+              className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col"
+            >
+              {/* Photo */}
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  alt={alumni.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src={alumni.img}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <span
+                  className="material-symbols-outlined text-3xl text-primary/30 mb-2 leading-none"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  format_quote
+                </span>
+                <p className="text-on-surface-variant text-sm italic leading-relaxed mb-5 flex-1">
+                  "{alumni.quote}"
+                </p>
+                <div className="border-t border-outline-variant/30 pt-4 flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="font-headline font-bold text-base text-primary">{alumni.name}</h3>
+                    <p className="text-xs text-on-surface-variant mt-0.5">{alumni.university}</p>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-primary bg-secondary-container/40 px-3 py-1 rounded-full shrink-0 mt-0.5">
+                    <span className="material-symbols-outlined text-sm">explore</span>
+                    {alumni.degree}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {visible.length === 0 && (
+            <div className="col-span-full text-center py-16 text-on-surface-variant">
+              No alumni found for this region yet.
+            </div>
+          )}
+        </div>
+
+        {/* Load More */}
+        <div className="mt-16 flex justify-center">
+          <button className="border border-outline-variant text-primary px-8 py-3 rounded-xl font-bold hover:bg-surface-container-high transition-colors uppercase text-sm tracking-widest">
             Load More Success Stories
-          </motion.button>
+          </button>
         </div>
       </div>
     </section>
