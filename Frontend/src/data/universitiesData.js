@@ -1,57 +1,135 @@
 export const universitiesData = {
   "la-trobe-university": {
     slug: "la-trobe-university",
-    name: "La Trobe University",
+    name: "Global Scholar",
+    universityName: "La Trobe University",
     hero: {
-      title: "La Trobe Uni",
-      titleAccent: "Via Navitas",
-      description: "With a proud history built on a mission to advance knowledge and learning to shape the future of our world, we are the most successful Australian university at combining accessibility and excellence.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjtmZKEicByt5kZ2BCETNMpoiA2TtXtFuzYIJQGNQs2lExXs0Kur5KaPCh1QWdZmgkBqU1Pr7_6NHu6tgbr7Wc5Y5XgqBxbDX-64HXAmAAfjsd3Lv9LOy_NJuhYoq_QVFTpc5vG91a37vAgSuGmZH1spnp5WZxmC6CSmNfqkja2q3lYCvHnyuJeop_VBhUb22epGtNC-yN21jVUxlwKkw2BggiIqAkICtuWj85G-pNz1nRkXHDEoN4dcM60VA_Pot3bYQBQC7PO_I",
-      cta: "VISIT WEBSITE"
+      title: "La Trobe University",
+      subtitle: "Combining accessibility and excellence with a proud history of shaping the future. Step into a world-class environment designed for global impact.",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAisJ3a2ace5yHv52e0ZI46hd1Zi0LX3tL87u2JgZb0Di0dNf1bmDtazxo-dJT0WYYJQwueqFA0f57OUeR_Zm21BDBrvfZfPoUoxLxXF68gCeNIIBRcka9ZNmLHj3o9RwBYbnSC2uWmh7Y_S7DcAlIKunmX-r5mCEvAq45eeeau17QaYZE8s8B9noyknih6RRxbOoNMXi8lOmjjGsd27TPOSlgmBY_8EjILUgfnD9DwapQdloCdAoAJrey3OtOQf2NvOmR1dRFuIN4",
+      primaryCta: "Explore Our Programs",
+      secondaryCta: "Virtual Tour"
     },
-    mission: {
-      title: "Our Mission",
-      paragraphs: [
-        "La Trobe is a university known for making a positive difference in the lives of our students, partners and communities. We will become an even more valued and relevant university because of the way we respond to their needs in this time of great local and national crisis.",
-        "Our aim is to emerge as a more resilient, future-focused and necessarily more efficient institution that will thrive in a post-COVID world by being more sharply focused on the needs of our community, and by playing to our strengths in teaching and research.",
-        "Our passionate teachers deliver globally recognised learning to our diverse student body. La Trobe’s schools and departments are known for making a positive difference in the lives of our students, partners and communities."
+    whyUniversity: {
+      title: "Why La Trobe?",
+      reasons: [
+        {
+          icon: "workspace_premium",
+          title: "Top 1% Worldwide",
+          description: "Consistently ranked among the top universities globally, we pride ourselves on research excellence and teaching quality that prepares you for international success.",
+          link: "#",
+          linkText: "View Rankings"
+        },
+        {
+          icon: "biotech",
+          title: "World-Class Facilities",
+          description: "Access state-of-the-art laboratories and digital innovation hubs designed to foster breakthroughs in science and technology."
+        },
+        {
+          icon: "public",
+          title: "Global Exposure",
+          description: "Partnerships with over 200 universities across the globe for exchange programs, ensuring our graduates are truly global citizens."
+        },
+        {
+          icon: "groups",
+          title: "Vibrant Student Life",
+          description: "Join a community of over 90 student-run clubs and societies ranging from performing arts to competitive university sports."
+        }
       ]
     },
-    waysToStudy: {
-      title: "Ways to Study",
-      description: "Take the next step in your career with flexible online study options, industry connections and the support of expert teachers.",
-      background: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIU-C4r0oCuJSrAPeshDeJtGEPnr3ZjKvIAUADh_Q1PLqPjOINubgioXw0GFzepoIQFkzkj8Xk41a01MoLJQmiSZBSzBi9q6HXN_8c-f1-YwiyfdVWI41j1K0G4NVimZWP2M5y7ULbB1Eiv6HUdFAoYzHWjjZutLOQHO2e8uAM0zgaWNiU1QRuuCK6QHLjnEQmrnAa_1pofoswjV9olWFY8ddItZLu_Kj_xJFfPWE05_FGeq1z-LvdMU_hpPp96bYWbV1yhJCX6yA",
-      methods: [
-        { count: "2", label: "Undergraduate" },
-        { count: "3", label: "Postgraduate" },
-        { count: "4", label: "Graduate Research Degrees" },
-        { count: "5", label: "Online Courses" },
-        { label: "Short Courses" }
+    coursesSection: {
+      title: "Courses Offered",
+      description: "Discover our diverse range of undergraduate and postgraduate programs tailored for the modern workforce.",
+      buttonText: "View All Courses",
+      courses: [
+        {
+          icon: "medical_services",
+          title: "Nursing",
+          description: "Clinical practice with high employability and hands-on training.",
+          tag: "Postgrad Available",
+          tagStyle: "bg-secondary-container text-on-secondary-container"
+        },
+        {
+          icon: "payments",
+          title: "Business",
+          description: "Global business strategy, management, and entrepreneurial leadership.",
+          tag: "Industry Accredited",
+          tagStyle: "bg-secondary-container text-on-secondary-container"
+        },
+        {
+          icon: "terminal",
+          title: "Information Technology",
+          description: "Software development, cloud systems, and data analytics.",
+          tag: "Fast Track Ready",
+          tagStyle: "bg-secondary-container text-on-secondary-container"
+        },
+        {
+          icon: "lock",
+          title: "Cybersecurity",
+          description: "Protecting digital infrastructure and mitigating global security threats.",
+          tag: "New Specialization",
+          tagStyle: "bg-primary text-on-primary"
+        },
+        {
+          icon: "psychology",
+          title: "Psychology",
+          description: "Understanding human behavior and clinical health perspectives."
+        },
+        {
+          icon: "gavel",
+          title: "Law",
+          description: "Social justice frameworks and corporate legal advocacy."
+        }
       ]
     },
-    courses: {
-      title: "Courses From La Trobe Uni Via Navitas",
-      list: [
-        "Bachelor of Arts", "Bachelor of Archaeology", "Diploma of Arts",
-        "Bachelor of Accounting", "Bachelor of Business", "Diploma in Business",
-        "Bachelor of Criminology", "Bachelor of Cybersecurity / Bachelor of Criminology",
-        "Associate Degree in Engineering Technology", "Bachelor of Engineering (Honours)",
-        "Bachelor of Nursing", "Bachelor of Physiotherapy", "Bachelor of Dental Science (Honours)"
+    admission: {
+      requirementsTitle: "Entry Requirements",
+      howToApplyTitle: "How to Apply",
+      requirements: [
+        {
+          title: "Academic Excellence",
+          description: "Completion of Year 12 or equivalent with competitive GPA scores."
+        },
+        {
+          title: "English Proficiency",
+          description: "IELTS 6.5 (min 6.0 in all bands) or equivalent TOEFL/PTE scores."
+        },
+        {
+          title: "Course Specifics",
+          description: "Some courses may require portfolios, interviews, or relevant work experience."
+        }
+      ],
+      howToApply: [
+        "Select your course and check the entry dates.",
+        "Prepare your academic transcripts and documents.",
+        "Submit your application via the online portal.",
+        "Accept your offer and start your visa process."
       ]
     },
-    admissions: {
-      requirements: {
-        title: "Entry Requirements",
-        description: "Our courses have a range of academic and English language requirements. These requirements are in place to make sure you have the knowledge and skills you need to succeed in your studies."
-      },
-      howToApply: {
-        title: "How to Apply",
-        description: "Select your level of study and begin your application process."
-      }
+    ctaSection: {
+      title: "Ready to begin your journey?",
+      description: "Take the first step toward a global career with La Trobe University. Detailed information on scholarships and intake is just a click away.",
+      buttonText: "Visit Official Website",
+      link: "https://www.latrobe.edu.au"
     },
-    scholarship: {
-      title: "International Tuition Fees and Scholarships",
-      description: "International study is a big decision, especially when the future can look a little uncertain. So we’ve designed our range of scholarships to give you the support you need in a changing world. In the form of tuition fee reductions these scholarships recognize your achievements and reward your commitment to your future."
+    footerData: {
+      brandDesc: "Empowering students with world-class education pathways and personalized academic consulting.",
+      copyright: "© 2024 Global Scholar University. All rights reserved.",
+      navigationUrls: [
+        { label: "Programs", link: "#" },
+        { label: "Admissions", link: "#" },
+        { label: "Scholarships", link: "#" }
+      ],
+      resourcesUrls: [
+        { label: "Campus Life", link: "#" },
+        { label: "Virtual Tour", link: "#" },
+        { label: "Contact", link: "#" }
+      ],
+      socials: [
+        { icon: "public", link: "#" },
+        { icon: "mail", link: "#" },
+        { icon: "call", link: "#" }
+      ]
     }
   }
 };

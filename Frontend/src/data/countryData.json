@@ -96,50 +96,62 @@
     "universities": [
       {
         "name": "University of Melbourne",
+        "id": "university-of-melbourne",
         "location": "Victoria",
         "desc": "A global leader in research and teaching, consistently ranked as the number one university in Australia.",
         "qs": "#14",
         "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuBONdyWp98dja6bdquwGL6OOBcfaNTS1YfO47JDmkNYZ47QSV1wbiKNjI08XnXbPVb9QSldMnx-i8_cCUt55vgzQuIV9BXiOy1w6bXCEoM8sZM1R0W5JR_C7bbxM0VZQ7ux2ROAhe6mwV9Eq1jgCxGaUY-HP02u8VLsbs95emvPdck8YWPPHh06LIAdFO74Kh6yXpgwecTVdI-PZCXZ-40L2ncolkIH1kAxjZ2vRHMhafsgXdQyqKaIm4YhxhrsUTesNT62kJXS6ZY",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBONdyWp98dja6bdquwGL6OOBcfaNTS1YfO47JDmkNYZ47QSV1wbiKNjI08XnXbPVb9QSldMnx-i8_cCUt55vgzQuIV9BXiOy1w6bXCEoM8sZM1R0W5JR_C7bbxM0VZQ7ux2ROAhe6mwV9Eq1jgCxGaUY-HP02u8VLsbs95emvPdck8YWPPHh06LIAdFO74Kh6yXpgwecTVdI-PZCXZ-40L2ncolkIH1kAxjZ2vRHMhafsgXdQyqKaIm4YhxhrsUTesNT62kJXS6ZY",
         "tagline": "#1 in Australia • Research Focused"
       },
       {
         "name": "University of Sydney",
+        "id": "university-of-sydney",
         "location": "NSW",
         "desc": "Australia’s first university, known for its heritage campus and commitment to challenging the status quo.",
         "qs": "#19",
         "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuAmjPSO7wLYt7F91hOzL3adI1OJUm7XT1-vPlIlGsEiuDacRBi0TyUQEEJxpRCT6_pjBBy6DjDtk8c8ga3RDr4spczrEyixtd9GOGeMvD1TNUzw0JNQiW7MdTHYq7tX1DpLq3EXVjjzZO1siGMAGSKb7lntMuP5oFdfKV7_99u3GSK-p-wCG0_vJ3W1xtCWrj7IbF99pRv8mze-Anu7qBVrCb5KH1UpWWUiRlD1k2-CTb7_rePr9w1ObeyChbQiMhBiecP9VDtx83Y",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAmjPSO7wLYt7F91hOzL3adI1OJUm7XT1-vPlIlGsEiuDacRBi0TyUQEEJxpRCT6_pjBBy6DjDtk8c8ga3RDr4spczrEyixtd9GOGeMvD1TNUzw0JNQiW7MdTHYq7tX1DpLq3EXVjjzZO1siGMAGSKb7lntMuP5oFdfKV7_99u3GSK-p-wCG0_vJ3W1xtCWrj7IbF99pRv8mze-Anu7qBVrCb5KH1UpWWUiRlD1k2-CTb7_rePr9w1ObeyChbQiMhBiecP9VDtx83Y",
         "tagline": "Traditional Excellence • Global Network"
       },
       {
         "name": "Australian National University",
+        "id": "australian-national-university",
         "location": "ACT",
         "desc": "A world-leading center for research and education located in the heart of the nation's capital.",
         "qs": "#34",
         "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDsOfmbxtLJcfinsdSn4BRm2IAn6V7clz5Ujlyi8n8Q4yBX46JMMLh9-lxEtdXhy5uV8HP-en5vOE03EXlkQNO_Au568GXFw26PKJpimMr6Gfeq3F3SOLWjXMuB4EadStGRTlQ-cGH-oyLkh6_VlPX6SvEUVssGIjtFHONTx0FO8Y7bZMbgecU-iMInl9-VpS4LDBNa_HQgWVg3FjLSQtsWlNeT2cIzsp_THCWtXWPRFsQXwhSxsh7ZlqK-AwKGHO5ESDQNDYxiHNA",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDsOfmbxtLJcfinsdSn4BRm2IAn6V7clz5Ujlyi8n8Q4yBX46JMMLh9-lxEtdXhy5uV8HP-en5vOE03EXlkQNO_Au568GXFw26PKJpimMr6Gfeq3F3SOLWjXMuB4EadStGRTlQ-cGH-oyLkh6_VlPX6SvEUVssGIjtFHONTx0FO8Y7bZMbgecU-iMInl9-VpS4LDBNa_HQgWVg3FjLSQtsWlNeT2cIzsp_THCWtXWPRFsQXwhSxsh7ZlqK-AwKGHO5ESDQNDYxiHNA",
         "tagline": "National Prestige • Policy & Law"
       },
       {
         "name": "La Trobe University",
+        "id": "la-trobe-university",
         "location": "Victoria",
         "desc": "Renowned for its commitment to social impact and excellence in health, humanities, and research.",
         "qs": "#242",
         "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuBKH8Ix09G3hgIiace3ANuIL7eurWmSS8A34WjNViRPoBzM-anHlh3BVz7mstrEibD602TSsJSqa9DyhWb_7P1Ci13wQVrb9vr4p5dmyLHs-f69BQBzodrtEosQ0vIbuxcAp9j5UkpcViLZG6YGTkTpysvS8a_YFAApCScd6rfCtc7PzGlBZ2Mbby8A9zPqNzZ-0UsmlcHNBl6_6-CwweRL5P2LeWJfo_2zdKZ_6deW6WW8O-d_NR9FokoF8TaMZN-_xq-vkNdxaT4",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBKH8Ix09G3hgIiace3ANuIL7eurWmSS8A34WjNViRPoBzM-anHlh3BVz7mstrEibD602TSsJSqa9DyhWb_7P1Ci13wQVrb9vr4p5dmyLHs-f69BQBzodrtEosQ0vIbuxcAp9j5UkpcViLZG6YGTkTpysvS8a_YFAApCScd6rfCtc7PzGlBZ2Mbby8A9zPqNzZ-0UsmlcHNBl6_6-CwweRL5P2LeWJfo_2zdKZ_6deW6WW8O-d_NR9FokoF8TaMZN-_xq-vkNdxaT4",
         "tagline": "Health & Science Leader"
       },
       {
         "name": "UNSW Sydney",
+        "id": "unsw-sydney",
         "location": "NSW",
         "desc": "A powerhouse of innovation and entrepreneurship, focusing on high-impact research and career-ready graduates.",
         "qs": "#19",
         "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSJiLZY_YWbjJbyqHEliA3Z0z78R9p-_1HhYZNPc0PhZK_Go8sYBxVyh2vNRQuPgxWeAZS6p4GyTURGvNpwdoiw6EfWGG-882Oj2jeIHW8DW2XGoIge1wbi3QrweKfisJDGijA_R-X6b6ci4a_ZjwqjR-8zkPRA4NickIWxEKJuCKX_hBgPJfw0vwyvVAX32R0FlNMh2kJfWIoCXmzeaKtEnST0kuYUKSNzJcAmMBFFhIBoWN75QgLG-QZKnhVHizFFmySvJXSFW4",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSJiLZY_YWbjJbyqHEliA3Z0z78R9p-_1HhYZNPc0PhZK_Go8sYBxVyh2vNRQuPgxWeAZS6p4GyTURGvNpwdoiw6EfWGG-882Oj2jeIHW8DW2XGoIge1wbi3QrweKfisJDGijA_R-X6b6ci4a_ZjwqjR-8zkPRA4NickIWxEKJuCKX_hBgPJfw0vwyvVAX32R0FlNMh2kJfWIoCXmzeaKtEnST0kuYUKSNzJcAmMBFFhIBoWN75QgLG-QZKnhVHizFFmySvJXSFW4",
         "tagline": "Innovation & Tech"
       },
       {
         "name": "Monash University",
+        "id": "monash-university",
         "location": "Victoria",
         "desc": "The largest university in Australia, offering a truly international perspective and pioneering research facilities.",
         "qs": "#42",
         "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuBnOscsQKUcY_4-ytUnQqn1SXPVnrG0jl7Ghv_vRPIvu0hNXOpq9b-wSgr_gLabMTQU3khZUum71VVQWmQPRrrMHJPgRke4AjEOC4A_u_TDC--orrl0epT_FTZYR85lBfuS1rEdArpgkbiaCjEMIV6nYgVCVEtjiblBKZrkeKcjhvM9yvtdOiLa_ubfbh62beeZlNMt4OEO8Pz1PoKnRyPUfuzcfQVGHvqSJNQyE4THb6Au3t5PgLdR4IrAqK-UvT_s2JePJ5cxSRo",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBnOscsQKUcY_4-ytUnQqn1SXPVnrG0jl7Ghv_vRPIvu0hNXOpq9b-wSgr_gLabMTQU3khZUum71VVQWmQPRrrMHJPgRke4AjEOC4A_u_TDC--orrl0epT_FTZYR85lBfuS1rEdArpgkbiaCjEMIV6nYgVCVEtjiblBKZrkeKcjhvM9yvtdOiLa_ubfbh62beeZlNMt4OEO8Pz1PoKnRyPUfuzcfQVGHvqSJNQyE4THb6Au3t5PgLdR4IrAqK-UvT_s2JePJ5cxSRo",
         "tagline": "Pioneering Research"
       }
     ],
