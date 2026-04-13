@@ -1,63 +1,44 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import ctaBg from '../../assets/Alumni/cta-bg.jpg';
-
 import { Link } from 'react-router-dom';
 
-const AlumniCTA = () => {
+const AlumniCTA = ({ data }) => {
+  if (!data) return null;
   return (
-    <section className="py-16 md:py-20 px-6">
+    <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="bg-primary rounded-3xl overflow-hidden relative p-12 md:p-24 text-center shadow-2xl shadow-primary/30"
-        >
-          {/* Background Overlay */}
-          <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <img 
-              className="w-full h-full object-cover mix-blend-overlay" 
-              src={ctaBg} 
-              alt="Background pattern" 
-            />
-          </div>
-
+        <div className="bg-primary rounded-2xl overflow-hidden relative p-12 md:p-24 text-center">
+          {data.backgroundImage && (
+            <div className="absolute inset-0 opacity-10">
+              <img
+                alt="Students on campus"
+                className="w-full h-full object-cover"
+                src={data.backgroundImage}
+              />
+            </div>
+          )}
           <div className="relative z-10">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="font-headline font-extrabold text-3xl md:text-6xl text-white mb-8 tracking-tight"
-            >
-              Ready to write your <br className="hidden md:block" /> global story?
-            </motion.h2>
-            <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-              Your future at a world-class university is just one consultation away. Let's make it happen together.
+            <h2 className="font-headline font-extrabold text-3xl md:text-5xl text-on-primary mb-6">
+              {data.title}
+            </h2>
+            <p className="text-on-primary-container text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+              {data.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link to="/contact">
-                <motion.button 
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-primary px-10 py-5 rounded-2xl text-md font-headline font-bold uppercase tracking-widest shadow-xl transition-all"
-                >
-                  Book a Consultation
-                </motion.button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to={data.primaryLink}
+                className="bg-surface-container-lowest text-primary px-8 py-4 rounded-xl text-md font-bold uppercase tracking-wide hover:scale-105 transition-transform active:scale-95 shadow-lg"
+              >
+                {data.primaryText}
               </Link>
-              <Link to="/destinations">
-                <motion.button 
-                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white/30 text-white px-10 py-5 rounded-2xl text-md font-headline font-bold uppercase tracking-widest backdrop-blur-sm transition-all"
-                >
-                  Explore Destinations
-                </motion.button>
+              <Link
+                to={data.secondaryLink}
+                className="border border-on-primary text-on-primary px-8 py-4 rounded-xl text-md font-bold uppercase tracking-wide hover:bg-white/10 transition-colors"
+              >
+                {data.secondaryText}
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
