@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { universitiesData } from '../data/universitiesData';
+
 import UniversityHero from '../Components/University/UniversityHero';
-import MissionSection from '../Components/University/MissionSection';
-import WaysToStudyCards from '../Components/University/WaysToStudyCards';
-import CoursesBentoGrid from '../Components/University/CoursesBentoGrid';
-import UniversityInfoCards from '../Components/University/UniversityInfoCards';
-import ScholarshipEditorial from '../Components/University/ScholarshipEditorial';
-import MobileUniversityNav from '../Components/University/MobileUniversityNav';
+import WhySection from '../Components/University/WhySection';
+import CoursesSection from '../Components/University/CoursesSection';
+import AdmissionSection from '../Components/University/AdmissionSection';
+import UniversityCTASection from '../Components/University/UniversityCTASection';
 import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 
 const UniversityDetails = () => {
@@ -43,25 +42,16 @@ const UniversityDetails = () => {
   }
 
   return (
-    <main className="min-h-screen bg-background pt-0 pb-20 md:pb-0 relative">
+    <div className="bg-surface text-on-surface min-h-screen font-body">
       {!isReady && <GenericPageSkeleton />}
       <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
         <UniversityHero data={data.hero} />
-
-        <MissionSection data={data.mission} />
-
-        <WaysToStudyCards data={data.waysToStudy} />
-
-        <CoursesBentoGrid data={data.courses} />
-
-        <UniversityInfoCards data={data.admissions} />
-
-        <ScholarshipEditorial data={data.scholarship} />
-
-        {/* Mobile-only Persistent Navigation */}
-        <MobileUniversityNav />
+        <WhySection data={data.whyUniversity} />
+        <CoursesSection data={data.coursesSection} />
+        <AdmissionSection data={data.admission} />
+        <UniversityCTASection data={data.ctaSection} />
       </div>
-    </main>
+    </div>
   );
 };
 

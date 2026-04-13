@@ -1,38 +1,39 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const UniversityHero = ({ data }) => {
+  if (!data) return null;
+
   return (
-    <section className="relative min-h-[795px] flex items-center overflow-hidden">
+    <section className="relative h-[751px] w-full overflow-hidden flex items-center">
       <div className="absolute inset-0 z-0">
-        <img 
-          src={data.image} 
-          alt={data.name} 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+        {data.image && (
+          <img
+            alt={data.title}
+            className="w-full h-full object-cover"
+            src={data.image}
+          />
+        )}
+        {/* Dark fade at bottom so text stays readable — no colour tint */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-2xl"
-        >
-          <h1 className="text-6xl md:text-7xl font-headline font-extrabold text-on-primary tracking-tight mb-8 leading-tight">
-            {data.title} <br/>
-            <span className="text-on-primary-container/80">{data.titleAccent}</span>
+        <div className="max-w-3xl">
+          <h1 className="text-6xl md:text-8xl font-extrabold text-on-primary tracking-tighter mb-6 leading-tight font-headline">
+            {data.title}
           </h1>
-          <p className="text-xl text-on-primary/90 leading-relaxed font-body mb-10 text-balance">
-            {data.description}
+          <p className="text-xl md:text-2xl text-on-primary-fixed font-body leading-relaxed mb-10 opacity-90">
+            {data.subtitle}
           </p>
-          <div className="flex gap-4">
-            <button className="bg-on-primary text-primary px-8 py-4 rounded-xl font-label font-bold uppercase tracking-widest hover:bg-surface-container-low transition-colors shadow-lg">
-              {data.cta}
+          <div className="flex flex-wrap gap-4">
+            <button className="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all">
+              {data.primaryCta || "Explore Our Programs"}
+            </button>
+            <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">
+              {data.secondaryCta || "Virtual Tour"}
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
