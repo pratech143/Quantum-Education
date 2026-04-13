@@ -7,7 +7,7 @@ export const alumniData = {
     ctaText: "Start Your Journey",
     ctaLink: "/contact",
     image:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2670&auto=format&fit=crop"
+      "/assets/alumni/hero.jpg"
   },
 
   stats: [
@@ -42,7 +42,7 @@ export const alumniData = {
       country: "canada",
       quote:
         "From visa application to settling in Toronto — the team handled everything. I could focus entirely on my studies.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAFEj5ktktQp-XJ5ifqG1_QmRLOBNLY-UPT3GvmJMWEKbS3bd_WzsocM8vgZVGxzKacjIc1xYPmxSikPPNN7jIB0LPFB86UkuzC705a3IEjhnIopSxKueIOaJYiQnFZxZ0GxthSJKiD38yCqZKUB9Xxqub5tCykN4rCwOXBz9wPc9sRvBguC24ei884JIv2ZHQO_ZWd5uEorDPGl1P11QAlP3YDiiyTaXrpdu1QOeKmvz3DkWdccMp9AcwyoGKJjdTo37HL-tkMzFE"
+      img: "/assets/alumni/sandeep-k.jpg"
     },
     {
       name: "Ritika P.",
@@ -60,7 +60,7 @@ export const alumniData = {
       country: "germany",
       quote:
         "Studying at TU Munich felt impossible until Global Scholar walked me through every requirement. Now I'm living my dream.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCboZSMxZzgB9DUmbwRBsj8avCubcSEpnsCZeo6Y6HCeXomDHJSeAsziVtcB1Hs4ErmIXtpUSMs-IUBOMMm-AjLuNapka7RmxMWiHFZP923vwQdNxTcGEmOU1k-AqifvvSyWqv6ZemS76w0w3vtiiqRh13n7xgu7Ll7q0ma6ieAwPgG8F5QeXaervB_pP-mE87dEjXb2fFDd1q5dBj3wrBSVvrlBNts-NCOWsD0_42xQV-w15lCRSmJD_WrCmEL2N8RdEAZVco-8pk"
+      img: "/assets/alumni/deepak-b.jpg"
     },
     {
       name: "Aaryav M.",
@@ -78,7 +78,7 @@ export const alumniData = {
       country: "usa",
       quote:
         "From the first consultation to landing in Boston, the support was seamless. I'm now pursuing my dream in AI research.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAEJY-UJ4ky-05vQWnHKb_SZXiXLKBgONYnI_2Zx9plGYc_h-vV-8QAyfWTN_akQQ8caU9YbRqjGgQTXrLvMP61ie6jvXclZgkuNI4J3FhNb2lUVVhLvT0XXpUlVoRG1bSGLA8PM4H9h2ihi-QJxCXGproOC7ntvzTZic1ACxcnKNFzCdjgEP_V6AVINQFujA6YuVnIU03O_G8xyMBrGJYQmhRLsFwrDwOsbcpPfRGR73f9Mc0JEx2IBcflILcXz3Bh456WDItMX6E"
+      img: "/assets/alumni/priya-r.jpg"
     }
   ],
 

@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const GlobalMapSection = () => {
+const GlobalMapSection = ({ onLoaded }) => {
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    // Preload the SVG map image; fire onLoaded when it's ready
+    const img = new Image();
+    img.src = '/assets/images/world-map.svg';
+    img.onload = () => onLoaded?.();
+    img.onerror = () => onLoaded?.(); // Don't block if image fails
+  }, [onLoaded]);
+
   return (
     <section className="py-16 md:py-20 bg-surface overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 text-center mb-10 relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -13,9 +23,9 @@ const GlobalMapSection = () => {
         >
           Our Global Footprint
         </motion.h2>
-        
+
         <div className="flex justify-center gap-16 md:gap-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -24,8 +34,8 @@ const GlobalMapSection = () => {
             <div className="text-5xl font-black text-primary mb-2">25+</div>
             <div className="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Countries</div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -39,8 +49,8 @@ const GlobalMapSection = () => {
       </div>
 
       <div className="relative w-full aspect-[21/9] min-h-[450px] flex items-center justify-center">
-        <svg 
-          viewBox="0 0 1000 450" 
+        <svg
+          viewBox="0 0 1000 450"
           className="w-full h-full opacity-20 text-primary pointer-events-none"
           fill="currentColor"
         >
@@ -49,12 +59,13 @@ const GlobalMapSection = () => {
         </svg>
 
         <div className="absolute inset-0 flex items-center justify-center">
-           <div className="w-full h-full bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-no-repeat bg-center bg-contain opacity-10 mix-blend-multiply grayscale"></div>
+          <div
+            ref={imgRef}
+            className="w-full h-full bg-[url('/assets/images/world-map.svg')] bg-no-repeat bg-center bg-contain opacity-10 mix-blend-multiply grayscale"
+          />
         </div>
 
-
-
-        <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface pointer-events-none" />
       </div>
     </section>
   );

@@ -20,7 +20,7 @@ const UniversitySpotlight = ({ universities, onViewAll }) => {
               <img 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 alt={uni.name} 
-                src={uni.image || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2000&auto=format&fit=crop'} 
+                src={uni.image || '/assets/images/country/university-fallback.jpg'} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 w-full p-6 bg-tertiary-container/80 backdrop-blur-md transition-colors group-hover:bg-primary-container/90">
