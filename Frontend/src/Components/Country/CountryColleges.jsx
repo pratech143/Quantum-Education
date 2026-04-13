@@ -57,7 +57,7 @@ const CountryColleges = ({ colleges }) => {
           </div>
           <div className="w-full lg:w-1/2 relative">
             <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl rotate-2">
-              <img className="w-full h-full object-cover" alt="Students studying" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC55HMxsxvg7vFPWeEQwHWW5jrptIyOkwb0JrT8EesAn7L9qudLOgFvO0ZydTUiZKwJXs3O-laWkBznN7npRS7F84s_a8dSgfEkv0etalQbpEWmADMCTtyXdKiOU8R21Lb-o2aRB6tFAqz6HXnkybltTVaNRIX9_RWzQh7VZm1zKHk5unP-jauktIiElMPa8DitxKHTZf3CTsmL4TiRfnhzvfOMsWD_3cPkuvlRK6pwunZPj-vIdoFdTCznF9RClz2RbEpxU0Tzz0"/>
+              <img className="w-full h-full object-cover" alt="Students studying" src="/assets/images/colleges/students-studying.jpg"/>
             </div>
             <div className="absolute -bottom-6 -left-6 bg-tertiary-container text-white p-6 rounded-2xl shadow-xl -rotate-3 hidden md:block">
               <p className="text-2xl font-black">92%</p>

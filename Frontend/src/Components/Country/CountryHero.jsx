@@ -7,7 +7,7 @@ const CountryHero = ({ hero }) => {
       <img 
         className="absolute inset-0 w-full h-full object-cover" 
         alt={hero.title} 
-        src={hero.image || 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=2670&auto=format&fit=crop'} 
+        src={hero.image || '/assets/images/country/hero-fallback.jpg'} 
       />
       <div className="relative z-20 max-w-7xl mx-auto px-6 w-full">
         <div className="max-w-2xl">

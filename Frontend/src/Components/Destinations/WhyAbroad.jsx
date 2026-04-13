@@ -53,10 +53,10 @@ const WhyAbroad = () => {
             className="grid grid-cols-2 gap-4 h-[500px]"
           >
             <div className="rounded-xl overflow-hidden shadow-lg h-full pt-12">
-              <img className="w-full h-full object-cover" alt="student networking in modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF1VlQidkgR9sSbp8ci1HweuxYhNEo3UmVpOCQ9NIk9zN4H1xMskjNPwu7N4uRfDdlKgwrXRYsnMKPTpOBE4qTKnTQvv8CQTmAkesVj7Jw7jThj_IgOqmV8Cru1pZnMyYqyPNpPChtpviReWgXe47KJpSiKHXEq1V7nBHvgzQKYo_DSlB1U5o-OEwVaNiwPJo_H_4CkQzOgP0-rpW2mAa6vRsKKrimw5mxMVah2FLoRlJ5Wn59RuaucThwKaUSOnCTZsCMFGYzIZQ"/>
+              <img className="w-full h-full object-cover" alt="student networking in modern office" src="/assets/images/why-abroad/networking.jpg"/>
             </div>
             <div className="rounded-xl overflow-hidden shadow-lg h-full pb-12">
-              <img className="w-full h-full object-cover" alt="student group discussions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYeS6A81EJPhL8TvP89v-ehgb13M6sTARrnY3Cd1TO_0ia1zmAql2OUgS5MPC63PAyhKXoQjf1IFGhtSw8g4RIPnpbs8hX1XZid9VJW3DODykSgeAqgnQyN6kqmZR8HcgiO9qLlSkuhw3WFouxad_vmd8n2ZEjYxEw3RHwL8wEpkA68C6KaO6g71gdtouMhky_1xVkWD7snPJRWIS-Gzc1Jdr6r0EhJ7KONZP741XWagcv33MhBOxOHiM6P9GjC7MZXeOYiIj0Fz4"/>
+              <img className="w-full h-full object-cover" alt="student group discussions" src="/assets/images/why-abroad/group.jpg"/>
             </div>
           </motion.div>
         </div>

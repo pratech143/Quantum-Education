@@ -6,7 +6,7 @@ export const universitiesData = {
     hero: {
       title: "La Trobe University",
       subtitle: "Combining accessibility and excellence with a proud history of shaping the future. Step into a world-class environment designed for global impact.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAisJ3a2ace5yHv52e0ZI46hd1Zi0LX3tL87u2JgZb0Di0dNf1bmDtazxo-dJT0WYYJQwueqFA0f57OUeR_Zm21BDBrvfZfPoUoxLxXF68gCeNIIBRcka9ZNmLHj3o9RwBYbnSC2uWmh7Y_S7DcAlIKunmX-r5mCEvAq45eeeau17QaYZE8s8B9noyknih6RRxbOoNMXi8lOmjjGsd27TPOSlgmBY_8EjILUgfnD9DwapQdloCdAoAJrey3OtOQf2NvOmR1dRFuIN4",
+      image: "/assets/universities/la-trobe/hero.jpg",
       primaryCta: "Explore Our Programs",
       secondaryCta: "Virtual Tour"
     },

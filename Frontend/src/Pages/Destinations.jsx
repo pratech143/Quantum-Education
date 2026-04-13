@@ -10,6 +10,7 @@ import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 
 const Destinations = () => {
   const [isReady, setIsReady] = useState(false);
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,14 +21,25 @@ const Destinations = () => {
   return (
     <main className="min-h-screen bg-surface selection:bg-primary-container selection:text-white relative pt-0">
       {!isReady && <GenericPageSkeleton />}
+
       <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
         <HeroSection />
         <WhyAbroad />
         <DestinationsSection />
-        <GlobalMapSection />
-        <JourneySection />
-        <OutcomesSection />
-        <CTASection />
+
+        {/* Map — fires setMapLoaded when its image is ready */}
+        <GlobalMapSection onLoaded={() => setMapLoaded(true)} />
+
+        {/* Sections below the map fade in only after map has loaded */}
+        <div
+          className={`transition-opacity duration-700 ${
+            mapLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
+        >
+          <JourneySection />
+          <OutcomesSection />
+          <CTASection />
+        </div>
       </div>
     </main>
   );
