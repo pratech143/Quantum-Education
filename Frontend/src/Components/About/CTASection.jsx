@@ -43,7 +43,7 @@ const CTASection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="pt-4 flex flex-col sm:flex-row gap-6 justify-center"
+              className="pt-4 flex justify-center"
             >
               <Link to="/contact">
                 <motion.button 
@@ -52,16 +52,6 @@ const CTASection = () => {
                   className="bg-white text-primary px-10 py-5 rounded-2xl font-headline font-extrabold text-lg uppercase tracking-widest hover:bg-surface-container-low transition-all shadow-xl"
                 >
                   Book a Consultation
-                </motion.button>
-              </Link>
-              
-              <Link to="/contact">
-                <motion.button 
-                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-headline font-extrabold text-lg uppercase tracking-widest backdrop-blur-sm transition-all"
-                >
-                  Contact Us
                 </motion.button>
               </Link>
             </motion.div>

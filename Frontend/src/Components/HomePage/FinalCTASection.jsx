@@ -19,15 +19,10 @@ const FinalCTASection = () => {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="flex flex-wrap justify-center gap-4 sm:gap-6 w-full sm:w-auto pt-4">
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <button className="bg-white text-primary-container px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-headline font-bold text-lg sm:text-xl hover:scale-[1.05] transition-transform shadow-2xl shadow-black/10 active:scale-95 w-full">
+              <div className="flex justify-center pt-4">
+                <Link to="/contact">
+                  <button className="bg-white text-primary-container px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-headline font-bold text-lg sm:text-xl hover:scale-[1.05] transition-transform shadow-2xl shadow-black/10 active:scale-95">
                     Start Free Application
-                  </button>
-                </Link>
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <button className="border-2 border-white/30 text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-headline font-bold text-lg sm:text-xl hover:bg-white/10 transition-colors active:scale-95 w-full">
-                    Contact Our Team
                   </button>
                 </Link>
               </div>

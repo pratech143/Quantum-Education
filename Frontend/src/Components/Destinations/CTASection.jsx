@@ -13,15 +13,10 @@ const CTASection = () => {
 
         <p className="text-on-primary-container text-lg mb-8 max-w-xl mx-auto relative z-10">Your global future starts with a single conversation. Book a free consultation with our expert advisors today.</p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+        <div className="flex justify-center">
           <Link to="/contact">
-            <button className="bg-surface-container-lowest text-primary px-10 py-4 rounded-xl font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl w-full sm:w-auto">
+            <button className="bg-surface-container-lowest text-primary px-10 py-4 rounded-xl font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl">
               Book Consultation
-            </button>
-          </Link>
-          <Link to="/contact">
-            <button className="border-2 border-white/30 hover:bg-white/10 px-10 py-4 rounded-xl font-black uppercase tracking-widest transition-all w-full sm:w-auto">
-              Contact Us
             </button>
           </Link>
         </div>
