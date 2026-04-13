@@ -33,7 +33,7 @@ export const alumniData = {
       country: "australia",
       quote:
         "Global Scholar gave me the confidence and roadmap to pursue my dream degree. The support was exceptional at every step.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuC9HRB7jyjqkZ9jobshxPHGHPldH3CDnHIqjetoLvWJV8P5V72OpS-szbrZlFd3B5QEfuIZYDJvenmvTFAqwI1yTjAAa6wFMuahIXIpCCdA7-bMV2j3GIUp8dUL4feQX-QfqXHT6LrVeL8DTpDwSgz7Ht18ddmeHmp0_X9cRONg4dkevIc03GPPDVqjXWFf3-w6dzAvRuD7DmIVeNR2Jrs-BGqSjgX4JV7-dEzCGcZ4j9DG8kU1DmJqquEs7jMAiDcz8UOHJZSzt9k"
+      img: "/assets/alumni/anjali-s.jpg"
     },
     {
       name: "Sandeep K.",
@@ -51,7 +51,7 @@ export const alumniData = {
       country: "australia",
       quote:
         "They matched me with the perfect nursing program. Within a year I already had clinical placement offers across Melbourne.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIRm8kShTTgfmM_Lpfi7BvjbHbEyD48XRvmUNb_uK_zq8X2kx_eOhthNfwdjY19iNDGMzcKJJLWtsJpKM1DmdGJOClmoGV03h8bYdb2soI3jMZZ_zlHTlMD7IK0_5c-75tkoRepjm2lY6fAKySJYCKKmhgDGD1Lm168Yg40src8bth_DO6hJSw0hQomgm8HPagpa8cEnPSJrokFyMGxR_bycwB7a8IB92NypRgLJWM9TGi8SEnY8kJWy09kdH0x5HzCe9sooSS3yg"
+      img: "/assets/alumni/ritika-p.jpg"
     },
     {
       name: "Deepak B.",
@@ -69,7 +69,7 @@ export const alumniData = {
       country: "uk",
       quote:
         "The Global Scholar didn't just help with my visa; they helped me find a community. Oxford has been truly transformative.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIiexRnnuxFNCi76ovxbBxHGFSePphTVUW-cvWq5b-aWWjUOu4MoOlTBPFeRGzGRF_0m7wTxg27m1qO_W7nFpi8B6rUpe9fUBMd1vtwy2PMyTmO-PDovIqzIB3yIEBN03m3y_6aS58kZz-fm83ExoXTyFITtjw6XBm1yhq0yp3_AXZn7UcvPDOMUP0Mq3Kl9qltxSwRTco4Iyru3QIHZHafQipgRc-j30ObfzaB7bbkAi34YMIylUgCORnhWilkG13gbezFxDpRY8"
+      img: "/assets/alumni/aaryav-m.jpg"
     },
     {
       name: "Priya R.",
@@ -91,6 +91,6 @@ export const alumniData = {
     secondaryText: "Explore Destinations",
     secondaryLink: "/destinations",
     backgroundImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCCqzr1GcJSasVR2jDBQnrLmqumS6OOO2qnEcvmBaGBqUgrpNSwjcXapd65KE5GpSvRmuxAJPr15JJw6AK-J1YOHr7eZlEJ7Zywkxp6bhVorbhUXfutgstieaKJO9M8mLRP0E-vKx86KLe-liDkYfJKtI9GR050atSZ7n-475-f7gdWHHFCiHIXPkWMji6HjxhCP1u6whnUryGoZYhMAyGBI2gifXsdgcbzsnAS96ExRg0MPwxpgRpvHVb2NbA_rCdlNZSH1a6KEWc"
+      "/assets/alumni/cta-background.jpg"
   }
 };
