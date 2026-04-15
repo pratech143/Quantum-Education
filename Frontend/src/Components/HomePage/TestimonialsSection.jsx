@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { api } from '../../api';
 import { alumniData } from '../../data/alumniData';
 import Reveal from '../UX/Reveal';
 
 const TestimonialsSection = () => {
-  // Show only first 3 alumni on homepage
-  const featuredAlumni = alumniData.alumni.slice(0, 3);
+  const [featuredAlumni, setFeaturedAlumni] = useState(alumniData.alumni.slice(0, 3));
+
+  useEffect(() => {
+    api.getAlumni({ limit: '3' })
+      .then((res) => {
+        if (res.data && res.data.length > 0) {
+          setFeaturedAlumni(res.data.map((a) => ({
+            name: a.name,
+            university: a.university,
+            degree: a.degree,
+            country: a.country,
+            quote: a.quote,
+            img: a.image || '/assets/alumni/default.jpg'
+          })));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   return (
     <section className="py-16 lg:py-24 font-body" style={{ background: '#F9F9F9' }}>

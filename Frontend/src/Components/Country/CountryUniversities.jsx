@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CountryUniversities = ({ countryName, universities }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -56,9 +57,9 @@ const CountryUniversities = ({ countryName, universities }) => {
                 </p>
                 <div className="mt-auto pt-4 flex items-center justify-between">
                   <span className="text-xs font-semibold text-secondary uppercase tracking-wider">QS Rank: {uni.qs}</span>
-                  <button className="px-5 py-2.5 bg-surface-container text-primary text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                  <Link to={`/universities/${uni.id}`} className="px-5 py-2.5 bg-surface-container text-primary text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
                     View Details
-                  </button>
+                  </Link>
                 </div>
               </div>
             </article>

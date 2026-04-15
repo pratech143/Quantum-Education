@@ -14,6 +14,9 @@ import Dashboard from "../admin/pages/Dashboard";
 import AdminManagement from "../admin/pages/AdminManagement";
 import ContactMessages from "../admin/pages/ContactMessages";
 import Profile from "../admin/pages/Profile";
+import DestinationsManagement from "../admin/pages/DestinationsManagement";
+import UniversitiesManagement from "../admin/pages/UniversitiesManagement";
+import AlumniManagement from "../admin/pages/AlumniManagement";
 import { AuthProvider } from "../admin/AuthContext";
 
 const AdminWrapper = () => (
@@ -56,6 +59,9 @@ export const router = createBrowserRouter([
       { path: "dashboard", element: <Dashboard /> },
       { path: "admins", element: <AdminManagement /> },
       { path: "messages", element: <ContactMessages /> },
+      { path: "destinations", element: <DestinationsManagement /> },
+      { path: "universities", element: <UniversitiesManagement /> },
+      { path: "alumni", element: <AlumniManagement /> },
       { path: "profile", element: <Profile /> },
     ],
   },

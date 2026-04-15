@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../AuthContext';
 import { adminApi } from '../api';
-import { Users, UserCheck, Shield, Loader2 } from 'lucide-react';
+import { Users, UserCheck, Shield, Globe, GraduationCap, Award, MessageSquare, Loader2 } from 'lucide-react';
 
 const StatCard = ({ icon: Icon, label, value, color }) => (
   <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant p-6">
@@ -56,17 +56,41 @@ const Dashboard = () => {
         <p className="text-sm text-on-surface-variant mt-1">Welcome back, {admin?.name}</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <StatCard
+          icon={Globe}
+          label="Destinations"
+          value={stats?.totalCountries ?? '—'}
+          color="bg-blue-100 text-blue-700"
+        />
+        <StatCard
+          icon={GraduationCap}
+          label="Universities"
+          value={stats?.totalUniversities ?? '—'}
+          color="bg-purple-100 text-purple-700"
+        />
+        <StatCard
+          icon={Award}
+          label="Alumni"
+          value={stats?.totalAlumni ?? '—'}
+          color="bg-amber-100 text-amber-700"
+        />
+        <StatCard
+          icon={MessageSquare}
+          label="Contact Requests"
+          value={stats?.totalContactRequests ?? '—'}
+          color="bg-green-100 text-green-700"
+        />
         <StatCard
           icon={Users}
           label="Total Admins"
-          value={stats?.total ?? '—'}
+          value={stats?.totalAdmins ?? '—'}
           color="bg-primary/10 text-primary"
         />
         <StatCard
           icon={UserCheck}
           label="Active Admins"
-          value={stats?.active ?? '—'}
+          value={stats?.activeAdmins ?? '—'}
           color="bg-green-100 text-green-700"
         />
         <StatCard

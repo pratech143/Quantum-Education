@@ -8,11 +8,21 @@ import type { Country } from '../../../country/domain/country.js';
 const mockCountry: Country = {
   id: '550e8400-e29b-41d4-a716-446655440000',
   name: 'Australia',
+  slug: 'australia',
   description: 'Study abroad destination.',
   tuitionFees: 20000,
   visaInfo: 'Visa info.',
   livingCost: 1500,
   currency: 'AUD',
+  heroImage: null,
+  heroSubtitle: null,
+  heroStats: null,
+  overview: null,
+  details: null,
+  popularCourses: null,
+  admissionRequirements: null,
+  intakes: null,
+  scholarships: null,
   createdAt: new Date(),
   updatedAt: new Date()
 };
@@ -20,9 +30,21 @@ const mockCountry: Country = {
 const mockUniversity: University = {
   id: '660e8400-e29b-41d4-a716-446655440000',
   name: 'University of Melbourne',
+  slug: 'university-of-melbourne',
   description: 'Top Australian university.',
+  location: 'Victoria',
+  image: null,
   ranking: 1,
+  qsRanking: '#14',
+  tagline: null,
   website: 'https://unimelb.edu.au',
+  type: 'UNIVERSITY',
+  fees: null,
+  heroData: null,
+  whySection: null,
+  coursesData: null,
+  admissionData: null,
+  ctaData: null,
   countryId: mockCountry.id,
   createdAt: new Date(),
   updatedAt: new Date()
@@ -33,7 +55,11 @@ const createMockUniversityRepo = (): UniversityRepository => ({
   update: vi.fn(),
   delete: vi.fn(),
   findById: vi.fn(),
-  findByCountry: vi.fn()
+  findByIdWithCountry: vi.fn(),
+  findBySlug: vi.fn(),
+  findByCountry: vi.fn(),
+  findByType: vi.fn(),
+  findAll: vi.fn()
 });
 
 const createMockCountryRepo = (): Pick<CountryRepository, 'findById'> & Record<string, ReturnType<typeof vi.fn>> => ({
@@ -42,6 +68,8 @@ const createMockCountryRepo = (): Pick<CountryRepository, 'findById'> & Record<s
   delete: vi.fn(),
   findById: vi.fn(),
   findByIdWithUniversities: vi.fn(),
+  findBySlug: vi.fn(),
+  findBySlugWithUniversities: vi.fn(),
   findByName: vi.fn(),
   findAll: vi.fn()
 });
@@ -64,6 +92,7 @@ describe('UniversityService', () => {
 
       const result = await service.create({
         name: 'University of Melbourne',
+        slug: 'university-of-melbourne',
         description: 'Top Australian university.',
         ranking: 1,
         website: 'https://unimelb.edu.au',
@@ -80,6 +109,7 @@ describe('UniversityService', () => {
       await expect(
         service.create({
           name: 'Some University',
+          slug: 'some-university',
           description: 'Some description.',
           ranking: 10,
           website: 'https://example.com',

@@ -7,6 +7,8 @@ export interface CountryRepository {
   delete(id: string): Promise<void>;
   findById(id: string): Promise<Country | null>;
   findByIdWithUniversities(id: string): Promise<CountryWithUniversities | null>;
+  findBySlug(slug: string): Promise<Country | null>;
+  findBySlugWithUniversities(slug: string): Promise<CountryWithUniversities | null>;
   findByName(name: string): Promise<Country | null>;
   findAll(params: PaginationParams): Promise<PaginatedResult<Country>>;
 }
