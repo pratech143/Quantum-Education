@@ -6,7 +6,12 @@ export const createUniversityRouter = (universityController: UniversityControlle
   const router = Router();
 
   // Public routes
+  router.get('/', universityController.getAll);
+  router.get('/colleges', universityController.getColleges);
   router.get('/country/:countryId', universityController.getByCountry);
+  router.get('/slug/:slug', universityController.getBySlug);
+  router.get('/:id', universityController.getById);
+  router.get('/:id/courses', universityController.getCourses);
 
   // Admin-only routes
   router.post('/country/:countryId', authenticateAdmin, universityController.create);

@@ -74,6 +74,20 @@ export class CountryService {
     return country;
   }
 
+  async getBySlug(slug: string): Promise<CountryWithUniversities> {
+    const country = await this.countryRepository.findBySlugWithUniversities(slug);
+
+    if (!country) {
+      throw new AppError({
+        statusCode: 404,
+        code: 'COUNTRY_NOT_FOUND',
+        message: 'Country not found.'
+      });
+    }
+
+    return country;
+  }
+
   async getAll(params: PaginationParams): Promise<PaginatedResult<Country>> {
     return this.countryRepository.findAll(params);
   }

@@ -1,6 +1,6 @@
 import type { UniversityRepository } from '../ports/university.repository.js';
 import type { CountryRepository } from '../../../country/application/ports/country.repository.js';
-import type { University, CreateUniversityInput, UpdateUniversityInput } from '../../domain/university.js';
+import type { University, UniversityWithCountry, CreateUniversityInput, UpdateUniversityInput } from '../../domain/university.js';
 import type { PaginatedResult, PaginationParams } from '../../../../shared/types/pagination.js';
 import { AppError } from '../../../../shared/errors/app-error.js';
 
@@ -52,6 +52,34 @@ export class UniversityService {
     await this.universityRepository.delete(id);
   }
 
+  async getById(id: string): Promise<UniversityWithCountry> {
+    const university = await this.universityRepository.findByIdWithCountry(id);
+
+    if (!university) {
+      throw new AppError({
+        statusCode: 404,
+        code: 'UNIVERSITY_NOT_FOUND',
+        message: 'University not found.'
+      });
+    }
+
+    return university;
+  }
+
+  async getBySlug(slug: string): Promise<University> {
+    const university = await this.universityRepository.findBySlug(slug);
+
+    if (!university) {
+      throw new AppError({
+        statusCode: 404,
+        code: 'UNIVERSITY_NOT_FOUND',
+        message: 'University not found.'
+      });
+    }
+
+    return university;
+  }
+
   async getByCountry(countryId: string, params: PaginationParams): Promise<PaginatedResult<University>> {
     const country = await this.countryRepository.findById(countryId);
 
@@ -64,5 +92,13 @@ export class UniversityService {
     }
 
     return this.universityRepository.findByCountry(countryId, params);
+  }
+
+  async getAll(params: PaginationParams): Promise<PaginatedResult<University>> {
+    return this.universityRepository.findAll(params);
+  }
+
+  async getByType(type: string, params: PaginationParams): Promise<PaginatedResult<University>> {
+    return this.universityRepository.findByType(type, params);
   }
 }

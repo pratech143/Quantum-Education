@@ -4,7 +4,7 @@ const CoursesSection = ({ data }) => {
   if (!data) return null;
 
   return (
-    <section className="py-24 bg-surface-container-low">
+    <section id="courses-section" className="py-24 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -14,11 +14,6 @@ const CoursesSection = ({ data }) => {
             <div className="w-12 h-0.5 bg-primary mt-2"></div>
             <p className="text-on-surface-variant max-w-xl mt-6">{data.description}</p>
           </div>
-          {data.buttonText && (
-            <button className="text-primary font-bold border-2 border-primary px-6 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">
-              {data.buttonText}
-            </button>
-          )}
         </div>
         
         <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-outline-variant/10">

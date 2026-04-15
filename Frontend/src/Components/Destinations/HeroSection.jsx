@@ -13,7 +13,8 @@ const HeroSection = () => {
           alt="Study abroad destinations"
           className="w-full h-full object-cover"
         />
-
+        <div className="absolute inset-0 bg-on-primary-fixed/55"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-on-primary-fixed/70 via-transparent to-primary-container/30"></div>
       </div>
 
       {/* Content */}
@@ -22,7 +23,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-sm text-[#f0f8ff] text-sm font-bold tracking-wide uppercase mb-6 shadow-md border border-white/10"
+            className="inline-flex px-4 py-1.5 rounded-full bg-primary-fixed/10 backdrop-blur-sm text-primary-fixed text-sm font-bold tracking-wide uppercase mb-6 border border-primary-fixed/20"
           >
             Global Destinations
           </motion.div>
@@ -31,17 +32,17 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+            className="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-fixed leading-[1.1] tracking-tight mb-5 drop-shadow-lg"
           >
             Explore Your <br />
-            <span className="text-[#e2f0ff]">Study Destinations</span>
+            <span className="text-on-primary-container">Study Destinations</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-[#f0f8ff] font-bold text-lg md:text-xl leading-relaxed mb-8 max-w-xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]"
+            className="text-on-primary-container font-bold text-lg md:text-xl leading-relaxed mb-8 max-w-xl"
           >
             Unlock a world of prestige and opportunity. We connect ambitious students from Nepal to top-tier international universities across the globe.
           </motion.p>
@@ -55,18 +56,23 @@ const HeroSection = () => {
             <Link to="/contact">
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider flex items-center gap-3 shadow-xl"
+                whileTap={{ scale: 0.98 }}
+                className="group relative bg-primary text-on-primary px-8 py-4 rounded-xl font-bold uppercase tracking-wider flex items-center gap-3
+                  overflow-hidden shadow-xl hover:shadow-[0_8px_30px_rgba(5,114,255,0.4)] transition-shadow duration-300"
               >
-                Start Your Journey
-                <span className="material-symbols-outlined">arrow_forward</span>
+                <span className="absolute inset-0 bg-primary-container translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                <span className="relative flex items-center gap-3">
+                  Start Your Journey
+                  <span className="material-symbols-outlined">arrow_forward</span>
+                </span>
               </motion.button>
             </Link>
             <a href="#destinations">
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/50 text-white hover:bg-white/20 backdrop-blur-sm px-8 py-4 rounded-xl font-bold uppercase tracking-wider transition-colors shadow-lg"
+                whileTap={{ scale: 0.98 }}
+                className="bg-primary-fixed/10 backdrop-blur-md border border-primary-fixed/25 text-primary-fixed px-8 py-4 rounded-xl font-bold uppercase tracking-wider
+                  hover:bg-primary-fixed/20 hover:border-primary-fixed/50 hover:shadow-[0_8px_30px_rgba(185,234,255,0.15)] transition-all duration-300"
               >
                 View Countries
               </motion.button>

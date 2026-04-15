@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { api } from '../api';
 import { universitiesData } from '../data/universitiesData';
 
 import UniversityHero from '../Components/University/UniversityHero';
@@ -11,17 +12,59 @@ import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 
 const UniversityDetails = () => {
   const { slug } = useParams();
-  const data = universitiesData[slug];
-  const [isReady, setIsReady] = useState(false);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setIsReady(false);
-    const timer = setTimeout(() => setIsReady(true), 10);
-    return () => clearTimeout(timer);
+    setLoading(true);
+    setError(null);
+
+    // Try fetching from API first, fall back to static data
+    api.getUniversityBySlug(slug)
+      .then((res) => {
+        const uni = res.data;
+        // Map API response to component-expected format
+        setData({
+          hero: uni.heroData || {
+            title: uni.name,
+            subtitle: uni.description,
+            image: uni.image,
+          },
+          website: uni.website || '',
+          whyUniversity: uni.whySection || null,
+          coursesSection: uni.coursesData || null,
+          admission: uni.admissionData || null,
+          ctaSection: uni.ctaData ? {
+            ...uni.ctaData,
+            buttonText: 'Visit Official Website',
+            link: uni.website
+          } : {
+            title: `Ready to begin your journey?`,
+            description: `Take the first step toward a global career with ${uni.name}.`,
+            buttonText: 'Visit Official Website',
+            link: uni.website
+          }
+        });
+      })
+      .catch(() => {
+        // Fall back to local static data
+        const staticData = universitiesData[slug];
+        if (staticData) {
+          setData(staticData);
+        } else {
+          setError('not_found');
+        }
+      })
+      .finally(() => setLoading(false));
   }, [slug]);
 
-  if (!data) {
+  if (loading) {
+    return <GenericPageSkeleton />;
+  }
+
+  if (error === 'not_found' || !data) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center pt-32 bg-background">
         <span className="material-symbols-outlined text-9xl text-primary/20 mb-6 font-thin">
@@ -43,14 +86,11 @@ const UniversityDetails = () => {
 
   return (
     <div className="bg-surface text-on-surface min-h-screen font-body">
-      {!isReady && <GenericPageSkeleton />}
-      <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
-        <UniversityHero data={data.hero} />
-        <WhySection data={data.whyUniversity} />
-        <CoursesSection data={data.coursesSection} />
-        <AdmissionSection data={data.admission} />
-        <UniversityCTASection data={data.ctaSection} />
-      </div>
+      <UniversityHero data={data.hero} website={data.website} />
+      {data.whyUniversity && <WhySection data={data.whyUniversity} />}
+      {data.coursesSection && <CoursesSection data={data.coursesSection} />}
+      {data.admission && <AdmissionSection data={data.admission} />}
+      {data.ctaSection && <UniversityCTASection data={data.ctaSection} />}
     </div>
   );
 };

@@ -7,6 +7,7 @@ export const createCountryRouter = (countryController: CountryController) => {
 
   // Public routes
   router.get('/', countryController.getAll);
+  router.get('/slug/:slug', countryController.getBySlug);
   router.get('/:id', countryController.getById);
 
   // Admin-only routes

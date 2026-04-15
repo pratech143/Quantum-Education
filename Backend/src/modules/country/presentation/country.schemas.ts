@@ -10,6 +10,12 @@ export const createCountrySchema = z
       .min(2, 'Country name must be at least 2 characters.')
       .max(100, 'Country name must be at most 100 characters.')
       .transform(normalizeText),
+    slug: z
+      .string()
+      .trim()
+      .min(2)
+      .max(100)
+      .regex(/^[a-z0-9-]+$/, 'Slug must be lowercase alphanumeric with hyphens.'),
     description: z
       .string()
       .trim()
@@ -31,7 +37,16 @@ export const createCountrySchema = z
       .trim()
       .min(1, 'Currency is required.')
       .max(10, 'Currency must be at most 10 characters.')
-      .transform((v) => v.toUpperCase())
+      .transform((v) => v.toUpperCase()),
+    heroImage: z.string().trim().max(1000).optional(),
+    heroSubtitle: z.string().trim().max(500).optional(),
+    heroStats: z.any().optional(),
+    overview: z.any().optional(),
+    details: z.any().optional(),
+    popularCourses: z.any().optional(),
+    admissionRequirements: z.any().optional(),
+    intakes: z.any().optional(),
+    scholarships: z.any().optional()
   })
   .strict();
 
@@ -48,4 +63,8 @@ export const paginationSchema = z.object({
 
 export const idParamSchema = z.object({
   id: z.string().uuid('Invalid ID format.')
+});
+
+export const slugParamSchema = z.object({
+  slug: z.string().trim().min(1)
 });

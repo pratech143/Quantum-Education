@@ -48,6 +48,28 @@ export class UniversityController {
     });
   };
 
+  getById = async (request: Request, response: Response) => {
+    const { id } = universityIdParamSchema.parse(request.params);
+    const university = await this.universityService.getById(id);
+
+    response.status(200).json({
+      success: true,
+      data: university,
+      requestId: request.requestId
+    });
+  };
+
+  getBySlug = async (request: Request, response: Response) => {
+    const slug = request.params['slug'] as string;
+    const university = await this.universityService.getBySlug(slug);
+
+    response.status(200).json({
+      success: true,
+      data: university,
+      requestId: request.requestId
+    });
+  };
+
   getByCountry = async (request: Request, response: Response) => {
     const { countryId } = countryIdParamSchema.parse(request.params);
     const params = universityPaginationSchema.parse(request.query);
@@ -56,6 +78,42 @@ export class UniversityController {
     response.status(200).json({
       success: true,
       ...result,
+      requestId: request.requestId
+    });
+  };
+
+  getAll = async (request: Request, response: Response) => {
+    const params = universityPaginationSchema.parse(request.query);
+    const result = await this.universityService.getAll(params);
+
+    response.status(200).json({
+      success: true,
+      ...result,
+      requestId: request.requestId
+    });
+  };
+
+  getColleges = async (request: Request, response: Response) => {
+    const params = universityPaginationSchema.parse(request.query);
+    const result = await this.universityService.getByType('COLLEGE', params);
+
+    response.status(200).json({
+      success: true,
+      ...result,
+      requestId: request.requestId
+    });
+  };
+
+  getCourses = async (request: Request, response: Response) => {
+    const { id } = universityIdParamSchema.parse(request.params);
+    const university = await this.universityService.getById(id);
+
+    const coursesData = university.coursesData as { courses?: unknown[] } | null;
+    const courses = coursesData?.courses || [];
+
+    response.status(200).json({
+      success: true,
+      data: courses,
       requestId: request.requestId
     });
   };

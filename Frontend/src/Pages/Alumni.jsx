@@ -1,27 +1,53 @@
 import React, { useState, useEffect } from 'react';
-import { alumniData } from '../data/alumniData';
+import { api } from '../api';
+import { alumniData as staticAlumniData } from '../data/alumniData';
 import AlumniHero from '../Components/Alumni/AlumniHero';
 import FeaturedStories from '../Components/Alumni/FeaturedStories';
 import AlumniGrid from '../Components/Alumni/AlumniGrid';
 import AlumniCTA from '../Components/Alumni/AlumniCTA';
 import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 
-/**
- * To connect to a backend, replace the alumniData import with an API call:
- *
- *   const [data, setData] = useState(null);
- *   useEffect(() => {
- *     fetch('/api/alumni').then(r => r.json()).then(setData);
- *   }, []);
- */
-
 const Alumni = () => {
   const [isReady, setIsReady] = useState(false);
+  const [alumniData, setAlumniData] = useState(staticAlumniData);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const timer = setTimeout(() => setIsReady(true), 10);
-    return () => clearTimeout(timer);
+
+    api.getAlumni({ limit: '50' })
+      .then((res) => {
+        if (res.data && res.data.length > 0) {
+          // Map API alumni into the format expected by AlumniGrid
+          const apiAlumni = res.data.map((a) => ({
+            name: a.name,
+            university: a.university,
+            degree: a.degree,
+            country: a.country,
+            quote: a.quote,
+            img: a.image || '/assets/alumni/default.jpg'
+          }));
+
+          // Build unique filters from API data
+          const countries = [...new Set(apiAlumni.map((a) => a.country))];
+          const filters = [
+            { label: 'All', value: 'all' },
+            ...countries.map((c) => ({
+              label: c.charAt(0).toUpperCase() + c.slice(1),
+              value: c.toLowerCase()
+            }))
+          ];
+
+          setAlumniData((prev) => ({
+            ...prev,
+            alumni: apiAlumni,
+            filters
+          }));
+        }
+      })
+      .catch(() => {
+        // Keep static data on failure
+      })
+      .finally(() => setIsReady(true));
   }, []);
 
   return (

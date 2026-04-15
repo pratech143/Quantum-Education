@@ -29,6 +29,7 @@ describe('Country API - Integration Tests', () => {
   describe('POST /api/v1/countries', () => {
     const validPayload = {
       name: 'Australia',
+      slug: 'australia',
       description: 'A popular destination for international students.',
       tuitionFees: 20000,
       visaInfo: 'Student visa subclass 500 is required.',
@@ -156,11 +157,12 @@ describe('Country API - Integration Tests', () => {
       await prisma.university.create({
         data: {
           name: 'TU Munich',
+          slug: 'tu-munich',
           description: 'Top technical university in Germany.',
           ranking: 1,
           website: 'https://tum.de',
           countryId: country.id
-        }
+        } as any
       });
 
       const res = await request(app).get(`/api/v1/countries/${country.id}`);
@@ -239,11 +241,12 @@ describe('Country API - Integration Tests', () => {
       await prisma.university.create({
         data: {
           name: 'Seoul National University',
+          slug: 'seoul-national-university',
           description: 'Top university in South Korea.',
           ranking: 1,
           website: 'https://snu.ac.kr',
           countryId: country.id
-        }
+        } as any
       });
 
       const res = await request(app)
