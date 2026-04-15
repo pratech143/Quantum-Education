@@ -1,5 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
-const API_PREFIX = `${API_BASE}/api/v1`;
+const API_PREFIX = '/api/v1';
 
 const fetchJson = async (url) => {
   const response = await fetch(url);
