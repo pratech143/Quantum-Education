@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { api } from '../../api';
 import DestinationCard from './DestinationCard';
 
-import { destinationsData } from '../../data/destinationsData';
+import { destinationsData as staticDestinations } from '../../data/destinationsData';
 
 const DestinationsSection = () => {
   const [showAll, setShowAll] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [destinationsData, setDestinationsData] = useState(staticDestinations);
+  const [destinations, setDestinations] = useState(staticDestinations);
 
   useEffect(() => {
     api.getDestinations({ limit: '50' })
@@ -23,7 +23,7 @@ const DestinationsSection = () => {
             image: country.heroImage || `/assets/images/destinations/${country.slug}.jpg`,
             labels: []
           }));
-          setDestinationsData(apiDestinations);
+          setDestinations(apiDestinations);
         }
       })
       .catch(() => {
@@ -31,7 +31,7 @@ const DestinationsSection = () => {
       });
   }, []);
 
-  const filteredDestinations = destinationsData.filter(dest =>
+  const filteredDestinations = destinations.filter(dest =>
     dest.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     dest.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
