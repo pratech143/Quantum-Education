@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { destinationsData } from '../../data/destinationsData';
+import { api } from '../../api';
+import { destinationsData as staticDestinations } from '../../data/destinationsData';
 import DestinationCard from '../Destinations/DestinationCard';
 import Reveal from '../UX/Reveal';
 
 const DestinationsSection = () => {
-  const destinations = destinationsData.slice(0, 4);
+  const [destinations, setDestinations] = useState(staticDestinations.slice(0, 4));
+
+  useEffect(() => {
+    api.getDestinations({ limit: '4' })
+      .then((res) => {
+        if (res.data && res.data.length > 0) {
+          setDestinations(res.data.map((country, idx) => ({
+            id: idx + 1,
+            name: country.name.toUpperCase(),
+            title: country.name,
+            slug: country.slug,
+            description: country.description,
+            image: country.heroImage || `/assets/images/destinations/${country.slug}.jpg`,
+            labels: []
+          })));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   return (
     <section className="py-16 lg:py-24" style={{ background: '#F9F9F9' }}>
@@ -22,7 +41,7 @@ const DestinationsSection = () => {
             </Reveal>
           </div>
           <Reveal delay={0.2}>
-            <Link 
+            <Link
               to="/destinations"
               className="text-primary font-bold flex items-center gap-2 hover:underline transition-all group"
             >
@@ -41,4 +60,3 @@ const DestinationsSection = () => {
 };
 
 export default DestinationsSection;
-   
