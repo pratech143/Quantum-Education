@@ -15,9 +15,6 @@ const Sidebar = ({ admission, intakes, scholarships }) => {
             </li>
           ))}
         </ul>
-        <Link to="/contact" className="block text-center w-full mt-8 bg-white text-primary py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform">
-          Check Eligibility
-        </Link>
       </div>
 
       {/* Intake Periods */}
@@ -40,9 +37,6 @@ const Sidebar = ({ admission, intakes, scholarships }) => {
           <h3 className="text-xl font-bold font-headline">Scholarships</h3>
         </div>
         <p className="text-sm leading-relaxed mb-4">{scholarships.description}</p>
-        <Link to="/contact" className="inline-flex items-center text-sm font-bold border-b-2 border-on-tertiary-fixed-variant pb-1 hover:text-primary transition-colors">
-          Browse Scholarships
-        </Link>
       </div>
     </aside>
   );
