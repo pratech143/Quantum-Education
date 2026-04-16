@@ -23,18 +23,12 @@ const AlumniCTA = ({ data }) => {
             <p className="text-on-primary-container text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               {data.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link
-                to={data.primaryLink}
-                className="bg-surface-container-lowest text-primary px-8 py-4 rounded-xl text-md font-bold uppercase tracking-wide hover:scale-105 transition-transform active:scale-95 shadow-lg"
+                to={data.primaryLink || '/contact'}
+                className="bg-surface-container-lowest text-primary px-10 py-4 rounded-xl text-md font-bold uppercase tracking-wide hover:scale-105 transition-transform active:scale-95 shadow-lg"
               >
-                {data.primaryText}
-              </Link>
-              <Link
-                to={data.secondaryLink}
-                className="border border-on-primary text-on-primary px-8 py-4 rounded-xl text-md font-bold uppercase tracking-wide hover:bg-white/10 transition-colors"
-              >
-                {data.secondaryText}
+                {data.primaryText || 'Get Started'}
               </Link>
             </div>
           </div>
