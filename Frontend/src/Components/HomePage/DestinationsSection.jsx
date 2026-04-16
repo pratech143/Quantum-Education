@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../../api';
-import { destinationsData as staticDestinations } from '../../data/destinationsData';
 import DestinationCard from '../Destinations/DestinationCard';
 import Reveal from '../UX/Reveal';
 
 const DestinationsSection = () => {
-  const [destinations, setDestinations] = useState(staticDestinations.slice(0, 4));
+  const [destinations, setDestinations] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     api.getDestinations({ limit: '4' })
@@ -18,12 +18,13 @@ const DestinationsSection = () => {
             title: country.name,
             slug: country.slug,
             description: country.description,
-            image: country.heroImage || `/assets/images/destinations/${country.slug}.jpg`,
+            image: country.heroImage || '',
             labels: []
           })));
         }
       })
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
   return (
@@ -50,9 +51,20 @@ const DestinationsSection = () => {
           </Reveal>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {destinations.map((dest, index) => (
-            <DestinationCard key={dest.id} {...dest} index={index} />
-          ))}
+          {loading ? (
+            Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="h-64 rounded-xl bg-surface-container animate-pulse" />
+            ))
+          ) : destinations.length > 0 ? (
+            destinations.map((dest, index) => (
+              <DestinationCard key={dest.id} {...dest} index={index} />
+            ))
+          ) : (
+            <div className="col-span-full text-center py-12 text-on-surface-variant">
+              <span className="material-symbols-outlined text-5xl opacity-40 mb-4 block">cloud_off</span>
+              <p>Unable to load destinations. Please check your connection.</p>
+            </div>
+          )}
         </div>
       </div>
     </section>

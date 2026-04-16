@@ -1,4 +1,6 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import cookieParser from 'cookie-parser';
 import { createHealthRouter } from './modules/health/presentation/health.routes.js';
 import { createContactRouter } from './modules/contact/presentation/contact.routes.js';
@@ -71,8 +73,9 @@ export const createApp = () => {
   app.use(`${env.API_PREFIX}/alumni`, createAlumniRouter(alumniController));
   app.use('/api/admin', createAdminRouter());
 
-  // Serve uploaded files
-  app.use('/uploads', express.static('uploads'));
+  // Serve uploaded files (absolute path so it works regardless of CWD)
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
 
   app.use(notFoundHandler);
   app.use(errorHandler);

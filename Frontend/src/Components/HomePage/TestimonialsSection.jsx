@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../../api';
-import { alumniData } from '../../data/alumniData';
 import Reveal from '../UX/Reveal';
 
 const TestimonialsSection = () => {
-  const [featuredAlumni, setFeaturedAlumni] = useState(alumniData.alumni.slice(0, 3));
+  const [featuredAlumni, setFeaturedAlumni] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     api.getAlumni({ limit: '3' })
@@ -17,11 +17,12 @@ const TestimonialsSection = () => {
             degree: a.degree,
             country: a.country,
             quote: a.quote,
-            img: a.image || '/assets/alumni/default.jpg'
+            img: a.image || ''
           })));
         }
       })
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
   return (
@@ -50,7 +51,17 @@ const TestimonialsSection = () => {
 
         {/* Alumni Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredAlumni.map((alumni, index) => (
+          {loading ? (
+            Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="h-80 rounded-xl bg-surface-container animate-pulse" />
+            ))
+          ) : featuredAlumni.length === 0 ? (
+            <div className="col-span-full text-center py-12 text-on-surface-variant">
+              <span className="material-symbols-outlined text-5xl opacity-40 mb-4 block">cloud_off</span>
+              <p>Unable to load alumni stories. Please check your connection.</p>
+            </div>
+          ) : (
+          featuredAlumni.map((alumni, index) => (
             <Reveal key={alumni.name + alumni.country} delay={index * 0.1}>
               <div className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col">
                 {/* Photo */}
@@ -86,7 +97,8 @@ const TestimonialsSection = () => {
                 </div>
               </div>
             </Reveal>
-          ))}
+          ))
+          )}
         </div>
       </div>
     </section>
