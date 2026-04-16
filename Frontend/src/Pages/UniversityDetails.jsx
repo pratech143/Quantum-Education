@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { api } from '../api';
-import { universitiesData } from '../data/universitiesData';
 
 import UniversityHero from '../Components/University/UniversityHero';
 import WhySection from '../Components/University/WhySection';
@@ -49,13 +48,7 @@ const UniversityDetails = () => {
         });
       })
       .catch(() => {
-        // Fall back to local static data
-        const staticData = universitiesData[slug];
-        if (staticData) {
-          setData(staticData);
-        } else {
-          setError('not_found');
-        }
+        setError('not_found');
       })
       .finally(() => setLoading(false));
   }, [slug]);

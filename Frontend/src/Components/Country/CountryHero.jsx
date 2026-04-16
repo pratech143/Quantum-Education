@@ -6,7 +6,7 @@ const CountryHero = ({ hero }) => {
       <img
         className="absolute inset-0 w-full h-full object-cover"
         alt={hero.title}
-        src={hero.image || '/assets/images/country/hero-fallback.jpg'}
+        src={hero.image}
       />
       {/* Lighter brand-tinted overlay — lets the image breathe */}
       <div className="absolute inset-0 bg-on-primary-fixed/55 z-10"></div>

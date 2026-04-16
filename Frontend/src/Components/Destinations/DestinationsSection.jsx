@@ -3,12 +3,11 @@ import { motion } from 'framer-motion';
 import { api } from '../../api';
 import DestinationCard from './DestinationCard';
 
-import { destinationsData as staticDestinations } from '../../data/destinationsData';
-
 const DestinationsSection = () => {
   const [showAll, setShowAll] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [destinations, setDestinations] = useState(staticDestinations);
+  const [destinations, setDestinations] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     api.getDestinations({ limit: '50' })
@@ -20,15 +19,14 @@ const DestinationsSection = () => {
             title: country.name,
             slug: country.slug,
             description: country.description,
-            image: country.heroImage || `/assets/images/destinations/${country.slug}.jpg`,
+            image: country.heroImage || '',
             labels: []
           }));
           setDestinations(apiDestinations);
         }
       })
-      .catch(() => {
-        // Keep static data on failure
-      });
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
   const filteredDestinations = destinations.filter(dest =>
@@ -65,12 +63,18 @@ const DestinationsSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-          {visibleDestinations.map((dest, index) => (
-            <DestinationCard key={dest.id} {...dest} index={index} />
-          ))}
+          {loading ? (
+            Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="h-72 rounded-xl bg-surface-container animate-pulse" />
+            ))
+          ) : (
+            visibleDestinations.map((dest, index) => (
+              <DestinationCard key={dest.id} {...dest} index={index} />
+            ))
+          )}
         </div>
 
-        {filteredDestinations.length > 3 && (
+        {!loading && filteredDestinations.length > 3 && (
           <div className="flex justify-center">
             <button
               onClick={() => setShowAll(!showAll)}
@@ -81,9 +85,10 @@ const DestinationsSection = () => {
           </div>
         )}
 
-        {filteredDestinations.length === 0 && (
-           <div className="text-center py-12 text-on-surface-variant">
-             No destinations found matching your search.
+        {!loading && filteredDestinations.length === 0 && (
+           <div className="text-center py-12 text-on-surface-variant flex flex-col items-center">
+             <span className="material-symbols-outlined text-5xl opacity-40 mb-4">cloud_off</span>
+             <p>{searchQuery ? 'No destinations found matching your search.' : 'Unable to load destinations. Please check your connection.'}</p>
            </div>
         )}
       </div>

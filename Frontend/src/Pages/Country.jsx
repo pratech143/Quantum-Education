@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { api } from '../api';
-import countryData from '../data/countryData.json';
 import CountryPage from '../Components/Country/CountryPage';
 import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 import CTASection from '../Components/Destinations/CTASection';
@@ -15,7 +14,7 @@ const mapApiToCountryData = (apiData) => {
     hero: {
       title: `Study in ${country.name}`,
       subtitle: country.heroSubtitle || country.description,
-      image: country.heroImage || `/assets/countries/${country.slug}/${country.slug}-hero.jpg`,
+      image: country.heroImage || '',
       stats: country.heroStats || []
     },
     overview: country.overview || {
@@ -65,13 +64,7 @@ const Country = () => {
         setData(mapApiToCountryData(res.data));
       })
       .catch(() => {
-        // Fall back to static data
-        const staticData = countryData[normalizedKey];
-        if (staticData) {
-          setData(staticData);
-        } else {
-          setNotFound(true);
-        }
+        setNotFound(true);
       })
       .finally(() => setLoading(false));
   }, [countryName, normalizedKey]);
