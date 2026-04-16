@@ -13,6 +13,11 @@ enum AdminRole {
   ADMIN
 }
 
+enum InstitutionType {
+  UNIVERSITY
+  COLLEGE
+}
+
 model AdminUser {
   id                  String    @id @default(cuid())
   name                String
@@ -47,25 +52,66 @@ model ContactRequest {
 model Country {
   id           String   @id @default(uuid())
   name         String   @unique
+  slug         String   @unique
   description  String
   tuitionFees  Float
   visaInfo     String
   livingCost   Float
   currency     String
+
+  // Hero section
+  heroImage    String?
+  heroSubtitle String?
+  heroStats    Json?    // [{ label: string, value: string }]
+
+  // Overview section
+  overview     Json?    // { title: string, description: string[] }
+
+  // Details grid
+  details      Json?    // [{ icon: string, title: string, description: string }]
+
+  // Popular courses
+  popularCourses Json?  // [{ title: string, icon: string, desc: string }]
+
+  // Admission requirements
+  admissionRequirements Json? // string[]
+
+  // Intakes
+  intakes      Json?    // [{ name: string, month: string }]
+
+  // Scholarships
+  scholarships Json?    // { description: string }
+
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
   universities University[]
 
   @@index([name])
+  @@index([slug])
 }
 
 model University {
-  id          String   @id @default(uuid())
+  id          String          @id @default(uuid())
   name        String
+  slug        String          @unique
   description String
+  location    String?
+  image       String?
   ranking     Int
+  qsRanking   String?
+  tagline     String?
   website     String
+  type        InstitutionType @default(UNIVERSITY)
+  fees        String?
+
+  // Rich detail sections (JSON for flexibility)
+  heroData      Json?  // { title, subtitle, image, primaryCta, secondaryCta }
+  whySection    Json?  // { title, reasons: [{ icon, title, description, link?, linkText? }] }
+  coursesData   Json?  // { title, description, buttonText, courses: [{ icon, title, description, tag?, tagStyle? }] }
+  admissionData Json?  // { requirementsTitle, howToApplyTitle, requirements: [{ title, description }], howToApply: string[] }
+  ctaData       Json?  // { title, description, buttonText, link }
+
   countryId   String
   country     Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
   createdAt   DateTime @default(now())
@@ -73,4 +119,20 @@ model University {
 
   @@index([countryId])
   @@index([name])
+  @@index([slug])
+  @@index([type])
+}
+
+model Alumni {
+  id         String   @id @default(uuid())
+  name       String
+  university String
+  degree     String
+  country    String
+  quote      String
+  image      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([country])
 }

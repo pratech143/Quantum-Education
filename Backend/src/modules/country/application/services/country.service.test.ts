@@ -6,11 +6,21 @@ import type { Country, CountryWithUniversities } from '../../domain/country.js';
 const mockCountry: Country = {
   id: '550e8400-e29b-41d4-a716-446655440000',
   name: 'Australia',
+  slug: 'australia',
   description: 'A popular study abroad destination.',
   tuitionFees: 20000,
   visaInfo: 'Student visa subclass 500 required.',
   livingCost: 1500,
   currency: 'AUD',
+  heroImage: null,
+  heroSubtitle: null,
+  heroStats: null,
+  overview: null,
+  details: null,
+  popularCourses: null,
+  admissionRequirements: null,
+  intakes: null,
+  scholarships: null,
   createdAt: new Date('2026-01-01'),
   updatedAt: new Date('2026-01-01')
 };
@@ -21,6 +31,8 @@ const createMockRepository = (): CountryRepository => ({
   delete: vi.fn(),
   findById: vi.fn(),
   findByIdWithUniversities: vi.fn(),
+  findBySlug: vi.fn(),
+  findBySlugWithUniversities: vi.fn(),
   findByName: vi.fn(),
   findAll: vi.fn()
 });
@@ -41,6 +53,7 @@ describe('CountryService', () => {
 
       const result = await service.create({
         name: 'Australia',
+        slug: 'australia',
         description: 'A popular study abroad destination.',
         tuitionFees: 20000,
         visaInfo: 'Student visa subclass 500 required.',
@@ -59,6 +72,7 @@ describe('CountryService', () => {
       await expect(
         service.create({
           name: 'Australia',
+          slug: 'australia',
           description: 'Duplicate country.',
           tuitionFees: 20000,
           visaInfo: 'Visa info.',
@@ -139,9 +153,16 @@ describe('CountryService', () => {
           {
             id: 'uni-1',
             name: 'University of Melbourne',
+            slug: 'university-of-melbourne',
             description: 'Top university.',
+            location: 'Victoria',
+            image: null,
             ranking: 1,
+            qsRanking: '#14',
+            tagline: null,
             website: 'https://unimelb.edu.au',
+            type: 'UNIVERSITY',
+            fees: null,
             createdAt: new Date(),
             updatedAt: new Date()
           }

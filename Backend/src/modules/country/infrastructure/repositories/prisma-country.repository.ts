@@ -3,17 +3,16 @@ import type { Country, CountryWithUniversities, CreateCountryInput, UpdateCountr
 import type { PaginatedResult, PaginationParams } from '../../../../shared/types/pagination.js';
 import { prisma } from '../../../../shared/database/prisma.js';
 
-const stripUndefined = <T extends Record<string, unknown>>(obj: T): { [K in keyof T]: Exclude<T[K], undefined> } => {
-  return Object.fromEntries(Object.entries(obj).filter(([, v]) => v !== undefined)) as { [K in keyof T]: Exclude<T[K], undefined> };
-};
-
 export class PrismaCountryRepository implements CountryRepository {
   async create(input: CreateCountryInput): Promise<Country> {
-    return prisma.country.create({ data: input });
+    return prisma.country.create({ data: input as any }) as any;
   }
 
   async update(id: string, input: UpdateCountryInput): Promise<Country> {
-    return prisma.country.update({ where: { id }, data: stripUndefined(input) });
+    const data = Object.fromEntries(
+      Object.entries(input).filter(([, v]) => v !== undefined)
+    );
+    return prisma.country.update({ where: { id }, data: data as any }) as any;
   }
 
   async delete(id: string): Promise<void> {
@@ -21,7 +20,7 @@ export class PrismaCountryRepository implements CountryRepository {
   }
 
   async findById(id: string): Promise<Country | null> {
-    return prisma.country.findUnique({ where: { id } });
+    return prisma.country.findUnique({ where: { id } }) as any;
   }
 
   async findByIdWithUniversities(id: string): Promise<CountryWithUniversities | null> {
@@ -32,13 +31,28 @@ export class PrismaCountryRepository implements CountryRepository {
           orderBy: { ranking: 'asc' }
         }
       }
-    });
+    }) as any;
+  }
+
+  async findBySlug(slug: string): Promise<Country | null> {
+    return prisma.country.findUnique({ where: { slug } }) as any;
+  }
+
+  async findBySlugWithUniversities(slug: string): Promise<CountryWithUniversities | null> {
+    return prisma.country.findUnique({
+      where: { slug },
+      include: {
+        universities: {
+          orderBy: { ranking: 'asc' }
+        }
+      }
+    }) as any;
   }
 
   async findByName(name: string): Promise<Country | null> {
     return prisma.country.findFirst({
       where: { name: { equals: name, mode: 'insensitive' } }
-    });
+    }) as any;
   }
 
   async findAll(params: PaginationParams): Promise<PaginatedResult<Country>> {
@@ -60,7 +74,7 @@ export class PrismaCountryRepository implements CountryRepository {
     ]);
 
     return {
-      data,
+      data: data as any,
       pagination: {
         page,
         limit,

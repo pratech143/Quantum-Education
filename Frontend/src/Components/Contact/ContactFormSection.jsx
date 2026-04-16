@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Reveal from '../UX/Reveal';
 import toast from 'react-hot-toast';
-
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+import { api } from '../../api';
 
 const ContactFormSection = () => {
   const [form, setForm] = useState({
@@ -13,6 +12,19 @@ const ContactFormSection = () => {
     message: ''
   });
   const [submitting, setSubmitting] = useState(false);
+  const [destinations, setDestinations] = useState([]);
+
+  useEffect(() => {
+    api.getDestinations({ limit: '50' })
+      .then((res) => {
+        if (res.data && res.data.length > 0) {
+          setDestinations(res.data.map(c => c.name));
+        }
+      })
+      .catch(() => {
+        setDestinations(['Australia', 'USA', 'United Kingdom', 'Canada', 'New Zealand']);
+      });
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -23,7 +35,7 @@ const ContactFormSection = () => {
     setSubmitting(true);
 
     try {
-      const response = await fetch(`${API_BASE}/api/v1/contact-requests`, {
+      const response = await fetch(`/api/v1/contact-requests`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
@@ -117,11 +129,9 @@ const ContactFormSection = () => {
                       onChange={handleChange}
                     >
                       <option value="">Select Destination</option>
-                      <option value="Australia">Australia</option>
-                      <option value="USA">USA</option>
-                      <option value="United Kingdom">United Kingdom</option>
-                      <option value="Canada">Canada</option>
-                      <option value="New Zealand">New Zealand</option>
+                      {destinations.map(name => (
+                        <option key={name} value={name}>{name}</option>
+                      ))}
                     </select>
                   </div>
                 </div>

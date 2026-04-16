@@ -1,27 +1,83 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import countryData from '../data/countryData.json';
+import { api } from '../api';
 import CountryPage from '../Components/Country/CountryPage';
 import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 import CTASection from '../Components/Destinations/CTASection';
 
+const mapApiToCountryData = (apiData) => {
+  const country = apiData;
+  const universities = (country.universities || []).filter(u => u.type === 'UNIVERSITY');
+  const colleges = (country.universities || []).filter(u => u.type === 'COLLEGE');
+
+  return {
+    hero: {
+      title: `Study in ${country.name}`,
+      subtitle: country.heroSubtitle || country.description,
+      image: country.heroImage || '',
+      stats: country.heroStats || []
+    },
+    overview: country.overview || {
+      title: 'Country Overview',
+      description: [country.description]
+    },
+    details: country.details || [],
+    courses: country.popularCourses || [],
+    admission: country.admissionRequirements || [],
+    intakes: country.intakes || [],
+    scholarships: country.scholarships || {},
+    universities: universities.map(u => ({
+      name: u.name,
+      id: u.slug,
+      location: u.location || '',
+      desc: u.description,
+      qs: u.qsRanking || `#${u.ranking}`,
+      img: u.image || '',
+      image: u.image || '',
+      tagline: u.tagline || ''
+    })),
+    colleges: colleges.map(c => ({
+      name: c.name,
+      id: c.slug,
+      location: c.location || '',
+      desc: c.description,
+      img: c.image || ''
+    }))
+  };
+};
+
 const Country = () => {
   const { countryName } = useParams();
-  
-  // Try to find the data by the exact key or matching a slug
   const normalizedKey = countryName?.toLowerCase().replace(/[^a-z]/g, '');
-  const data = countryData[normalizedKey] || countryData['australia']; // Fallback for safety/dev if it doesn't exist
-  
-  const [isReady, setIsReady] = useState(false);
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setIsReady(false);
-    const timer = setTimeout(() => setIsReady(true), 10);
-    return () => clearTimeout(timer);
-  }, [countryName]);
+    setLoading(true);
+    setNotFound(false);
 
-  if (!countryData[normalizedKey]) {
+    api.getDestinationBySlug(normalizedKey)
+      .then((res) => {
+        setData(mapApiToCountryData(res.data));
+      })
+      .catch(() => {
+        setNotFound(true);
+      })
+      .finally(() => setLoading(false));
+  }, [countryName, normalizedKey]);
+
+  if (loading) {
+    return (
+      <main className="bg-background min-h-screen relative pt-0">
+        <GenericPageSkeleton />
+      </main>
+    );
+  }
+
+  if (notFound) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center pt-32 bg-background">
         <span className="material-symbols-outlined text-9xl text-primary/20 mb-6">
@@ -43,15 +99,9 @@ const Country = () => {
 
   return (
     <main className="bg-background min-h-screen relative pt-0">
-      {!isReady && <GenericPageSkeleton />}
-      <div className={isReady ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}>
-        
-        {/* New dynamic layout */}
-        <CountryPage data={data} />
-
-        <div className="pb-20">
-           <CTASection />
-        </div>
+      <CountryPage data={data} />
+      <div className="pb-20">
+        <CTASection />
       </div>
     </main>
   );

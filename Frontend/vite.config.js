@@ -6,4 +6,10 @@ export default defineConfig({
   plugins: [react(),
   tailwindcss(),
   ],
+  server: {
+    proxy: {
+      '/uploads': 'http://localhost:4000',
+      '/api': 'http://localhost:4000'
+    }
+  }
 })

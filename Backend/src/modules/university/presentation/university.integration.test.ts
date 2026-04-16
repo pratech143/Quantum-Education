@@ -33,6 +33,7 @@ describe('University API - Integration Tests', () => {
   describe('POST /api/v1/universities/country/:countryId', () => {
     const validPayload = {
       name: 'University of Toronto',
+      slug: 'university-of-toronto',
       description: 'One of the top universities in Canada.',
       ranking: 18,
       website: 'https://utoronto.ca'

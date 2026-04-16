@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { destinationsData } from '../../data/destinationsData';
+import { api } from '../../api';
 import DestinationCard from '../Destinations/DestinationCard';
 import Reveal from '../UX/Reveal';
 
 const DestinationsSection = () => {
-  const destinations = destinationsData.slice(0, 4);
+  const [destinations, setDestinations] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api.getDestinations({ limit: '4' })
+      .then((res) => {
+        if (res.data && res.data.length > 0) {
+          setDestinations(res.data.map((country, idx) => ({
+            id: idx + 1,
+            name: country.name.toUpperCase(),
+            title: country.name,
+            slug: country.slug,
+            description: country.description,
+            image: country.heroImage || '',
+            labels: []
+          })));
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, []);
 
   return (
     <section className="py-16 lg:py-24" style={{ background: '#F9F9F9' }}>
@@ -22,7 +42,7 @@ const DestinationsSection = () => {
             </Reveal>
           </div>
           <Reveal delay={0.2}>
-            <Link 
+            <Link
               to="/destinations"
               className="text-primary font-bold flex items-center gap-2 hover:underline transition-all group"
             >
@@ -31,9 +51,20 @@ const DestinationsSection = () => {
           </Reveal>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {destinations.map((dest, index) => (
-            <DestinationCard key={dest.id} {...dest} index={index} />
-          ))}
+          {loading ? (
+            Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="h-64 rounded-xl bg-surface-container animate-pulse" />
+            ))
+          ) : destinations.length > 0 ? (
+            destinations.map((dest, index) => (
+              <DestinationCard key={dest.id} {...dest} index={index} />
+            ))
+          ) : (
+            <div className="col-span-full text-center py-12 text-on-surface-variant">
+              <span className="material-symbols-outlined text-5xl opacity-40 mb-4 block">cloud_off</span>
+              <p>Unable to load destinations. Please check your connection.</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
@@ -41,4 +72,3 @@ const DestinationsSection = () => {
 };
 
 export default DestinationsSection;
-   

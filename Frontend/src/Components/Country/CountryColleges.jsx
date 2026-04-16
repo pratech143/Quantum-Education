@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CountryColleges = ({ colleges }) => {
   return (
@@ -24,9 +25,9 @@ const CountryColleges = ({ colleges }) => {
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold text-primary mb-2">{college.name}</h3>
               <p className="text-on-surface-variant text-sm mb-6 line-clamp-2 flex-grow">{college.desc}</p>
-              <button className="w-full mt-auto py-3 px-6 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-semibold text-sm uppercase tracking-wider hover:opacity-90 transition-all active:scale-95">
+              <Link to={`/universities/${college.id || college.name.toLowerCase().replace(/\s+/g, '-')}`} className="w-full mt-auto py-3 px-6 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-semibold text-sm uppercase tracking-wider hover:opacity-90 transition-all active:scale-95 block text-center">
                 View Details
-              </button>
+              </Link>
             </div>
           </div>
         ))}

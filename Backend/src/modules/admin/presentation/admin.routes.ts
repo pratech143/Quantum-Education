@@ -1,10 +1,30 @@
 import { Router } from 'express';
 import rateLimit from 'express-rate-limit';
+import multer from 'multer';
+import path from 'path';
+import crypto from 'crypto';
 import { authenticateAdmin, requireSuperAdmin } from '../../../shared/middleware/admin-auth.js';
 import { AppError } from '../../../shared/errors/app-error.js';
 import { AdminAuthController } from './admin-auth.controller.js';
 import { AdminManagementController } from './admin-management.controller.js';
 import { AdminProfileController } from './admin-profile.controller.js';
+
+const storage = multer.diskStorage({
+  destination: 'uploads/',
+  filename(_req, file, cb) {
+    const ext = path.extname(file.originalname);
+    cb(null, `${crypto.randomUUID()}${ext}`);
+  }
+});
+
+const upload = multer({
+  storage,
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5 MB
+  fileFilter(_req, file, cb) {
+    const allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/svg+xml'];
+    cb(null, allowed.includes(file.mimetype));
+  }
+});
 
 const loginRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -36,7 +56,31 @@ export const createAdminRouter = () => {
   router.put('/admins/:id/password', authenticateAdmin, requireSuperAdmin, managementController.resetPassword);
 
   // Stats (authenticated)
-  router.get('/stats', authenticateAdmin, managementController.stats);
+  router.get('/stats', authenticateAdmin, async (req, res) => {
+    const { prisma } = await import('../../../shared/database/prisma.js');
+    const [adminCount, activeAdminCount, countryCount, universityCount, alumniCount, contactCount] = await Promise.all([
+      prisma.adminUser.count(),
+      prisma.adminUser.count({ where: { isActive: true } }),
+      prisma.country.count(),
+      prisma.university.count(),
+      prisma.alumni.count(),
+      prisma.contactRequest.count()
+    ]);
+
+    res.json({
+      success: true,
+      data: {
+        totalAdmins: adminCount,
+        activeAdmins: activeAdminCount,
+        totalCountries: countryCount,
+        totalUniversities: universityCount,
+        totalAlumni: alumniCount,
+        totalContactRequests: contactCount,
+        role: req.admin!.role
+      },
+      requestId: req.requestId
+    });
+  });
 
   // Contact requests (authenticated)
   router.get('/contact-requests', authenticateAdmin, async (req, res) => {
@@ -59,6 +103,19 @@ export const createAdminRouter = () => {
     }
     await prisma.contactRequest.delete({ where: { id } });
     res.json({ success: true, message: 'Contact request deleted.', requestId: req.requestId });
+  });
+
+  // File upload (authenticated)
+  router.post('/upload', authenticateAdmin, upload.single('file'), (req, res) => {
+    if (!req.file) {
+      throw new AppError({
+        statusCode: 400,
+        code: 'NO_FILE',
+        message: 'No image file provided or file type not allowed.'
+      });
+    }
+    const url = `/uploads/${req.file.filename}`;
+    res.json({ success: true, data: { url }, requestId: req.requestId });
   });
 
   // Profile (own account)

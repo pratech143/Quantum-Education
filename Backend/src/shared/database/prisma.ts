@@ -3,8 +3,11 @@ import { Pool } from 'pg';
 import { PrismaClient } from '../../generated/prisma/client.js';
 import { env } from '../config/env.js';
 
+const needsSsl = env.DATABASE_URL.includes('sslmode=require') || env.DATABASE_URL.includes('aivencloud.com');
+
 const pool = new Pool({
-  connectionString: env.DATABASE_URL
+  connectionString: env.DATABASE_URL,
+  ssl: needsSsl ? { rejectUnauthorized: false } : undefined
 });
 
 const adapter = new PrismaPg(pool);

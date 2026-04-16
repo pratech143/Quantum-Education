@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import type { CountryService } from '../application/services/country.service.js';
-import { createCountrySchema, updateCountrySchema, paginationSchema, idParamSchema } from './country.schemas.js';
+import { createCountrySchema, updateCountrySchema, paginationSchema, idParamSchema, slugParamSchema } from './country.schemas.js';
 
 export class CountryController {
   constructor(private readonly countryService: CountryService) {}
@@ -44,6 +44,17 @@ export class CountryController {
   getById = async (request: Request, response: Response) => {
     const { id } = idParamSchema.parse(request.params);
     const country = await this.countryService.getById(id);
+
+    response.status(200).json({
+      success: true,
+      data: country,
+      requestId: request.requestId
+    });
+  };
+
+  getBySlug = async (request: Request, response: Response) => {
+    const { slug } = slugParamSchema.parse(request.params);
+    const country = await this.countryService.getBySlug(slug);
 
     response.status(200).json({
       success: true,
