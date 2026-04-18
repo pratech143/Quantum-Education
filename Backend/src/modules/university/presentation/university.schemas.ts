@@ -38,15 +38,18 @@ export const createUniversitySchema = z
     heroData: z.any().optional(),
     whySection: z.any().optional(),
     coursesData: z.any().optional(),
-    admissionData: z.any().optional(),
-    ctaData: z.any().optional()
+    admissionData: z.any().optional()
   })
   .strict();
 
-export const updateUniversitySchema = createUniversitySchema.partial().refine(
-  (data) => Object.keys(data).length > 0,
-  { message: 'At least one field must be provided for update.' }
-);
+export const updateUniversitySchema = createUniversitySchema
+  .omit({ type: true })
+  .partial()
+  .extend({ type: z.enum(['UNIVERSITY', 'COLLEGE']).optional() })
+  .refine(
+    (data) => Object.keys(data).length > 0,
+    { message: 'At least one field must be provided for update.' }
+  );
 
 export const universityIdParamSchema = z.object({
   id: z.string().uuid('Invalid university ID format.')

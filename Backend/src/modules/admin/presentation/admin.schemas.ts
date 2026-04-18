@@ -21,14 +21,12 @@ export const createAdminSchema = z.object({
 
 export const updateAdminSchema = z.object({
   name: z.string().min(2).max(100).trim().optional(),
-  email: z.string().email().max(254).trim().toLowerCase().optional(),
   role: z.enum(['SUPERADMIN', 'ADMIN']).optional(),
   isActive: z.boolean().optional()
 });
 
 export const updateProfileSchema = z.object({
-  name: z.string().min(2).max(100).trim().optional(),
-  email: z.string().email().max(254).trim().toLowerCase().optional()
+  name: z.string().min(2).max(100).trim().optional()
 });
 
 export const changePasswordSchema = z
