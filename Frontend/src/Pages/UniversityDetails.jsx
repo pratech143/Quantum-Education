@@ -6,7 +6,6 @@ import UniversityHero from '../Components/University/UniversityHero';
 import WhySection from '../Components/University/WhySection';
 import CoursesSection from '../Components/University/CoursesSection';
 import AdmissionSection from '../Components/University/AdmissionSection';
-import UniversityCTASection from '../Components/University/UniversityCTASection';
 import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 
 const UniversityDetails = () => {
@@ -34,17 +33,7 @@ const UniversityDetails = () => {
           website: uni.website || '',
           whyUniversity: uni.whySection || null,
           coursesSection: uni.coursesData || null,
-          admission: uni.admissionData || null,
-          ctaSection: uni.ctaData ? {
-            ...uni.ctaData,
-            buttonText: 'Visit Official Website',
-            link: uni.website
-          } : {
-            title: `Ready to begin your journey?`,
-            description: `Take the first step toward a global career with ${uni.name}.`,
-            buttonText: 'Visit Official Website',
-            link: uni.website
-          }
+          admission: uni.admissionData || null
         });
       })
       .catch(() => {
@@ -83,7 +72,6 @@ const UniversityDetails = () => {
       {data.whyUniversity && <WhySection data={data.whyUniversity} />}
       {data.coursesSection && <CoursesSection data={data.coursesSection} />}
       {data.admission && <AdmissionSection data={data.admission} />}
-      {data.ctaSection && <UniversityCTASection data={data.ctaSection} />}
     </div>
   );
 };

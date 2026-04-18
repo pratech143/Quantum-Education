@@ -15,7 +15,9 @@ const request = async (path, options = {}) => {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || 'Request failed');
+    const err = new Error(data.message || 'Request failed');
+    if (data.errors) err.fieldErrors = data.errors;
+    throw err;
   }
 
   return data;

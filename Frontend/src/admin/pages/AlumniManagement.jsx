@@ -15,6 +15,7 @@ const AlumniManagement = () => {
   const [form, setForm] = useState(emptyForm);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [errorFields, setErrorFields] = useState(null);
 
   const load = async () => {
     setLoading(true);
@@ -33,7 +34,7 @@ const AlumniManagement = () => {
 
   const uniqueCountries = [...new Set(items.map(a => a.country).filter(Boolean))];
 
-  const openCreate = () => { setForm(emptyForm); setError(''); setModal('create'); };
+  const openCreate = () => { setForm(emptyForm); setError(''); setErrorFields(null); setModal('create'); };
 
   const openEdit = (a) => {
     setSelected(a);
@@ -41,16 +42,32 @@ const AlumniManagement = () => {
       name: a.name || '', university: a.university || '', degree: a.degree || '',
       country: a.country || '', quote: a.quote || '', image: a.image || ''
     });
-    setError('');
+    setError(''); setErrorFields(null);
     setModal('edit');
   };
 
-  const openDelete = (a) => { setSelected(a); setError(''); setModal('delete'); };
+  const openDelete = (a) => { setSelected(a); setError(''); setErrorFields(null); setModal('delete'); };
 
-  const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm(f => ({ ...f, [name]: value }));
+    if (errorFields?.[name]) {
+      setErrorFields(prev => { const next = { ...prev }; delete next[name]; return next; });
+    }
+  };
+
+  const fieldClass = (name) =>
+    errorFields?.[name]
+      ? 'w-full px-3 py-2 border border-red-500 rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-300'
+      : 'w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20';
+
+  const fieldError = (name) =>
+    errorFields?.[name]
+      ? <p className="text-red-500 text-[10px] mt-0.5">{Array.isArray(errorFields[name]) ? errorFields[name].join(', ') : errorFields[name]}</p>
+      : null;
 
   const handleSave = async () => {
-    setSaving(true); setError('');
+    setSaving(true); setError(''); setErrorFields(null);
     try {
       const payload = { ...form };
       if (!payload.image) delete payload.image;
@@ -60,7 +77,7 @@ const AlumniManagement = () => {
         await adminApi.updateAlumni(selected.id, payload);
       }
       setModal(null); load();
-    } catch (e) { setError(e.message); }
+    } catch (e) { setError(e.message); setErrorFields(e.fieldErrors || null); }
     setSaving(false);
   };
 
@@ -69,7 +86,7 @@ const AlumniManagement = () => {
     try {
       await adminApi.deleteAlumni(selected.id);
       setModal(null); load();
-    } catch (e) { setError(e.message); }
+    } catch (e) { setError(e.message); setErrorFields(e.fieldErrors || null); }
     setSaving(false);
   };
 
@@ -107,7 +124,7 @@ const AlumniManagement = () => {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map(a => (
-            <div key={a.id} className="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 flex flex-col">
+            <div key={a.id} className="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 flex flex-col h-full">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
                   {a.image ? (
@@ -145,16 +162,23 @@ const AlumniManagement = () => {
               <h2 className="text-lg font-bold">{modal === 'create' ? 'Add Alumni' : 'Edit Alumni'}</h2>
               <button onClick={() => setModal(null)}><X className="w-5 h-5" /></button>
             </div>
-            {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-3">
+                <p className="text-red-700 text-sm font-medium">{error}</p>
+              </div>
+            )}
             <div className="space-y-3">
               {[
-                ['name', 'Full Name'], ['university', 'University'], ['degree', 'Degree'],
-                ['country', 'Country (lowercase, e.g. australia)']
-              ].map(([key, label]) => (
+                ['name', 'Full Name', 'e.g. John Smith'],
+                ['university', 'University', 'e.g. University of Melbourne'],
+                ['degree', 'Degree', 'e.g. Bachelor of Computer Science'],
+                ['country', 'Country (lowercase)', 'e.g. australia']
+              ].map(([key, label, placeholder]) => (
                 <div key={key}>
                   <label className="block text-xs font-medium text-on-surface-variant mb-1">{label}</label>
-                  <input name={key} value={form[key]} onChange={handleChange}
-                    className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                  <input name={key} value={form[key]} onChange={handleChange} placeholder={placeholder}
+                    className={fieldClass(key)} />
+                  {fieldError(key)}
                 </div>
               ))}
               <ImageUpload
@@ -165,7 +189,9 @@ const AlumniManagement = () => {
               <div>
                 <label className="block text-xs font-medium text-on-surface-variant mb-1">Testimonial Quote</label>
                 <textarea name="quote" value={form.quote} onChange={handleChange} rows={3}
-                  className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                  placeholder="e.g. Studying in Australia was a life-changing experience. The quality of education and support was outstanding."
+                  className={fieldClass('quote')} />
+                {fieldError('quote')}
               </div>
             </div>
             <div className="flex justify-end gap-3 mt-4 pt-4 border-t border-outline-variant">
