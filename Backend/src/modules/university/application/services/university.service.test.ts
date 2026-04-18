@@ -44,7 +44,6 @@ const mockUniversity: University = {
   whySection: null,
   coursesData: null,
   admissionData: null,
-  ctaData: null,
   countryId: mockCountry.id,
   createdAt: new Date(),
   updatedAt: new Date()

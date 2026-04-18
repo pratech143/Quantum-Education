@@ -8,7 +8,7 @@ const PopularCourses = ({ courses }) => {
         {courses.map((course, index) => (
           <div key={index} className="bg-white p-6 rounded-xl text-center flex flex-col items-center shadow-sm">
             <div className="w-16 h-16 bg-primary-container/10 rounded-full flex items-center justify-center mb-4">
-              <span className="material-symbols-outlined text-primary">{course.icon}</span>
+              <span className="material-symbols-outlined text-primary">{course.icon || 'school'}</span>
             </div>
             <h4 className="font-bold font-headline">{course.title}</h4>
             <p className="text-xs text-on-surface-variant mt-2">{course.desc}</p>

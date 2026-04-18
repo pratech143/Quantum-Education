@@ -71,22 +71,8 @@ export class AdminManagementController {
     const id = getParamId(request);
     const input = updateAdminSchema.parse(request.body);
 
-    if (input.email) {
-      const existing = await prisma.adminUser.findFirst({
-        where: { email: input.email, NOT: { id } }
-      });
-      if (existing) {
-        throw new AppError({
-          statusCode: 409,
-          code: 'EMAIL_EXISTS',
-          message: 'An admin with this email already exists.'
-        });
-      }
-    }
-
     const data: Record<string, string | boolean> = {};
     if (input.name !== undefined) data['name'] = input.name;
-    if (input.email !== undefined) data['email'] = input.email;
     if (input.role !== undefined) data['role'] = input.role;
     if (input.isActive !== undefined) data['isActive'] = input.isActive;
 

@@ -20,18 +20,23 @@ export class SmtpContactNotificationService implements ContactNotificationServic
   private readonly transporter: Transporter;
 
   constructor() {
-    this.transporter = nodemailer.createTransport({
-      host: env.SMTP_HOST,
-      port: env.SMTP_PORT,
-      secure: env.SMTP_SECURE,
-      auth:
-        env.SMTP_USER && env.SMTP_PASS
-          ? {
-              user: env.SMTP_USER,
-              pass: env.SMTP_PASS
-            }
-          : undefined
-    });
+    // Support both service-based (e.g. gmail) and host-based SMTP config
+    const transportConfig = env.SMTP_SERVICE
+      ? {
+          service: env.SMTP_SERVICE,
+          auth: { user: env.SMTP_USER!, pass: env.SMTP_PASS! }
+        }
+      : {
+          host: env.SMTP_HOST,
+          port: env.SMTP_PORT,
+          secure: env.SMTP_SECURE,
+          auth:
+            env.SMTP_USER && env.SMTP_PASS
+              ? { user: env.SMTP_USER, pass: env.SMTP_PASS }
+              : undefined
+        };
+
+    this.transporter = nodemailer.createTransport(transportConfig);
   }
 
   async notifyNewContactRequest(contactRequest: ContactRequest): Promise<void> {

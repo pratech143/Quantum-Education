@@ -44,7 +44,7 @@ const AlumniGrid = ({ alumni = [], filters = [] }) => {
           {visible.map((alumni) => (
             <div
               key={alumni.name + alumni.country}
-              className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col"
+              className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full"
             >
               {/* Photo */}
               <div className="aspect-[4/3] overflow-hidden">

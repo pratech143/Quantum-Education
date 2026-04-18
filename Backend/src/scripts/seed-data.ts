@@ -32,12 +32,6 @@ function buildDetail(u: {
       requirements: u.requirements,
       howToApply: u.howToApply
     },
-    ctaData: {
-      title: 'Ready to begin your journey?',
-      description: `Take the first step toward a global career with ${u.name}. Scholarships, intake dates, and application details are just a click away.`,
-      buttonText: 'Visit Official Website',
-      link: u.website
-    }
   };
 }
 
