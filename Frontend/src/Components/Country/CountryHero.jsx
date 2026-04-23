@@ -26,11 +26,15 @@ const CountryHero = ({ hero }) => {
               {hero.stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-primary-fixed/10 backdrop-blur-sm border border-primary-fixed/20 p-6 rounded-2xl
+                  className="card-content-safe bg-primary-fixed/10 backdrop-blur-sm border border-primary-fixed/20 p-6 rounded-2xl
                     transition-all duration-300 ease-out hover:bg-primary-fixed/20 hover:border-primary-fixed/40 hover:scale-[1.03] hover:shadow-lg"
                 >
-                  <span className="block text-on-primary-container text-sm font-label font-bold uppercase tracking-widest mb-1">{stat.label}</span>
-                  <span className="text-primary-fixed text-3xl font-extrabold font-headline">{stat.value}</span>
+                  <span className="text-wrap-safe block text-on-primary-container text-sm font-label font-bold uppercase tracking-widest mb-1 leading-snug">
+                    {stat.label}
+                  </span>
+                  <span className="text-wrap-safe block text-primary-fixed text-3xl font-extrabold font-headline leading-tight">
+                    {stat.value}
+                  </span>
                 </div>
               ))}
             </div>

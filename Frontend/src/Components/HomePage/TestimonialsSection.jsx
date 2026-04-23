@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
           ) : (
           featuredAlumni.map((alumni, index) => (
             <Reveal key={alumni.name + alumni.country} delay={index * 0.1}>
-              <div className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col">
+              <div className="card-content-safe bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col">
                 {/* Photo */}
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -74,22 +74,22 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col flex-1">
+                <div className="card-content-safe p-6 flex flex-col flex-1">
                   <span
                     className="material-symbols-outlined text-3xl text-primary/30 mb-2 leading-none"
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >
                     format_quote
                   </span>
-                  <p className="text-on-surface-variant text-sm italic leading-relaxed mb-5 flex-1">
+                  <p className="text-wrap-safe text-on-surface-variant text-sm italic leading-relaxed mb-5 flex-1">
                     "{alumni.quote}"
                   </p>
-                  <div className="border-t border-outline-variant/30 pt-4 flex items-start justify-between gap-3">
-                    <div>
-                      <h3 className="font-headline font-bold text-base text-primary">{alumni.name}</h3>
-                      <p className="text-xs text-on-surface-variant mt-0.5">{alumni.university}</p>
+                  <div className="border-t border-outline-variant/30 pt-4 flex flex-wrap items-start justify-between gap-3">
+                    <div className="card-content-safe min-w-0 flex-1">
+                      <h3 className="text-wrap-safe font-headline font-bold text-base text-primary">{alumni.name}</h3>
+                      <p className="text-wrap-safe text-xs text-on-surface-variant mt-0.5">{alumni.university}</p>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-primary bg-secondary-container/40 px-3 py-1 rounded-full shrink-0 mt-0.5">
+                    <div className="text-wrap-safe flex items-center gap-1.5 text-xs font-semibold text-primary bg-secondary-container/40 px-3 py-1 rounded-full shrink-0 mt-0.5 max-w-full">
                       <span className="material-symbols-outlined text-sm">explore</span>
                       {alumni.degree}
                     </div>

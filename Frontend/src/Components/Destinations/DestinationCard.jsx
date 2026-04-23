@@ -11,7 +11,7 @@ const DestinationCard = ({ id, name, title, slug, description, image, labels, in
         viewport={{ once: true }}
         transition={{ delay: index * 0.1, duration: 0.5 }}
         whileHover={{ y: -8 }}
-        className="group bg-white rounded-xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl border border-surface-container/50 cursor-pointer h-full flex flex-col"
+        className="card-content-safe group bg-white rounded-xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl border border-surface-container/50 cursor-pointer h-full flex flex-col"
       >
         <div className="relative aspect-video overflow-hidden">
           <img
@@ -23,9 +23,9 @@ const DestinationCard = ({ id, name, title, slug, description, image, labels, in
             {name}
           </div>
         </div>
-        <div className="p-8 flex flex-col flex-1">
-          <h3 className="font-headline text-2xl font-bold text-primary mb-3">{title}</h3>
-          <p className="text-on-surface-variant text-sm mb-6 leading-relaxed hidden sm:block flex-1">
+        <div className="card-content-safe p-8 flex flex-col flex-1">
+          <h3 className="text-wrap-safe font-headline text-2xl font-bold text-primary mb-3">{title}</h3>
+          <p className="text-wrap-safe text-on-surface-variant text-sm mb-6 leading-relaxed hidden sm:block flex-1">
             {description}
           </p>
           <div className="flex flex-wrap gap-2 items-center justify-between">
