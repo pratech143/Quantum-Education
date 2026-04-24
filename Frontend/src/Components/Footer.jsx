@@ -114,34 +114,24 @@ const Footer = () => {
                     <h4 className="mb-8 text-center font-bold text-xs uppercase tracking-[0.3em] text-primary/60">
                         Accreditations & Memberships
                     </h4>
-                    <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                        {/* Placeholder for MOE Certification */}
-                        <div className="flex flex-col items-center gap-2 group cursor-help" title="Ministry of Education (MOE)">
-                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
-                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">MOE</span>
+                    <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
+                        {[
+                            { src: '/assets/accreditation/ecan.webp', title: 'ECAN Membership' },
+                            { src: '/assets/accreditation/icef-logo.webp', title: 'ICEF Certified' },
+                            { src: '/assets/accreditation/qeac-logo.webp', title: 'QEAC Certified' },
+                            { src: '/assets/accreditation/aaeri-logo.webp', title: 'AAERI Member' },
+                            { src: '/assets/accreditation/NZEAC.webp', title: 'NZEAC Certified' },
+                            { src: '/assets/accreditation/AIRC_certified.gif', title: 'AIRC Certified' },
+                            { src: '/assets/accreditation/usatc-logo.webp', title: 'USATC Certified' },
+                        ].map((logo, index) => (
+                            <div key={index} className="flex items-center justify-center" title={logo.title}>
+                                <img 
+                                    src={logo.src} 
+                                    alt={logo.title} 
+                                    className="h-10 md:h-14 w-auto object-contain"
+                                />
                             </div>
-                        </div>
-
-                        {/* Placeholder for ECAN Membership */}
-                        <div className="flex flex-col items-center gap-2 group cursor-help" title="ECAN Membership">
-                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
-                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">ECAN</span>
-                            </div>
-                        </div>
-
-                        {/* Placeholder for ICEF Certification */}
-                        <div className="flex flex-col items-center gap-2 group cursor-help" title="ICEF Certified">
-                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
-                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">ICEF</span>
-                            </div>
-                        </div>
-
-                        {/* Placeholder for QEAC Certification */}
-                        <div className="flex flex-col items-center gap-2 group cursor-help" title="QEAC Certified">
-                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
-                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">QEAC</span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
 

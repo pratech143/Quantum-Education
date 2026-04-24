@@ -13,7 +13,8 @@ import {
   MessageSquare,
   Globe,
   GraduationCap,
-  Award
+  Award,
+  Newspaper
 } from 'lucide-react';
 
 const Sidebar = ({ open, onClose }) => {
@@ -33,6 +34,7 @@ const Sidebar = ({ open, onClose }) => {
     { to: '/admin/destinations', icon: Globe, label: 'Destinations' },
     { to: '/admin/universities', icon: GraduationCap, label: 'Universities' },
     { to: '/admin/alumni', icon: Award, label: 'Alumni' },
+    { to: '/admin/news', icon: Newspaper, label: 'News & Notices' },
     { to: '/admin/messages', icon: MessageSquare, label: 'Messages' },
     { to: '/admin/profile', icon: User, label: 'Profile' }
   ];

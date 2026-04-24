@@ -7,6 +7,8 @@ import Contact from "../Pages/Contact";
 import Alumni from "../Pages/Alumni";
 import Country from "../Pages/Country";
 import UniversityDetails from "../Pages/UniversityDetails";
+import News from "../Pages/News";
+import NewsDetail from "../Pages/NewsDetail";
 
 import AdminLayout from "../admin/AdminLayout";
 import Login from "../admin/pages/Login";
@@ -17,6 +19,7 @@ import Profile from "../admin/pages/Profile";
 import DestinationsManagement from "../admin/pages/DestinationsManagement";
 import UniversitiesManagement from "../admin/pages/UniversitiesManagement";
 import AlumniManagement from "../admin/pages/AlumniManagement";
+import NewsManagement from "../admin/pages/NewsManagement";
 import { AuthProvider } from "../admin/AuthContext";
 
 const AdminWrapper = () => (
@@ -44,6 +47,8 @@ export const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
       { path: "alumni", element: <Alumni /> },
 
+      { path: "news", element: <News /> },
+      { path: "news/:id", element: <NewsDetail /> },
       { path: "universities/:slug", element: <UniversityDetails /> },
     ],
   },
@@ -62,6 +67,7 @@ export const router = createBrowserRouter([
       { path: "destinations", element: <DestinationsManagement /> },
       { path: "universities", element: <UniversitiesManagement /> },
       { path: "alumni", element: <AlumniManagement /> },
+      { path: "news", element: <NewsManagement /> },
       { path: "profile", element: <Profile /> },
     ],
   },

@@ -8,6 +8,7 @@ import { createCountryRouter } from './modules/country/presentation/country.rout
 import { createUniversityRouter } from './modules/university/presentation/university.routes.js';
 import { createAlumniRouter } from './modules/alumni/presentation/alumni.routes.js';
 import { createAdminRouter } from './modules/admin/presentation/admin.routes.js';
+import { createNewsRouter } from './modules/news/presentation/news.routes.js';
 import { PrismaContactRequestRepository } from './modules/contact/infrastructure/repositories/prisma-contact-request.repository.js';
 import { NoopContactNotificationService } from './modules/contact/infrastructure/services/noop-contact-notification.service.js';
 import { SmtpContactNotificationService } from './modules/contact/infrastructure/services/smtp-contact-notification.service.js';
@@ -71,6 +72,7 @@ export const createApp = () => {
   app.use(`${env.API_PREFIX}/destinations`, createCountryRouter(countryController)); // alias
   app.use(`${env.API_PREFIX}/universities`, createUniversityRouter(universityController));
   app.use(`${env.API_PREFIX}/alumni`, createAlumniRouter(alumniController));
+  app.use(`${env.API_PREFIX}/news`, createNewsRouter());
   app.use('/api/admin', createAdminRouter());
 
   // Serve uploaded files (absolute path so it works regardless of CWD)

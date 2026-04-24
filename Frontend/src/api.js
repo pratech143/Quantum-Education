@@ -2,11 +2,14 @@ const API_PREFIX = '/api/v1';
 
 const fetchJson = async (url) => {
   const response = await fetch(url);
+  const data = await response.json().catch(() => ({}));
+  
   if (!response.ok) {
-    const data = await response.json().catch(() => ({}));
-    throw new Error(data.message || `Request failed: ${response.status}`);
+    const error = new Error(data.message || `Request failed: ${response.status}`);
+    Object.assign(error, data);
+    throw error;
   }
-  return response.json();
+  return data;
 };
 
 export const api = {
@@ -52,5 +55,14 @@ export const api = {
   getColleges: (params = {}) => {
     const query = new URLSearchParams(params).toString();
     return fetchJson(`${API_PREFIX}/universities/colleges${query ? `?${query}` : ''}`);
-  }
+  },
+
+  // News
+  getNews: (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return fetchJson(`${API_PREFIX}/news${query ? `?${query}` : ''}`);
+  },
+
+  getNewsById: (id) =>
+    fetchJson(`${API_PREFIX}/news/${id}`)
 };
