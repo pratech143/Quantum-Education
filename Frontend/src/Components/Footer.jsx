@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
+
 const Footer = () => {
     const navLinks = [
         { name: 'Home', to: '/' },
@@ -71,7 +72,6 @@ const Footer = () => {
                         <ul className="flex flex-col gap-4 font-body">
                             <li><Link to="/privacy" className="text-gray-300 transition-colors hover:text-primary">Privacy Policy</Link></li>
                             <li><Link to="/terms" className="text-gray-300 transition-colors hover:text-primary">Terms of Service</Link></li>
-                            <li><Link to="/certifications" className="text-gray-300 transition-colors hover:text-primary">Certifications</Link></li>
                         </ul>
                     </div>
 
@@ -109,8 +109,44 @@ const Footer = () => {
                     </div>
                 </div>
 
+                {/* Accreditation Section */}
+                <div className="mt-20 border-t border-white/10 pt-12">
+                    <h4 className="mb-8 text-center font-bold text-xs uppercase tracking-[0.3em] text-primary/60">
+                        Accreditations & Memberships
+                    </h4>
+                    <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                        {/* Placeholder for MOE Certification */}
+                        <div className="flex flex-col items-center gap-2 group cursor-help" title="Ministry of Education (MOE)">
+                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
+                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">MOE</span>
+                            </div>
+                        </div>
+
+                        {/* Placeholder for ECAN Membership */}
+                        <div className="flex flex-col items-center gap-2 group cursor-help" title="ECAN Membership">
+                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
+                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">ECAN</span>
+                            </div>
+                        </div>
+
+                        {/* Placeholder for ICEF Certification */}
+                        <div className="flex flex-col items-center gap-2 group cursor-help" title="ICEF Certified">
+                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
+                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">ICEF</span>
+                            </div>
+                        </div>
+
+                        {/* Placeholder for QEAC Certification */}
+                        <div className="flex flex-col items-center gap-2 group cursor-help" title="QEAC Certified">
+                            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:border-primary/50 transition-colors">
+                                <span className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors">QEAC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Bottom Bar */}
-                <div className="mt-20 border-t border-white/10 pt-10 text-center font-body">
+                <div className="mt-12 border-t border-white/10 pt-10 text-center font-body">
                     <p className="text-sm font-medium text-gray-500">
                         &copy; {new Date().getFullYear()} Quantum Education. All rights reserved.
                     </p>
