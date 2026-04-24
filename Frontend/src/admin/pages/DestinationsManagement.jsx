@@ -4,7 +4,7 @@ import { Globe, Plus, Pencil, Trash2, X, Loader2, Filter } from 'lucide-react';
 import ImageUpload from '../components/ImageUpload';
 import ListEditor from '../components/ListEditor';
 import StringListEditor from '../components/StringListEditor';
-import CollapsibleSection from '../components/CollapsibleSection';
+import TabBar from '../components/TabBar';
 
 const emptyForm = {
   name: '', slug: '', description: '', tuitionFees: '', visaInfo: '',
@@ -26,6 +26,8 @@ const DestinationsManagement = () => {
   const [form, setForm] = useState(emptyForm);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [errorFields, setErrorFields] = useState(null);
+  const [activeTab, setActiveTab] = useState('basic');
   const scrollRef = useRef(null);
 
   const load = async () => {
@@ -45,7 +47,7 @@ const DestinationsManagement = () => {
 
   const openCreate = () => {
     setForm(emptyForm);
-    setError('');
+    setError(''); setErrorFields(null); setActiveTab('basic');
     setModal('create');
     setTimeout(() => scrollRef.current?.scrollTo(0, 0), 0);
   };
@@ -71,14 +73,30 @@ const DestinationsManagement = () => {
       intakes: Array.isArray(c.intakes) ? c.intakes : [],
       scholarshipsDescription: c.scholarships?.description || ''
     });
-    setError('');
+    setError(''); setErrorFields(null); setActiveTab('basic');
     setModal('edit');
     setTimeout(() => scrollRef.current?.scrollTo(0, 0), 0);
   };
 
-  const openDelete = (c) => { setSelected(c); setModal('delete'); };
+  const openDelete = (c) => { setSelected(c); setError(''); setErrorFields(null); setModal('delete'); };
 
-  const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm(f => ({ ...f, [name]: value }));
+    if (errorFields?.[name]) {
+      setErrorFields(prev => { const next = { ...prev }; delete next[name]; return next; });
+    }
+  };
+
+  const fieldClass = (name) =>
+    errorFields?.[name]
+      ? 'w-full px-3 py-2 border border-red-500 rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-300'
+      : 'w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20';
+
+  const fieldError = (name) =>
+    errorFields?.[name]
+      ? <p className="text-red-500 text-[10px] mt-0.5">{Array.isArray(errorFields[name]) ? errorFields[name].join(', ') : errorFields[name]}</p>
+      : null;
 
   const buildPayload = () => {
     const payload = {
@@ -108,7 +126,7 @@ const DestinationsManagement = () => {
 
   const handleSave = async () => {
     setSaving(true);
-    setError('');
+    setError(''); setErrorFields(null);
     try {
       const payload = buildPayload();
       if (modal === 'create') {
@@ -119,7 +137,7 @@ const DestinationsManagement = () => {
       setModal(null);
       load();
     } catch (e) {
-      setError(e.message);
+      setError(e.message); setErrorFields(e.fieldErrors || null);
     }
     setSaving(false);
   };
@@ -131,7 +149,7 @@ const DestinationsManagement = () => {
       setModal(null);
       load();
     } catch (e) {
-      setError(e.message);
+      setError(e.message); setErrorFields(e.fieldErrors || null);
     }
     setSaving(false);
   };
@@ -213,21 +231,40 @@ const DestinationsManagement = () => {
               <h2 className="text-lg font-bold">{modal === 'create' ? 'Add Destination' : 'Edit Destination'}</h2>
               <button onClick={() => setModal(null)}><X className="w-5 h-5" /></button>
             </div>
-            {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
-            <div ref={scrollRef} className="space-y-3 max-h-[70vh] overflow-y-auto pr-2">
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-3">
+                <p className="text-red-700 text-sm font-medium">{error}</p>
+              </div>
+            )}
+            <TabBar
+              tabs={[
+                { key: 'basic', label: 'Basic Info' },
+                { key: 'hero', label: 'Hero & Overview', badge: (form.heroStats.length + form.overviewDescription.length) || null },
+                { key: 'details', label: 'Details & Courses', badge: (form.details.length + form.popularCourses.length) || null },
+                { key: 'admission', label: 'Admission & Intakes', badge: (form.admissionRequirements.length + form.intakes.length) || null },
+                { key: 'scholarships', label: 'Scholarships', badge: form.scholarshipsDescription ? 1 : null }
+              ]}
+              activeTab={activeTab}
+              onChange={setActiveTab}
+            />
+            <div ref={scrollRef} className="max-h-[65vh] overflow-y-auto pr-2">
 
-              {/* Basic Info — always open */}
-              <fieldset className="border border-outline-variant rounded-lg p-4">
-                <legend className="text-xs font-semibold text-primary px-2">Basic Info</legend>
+              {/* Basic Info */}
+              {activeTab === 'basic' && (
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    ['name', 'Name'], ['slug', 'Slug'], ['currency', 'Currency'],
-                    ['tuitionFees', 'Avg. Tuition Fees'], ['livingCost', 'Avg. Living Cost'], ['heroSubtitle', 'Hero Subtitle']
-                  ].map(([key, label]) => (
+                    ['name', 'Name', 'e.g. Australia'],
+                    ['slug', 'Slug', 'e.g. australia'],
+                    ['currency', 'Currency', 'e.g. AUD'],
+                    ['tuitionFees', 'Avg. Tuition Fees', 'e.g. 35000'],
+                    ['livingCost', 'Avg. Living Cost', 'e.g. 21000'],
+                    ['heroSubtitle', 'Hero Subtitle', 'e.g. World-class education in a vibrant multicultural society']
+                  ].map(([key, label, placeholder]) => (
                     <div key={key}>
                       <label className="block text-xs font-medium text-on-surface-variant mb-1">{label}</label>
-                      <input name={key} value={form[key]} onChange={handleChange}
-                        className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      <input name={key} value={form[key]} onChange={handleChange} placeholder={placeholder}
+                        className={fieldClass(key)} />
+                      {fieldError(key)}
                     </div>
                   ))}
                   <div className="col-span-2">
@@ -237,110 +274,139 @@ const DestinationsManagement = () => {
                       onChange={(url) => setForm(f => ({ ...f, heroImage: url }))}
                     />
                   </div>
-                  {[['visaInfo', 'Visa Info'], ['description', 'Description']].map(([key, label]) => (
+                  {[
+                    ['visaInfo', 'Visa Info', 'e.g. Student Visa (Subclass 500) required. Processing time: 4-6 weeks.'],
+                    ['description', 'Description', 'e.g. Australia is a top destination for international students, offering world-class universities and a high quality of life.']
+                  ].map(([key, label, placeholder]) => (
                     <div key={key} className="col-span-2">
                       <label className="block text-xs font-medium text-on-surface-variant mb-1">{label}</label>
-                      <textarea name={key} value={form[key]} onChange={handleChange} rows={3}
-                        className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      <textarea name={key} value={form[key]} onChange={handleChange} rows={3} placeholder={placeholder}
+                        className={fieldClass(key)} />
+                      {fieldError(key)}
                     </div>
                   ))}
                 </div>
-              </fieldset>
+              )}
 
-              {/* Collapsible sections */}
-              <CollapsibleSection title="Hero Stats" badge={form.heroStats.length || null}>
-                <ListEditor
-                  label="Stats displayed in the hero section"
-                  value={form.heroStats}
-                  onChange={(v) => setForm(f => ({ ...f, heroStats: v }))}
-                  fields={[
-                    { key: 'label', label: 'Label', placeholder: 'e.g. Universities' },
-                    { key: 'value', label: 'Value', placeholder: 'e.g. 43' }
-                  ]}
-                  emptyItem={() => ({ label: '', value: '' })}
-                />
-              </CollapsibleSection>
-
-              <CollapsibleSection title="Overview" badge={form.overviewDescription.length || null}>
-                <div className="space-y-3">
+              {/* Hero & Overview */}
+              {activeTab === 'hero' && (
+                <div className="space-y-6">
                   <div>
-                    <label className="block text-xs font-medium text-on-surface-variant mb-1">Overview Title</label>
-                    <input name="overviewTitle" value={form.overviewTitle} onChange={handleChange}
-                      placeholder="e.g. Country Overview"
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                    <h3 className="text-xs font-semibold text-primary mb-3">Hero Stats</h3>
+                    <ListEditor
+                      label="Stats displayed in the hero section"
+                      description="Add key statistics shown in the hero banner, e.g. number of universities, international students, etc."
+                      value={form.heroStats}
+                      onChange={(v) => setForm(f => ({ ...f, heroStats: v }))}
+                      fields={[
+                        { key: 'label', label: 'Label', placeholder: 'e.g. Universities' },
+                        { key: 'value', label: 'Value', placeholder: 'e.g. 43' }
+                      ]}
+                      emptyItem={() => ({ label: '', value: '' })}
+                    />
                   </div>
-                  <StringListEditor
-                    label="Overview Paragraphs"
-                    value={form.overviewDescription}
-                    onChange={(v) => setForm(f => ({ ...f, overviewDescription: v }))}
-                    placeholder="Enter a paragraph..."
-                  />
+                  <div className="border-t border-outline-variant pt-4">
+                    <h3 className="text-xs font-semibold text-primary mb-3">Overview</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <label className="block text-xs font-medium text-on-surface-variant mb-1">Overview Title</label>
+                        <input name="overviewTitle" value={form.overviewTitle} onChange={handleChange}
+                          placeholder="e.g. Study in Australia"
+                          className={fieldClass('overviewTitle')} />
+                        {fieldError('overviewTitle')}
+                      </div>
+                      <StringListEditor
+                        label="Overview Paragraphs"
+                        description="Add paragraphs that describe this destination. Each entry is one paragraph displayed in the overview section."
+                        value={form.overviewDescription}
+                        onChange={(v) => setForm(f => ({ ...f, overviewDescription: v }))}
+                        placeholder="e.g. Australia is home to some of the world's top-ranked universities..."
+                      />
+                    </div>
+                  </div>
                 </div>
-              </CollapsibleSection>
+              )}
 
-              <CollapsibleSection title="Details Grid" badge={form.details.length || null}>
-                <ListEditor
-                  label="Detail cards (e.g. Climate, Living Cost, Visa Type)"
-                  value={form.details}
-                  onChange={(v) => setForm(f => ({ ...f, details: v }))}
-                  fields={[
-                    { key: 'icon', label: 'Icon Name', placeholder: 'e.g. wb_sunny' },
-                    { key: 'title', label: 'Title', placeholder: 'e.g. Climate' },
-                    { key: 'description', label: 'Description', placeholder: 'Describe this detail...', type: 'textarea' }
-                  ]}
-                  emptyItem={() => ({ icon: '', title: '', description: '' })}
-                />
-              </CollapsibleSection>
+              {/* Details & Courses */}
+              {activeTab === 'details' && (
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xs font-semibold text-primary mb-3">Details Grid</h3>
+                    <ListEditor
+                      label="Detail cards (e.g. Climate, Living Cost, Visa Type)"
+                      description="Add detail cards for the destination grid."
+                      value={form.details}
+                      onChange={(v) => setForm(f => ({ ...f, details: v }))}
+                      fields={[
+                        { key: 'title', label: 'Title', placeholder: 'e.g. Climate' },
+                        { key: 'description', label: 'Description', placeholder: 'Describe this detail...', type: 'textarea' }
+                      ]}
+                      emptyItem={() => ({ title: '', description: '' })}
+                    />
+                  </div>
+                  <div className="border-t border-outline-variant pt-4">
+                    <h3 className="text-xs font-semibold text-primary mb-3">Popular Courses</h3>
+                    <ListEditor
+                      label="Courses popular in this country"
+                      description="Add popular courses/fields of study for this destination."
+                      value={form.popularCourses}
+                      onChange={(v) => setForm(f => ({ ...f, popularCourses: v }))}
+                      fields={[
+                        { key: 'title', label: 'Course Title', placeholder: 'e.g. Nursing' },
+                        { key: 'desc', label: 'Short Description', placeholder: 'e.g. High demand & PR pathways' }
+                      ]}
+                      emptyItem={() => ({ title: '', desc: '' })}
+                    />
+                  </div>
+                </div>
+              )}
 
-              <CollapsibleSection title="Popular Courses" badge={form.popularCourses.length || null}>
-                <ListEditor
-                  label="Courses popular in this country"
-                  value={form.popularCourses}
-                  onChange={(v) => setForm(f => ({ ...f, popularCourses: v }))}
-                  fields={[
-                    { key: 'icon', label: 'Icon Name', placeholder: 'e.g. medical_services' },
-                    { key: 'title', label: 'Course Title', placeholder: 'e.g. Nursing' },
-                    { key: 'desc', label: 'Short Description', placeholder: 'e.g. High demand & PR pathways' }
-                  ]}
-                  emptyItem={() => ({ icon: '', title: '', desc: '' })}
-                />
-              </CollapsibleSection>
+              {/* Admission & Intakes */}
+              {activeTab === 'admission' && (
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xs font-semibold text-primary mb-3">Admission Requirements</h3>
+                    <StringListEditor
+                      label="List of requirements"
+                      description="Add general admission requirements for studying in this country. Each entry is one requirement."
+                      value={form.admissionRequirements}
+                      onChange={(v) => setForm(f => ({ ...f, admissionRequirements: v }))}
+                      placeholder="e.g. Academic transcripts (Bachelor/High School)"
+                    />
+                  </div>
+                  <div className="border-t border-outline-variant pt-4">
+                    <h3 className="text-xs font-semibold text-primary mb-3">Major Intakes</h3>
+                    <ListEditor
+                      label="Intake periods"
+                      description="Add major intake periods for universities in this country, e.g. Semester 1 in February, Semester 2 in July."
+                      value={form.intakes}
+                      onChange={(v) => setForm(f => ({ ...f, intakes: v }))}
+                      fields={[
+                        { key: 'name', label: 'Intake Name', placeholder: 'e.g. Semester 1' },
+                        { key: 'month', label: 'Month', placeholder: 'e.g. February' }
+                      ]}
+                      emptyItem={() => ({ name: '', month: '' })}
+                    />
+                  </div>
+                </div>
+              )}
 
-              <CollapsibleSection title="Admission Requirements" badge={form.admissionRequirements.length || null}>
-                <StringListEditor
-                  label="List of requirements"
-                  value={form.admissionRequirements}
-                  onChange={(v) => setForm(f => ({ ...f, admissionRequirements: v }))}
-                  placeholder="e.g. Academic transcripts (Bachelor/High School)"
-                />
-              </CollapsibleSection>
-
-              <CollapsibleSection title="Major Intakes" badge={form.intakes.length || null}>
-                <ListEditor
-                  label="Intake periods"
-                  value={form.intakes}
-                  onChange={(v) => setForm(f => ({ ...f, intakes: v }))}
-                  fields={[
-                    { key: 'name', label: 'Intake Name', placeholder: 'e.g. Semester 1' },
-                    { key: 'month', label: 'Month', placeholder: 'e.g. February' }
-                  ]}
-                  emptyItem={() => ({ name: '', month: '' })}
-                />
-              </CollapsibleSection>
-
-              <CollapsibleSection title="Scholarships" badge={form.scholarshipsDescription ? 1 : null}>
+              {/* Scholarships */}
+              {activeTab === 'scholarships' && (
                 <div>
                   <label className="block text-xs font-medium text-on-surface-variant mb-1">Scholarship Description</label>
                   <textarea
                     name="scholarshipsDescription"
                     value={form.scholarshipsDescription}
                     onChange={handleChange}
-                    rows={3}
+                    rows={5}
                     placeholder="Describe available scholarships..."
-                    className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20"
+                    className={fieldClass('scholarshipsDescription')}
                   />
+                  {fieldError('scholarshipsDescription')}
                 </div>
-              </CollapsibleSection>
+              )}
+
             </div>
 
             <div className="flex justify-end gap-3 mt-4 pt-4 border-t border-outline-variant">

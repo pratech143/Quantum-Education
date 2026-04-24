@@ -15,7 +15,6 @@ export type University = {
   whySection: unknown | null;
   coursesData: unknown | null;
   admissionData: unknown | null;
-  ctaData: unknown | null;
   countryId: string;
   createdAt: Date;
   updatedAt: Date;
@@ -45,7 +44,6 @@ export type CreateUniversityInput = {
   whySection?: any;
   coursesData?: any;
   admissionData?: any;
-  ctaData?: any;
   countryId: string;
 };
 
@@ -65,5 +63,4 @@ export type UpdateUniversityInput = {
   whySection?: any;
   coursesData?: any;
   admissionData?: any;
-  ctaData?: any;
 };

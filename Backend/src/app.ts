@@ -41,7 +41,7 @@ export const createApp = () => {
   // ── Contact module ──────────────────────────────────────
   const contactRequestRepository = new PrismaContactRequestRepository();
   const contactNotificationService =
-    env.SMTP_HOST && env.SMTP_PORT && env.SMTP_FROM_EMAIL && env.CONTACT_NOTIFICATION_TO_EMAIL
+    (env.SMTP_SERVICE || (env.SMTP_HOST && env.SMTP_PORT)) && env.SMTP_FROM_EMAIL && env.CONTACT_NOTIFICATION_TO_EMAIL
       ? new SmtpContactNotificationService()
       : new NoopContactNotificationService();
   const createContactRequestUseCase = new CreateContactRequestUseCase(

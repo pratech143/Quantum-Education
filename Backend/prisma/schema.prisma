@@ -110,7 +110,6 @@ model University {
   whySection    Json?  // { title, reasons: [{ icon, title, description, link?, linkText? }] }
   coursesData   Json?  // { title, description, buttonText, courses: [{ icon, title, description, tag?, tagStyle? }] }
   admissionData Json?  // { requirementsTitle, howToApplyTitle, requirements: [{ title, description }], howToApply: string[] }
-  ctaData       Json?  // { title, description, buttonText, link }
 
   countryId   String
   country     Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)

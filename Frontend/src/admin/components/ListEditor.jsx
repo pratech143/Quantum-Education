@@ -5,7 +5,7 @@ import { Plus, Trash2, ChevronDown } from 'lucide-react';
  * Generic list editor for arrays of objects.
  * Each item is collapsible — shows a summary header when collapsed.
  */
-const ListEditor = ({ label, value = [], onChange, fields, emptyItem }) => {
+const ListEditor = ({ label, description, value = [], onChange, fields, emptyItem }) => {
   const items = Array.isArray(value) ? value : [];
   // Track which items are expanded; new items start expanded
   const [expanded, setExpanded] = useState({});
@@ -64,6 +64,9 @@ const ListEditor = ({ label, value = [], onChange, fields, emptyItem }) => {
           <Plus className="w-3 h-3" /> Add
         </button>
       </div>
+      {description && (
+        <p className="text-[10px] text-on-surface-variant/60 mb-2">{description}</p>
+      )}
       {items.length === 0 && (
         <p className="text-xs text-on-surface-variant/60 italic py-2">No items added yet.</p>
       )}

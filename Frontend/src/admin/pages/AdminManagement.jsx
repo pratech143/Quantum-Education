@@ -24,14 +24,19 @@ const Modal = ({ open, onClose, title, children }) => {
   );
 };
 
-const Input = ({ label, ...props }) => (
+const Input = ({ label, error: fieldErr, ...props }) => (
   <div>
     <label className="block text-sm font-medium text-on-surface mb-1.5">{label}</label>
     <input
       {...props}
-      className="w-full px-4 py-2.5 rounded-xl border border-outline-variant bg-surface-container-low
-        text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
+      className={`w-full px-4 py-2.5 rounded-xl border bg-surface-container-low
+        text-on-surface text-sm focus:outline-none focus:ring-2 transition-colors ${
+        fieldErr
+          ? 'border-red-500 focus:ring-red-300 focus:border-red-500'
+          : 'border-outline-variant focus:ring-primary/30 focus:border-primary'
+      }`}
     />
+    {fieldErr && <p className="text-red-500 text-xs mt-1">{Array.isArray(fieldErr) ? fieldErr.join(', ') : fieldErr}</p>}
   </div>
 );
 
@@ -54,6 +59,7 @@ const AdminManagement = () => {
   const [form, setForm] = useState({ name: '', email: '', password: '', role: 'ADMIN' });
   const [editForm, setEditForm] = useState({ name: '', email: '', role: 'ADMIN' });
   const [resetPw, setResetPw] = useState('');
+  const [fieldErrors, setFieldErrors] = useState({});
 
   const loadAdmins = useCallback(async () => {
     try {
@@ -78,7 +84,7 @@ const AdminManagement = () => {
 
   const handleCreate = async (e) => {
     e.preventDefault();
-    setSubmitting(true);
+    setSubmitting(true); setFieldErrors({});
     try {
       await adminApi.createAdmin(form);
       toast.success('Admin created');
@@ -87,6 +93,7 @@ const AdminManagement = () => {
       loadAdmins();
     } catch (err) {
       toast.error(err.message);
+      if (err.fieldErrors) setFieldErrors(err.fieldErrors);
     } finally {
       setSubmitting(false);
     }
@@ -94,7 +101,7 @@ const AdminManagement = () => {
 
   const handleEdit = async (e) => {
     e.preventDefault();
-    setSubmitting(true);
+    setSubmitting(true); setFieldErrors({});
     try {
       await adminApi.updateAdmin(showEdit.id, editForm);
       toast.success('Admin updated');
@@ -102,6 +109,7 @@ const AdminManagement = () => {
       loadAdmins();
     } catch (err) {
       toast.error(err.message);
+      if (err.fieldErrors) setFieldErrors(err.fieldErrors);
     } finally {
       setSubmitting(false);
     }
@@ -109,7 +117,7 @@ const AdminManagement = () => {
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
-    setSubmitting(true);
+    setSubmitting(true); setFieldErrors({});
     try {
       await adminApi.resetPassword(showResetPw.id, resetPw);
       toast.success('Password reset');
@@ -117,6 +125,7 @@ const AdminManagement = () => {
       setResetPw('');
     } catch (err) {
       toast.error(err.message);
+      if (err.fieldErrors) setFieldErrors(err.fieldErrors);
     } finally {
       setSubmitting(false);
     }
@@ -153,6 +162,7 @@ const AdminManagement = () => {
 
   const openEdit = (admin) => {
     setEditForm({ name: admin.name, email: admin.email, role: admin.role });
+    setFieldErrors({});
     setShowEdit(admin);
   };
 
@@ -293,9 +303,9 @@ const AdminManagement = () => {
       {/* Create Admin Modal */}
       <Modal open={showCreate} onClose={() => setShowCreate(false)} title="Add Admin">
         <form onSubmit={handleCreate} className="space-y-4">
-          <Input label="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
-          <Input label="Email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
-          <Input label="Temporary Password" type="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} required minLength={8} />
+          <Input label="Name" placeholder="e.g. John Smith" value={form.name} error={fieldErrors.name} onChange={(e) => { setForm({ ...form, name: e.target.value }); setFieldErrors(p => { const n = {...p}; delete n.name; return n; }); }} required />
+          <Input label="Email" type="email" placeholder="e.g. admin@example.com" value={form.email} error={fieldErrors.email} onChange={(e) => { setForm({ ...form, email: e.target.value }); setFieldErrors(p => { const n = {...p}; delete n.email; return n; }); }} required />
+          <Input label="Temporary Password" type="password" placeholder="Min. 8 characters" value={form.password} error={fieldErrors.password} onChange={(e) => { setForm({ ...form, password: e.target.value }); setFieldErrors(p => { const n = {...p}; delete n.password; return n; }); }} required minLength={8} />
           <div>
             <label className="block text-sm font-medium text-on-surface mb-1.5">Role</label>
             <select
@@ -325,8 +335,13 @@ const AdminManagement = () => {
       {/* Edit Admin Modal */}
       <Modal open={!!showEdit} onClose={() => setShowEdit(null)} title="Edit Admin">
         <form onSubmit={handleEdit} className="space-y-4">
-          <Input label="Name" value={editForm.name} onChange={(e) => setEditForm({ ...editForm, name: e.target.value })} required />
-          <Input label="Email" type="email" value={editForm.email} onChange={(e) => setEditForm({ ...editForm, email: e.target.value })} required />
+          <Input label="Name" placeholder="e.g. John Smith" value={editForm.name} error={fieldErrors.name} onChange={(e) => { setEditForm({ ...editForm, name: e.target.value }); setFieldErrors(p => { const n = {...p}; delete n.name; return n; }); }} required />
+          <div>
+            <label className="block text-sm font-medium text-on-surface mb-1.5">Email</label>
+            <input type="email" value={editForm.email} disabled
+              className="w-full px-4 py-2.5 rounded-xl border border-outline-variant bg-surface-container-high text-on-surface-variant text-sm cursor-not-allowed" />
+            <p className="text-xs text-on-surface-variant mt-1">Email cannot be changed after creation.</p>
+          </div>
           <div>
             <label className="block text-sm font-medium text-on-surface mb-1.5">Role</label>
             <select
@@ -359,7 +374,7 @@ const AdminManagement = () => {
           Set a new password for <strong>{showResetPw?.name}</strong>. They will be required to change it on next login.
         </p>
         <form onSubmit={handleResetPassword} className="space-y-4">
-          <Input label="New Password" type="password" value={resetPw} onChange={(e) => setResetPw(e.target.value)} required minLength={8} />
+          <Input label="New Password" type="password" placeholder="Min. 8 characters" value={resetPw} error={fieldErrors.newPassword} onChange={(e) => { setResetPw(e.target.value); setFieldErrors(p => { const n = {...p}; delete n.newPassword; return n; }); }} required minLength={8} />
           <div className="flex justify-end gap-3 pt-2">
             <button type="button" onClick={() => { setShowResetPw(null); setResetPw(''); }}
               className="px-4 py-2.5 rounded-xl border border-outline-variant text-sm font-medium text-on-surface hover:bg-surface-container-high transition-colors">

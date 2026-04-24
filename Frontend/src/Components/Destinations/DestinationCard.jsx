@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 const DestinationCard = ({ id, name, title, slug, description, image, labels, index = 0 }) => {
   return (
-    <Link to={`/countries/${slug}`} className="block">
+    <Link to={`/countries/${slug}`} className="block h-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: index * 0.1, duration: 0.5 }}
         whileHover={{ y: -8 }}
-        className="group bg-white rounded-xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl border border-surface-container/50 cursor-pointer"
+        className="group bg-white rounded-xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl border border-surface-container/50 cursor-pointer h-full flex flex-col"
       >
         <div className="relative aspect-video overflow-hidden">
           <img
@@ -23,9 +23,9 @@ const DestinationCard = ({ id, name, title, slug, description, image, labels, in
             {name}
           </div>
         </div>
-        <div className="p-8">
+        <div className="p-8 flex flex-col flex-1">
           <h3 className="font-headline text-2xl font-bold text-primary mb-3">{title}</h3>
-          <p className="text-on-surface-variant text-sm mb-6 leading-relaxed hidden sm:block">
+          <p className="text-on-surface-variant text-sm mb-6 leading-relaxed hidden sm:block flex-1">
             {description}
           </p>
           <div className="flex flex-wrap gap-2 items-center justify-between">

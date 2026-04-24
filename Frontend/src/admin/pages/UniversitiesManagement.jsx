@@ -4,7 +4,7 @@ import { GraduationCap, Plus, Pencil, Trash2, X, Loader2, Filter } from 'lucide-
 import ImageUpload from '../components/ImageUpload';
 import ListEditor from '../components/ListEditor';
 import StringListEditor from '../components/StringListEditor';
-import CollapsibleSection from '../components/CollapsibleSection';
+import TabBar from '../components/TabBar';
 
 const emptyForm = {
   name: '', slug: '', description: '', location: '', image: '',
@@ -17,9 +17,7 @@ const emptyForm = {
   // coursesData
   coursesTitle: '', coursesDescription: '', courses: [],
   // admissionData
-  requirementsTitle: '', howToApplyTitle: '', requirements: [], howToApply: [],
-  // ctaData
-  ctaTitle: '', ctaDescription: ''
+  requirementsTitle: '', howToApplyTitle: '', requirements: [], howToApply: []
 };
 
 const UniversitiesManagement = () => {
@@ -34,6 +32,8 @@ const UniversitiesManagement = () => {
   const [form, setForm] = useState(emptyForm);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [errorFields, setErrorFields] = useState(null);
+  const [activeTab, setActiveTab] = useState('basic');
   const scrollRef = useRef(null);
 
   const load = async () => {
@@ -59,7 +59,7 @@ const UniversitiesManagement = () => {
 
   const openCreate = () => {
     setForm({ ...emptyForm, countryId: countries[0]?.id || '' });
-    setError('');
+    setError(''); setErrorFields(null); setActiveTab('basic');
     setModal('create');
     setTimeout(() => scrollRef.current?.scrollTo(0, 0), 0);
   };
@@ -86,19 +86,32 @@ const UniversitiesManagement = () => {
       requirementsTitle: u.admissionData?.requirementsTitle || '',
       howToApplyTitle: u.admissionData?.howToApplyTitle || '',
       requirements: Array.isArray(u.admissionData?.requirements) ? u.admissionData.requirements : [],
-      howToApply: Array.isArray(u.admissionData?.howToApply) ? u.admissionData.howToApply : [],
-      // ctaData
-      ctaTitle: u.ctaData?.title || '',
-      ctaDescription: u.ctaData?.description || ''
+      howToApply: Array.isArray(u.admissionData?.howToApply) ? u.admissionData.howToApply : []
     });
-    setError('');
+    setError(''); setErrorFields(null); setActiveTab('basic');
     setModal('edit');
     setTimeout(() => scrollRef.current?.scrollTo(0, 0), 0);
   };
 
-  const openDelete = (u) => { setSelected(u); setError(''); setModal('delete'); };
+  const openDelete = (u) => { setSelected(u); setError(''); setErrorFields(null); setModal('delete'); };
 
-  const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm(f => ({ ...f, [name]: value }));
+    if (errorFields?.[name]) {
+      setErrorFields(prev => { const next = { ...prev }; delete next[name]; return next; });
+    }
+  };
+
+  const fieldClass = (name) =>
+    errorFields?.[name]
+      ? 'w-full px-3 py-2 border border-red-500 rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-300'
+      : 'w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20';
+
+  const fieldError = (name) =>
+    errorFields?.[name]
+      ? <p className="text-red-500 text-[10px] mt-0.5">{Array.isArray(errorFields[name]) ? errorFields[name].join(', ') : errorFields[name]}</p>
+      : null;
 
   const buildPayload = () => {
     const payload = {
@@ -136,18 +149,11 @@ const UniversitiesManagement = () => {
         requirements: form.requirements, howToApply: form.howToApply
       };
     }
-    // ctaData — link auto-uses the website field
-    if (form.ctaTitle) {
-      payload.ctaData = {
-        title: form.ctaTitle, description: form.ctaDescription,
-        buttonText: 'Visit Official Website', link: form.website
-      };
-    }
     return payload;
   };
 
   const handleSave = async () => {
-    setSaving(true); setError('');
+    setSaving(true); setError(''); setErrorFields(null);
     try {
       if (modal === 'create') {
         await adminApi.createUniversity(form.countryId, buildPayload());
@@ -156,7 +162,7 @@ const UniversitiesManagement = () => {
       }
       setModal(null);
       load();
-    } catch (e) { setError(e.message); }
+    } catch (e) { setError(e.message); setErrorFields(e.fieldErrors || null); }
     setSaving(false);
   };
 
@@ -165,7 +171,7 @@ const UniversitiesManagement = () => {
     try {
       await adminApi.deleteUniversity(selected.id);
       setModal(null); load();
-    } catch (e) { setError(e.message); }
+    } catch (e) { setError(e.message); setErrorFields(e.fieldErrors || null); }
     setSaving(false);
   };
 
@@ -252,12 +258,26 @@ const UniversitiesManagement = () => {
               <h2 className="text-lg font-bold">{modal === 'create' ? 'Add Institution' : 'Edit Institution'}</h2>
               <button onClick={() => setModal(null)}><X className="w-5 h-5" /></button>
             </div>
-            {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
-            <div ref={scrollRef} className="space-y-3 max-h-[70vh] overflow-y-auto pr-2">
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-3">
+                <p className="text-red-700 text-sm font-medium">{error}</p>
+              </div>
+            )}
+            <TabBar
+              tabs={[
+                { key: 'basic', label: 'Basic Info' },
+                { key: 'hero', label: 'Hero', badge: form.heroTitle ? 1 : null },
+                { key: 'why', label: 'Why Choose', badge: form.whyReasons.length || null },
+                { key: 'courses', label: 'Courses', badge: form.courses.length || null },
+                { key: 'admission', label: 'Admission', badge: (form.requirements.length + form.howToApply.length) || null }
+              ]}
+              activeTab={activeTab}
+              onChange={setActiveTab}
+            />
+            <div ref={scrollRef} className="max-h-[65vh] overflow-y-auto pr-2">
 
-              {/* Basic Info — always open */}
-              <fieldset className="border border-outline-variant rounded-lg p-4">
-                <legend className="text-xs font-semibold text-primary px-2">Basic Info</legend>
+              {/* Basic Info */}
+              {activeTab === 'basic' && (
                 <div className="grid grid-cols-2 gap-4">
                   <div className="col-span-2">
                     <label className="block text-xs font-medium text-on-surface-variant mb-1">Country</label>
@@ -275,14 +295,20 @@ const UniversitiesManagement = () => {
                     </select>
                   </div>
                   {[
-                    ['name', 'Name'], ['slug', 'Slug'], ['location', 'Location'], ['ranking', 'Ranking'],
-                    ['qsRanking', 'QS Ranking (e.g. #14)'], ['tagline', 'Tagline'],
-                    ['website', 'Website URL'], ['fees', 'Avg. Fees']
-                  ].map(([key, label]) => (
+                    ['name', 'Name', 'e.g. University of Melbourne'],
+                    ['slug', 'Slug', 'e.g. university-of-melbourne'],
+                    ['location', 'Location', 'e.g. Melbourne, Victoria'],
+                    ['ranking', 'Ranking', 'e.g. 1'],
+                    ['qsRanking', 'QS Ranking', 'e.g. #14'],
+                    ['tagline', 'Tagline', 'e.g. Australia\'s Leading University'],
+                    ['website', 'Website URL', 'e.g. https://www.unimelb.edu.au'],
+                    ['fees', 'Avg. Fees', 'e.g. $30,000 - $45,000 AUD/year']
+                  ].map(([key, label, placeholder]) => (
                     <div key={key}>
                       <label className="block text-xs font-medium text-on-surface-variant mb-1">{label}</label>
-                      <input name={key} value={form[key]} onChange={handleChange}
-                        className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      <input name={key} value={form[key]} onChange={handleChange} placeholder={placeholder}
+                        className={fieldClass(key)} />
+                      {fieldError(key)}
                     </div>
                   ))}
                   <div>
@@ -292,100 +318,122 @@ const UniversitiesManagement = () => {
                   <div className="col-span-2">
                     <label className="block text-xs font-medium text-on-surface-variant mb-1">Description</label>
                     <textarea name="description" value={form.description} onChange={handleChange} rows={3}
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      placeholder="e.g. The University of Melbourne is a public research university located in Melbourne, Australia..."
+                      className={fieldClass('description')} />
+                    {fieldError('description')}
                   </div>
                 </div>
-              </fieldset>
+              )}
 
-              {/* Collapsible sections */}
-              <CollapsibleSection title="Hero Section" badge={form.heroTitle ? 1 : null}>
+              {/* Hero */}
+              {activeTab === 'hero' && (
                 <div className="grid grid-cols-2 gap-4">
                   <div className="col-span-2">
                     <label className="block text-xs font-medium text-on-surface-variant mb-1">Title</label>
                     <input name="heroTitle" value={form.heroTitle} onChange={handleChange}
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      placeholder="e.g. University of Melbourne"
+                      className={fieldClass('heroTitle')} />
+                    {fieldError('heroTitle')}
                   </div>
                   <div className="col-span-2">
                     <label className="block text-xs font-medium text-on-surface-variant mb-1">Subtitle</label>
                     <textarea name="heroSubtitle" value={form.heroSubtitle} onChange={handleChange} rows={2}
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      placeholder="e.g. A world-class education in the heart of Melbourne, Australia"
+                      className={fieldClass('heroSubtitle')} />
+                    {fieldError('heroSubtitle')}
                   </div>
                   <div className="col-span-2">
                     <ImageUpload label="Hero Background Image" value={form.heroImage}
                       onChange={(url) => setForm(f => ({ ...f, heroImage: url }))} />
                   </div>
                 </div>
-              </CollapsibleSection>
+              )}
 
-              <CollapsibleSection title="Why Choose This Institution" badge={form.whyReasons.length || null}>
+              {/* Why Choose */}
+              {activeTab === 'why' && (
                 <div className="space-y-3">
                   <div>
                     <label className="block text-xs font-medium text-on-surface-variant mb-1">Section Title</label>
                     <input name="whyTitle" value={form.whyTitle} onChange={handleChange}
                       placeholder="e.g. Why University of Melbourne?"
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      className={fieldClass('whyTitle')} />
+                    {fieldError('whyTitle')}
                   </div>
                   <ListEditor
                     label="Reasons"
+                    description="Add reasons why students should choose this institution."
                     value={form.whyReasons}
                     onChange={(v) => setForm(f => ({ ...f, whyReasons: v }))}
                     fields={[
-                      { key: 'icon', label: 'Icon Name', placeholder: 'e.g. workspace_premium' },
                       { key: 'title', label: 'Title', placeholder: 'e.g. #1 in Australia' },
                       { key: 'description', label: 'Description', placeholder: 'Describe this reason...', type: 'textarea' },
                       { key: 'link', label: 'Link URL (optional)', placeholder: 'https://...' },
                       { key: 'linkText', label: 'Link Text (optional)', placeholder: 'e.g. Learn More' }
                     ]}
-                    emptyItem={() => ({ icon: '', title: '', description: '', link: '', linkText: '' })}
+                    emptyItem={() => ({ title: '', description: '', link: '', linkText: '' })}
                   />
                 </div>
-              </CollapsibleSection>
+              )}
 
-              <CollapsibleSection title="Courses" badge={form.courses.length || null}>
+              {/* Courses */}
+              {activeTab === 'courses' && (
                 <div className="space-y-3">
                   <div>
                     <label className="block text-xs font-medium text-on-surface-variant mb-1">Section Title</label>
                     <input name="coursesTitle" value={form.coursesTitle} onChange={handleChange}
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      placeholder="e.g. Popular Courses at University of Melbourne"
+                      className={fieldClass('coursesTitle')} />
+                    {fieldError('coursesTitle')}
                   </div>
                   <div>
                     <label className="block text-xs font-medium text-on-surface-variant mb-1">Section Description</label>
                     <textarea name="coursesDescription" value={form.coursesDescription} onChange={handleChange} rows={2}
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                      placeholder="e.g. Explore world-renowned programs across diverse fields of study"
+                      className={fieldClass('coursesDescription')} />
+                    {fieldError('coursesDescription')}
                   </div>
                   <ListEditor
                     label="Course List"
+                    description="Add courses offered by this institution with full details."
                     value={form.courses}
                     onChange={(v) => setForm(f => ({ ...f, courses: v }))}
                     fields={[
-                      { key: 'icon', label: 'Icon Name', placeholder: 'e.g. biotech' },
-                      { key: 'title', label: 'Course Title', placeholder: 'e.g. Biomedicine' },
-                      { key: 'description', label: 'Description', placeholder: 'Describe this course...', type: 'textarea' },
+                      { key: 'title', label: 'Course Title', placeholder: 'e.g. Bachelor of Biomedicine' },
+                      { key: 'description', label: 'Short Description', placeholder: 'e.g. A globally recognised pre-medical degree', type: 'textarea' },
+                      { key: 'fees', label: 'Fees', placeholder: 'e.g. $45,000 AUD/year' },
+                      { key: 'duration', label: 'Duration', placeholder: 'e.g. 3 years full-time' },
+                      { key: 'semesters', label: 'Semesters', placeholder: 'e.g. 6 semesters' },
+                      { key: 'scope', label: 'Scope in Country', placeholder: 'e.g. High demand in healthcare sector with strong PR pathways', type: 'textarea' },
+                      { key: 'details', label: 'Other Details', placeholder: 'e.g. Includes lab work, clinical placements, and research project in final year', type: 'textarea' },
                       { key: 'tag', label: 'Tag (optional)', placeholder: 'e.g. Top Ranked' }
                     ]}
-                    emptyItem={() => ({ icon: '', title: '', description: '', tag: '' })}
+                    emptyItem={() => ({ title: '', description: '', fees: '', duration: '', semesters: '', scope: '', details: '', tag: '' })}
                   />
                 </div>
-              </CollapsibleSection>
+              )}
 
-              <CollapsibleSection title="Admission" badge={(form.requirements.length + form.howToApply.length) || null}>
+              {/* Admission */}
+              {activeTab === 'admission' && (
                 <div className="space-y-3">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-medium text-on-surface-variant mb-1">Requirements Section Title</label>
                       <input name="requirementsTitle" value={form.requirementsTitle} onChange={handleChange}
                         placeholder="e.g. Entry Requirements"
-                        className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                        className={fieldClass('requirementsTitle')} />
+                      {fieldError('requirementsTitle')}
                     </div>
                     <div>
                       <label className="block text-xs font-medium text-on-surface-variant mb-1">How to Apply Section Title</label>
                       <input name="howToApplyTitle" value={form.howToApplyTitle} onChange={handleChange}
                         placeholder="e.g. How to Apply"
-                        className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
+                        className={fieldClass('howToApplyTitle')} />
+                      {fieldError('howToApplyTitle')}
                     </div>
                   </div>
                   <ListEditor
                     label="Entry Requirements"
+                    description="Add admission requirements such as academic qualifications, language tests, etc."
                     value={form.requirements}
                     onChange={(v) => setForm(f => ({ ...f, requirements: v }))}
                     fields={[
@@ -396,31 +444,14 @@ const UniversitiesManagement = () => {
                   />
                   <StringListEditor
                     label="How to Apply Steps"
+                    description="Add step-by-step instructions for how to apply to this institution."
                     value={form.howToApply}
                     onChange={(v) => setForm(f => ({ ...f, howToApply: v }))}
                     placeholder="e.g. Select your course and check the entry dates."
                   />
                 </div>
-              </CollapsibleSection>
+              )}
 
-              <CollapsibleSection title="Call to Action" badge={form.ctaTitle ? 1 : null}>
-                <div className="space-y-3">
-                  <div>
-                    <label className="block text-xs font-medium text-on-surface-variant mb-1">Title</label>
-                    <input name="ctaTitle" value={form.ctaTitle} onChange={handleChange}
-                      placeholder="e.g. Ready to begin your journey?"
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-on-surface-variant mb-1">Description</label>
-                    <textarea name="ctaDescription" value={form.ctaDescription} onChange={handleChange} rows={2}
-                      className="w-full px-3 py-2 border border-outline-variant rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20" />
-                  </div>
-                  <p className="text-[10px] text-on-surface-variant/60 italic">
-                    The button will automatically link to the Website URL from Basic Info.
-                  </p>
-                </div>
-              </CollapsibleSection>
             </div>
 
             <div className="flex justify-end gap-3 mt-4 pt-4 border-t border-outline-variant">
