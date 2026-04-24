@@ -3,13 +3,13 @@ import Reveal from '../UX/Reveal';
 
 const TrustSection = () => {
   const stats = [
-    { value: '5000+', label: 'Students Placed' },
-    { value: '500+', label: 'Partner Universities' },
+    { value: '200+', label: 'Students Placed' },
+    { value: '25+', label: 'Partner Universities' },
     { value: '95%', label: 'Visa Success Rate' },
-    { value: '12+', label: 'Years Experience' },
+    { value: '15+', label: 'Years Experience' },
   ];
 
-  const partners = ['HARVARD', 'OXFORD', 'TORONTO', 'MELBOURNE', 'STANFORD'];
+  const partners = ['BPP ', 'WOLVERHAMPTON', 'BIRMINGHAM', 'DERBY', 'UNIVERSITY OF BOLTON'];
 
   return (
     <section className="py-16" style={{ background: '#F7F6F3' }}>
@@ -27,9 +27,9 @@ const TrustSection = () => {
           ))}
         </div>
         <Reveal delay={0.4}>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {partners.map((partner) => (
-              <div key={partner} className="h-12 w-32 flex items-center justify-center font-headline font-black text-2xl text-on-surface-variant">
+              <div key={partner} className="h-12 flex items-center justify-center font-headline font-black text-xl lg:text-2xl text-on-surface-variant whitespace-nowrap">
                 {partner}
               </div>
             ))}
