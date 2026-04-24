@@ -3,7 +3,7 @@ import { Plus, Trash2 } from 'lucide-react';
 /**
  * Editor for arrays of strings (e.g. admission requirements, how-to-apply steps).
  */
-const StringListEditor = ({ label, value = [], onChange, placeholder = 'Enter item...' }) => {
+const StringListEditor = ({ label, description, value = [], onChange, placeholder = 'Enter item...' }) => {
   const items = Array.isArray(value) ? value : [];
 
   const handleAdd = () => onChange([...items, '']);
@@ -28,6 +28,9 @@ const StringListEditor = ({ label, value = [], onChange, placeholder = 'Enter it
           <Plus className="w-3 h-3" /> Add
         </button>
       </div>
+      {description && (
+        <p className="text-[10px] text-on-surface-variant/60 mb-2">{description}</p>
+      )}
       {items.length === 0 && (
         <p className="text-xs text-on-surface-variant/60 italic py-2">No items added yet.</p>
       )}

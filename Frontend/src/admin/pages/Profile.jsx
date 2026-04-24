@@ -7,7 +7,6 @@ import toast from 'react-hot-toast';
 const Profile = () => {
   const { admin, refreshAdmin } = useAuth();
   const [name, setName] = useState(admin?.name || '');
-  const [email, setEmail] = useState(admin?.email || '');
   const [saving, setSaving] = useState(false);
 
   const [currentPassword, setCurrentPassword] = useState('');
@@ -20,7 +19,7 @@ const Profile = () => {
     e.preventDefault();
     setSaving(true);
     try {
-      await adminApi.updateProfile({ name, email });
+      await adminApi.updateProfile({ name });
       await refreshAdmin();
       toast.success('Profile updated');
     } catch (err) {
@@ -105,12 +104,12 @@ const Profile = () => {
             <label className="block text-sm font-medium text-on-surface mb-1.5">Email</label>
             <input
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full px-4 py-2.5 rounded-xl border border-outline-variant bg-surface-container-low
-                text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
+              value={admin?.email || ''}
+              disabled
+              className="w-full px-4 py-2.5 rounded-xl border border-outline-variant bg-surface-container-high
+                text-on-surface-variant text-sm cursor-not-allowed"
             />
+            <p className="text-xs text-on-surface-variant mt-1">Email cannot be changed.</p>
           </div>
           <div className="flex justify-end pt-2">
             <button

@@ -17,7 +17,7 @@ const WhySection = ({ data }) => {
         {data.reasons?.map((reason, index) => (
           <div key={index} className="flex flex-col gap-3">
             <div className="flex items-center gap-2 text-primary">
-              <span className="material-symbols-outlined font-bold">{reason.icon}</span>
+              <span className="material-symbols-outlined font-bold">{reason.icon || 'star'}</span>
               <h3 className="text-xl font-bold uppercase tracking-wider font-headline">
                 {reason.title}
               </h3>

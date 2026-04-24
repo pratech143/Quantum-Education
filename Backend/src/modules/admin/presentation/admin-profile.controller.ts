@@ -10,22 +10,8 @@ export class AdminProfileController {
   update = async (request: Request, response: Response) => {
     const input = updateProfileSchema.parse(request.body);
 
-    if (input.email) {
-      const existing = await prisma.adminUser.findFirst({
-        where: { email: input.email, NOT: { id: request.admin!.id } }
-      });
-      if (existing) {
-        throw new AppError({
-          statusCode: 409,
-          code: 'EMAIL_EXISTS',
-          message: 'An admin with this email already exists.'
-        });
-      }
-    }
-
     const data: Record<string, string> = {};
     if (input.name !== undefined) data['name'] = input.name;
-    if (input.email !== undefined) data['email'] = input.email;
 
     const admin = await prisma.adminUser.update({
       where: { id: request.admin!.id },

@@ -26,6 +26,7 @@ const envSchema = z.object({
   CONTACT_NOTIFICATION_TO_EMAIL: z.string().email().optional(),
   CONTACT_NOTIFICATION_SUBJECT: z.string().trim().min(1).default('New website lead received'),
   ADMIN_PANEL_URL: z.string().url().optional(),
+  SMTP_SERVICE: z.string().trim().min(1).optional(),
   SMTP_HOST: z.string().trim().min(1).optional(),
   SMTP_PORT: z.coerce.number().int().min(1).max(65535).optional(),
   SMTP_SECURE: z
@@ -38,6 +39,7 @@ const envSchema = z.object({
 }).superRefine((values, context) => {
   const smtpConfigured = Boolean(
     values.CONTACT_NOTIFICATION_TO_EMAIL ||
+      values.SMTP_SERVICE ||
       values.SMTP_HOST ||
       values.SMTP_PORT ||
       values.SMTP_USER ||
@@ -57,19 +59,20 @@ const envSchema = z.object({
     });
   }
 
-  if (!values.SMTP_HOST) {
+  // Either SMTP_SERVICE (e.g. "gmail") or SMTP_HOST+SMTP_PORT must be provided
+  if (!values.SMTP_SERVICE && !values.SMTP_HOST) {
     context.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['SMTP_HOST'],
-      message: 'SMTP_HOST is required when SMTP notifications are configured'
+      message: 'Either SMTP_SERVICE (e.g. gmail) or SMTP_HOST is required'
     });
   }
 
-  if (!values.SMTP_PORT) {
+  if (!values.SMTP_SERVICE && values.SMTP_HOST && !values.SMTP_PORT) {
     context.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['SMTP_PORT'],
-      message: 'SMTP_PORT is required when SMTP notifications are configured'
+      message: 'SMTP_PORT is required when using SMTP_HOST'
     });
   }
 
@@ -78,6 +81,14 @@ const envSchema = z.object({
       code: z.ZodIssueCode.custom,
       path: ['SMTP_FROM_EMAIL'],
       message: 'SMTP_FROM_EMAIL is required when SMTP notifications are configured'
+    });
+  }
+
+  if (!values.SMTP_USER || !values.SMTP_PASS) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['SMTP_USER'],
+      message: 'SMTP_USER and SMTP_PASS are required for authentication'
     });
   }
 });
