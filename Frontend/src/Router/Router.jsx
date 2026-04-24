@@ -7,7 +7,7 @@ import Contact from "../Pages/Contact";
 import Alumni from "../Pages/Alumni";
 import Country from "../Pages/Country";
 import UniversityDetails from "../Pages/UniversityDetails";
-import Certifications from "../Pages/Certifications";
+
 import AdminLayout from "../admin/AdminLayout";
 import Login from "../admin/pages/Login";
 import Dashboard from "../admin/pages/Dashboard";
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "alumni", element: <Alumni /> },
-      { path: "certifications", element: <Certifications /> },
+
       { path: "universities/:slug", element: <UniversityDetails /> },
     ],
   },
