@@ -39,28 +39,28 @@ const NavBar = () => {
                     {/* Brand Section with Fluid Scaling */}
                     <Link
                         to="/"
-                        className="flex shrink-0 cursor-pointer items-center gap-3 sm:gap-5 group"
+                        className="flex shrink-0 cursor-pointer items-center gap-3 sm:gap-4 group"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <img
                             src={logoIcon}
                             alt="Logo Icon"
-                            className="h-[clamp(2.5rem,5vw,3.5rem)] w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                            className="h-[clamp(2.2rem,4vw,3rem)] w-auto object-contain transition-transform duration-500 group-hover:scale-110"
                             onError={(e) => { e.target.style.display = 'none'; }}
                         />
-                        <div className="text-2xl font-bold text-primary-container tracking-tighter font-headline hover:text-primary transition-colors">
+                        <div className="text-xl lg:text-2xl font-bold text-primary-container tracking-tighter font-headline hover:text-primary transition-colors">
                             Quantum Education
                         </div>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <ul className="hidden grow justify-center gap-10 lg:flex">
+                    <ul className="hidden grow justify-center gap-6 xl:gap-8 lg:flex">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <NavLink
                                     to={item.to}
                                     className={({ isActive }) => `
-                                        relative whitespace-nowrap text-sm font-headline font-bold uppercase tracking-widest transition-all duration-200 
+                                        relative whitespace-nowrap text-[12px] xl:text-[13px] font-headline font-bold uppercase tracking-[0.1em] transition-all duration-200 
                                         ${isActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary'}
                                         after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300
                                         ${isActive ? 'after:w-full' : 'after:w-0 hover:after:w-full'}
