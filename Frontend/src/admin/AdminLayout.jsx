@@ -29,12 +29,13 @@ const Sidebar = ({ open, onClose }) => {
   const links = [
     { to: '/admin/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
     ...(admin?.role === 'SUPERADMIN'
-      ? [{ to: '/admin/admins', icon: Users, label: 'Admins' }]
+      ? [{ to: '/admin/admins', icon: Shield, label: 'Admins' }]
       : []),
     { to: '/admin/destinations', icon: Globe, label: 'Destinations' },
     { to: '/admin/universities', icon: GraduationCap, label: 'Universities' },
     { to: '/admin/alumni', icon: Award, label: 'Alumni' },
     { to: '/admin/news', icon: Newspaper, label: 'News & Notices' },
+    { to: '/admin/team', icon: Users, label: 'Our Team' },
     { to: '/admin/messages', icon: MessageSquare, label: 'Messages' },
     { to: '/admin/profile', icon: User, label: 'Profile' }
   ];

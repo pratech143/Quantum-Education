@@ -13,11 +13,15 @@ export const errorHandler = (
   _next: NextFunction
 ) => {
   if (error instanceof ZodError) {
+    const flattened = error.flatten();
     response.status(400).json({
       success: false,
       code: 'VALIDATION_ERROR',
       message: 'The request payload is invalid.',
-      errors: error.flatten().fieldErrors,
+      errors: {
+        ...flattened.fieldErrors,
+        _form: flattened.formErrors
+      },
       requestId: request.requestId
     });
     return;

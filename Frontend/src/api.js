@@ -64,5 +64,11 @@ export const api = {
   },
 
   getNewsById: (id) =>
-    fetchJson(`${API_PREFIX}/news/${id}`)
+    fetchJson(`${API_PREFIX}/news/${id}`),
+
+  // Team
+  getTeam: (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return fetchJson(`${API_PREFIX}/team${query ? `?${query}` : ''}`);
+  }
 };

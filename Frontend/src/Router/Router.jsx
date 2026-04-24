@@ -21,6 +21,7 @@ import DestinationsManagement from "../admin/pages/DestinationsManagement";
 import UniversitiesManagement from "../admin/pages/UniversitiesManagement";
 import AlumniManagement from "../admin/pages/AlumniManagement";
 import NewsManagement from "../admin/pages/NewsManagement";
+import TeamManagement from "../admin/pages/TeamManagement";
 import { AuthProvider } from "../admin/AuthContext";
 
 const AdminWrapper = () => (
@@ -70,6 +71,7 @@ export const router = createBrowserRouter([
       { path: "universities", element: <UniversitiesManagement /> },
       { path: "alumni", element: <AlumniManagement /> },
       { path: "news", element: <NewsManagement /> },
+      { path: "team", element: <TeamManagement /> },
       { path: "profile", element: <Profile /> },
     ],
   },
