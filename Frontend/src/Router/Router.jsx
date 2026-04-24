@@ -9,6 +9,7 @@ import Country from "../Pages/Country";
 import UniversityDetails from "../Pages/UniversityDetails";
 import News from "../Pages/News";
 import NewsDetail from "../Pages/NewsDetail";
+import InterviewPrep from "../Pages/InterviewPrep";
 
 import AdminLayout from "../admin/AdminLayout";
 import Login from "../admin/pages/Login";
@@ -49,6 +50,7 @@ export const router = createBrowserRouter([
 
       { path: "news", element: <News /> },
       { path: "news/:id", element: <NewsDetail /> },
+      { path: "interview-preparation", element: <InterviewPrep /> },
       { path: "universities/:slug", element: <UniversityDetails /> },
     ],
   },
