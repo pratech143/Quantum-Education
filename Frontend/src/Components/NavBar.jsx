@@ -22,8 +22,9 @@ const NavBar = () => {
         { name: 'About', to: '/about' },
         { name: 'Destinations', to: '/destinations' },
         { name: 'Alumni', to: '/alumni' },
+        { name: 'News', to: '/news' },
+        { name: 'Interview Prep', to: '/interview-preparation' },
         { name: 'Contact us', to: '/contact' },
-
     ];
 
     return (

@@ -135,3 +135,31 @@ model Alumni {
 
   @@index([country])
 }
+
+enum NewsLabel {
+  news
+  notice
+}
+
+model News {
+  id            String    @id @default(cuid())
+  headTitle     String
+  subtitle      String
+  label         NewsLabel @default(news)
+  description   String
+  image         String?
+  date          DateTime  @default(now())
+  author        String?
+  authorRole    String?
+  authorImage   String?
+  caption       String?
+  readTime      String?
+  content       Json?     // [{ type: 'paragraph' | 'heading' | 'list', value: string | string[] }]
+  phases        Json?     // string[]
+  pullQuote     Json?     // { text: string, source: string }
+  isRelatedOnly Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([label])
+}
