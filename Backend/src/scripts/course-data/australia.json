@@ -1,0 +1,601 @@
+{
+  "university-of-melbourne": [
+    {
+      "icon": "science",
+      "title": "Bachelor of Science",
+      "description": "A flexible three-year undergraduate degree with majors across biology, chemistry, physics, mathematics, computing, and earth sciences at the University of Melbourne.",
+      "duration": "3 years full-time",
+      "link": "https://handbook.unimelb.edu.au/2026/courses/b-sci"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Commerce",
+      "description": "A three-year degree covering accounting, economics, finance, management, and marketing, preparing graduates for a wide range of business careers.",
+      "duration": "3 years full-time",
+      "link": "https://handbook.unimelb.edu.au/2026/courses/b-com"
+    },
+    {
+      "icon": "school",
+      "title": "Bachelor of Arts",
+      "description": "A broad humanities and social sciences degree offering majors in disciplines such as politics, history, languages, psychology, and media.",
+      "duration": "3 years full-time",
+      "link": "https://handbook.unimelb.edu.au/2026/courses/b-arts"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master of Business Analytics",
+      "description": "A one-year specialist masters covering data analytics, machine learning, and business decision-making for aspiring analytics professionals.",
+      "duration": "1 year full-time",
+      "link": "https://handbook.unimelb.edu.au/2026/courses/mc-busana"
+    },
+    {
+      "icon": "biotech",
+      "title": "Bachelor of Biomedicine",
+      "description": "A three-year undergraduate degree exploring human biology, medical research, and pathways into graduate medicine, dentistry, and biomedical science.",
+      "duration": "3 years full-time",
+      "link": "https://handbook.unimelb.edu.au/2026/courses/b-bmed"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Doctor of Dental Surgery",
+      "description": "A four-year professional graduate program preparing students for registration and practice as a dentist in Australia.",
+      "duration": "4 years full-time",
+      "link": "https://handbook.unimelb.edu.au/2026/courses/mc-ddensur"
+    }
+  ],
+  "university-of-sydney": [
+    {
+      "icon": "computer",
+      "title": "Engineering and Computer Science",
+      "description": "Programs spanning software, electrical, civil, mechanical, and biomedical engineering as well as computer science and data technologies.",
+      "link": "https://www.sydney.edu.au/courses/field-of-study/engineering-and-computer-science.html"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Medicine and Health",
+      "description": "Undergraduate and postgraduate study across medicine, nursing, pharmacy, public health, and allied health professions at the University of Sydney.",
+      "link": "https://www.sydney.edu.au/courses/field-of-study/medicine-and-health.html"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law",
+      "description": "Sydney Law School programs covering undergraduate LLB, Juris Doctor, and specialist postgraduate law qualifications.",
+      "link": "https://www.sydney.edu.au/courses/field-of-study/law.html"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Business School programs across commerce, finance, management, marketing, logistics, and analytics for undergraduate and postgraduate students.",
+      "link": "https://www.sydney.edu.au/courses/field-of-study/business.html"
+    },
+    {
+      "icon": "school",
+      "title": "Bachelor of Computer Science and Technology",
+      "description": "Undergraduate computer science degree covering software development, algorithms, and specialist streams in AI, cyber security, and data science.",
+      "link": "https://www.sydney.edu.au/courses/field-of-study/engineering-and-computer-science.html"
+    }
+  ],
+  "australian-national-university": [
+    {
+      "icon": "school",
+      "title": "Undergraduate Degrees",
+      "description": "Bachelor's programs across arts, science, business, engineering, computing, and social sciences at Australia's national university in Canberra.",
+      "link": "https://study.anu.edu.au/related-information/information-undergraduate-students"
+    },
+    {
+      "icon": "science",
+      "title": "Postgraduate Coursework",
+      "description": "Master's and graduate certificate programs spanning research-led disciplines including public policy, international relations, and data science.",
+      "link": "https://study.anu.edu.au/related-information/information-postgraduate-students"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Postgraduate Research Degrees",
+      "description": "PhD and research master's programs supported by world-class research centres and national facilities at ANU.",
+      "link": "https://study.anu.edu.au/related-information/information-postgraduate-research-students"
+    },
+    {
+      "icon": "public",
+      "title": "International Student Programs",
+      "description": "Study pathways, application guidance, and student support for prospective international students at the Australian National University.",
+      "link": "https://study.anu.edu.au/related-information/information-prospective-international-students"
+    },
+    {
+      "icon": "terminal",
+      "title": "ANU Programs and Courses Directory",
+      "description": "Complete searchable catalogue of ANU degrees, majors, minors, and courses across all colleges and disciplines.",
+      "link": "https://programsandcourses.anu.edu.au/"
+    }
+  ],
+  "unsw-sydney": [
+    {
+      "icon": "school",
+      "title": "Undergraduate Programs",
+      "description": "Bachelor's degrees at UNSW Sydney including single and double degree options across engineering, business, science, and the arts.",
+      "link": "https://www.unsw.edu.au/study/undergraduate"
+    },
+    {
+      "icon": "science",
+      "title": "Postgraduate Study",
+      "description": "Coursework and research master's, graduate certificates, and doctoral programs across UNSW's faculties.",
+      "link": "https://www.unsw.edu.au/study/postgraduate"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Programs in civil, mechanical, electrical, software, and photovoltaic engineering at one of Australia's largest engineering faculties.",
+      "link": "https://www.unsw.edu.au/engineering"
+    },
+    {
+      "icon": "business_center",
+      "title": "UNSW Business School and AGSM",
+      "description": "Undergraduate and postgraduate business programs, including the AGSM MBA and executive education pathways.",
+      "link": "https://www.unsw.edu.au/business"
+    },
+    {
+      "icon": "design_services",
+      "title": "Arts, Design and Architecture",
+      "description": "Creative and design-focused programs covering architecture, media, art and design, education, and social sciences.",
+      "link": "https://www.unsw.edu.au/arts-design-architecture"
+    },
+    {
+      "icon": "terminal",
+      "title": "Professional Development and Short Courses",
+      "description": "Short courses, microcredentials, and online postgraduate options for working professionals.",
+      "link": "https://www.unsw.edu.au/study/professional-development"
+    }
+  ],
+  "monash-university": [],
+  "university-of-queensland": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Advanced Business (Honours)",
+      "description": "A four-year honours degree combining core business disciplines with research, leadership, and industry experience at UQ.",
+      "duration": "4 years full-time",
+      "link": "https://study.uq.edu.au/study-options/programs/bachelor-advanced-business-honours-2139"
+    },
+    {
+      "icon": "school",
+      "title": "Bachelor of Arts (Honours)",
+      "description": "A one-year honours-level humanities and social sciences program building advanced research and analytical skills.",
+      "duration": "1 year full-time",
+      "link": "https://study.uq.edu.au/study-options/programs/bachelor-arts-honours-2052"
+    },
+    {
+      "icon": "science",
+      "title": "Bachelor of Advanced Science (Honours)",
+      "description": "A four-year research-intensive science degree with specialisations in biology, chemistry, physics, and earth sciences.",
+      "duration": "4 years full-time",
+      "link": "https://study.uq.edu.au/study-options/programs/bachelor-advanced-science-honours-2516"
+    },
+    {
+      "icon": "architecture",
+      "title": "Master of Architecture",
+      "description": "A two-year professional master's program accredited for entry into architectural practice in Australia.",
+      "duration": "2 years full-time",
+      "link": "https://study.uq.edu.au/study-options/programs/master-architecture-5429"
+    }
+  ],
+  "university-of-western-australia": [
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "UWA engineering programs covering civil, mechanical, electrical, software, mining, and chemical engineering with industry-linked projects.",
+      "link": "https://www.uwa.edu.au/study/explore-courses/study-areas/engineering"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Commerce",
+      "description": "Undergraduate and postgraduate business programs across accounting, finance, economics, management, and marketing.",
+      "link": "https://www.uwa.edu.au/study/explore-courses/study-areas/business-and-commerce"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health and Biomedical Sciences",
+      "description": "Programs in medicine, dentistry, biomedical science, public health, podiatry, and pharmacy at the University of Western Australia.",
+      "link": "https://www.uwa.edu.au/study/explore-courses/study-areas/health-and-biomedical-sciences"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Data and Computer Science",
+      "description": "Degrees in computer science, data science, cyber security, and artificial intelligence with strong research and industry connections.",
+      "link": "https://www.uwa.edu.au/study/explore-courses/study-areas/data-and-computer-science"
+    }
+  ],
+  "university-of-adelaide": [
+    {
+      "icon": "science",
+      "title": "Doctor of Philosophy",
+      "description": "The University of Adelaide's flagship research doctorate, available across all faculties including health, engineering, science, and humanities.",
+      "link": "https://adelaide.edu.au/study/degrees/doctor-of-philosophy/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Master of Philosophy",
+      "description": "A research-focused master's degree designed as preparation for a PhD or an independent research career.",
+      "link": "https://adelaide.edu.au/study/degrees/master-of-philosophy/"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master of Research",
+      "description": "A structured research master's program combining coursework with a significant research project or thesis.",
+      "link": "https://adelaide.edu.au/study/degrees/master-of-research/"
+    },
+    {
+      "icon": "school",
+      "title": "Graduate Certificate in Research Design",
+      "description": "A short graduate-level program focused on research design, methodology, and academic writing for emerging researchers.",
+      "link": "https://adelaide.edu.au/study/degrees/graduate-certificate-in-research-design/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Adelaide Degree Finder",
+      "description": "Search the University of Adelaide's full catalogue of undergraduate and postgraduate degrees across 22 study areas.",
+      "link": "https://adelaide.edu.au/study/degrees/"
+    }
+  ],
+  "university-of-technology-sydney": [
+    {
+      "icon": "business_center",
+      "title": "UTS Business School",
+      "description": "Programs in accounting, finance, economics, management, marketing, and business analytics at a socially committed Sydney business school.",
+      "link": "https://www.uts.edu.au/about/faculties/business"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering and Information Technology",
+      "description": "Practical, industry-focused degrees across civil, mechanical, electrical, software engineering, and IT disciplines.",
+      "link": "https://www.uts.edu.au/about/faculties/engineering-and-information-technology"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health",
+      "description": "Programs in nursing, midwifery, public health, sport and exercise science, and pharmacy with a strong practice orientation.",
+      "link": "https://www.uts.edu.au/about/faculties/health"
+    },
+    {
+      "icon": "science",
+      "title": "Science",
+      "description": "Research-led degrees across biology, chemistry, physics, environmental science, mathematics, and data science.",
+      "link": "https://www.uts.edu.au/about/faculties/science"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law",
+      "description": "A dynamic and innovative law school offering JD, LLB, and specialist postgraduate law programs.",
+      "link": "https://www.uts.edu.au/about/faculties/law"
+    },
+    {
+      "icon": "design_services",
+      "title": "Design and Society",
+      "description": "Creative programs across design, architecture, media, communication, and international studies.",
+      "link": "https://www.uts.edu.au/about/faculties/design-and-society"
+    }
+  ],
+  "macquarie-university": [],
+  "tafe-nsw": [
+    {
+      "icon": "terminal",
+      "title": "Information and Communication Technology",
+      "description": "Thirty IT and digital courses spanning cyber security, web development, cloud computing, and network engineering.",
+      "link": "https://www.tafensw.edu.au/courses"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Healthcare",
+      "description": "Around forty courses across aged care, allied health, pharmacy, optical, dental, and audiometry.",
+      "link": "https://www.tafensw.edu.au/courses"
+    },
+    {
+      "icon": "school",
+      "title": "Food and Hospitality",
+      "description": "Forty-eight courses covering commercial cookery, patisserie, bar and restaurant operations, and craft beverage specialties.",
+      "link": "https://www.tafensw.edu.au/courses"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Engineering",
+      "description": "Forty-five engineering and manufacturing courses including boilermaking, fitting and turning, fabrication, and welding.",
+      "link": "https://www.tafensw.edu.au/courses"
+    },
+    {
+      "icon": "engineering",
+      "title": "Building and Construction Trades",
+      "description": "Thirty-seven hands-on construction courses across carpentry, plumbing, bricklaying, and site-based services.",
+      "link": "https://www.tafensw.edu.au/courses"
+    }
+  ],
+  "tafe-queensland": [
+    {
+      "icon": "business_center",
+      "title": "Business and IT",
+      "description": "Certificates, diplomas, and degrees across business, accounting, justice, government, and information technology pathways.",
+      "link": "https://tafeqld.edu.au/courses/study-areas/business-and-it"
+    },
+    {
+      "icon": "design_services",
+      "title": "Creative Industries",
+      "description": "Courses spanning digital media, fashion, performing arts, and visual arts and design at TAFE Queensland.",
+      "link": "https://tafeqld.edu.au/courses/study-areas/creative-industries"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health and Science",
+      "description": "Nursing, dental, allied health, and laboratory science qualifications with strong practical placements.",
+      "link": "https://tafeqld.edu.au/courses/study-areas/health-and-science"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Trades",
+      "description": "Building and construction, automotive, electrotechnology, and engineering trade qualifications and apprenticeships.",
+      "link": "https://tafeqld.edu.au/courses/study-areas/trades"
+    },
+    {
+      "icon": "school",
+      "title": "Education and Community",
+      "description": "Aged care, community services, disability support, early childhood, and English language training courses.",
+      "link": "https://tafeqld.edu.au/courses/study-areas/education-and-community"
+    },
+    {
+      "icon": "agriculture",
+      "title": "Environment and Animal Services",
+      "description": "Animal services, agriculture, horticulture, and floristry qualifications with applied, hands-on training.",
+      "link": "https://tafeqld.edu.au/courses/study-areas/environment-and-animal-services"
+    }
+  ],
+  "holmesglen-institute": [
+    {
+      "icon": "medical_services",
+      "title": "Nursing, Community and Health Sciences",
+      "description": "Programs for international students in nursing, aged care, community services, and allied health at Holmesglen in Melbourne.",
+      "link": "https://www.holmesglen.edu.au/explore-courses/international-courses/Nursing,-Community-and-Health-Sciences"
+    },
+    {
+      "icon": "engineering",
+      "title": "Building and Construction",
+      "description": "Construction management, building design, and trades qualifications delivered on industry-standard campuses.",
+      "link": "https://www.holmesglen.edu.au/explore-courses/international-courses/Building-and-Construction"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Finance",
+      "description": "Diplomas and higher education programs in business, accounting, finance, and management for international students.",
+      "link": "https://www.holmesglen.edu.au/explore-courses/international-courses/Business-and-Finance"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing and IT",
+      "description": "Courses in information technology, cyber security, networking, and software development with applied learning.",
+      "link": "https://www.holmesglen.edu.au/explore-courses/international-courses/Computing-and-IT"
+    },
+    {
+      "icon": "school",
+      "title": "Hospitality, Tourism and Events",
+      "description": "Commercial cookery, hospitality, tourism, and events management programs taught in training kitchens and venues.",
+      "link": "https://www.holmesglen.edu.au/explore-courses/international-courses/Hospitality-Tourism-and-Events"
+    },
+    {
+      "icon": "design_services",
+      "title": "Arts and Design",
+      "description": "Creative industry programs covering graphic design, interior design, visual arts, and photography.",
+      "link": "https://www.holmesglen.edu.au/explore-courses/international-courses/Arts-and-Design"
+    }
+  ],
+  "box-hill-institute": [],
+  "chisholm-institute": [
+    {
+      "icon": "medical_services",
+      "title": "Allied Health and Nursing",
+      "description": "Qualifications in aged care, allied health, nursing, and community care at Chisholm Institute in Melbourne.",
+      "link": "https://www.chisholm.edu.au/career-fields/health"
+    },
+    {
+      "icon": "engineering",
+      "title": "Building Trades",
+      "description": "Programs in bricklaying, building and construction, cabinetry and furniture making, electrical, and plumbing.",
+      "link": "https://www.chisholm.edu.au/career-fields/building-trades"
+    },
+    {
+      "icon": "school",
+      "title": "Hospitality and Cookery",
+      "description": "Cookery, patisserie, hospitality, and event management courses with industry placements.",
+      "link": "https://www.chisholm.edu.au/career-fields/hospitality"
+    },
+    {
+      "icon": "terminal",
+      "title": "IT and Cyber Security",
+      "description": "Information technology, networking, and cyber security programs designed for Australia's digital economy.",
+      "link": "https://www.chisholm.edu.au/career-fields/it-and-cybersecurity"
+    },
+    {
+      "icon": "psychology",
+      "title": "Early Childhood and Education Support",
+      "description": "Qualifications in early childhood education and education support, including traineeships.",
+      "link": "https://www.chisholm.edu.au/career-fields/education"
+    },
+    {
+      "icon": "business_center",
+      "title": "Higher Education",
+      "description": "Bachelor's and graduate-level programs combining real-world skills with academic rigour at Chisholm.",
+      "link": "https://www.chisholm.edu.au/students/higher-education"
+    }
+  ],
+  "kangan-institute": [
+    {
+      "icon": "business_center",
+      "title": "Certificate IV in Accounting and Bookkeeping",
+      "description": "Nationally recognised accounting and bookkeeping qualification (FNS40222) preparing students for finance and BAS roles.",
+      "link": "https://www.kangan.edu.au/courses/department/business-accounting-and-management/certificate-iv-in-accounting-and-bookkeeping-14206"
+    },
+    {
+      "icon": "computer",
+      "title": "Certificate III in Information Technology",
+      "description": "Foundational IT qualification (ICT30120) covering support, networking, and web technologies.",
+      "link": "https://www.kangan.edu.au/courses/department/digital-initiatives/certificate-iii-in-information-technology-21274"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Diploma of Nursing",
+      "description": "Two-year enrolled nursing qualification with clinical placements for entry to practice in Australia.",
+      "link": "https://www.kangan.edu.au/courses/department/health-and-community/diploma-of-nursing-7958"
+    },
+    {
+      "icon": "psychology",
+      "title": "Certificate IV in Ageing Support",
+      "description": "Aged care support qualification (CHC43015) preparing graduates for residential and community care roles.",
+      "link": "https://www.kangan.edu.au/courses/department/health-and-community/certificate-iv-in-ageing-support-19349"
+    },
+    {
+      "icon": "design_services",
+      "title": "Certificate III in Hairdressing",
+      "description": "Hands-on hairdressing apprenticeship qualification delivered in working salon environments.",
+      "link": "https://www.kangan.edu.au/courses/department/hair--beauty-and-creative/certificate-iii-in-hairdressing-3182"
+    },
+    {
+      "icon": "engineering",
+      "title": "Certificate II in Building and Construction",
+      "description": "Pre-apprenticeship program (22614VIC) introducing key construction skills and safety practices.",
+      "link": "https://www.kangan.edu.au/courses/department/trades-and-industrial/certificate-ii-in-building-and-construction-pre-apprenticeship-13394"
+    }
+  ],
+  "tafe-sa": [
+    {
+      "icon": "computer",
+      "title": "Information Technology",
+      "description": "IT qualifications across programming, networking, cyber security, and digital technologies at TAFE SA.",
+      "link": "https://www.tafesa.edu.au/courses/information-technology"
+    },
+    {
+      "icon": "engineering",
+      "title": "Building and Construction",
+      "description": "Certificates and diplomas across carpentry, plumbing, construction management, and building design.",
+      "link": "https://www.tafesa.edu.au/courses/building-construction"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health and Lifestyle",
+      "description": "Nursing, aged care, allied health, fitness, and community services qualifications.",
+      "link": "https://www.tafesa.edu.au/courses/health-lifestyle"
+    },
+    {
+      "icon": "school",
+      "title": "Hospitality and Tourism",
+      "description": "Cookery, patisserie, tourism, and hospitality management courses with industry placement opportunities.",
+      "link": "https://www.tafesa.edu.au/courses/hospitality-tourism"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Marketing",
+      "description": "Qualifications in business, marketing, accounting, and project management from certificate to advanced diploma.",
+      "link": "https://www.tafesa.edu.au/courses/business-marketing"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Apprenticeships and Traineeships",
+      "description": "Structured apprenticeships and traineeships across trades and industry sectors supported by TAFE SA.",
+      "link": "https://www.tafesa.edu.au/industry/apprenticeships-and-traineeships"
+    }
+  ],
+  "south-metropolitan-tafe": [
+    {
+      "icon": "business_center",
+      "title": "Diploma of Accounting",
+      "description": "Hands-on accounting program covering advanced bookkeeping, budgets, and financial reporting for accountancy careers.",
+      "link": "https://www.southmetrotafe.wa.edu.au/courses/diploma-accounting"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Advanced Diploma of Accounting",
+      "description": "Advanced-level qualification preparing graduates for roles in account management, payroll, and business analysis.",
+      "link": "https://www.southmetrotafe.wa.edu.au/courses/advanced-diploma-accounting"
+    },
+    {
+      "icon": "business_center",
+      "title": "Certificate IV in Accounting and Bookkeeping",
+      "description": "Essential accounting and bookkeeping skills qualification aligned with professional recognition requirements.",
+      "link": "https://www.southmetrotafe.wa.edu.au/courses/certificate-iv-accounting-and-bookkeeping"
+    },
+    {
+      "icon": "school",
+      "title": "Certificate III in Accounts Administration",
+      "description": "Entry-level qualification providing foundational accounts administration skills for any industry.",
+      "link": "https://www.southmetrotafe.wa.edu.au/courses/certificate-iii-accounts-administration"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Certificate II in Aeroskills",
+      "description": "Aviation maintenance pre-apprenticeship covering manufacturing hand skills and basic inspection techniques.",
+      "link": "https://www.southmetrotafe.wa.edu.au/courses/certificate-ii-aeroskills-aeroskills-mechanical-pre-apprenticeship"
+    }
+  ],
+  "north-metropolitan-tafe": [
+    {
+      "icon": "business_center",
+      "title": "Diploma of Accounting",
+      "description": "Advanced accounting qualification covering budgets, forecasts, and specialist financial skills at North Metropolitan TAFE.",
+      "link": "https://www.northmetrotafe.wa.edu.au/courses/diploma-accounting-0"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Certificate IV in Accounting and Bookkeeping",
+      "description": "Broad accounting and bookkeeping skills including accounting software and financial report preparation.",
+      "link": "https://www.northmetrotafe.wa.edu.au/courses/certificate-iv-accounting-and-bookkeeping-0"
+    },
+    {
+      "icon": "school",
+      "title": "Certificate III in Accounts Administration",
+      "description": "Fundamental accounts administration skills suitable for entry-level roles across any industry.",
+      "link": "https://www.northmetrotafe.wa.edu.au/courses/certificate-iii-accounts-administration-0"
+    },
+    {
+      "icon": "architecture",
+      "title": "Advanced REVIT for Architecture",
+      "description": "Short program extending existing REVIT skills with advanced architectural modelling techniques.",
+      "link": "https://www.northmetrotafe.wa.edu.au/courses/advanced-revit-architecture"
+    },
+    {
+      "icon": "psychology",
+      "title": "Advanced Speaking and Listening Skill Set",
+      "description": "Communication-focused skill set developing advanced speaking and listening abilities for professional contexts.",
+      "link": "https://www.northmetrotafe.wa.edu.au/courses/advanced-speaking-and-listening-skill-set"
+    }
+  ],
+  "canberra-institute-of-technology": [
+    {
+      "icon": "engineering",
+      "title": "Certificate III in Electrotechnology Electrician",
+      "description": "Apprenticeship-based electrical qualification preparing students for licensed practice as an electrician.",
+      "link": "https://cit.edu.au/courses/trades/electrotechnology/C3-TS40"
+    },
+    {
+      "icon": "psychology",
+      "title": "Diploma of Early Childhood Education and Care",
+      "description": "Early childhood teaching qualification for leadership roles in education and care services.",
+      "link": "https://cit.edu.au/courses/education-community/childrens-education-care/DP-HS65"
+    },
+    {
+      "icon": "school",
+      "title": "Certificate III in Commercial Cookery",
+      "description": "Hands-on commercial cookery apprenticeship qualification for professional chef careers.",
+      "link": "https://cit.edu.au/courses/service-industry/commercial-cookery/C3-TS48"
+    },
+    {
+      "icon": "business_center",
+      "title": "Advanced Diploma of Accounting",
+      "description": "Advanced accounting qualification covering complex financial reporting, tax, and management accounting.",
+      "link": "https://cit.edu.au/courses/professional/accounting/AD-BT22"
+    },
+    {
+      "icon": "design_services",
+      "title": "Advanced Diploma of Graphic Design",
+      "description": "Creative design qualification covering branding, digital media, publication, and visual communication.",
+      "link": "https://cit.edu.au/courses/creative/graphic-design/AD-BD70"
+    },
+    {
+      "icon": "engineering",
+      "title": "Certificate III in Carpentry",
+      "description": "Apprenticeship-based carpentry qualification covering residential and commercial construction carpentry.",
+      "link": "https://cit.edu.au/courses/trades/carpentry/C3-TS28"
+    }
+  ]
+}

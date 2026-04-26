@@ -1,0 +1,600 @@
+{
+  "technical-university-of-munich": [
+    {
+      "icon": "engineering",
+      "title": "Aerospace (B.Sc.)",
+      "description": "Bachelor's program fully taught in English covering aeronautics and astronautics fundamentals.",
+      "duration": "3 years",
+      "semesters": "6 semesters",
+      "link": "https://www.tum.de/en/studies/degree-programs/detail/aerospace-bachelor-of-science-bsc"
+    },
+    {
+      "icon": "computer",
+      "title": "Informatics (B.Sc.)",
+      "description": "Bachelor's degree in computer science covering theoretical fundamentals and practical applications.",
+      "link": "https://www.tum.de/en/studies/degree-programs/detail/informatics-bachelor-of-science-bsc"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Engineering Science (B.Sc.)",
+      "description": "Interdisciplinary engineering bachelor's program covering multiple technical domains.",
+      "link": "https://www.tum.de/en/studies/degree-programs/detail/engineering-science-bachelor-of-science-bsc"
+    },
+    {
+      "icon": "engineering",
+      "title": "Aerospace (M.Sc.)",
+      "description": "Advanced master's in aircraft and space vehicle design with focus on innovative technological solutions.",
+      "link": "https://www.tum.de/en/studies/degree-programs/detail/aerospace-master-of-science-msc"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Computational Science and Engineering (M.Sc.)",
+      "description": "Combines computational methods with engineering applications to solve complex scientific and technical problems.",
+      "link": "https://www.tum.de/en/studies/degree-programs/detail/computational-science-and-engineering-cse-master-of-science-msc"
+    }
+  ],
+  "lmu-munich": [
+    {
+      "icon": "business_center",
+      "title": "Economics (M.Sc.)",
+      "description": "Research-oriented master's combining rigorous economic research with professional qualifications for international career paths.",
+      "link": "https://www.en.master.econ.uni-muenchen.de/index.html"
+    },
+    {
+      "icon": "science",
+      "title": "Physics (M.Sc.)",
+      "description": "Advanced research-focused master's program in physics with a broad selection of specializations.",
+      "link": "https://www.physik.lmu.de/en/studies/study-programs/msc-physics/index.html"
+    },
+    {
+      "icon": "psychology",
+      "title": "Neuroscience (M.Sc.)",
+      "description": "Graduate program on the nervous system and brain function at the Graduate School of Systemic Neurosciences.",
+      "link": "https://www.gsn.uni-muenchen.de/studies/msc_program/msc_neurosciences/index.html"
+    },
+    {
+      "icon": "science",
+      "title": "Astrophysics (M.Sc.)",
+      "description": "Research-intensive master's program in stellar and cosmic phenomena at University Observatory Munich.",
+      "link": "http://www.usm.uni-muenchen.de/MasterofScience_en.php"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biochemistry (M.Sc.)",
+      "description": "Advanced study of molecular processes in living organisms at the Gene Center Munich.",
+      "link": "https://www.genzentrum.uni-muenchen.de/study-program/master/index.html"
+    }
+  ],
+  "heidelberg-university": [
+    {
+      "icon": "computer",
+      "title": "Computer Science (Bachelor 100%)",
+      "description": "Foundational bachelor's program in computer science covering theory, algorithms, and systems.",
+      "link": "https://www.uni-heidelberg.de/en/study/all-subjects/computer-science/computer-science-bachelor-100"
+    },
+    {
+      "icon": "science",
+      "title": "Physics (M.Sc.)",
+      "description": "Consecutive master's program offering advanced, research-oriented study across physics disciplines.",
+      "link": "https://www.uni-heidelberg.de/en/study/all-subjects/physics/physics-master"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Mathematics (M.Sc.)",
+      "description": "Consecutive graduate-level program in pure and applied mathematics.",
+      "link": "https://www.uni-heidelberg.de/en/study/all-subjects/mathematics/mathematics-master"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biochemistry (Bachelor 100%)",
+      "description": "Bachelor's degree combining chemistry and biology with a focus on molecular life sciences.",
+      "link": "https://www.uni-heidelberg.de/en/study/all-subjects/biochemistry/biochemistry-bachelor-100"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Medical Informatics (Bachelor 100%)",
+      "description": "Bachelor's program combining medicine, health sciences and computational methods.",
+      "link": "https://www.uni-heidelberg.de/en/study/all-subjects/medical-informatics/medical-informatics-bachelor-100"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology - Clinical Psychology and Psychotherapy (M.Sc.)",
+      "description": "Graduate psychology master's program with a focus on clinical psychology and psychotherapy.",
+      "link": "https://www.uni-heidelberg.de/en/study/all-subjects/psychology/psychology-in-clinical-psychology-and-psychotherapy-master-of-science"
+    }
+  ],
+  "humboldt-university-of-berlin": [
+    {
+      "icon": "agriculture",
+      "title": "Agricultural Economics (M.Sc.)",
+      "description": "English-taught master's program focused on economics applied to agricultural systems and food markets.",
+      "link": "https://www.hu-berlin.de/en/study/study-programme/details/agricultural-economics-master-of-science-major-field"
+    },
+    {
+      "icon": "school",
+      "title": "American Studies (M.A.)",
+      "description": "English-taught graduate program exploring American literature, culture, history, and society.",
+      "link": "https://www.hu-berlin.de/en/study/study-programme/details/american-studies-master-of-arts-major-field"
+    }
+  ],
+  "rwth-aachen-university": [
+    {
+      "icon": "precision_manufacturing",
+      "title": "Automotive Engineering (M.Sc.)",
+      "description": "Master's program focused on engineering and innovation for the automotive sector.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.rwth-aachen.de/go/id/dgcq/lidx/1"
+    },
+    {
+      "icon": "architecture",
+      "title": "Civil Engineering (M.Sc.)",
+      "description": "Master's program with a focus on advanced computational methods in civil engineering.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.rwth-aachen.de/go/id/bmzm/lidx/1"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biomedical Engineering (M.Sc.)",
+      "description": "Master's combining engineering principles with medical and life science applications.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.rwth-aachen.de/go/id/bokx/lidx/1"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Data Science (M.Sc.)",
+      "description": "Master's program covering data analysis, machine learning and computational methods.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/Studiengaenge/Liste-Aktuelle-Studiengaenge/Studiengangbeschreibung/~pzpc/Data-Science-M-Sc/?lidx=1"
+    },
+    {
+      "icon": "science",
+      "title": "Physics (M.Sc.)",
+      "description": "Advanced master's program in theoretical and experimental physics research.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.rwth-aachen.de/go/id/bojy/lidx/1"
+    },
+    {
+      "icon": "terminal",
+      "title": "Software Systems Engineering (M.Sc.)",
+      "description": "Master's program on software architecture, modelling and systems development.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.rwth-aachen.de/go/id/bnhr/lidx/1"
+    }
+  ],
+  "freie-universitat-berlin": [
+    {
+      "icon": "school",
+      "title": "Archaeology of the Ancient World (M.A.)",
+      "description": "Master of Arts exploring archaeological studies of ancient civilizations.",
+      "link": "https://www.fu-berlin.de/en/studium/studienangebot/master/Archaeology-of-the-Ancient-World/index.html"
+    },
+    {
+      "icon": "school",
+      "title": "English Studies: Literature, Language, Culture (M.A.)",
+      "description": "Master's focused on English literature, linguistics, and cultural studies.",
+      "link": "https://www.fu-berlin.de/en/studium/studienangebot/master/english_studies/index.html"
+    },
+    {
+      "icon": "public",
+      "title": "Global History (M.A.)",
+      "description": "Master's program examining historical developments in a transnational and global perspective.",
+      "link": "https://www.fu-berlin.de/en/studium/studienangebot/master/global_history/index.html"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Data Science (M.Sc.)",
+      "description": "Master of Science specializing in computational data analysis, statistics and applications.",
+      "link": "https://www.fu-berlin.de/en/studium/studienangebot/master/data-science/index.html"
+    },
+    {
+      "icon": "psychology",
+      "title": "Cognitive Neuroscience (M.Sc.)",
+      "description": "Master's program investigating brain function and cognitive processes.",
+      "link": "https://www.fu-berlin.de/en/studium/studienangebot/master/cognitive-neuroscience/index.html"
+    }
+  ],
+  "university-of-freiburg": [],
+  "karlsruhe-institute-of-technology": [
+    {
+      "icon": "computer",
+      "title": "Computer Science (M.Sc.)",
+      "description": "Advanced master's program in computer science at KIT, covering core areas and research specializations.",
+      "link": "https://www.sle.kit.edu/vorstudium/master-computer-science.php"
+    },
+    {
+      "icon": "engineering",
+      "title": "Electrical Engineering and Information Technology (M.Sc.)",
+      "description": "Master's program covering electrical engineering fundamentals and modern information technology.",
+      "link": "https://www.sle.kit.edu/vorstudium/master-elektrotechnik-informationstechnik.php"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biomedical Engineering (M.Sc.)",
+      "description": "Master's program combining engineering methods with biomedical and clinical applications.",
+      "link": "https://www.sle.kit.edu/vorstudium/master-biomedical-engineering.php"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Mechatronics and Information Technology (M.Sc.)",
+      "description": "Master's program integrating mechanical engineering, electronics, and information technology.",
+      "link": "https://www.sle.kit.edu/vorstudium/master-mechatronik-informationstechnik.php"
+    },
+    {
+      "icon": "science",
+      "title": "Physics (M.Sc.)",
+      "description": "Master's program offering advanced theoretical and experimental physics with research specializations.",
+      "link": "https://www.sle.kit.edu/vorstudium/master-physik.php"
+    },
+    {
+      "icon": "public",
+      "title": "Remote Sensing and Geoinformatics (M.Sc.)",
+      "description": "Master's program in remote sensing, spatial data analysis and geoinformatics applications.",
+      "link": "https://www.sle.kit.edu/vorstudium/master-remote-sensing-geoinformatics.php"
+    }
+  ],
+  "university-of-bonn": [
+    {
+      "icon": "agriculture",
+      "title": "Agricultural and Food Economics (M.Sc.)",
+      "description": "English-taught master's program on economics of agriculture and food markets.",
+      "link": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/agricultural-and-food-economics-msc"
+    },
+    {
+      "icon": "school",
+      "title": "Applied Linguistics (M.A.)",
+      "description": "Master of Arts taught entirely in English covering theoretical and applied linguistics.",
+      "link": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/applied-linguistics-ma"
+    },
+    {
+      "icon": "computer",
+      "title": "Artificial Intelligence (M.Sc.)",
+      "description": "Master of Science in artificial intelligence, machine learning and intelligent systems.",
+      "link": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/artificial-intelligence-msc"
+    },
+    {
+      "icon": "agriculture",
+      "title": "Agricultural Sciences and Resource Management in the Tropics and Subtropics (M.Sc.)",
+      "description": "English-taught master's on agricultural systems and natural resource management in tropical and subtropical regions.",
+      "link": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/agricultural-sciences-and-resource-management-in-the-tropics-and-subtropics-msc"
+    }
+  ],
+  "university-of-mannheim": [
+    {
+      "icon": "business_center",
+      "title": "Business Administration (B.Sc.)",
+      "description": "Core business administration bachelor's degree offered with dual-language German and English instruction.",
+      "duration": "3 years",
+      "semesters": "6 semesters",
+      "link": "https://www.uni-mannheim.de/en/academics/before-your-studies/programs/bsc-business-administration/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Economics (B.Sc.)",
+      "description": "Foundational economics bachelor's program with English-language coursework options.",
+      "duration": "3 years",
+      "semesters": "6 semesters",
+      "link": "https://www.uni-mannheim.de/en/academics/before-your-studies/programs/bsc-economics/"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Mannheim Master in Data Science (M.Sc.)",
+      "description": "English-taught master's program focused on data science methodologies and real-world applications.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.uni-mannheim.de/en/academics/before-your-studies/programs/mannheim-master-in-data-science/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master's Program in Economics (M.Sc.)",
+      "description": "Research-oriented master's in economic theory and research conducted entirely in English.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.uni-mannheim.de/en/academics/before-your-studies/programs/masters-program-in-economics/"
+    },
+    {
+      "icon": "public",
+      "title": "Master's Program in Political Science (M.A.)",
+      "description": "Graduate-level political science program delivered in English covering comparative politics and international relations.",
+      "duration": "2 years",
+      "semesters": "4 semesters",
+      "link": "https://www.uni-mannheim.de/en/academics/before-your-studies/programs/masters-program-in-political-science/"
+    }
+  ],
+  "munich-university-of-applied-sciences": [
+    {
+      "icon": "science",
+      "title": "Engineering Physics and Data Science (B.Sc.)",
+      "description": "English-taught bachelor's program bridging applied physics and data science methods.",
+      "link": "https://sci.hm.edu/studierende/studiengaenge/bachelor/engineering_physics_and_datascience/index.en.html"
+    },
+    {
+      "icon": "business_center",
+      "title": "International Management and Digital Engineering (B.A.)",
+      "description": "Bachelor's program combining international business management with digital engineering competencies.",
+      "link": "https://wi.hm.edu/studiengange_de/studiengang_detail_1984.de.html"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Production and Automation - International (B.Eng.)",
+      "description": "International bachelor's program focused on manufacturing technologies and industrial automation.",
+      "link": "https://sci.hm.edu/studierende/studiengaenge/bachelor/poduktion_automatisierung_international/index.en.html"
+    },
+    {
+      "icon": "science",
+      "title": "Micro- and Nanotechnology (M.Sc.)",
+      "description": "English-taught master's program on micro- and nanoscale engineering, materials and devices.",
+      "link": "https://sci.hm.edu/studierende/studiengaenge/master/micro_and_nanotechnology/index.en.html"
+    },
+    {
+      "icon": "science",
+      "title": "Photonics (M.Sc.)",
+      "description": "English-taught master's program covering optical technologies, laser systems and photonic devices.",
+      "link": "https://sci.hm.edu/studierende/studiengaenge/master/photonics/index.en.html"
+    }
+  ],
+  "berlin-university-of-applied-sciences-and-technology": [
+    {
+      "icon": "query_stats",
+      "title": "Data Engineering (B.Eng.)",
+      "description": "English-taught bachelor's program in data engineering starting winter semester 2026/27.",
+      "link": "https://www.bht-berlin.de/en/b-de"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Data Science (M.Sc.)",
+      "description": "English-taught master's program covering data analysis, statistics and machine learning.",
+      "link": "https://www.bht-berlin.de/en/m-ds"
+    },
+    {
+      "icon": "engineering",
+      "title": "Information and Communications Engineering (M.Eng.)",
+      "description": "Advanced engineering master's program focused on information and communications technology.",
+      "link": "https://www.bht-berlin.de/en/m-ic"
+    },
+    {
+      "icon": "business_center",
+      "title": "MBA Renewables (Distance Learning)",
+      "description": "Fully online distance-learning MBA focused on renewable energy management; tuition fees apply.",
+      "link": "https://www.bht-berlin.de/en/fmre"
+    }
+  ],
+  "frankfurt-university-of-applied-sciences": [
+    {
+      "icon": "business_center",
+      "title": "International Business Administration (B.A.)",
+      "description": "English-taught bachelor's program in business administration with an international perspective.",
+      "link": "https://www.frankfurt-university.de/en/studies/bachelor-programs/international-business-administration-ba/for-prospective-students/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Science (B.Sc.)",
+      "description": "Bachelor's program covering core computing, software development and informatics fundamentals.",
+      "link": "https://www.frankfurt-university.de/en/studies/bachelor-programs/computer-science-b-sc/for-prospective-students/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Mechanical Engineering (B.Eng.)",
+      "description": "Bachelor's program in mechanical engineering with practical, application-oriented learning.",
+      "link": "https://www.frankfurt-university.de/en/studies/bachelor-programs/mechanical-engineering-b-eng/mechanial-engineering-for-prospective-students/"
+    },
+    {
+      "icon": "computer",
+      "title": "General Computer Science (M.Sc.)",
+      "description": "Master's program offering advanced computer science specializations and research opportunities.",
+      "link": "https://www.frankfurt-university.de/en/studies/master-programs/general-computer-science-msc/for-prospective-students/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Leadership (M.A.)",
+      "description": "Master's program focused on leadership, management and organizational development.",
+      "link": "https://www.frankfurt-university.de/en/studies/master-programs/leadership-ma/for-prospective-students/"
+    },
+    {
+      "icon": "architecture",
+      "title": "Advanced Architecture (M.Sc.)",
+      "description": "Master of Science specializing in architectural theory, design and practice.",
+      "link": "https://www.frankfurt-university.de/en/studies/master-programs/advanced-architecture-msc/"
+    }
+  ],
+  "htw-berlin": [],
+  "bremen-city-university-of-applied-sciences": [
+    {
+      "icon": "business_center",
+      "title": "MBA Global Management",
+      "description": "Full-time MBA geared towards international management, global business strategies and market dynamics.",
+      "duration": "Less than two years",
+      "link": "https://www.graduatecenter.org/en/mba-master/mba-global-management.html"
+    },
+    {
+      "icon": "business_center",
+      "title": "International MBA Dual Degree",
+      "description": "International dual-degree MBA with specializations in Finance & Investments, Logistics & SCM, Marketing, and Sustainable Risk Management.",
+      "duration": "Less than two years",
+      "link": "https://www.graduatecenter.org/en/mba-master/international-mba-dual-degree.html"
+    },
+    {
+      "icon": "business_center",
+      "title": "MBA International Logistics & Supply Chain Management",
+      "description": "MBA specializing in international logistics and supply chain management with project-based learning.",
+      "duration": "Less than two years",
+      "link": "https://www.graduatecenter.org/en/mba-master/mba-in-logistics-supply-chain-management.html"
+    },
+    {
+      "icon": "business_center",
+      "title": "MBA International Tourism Management",
+      "description": "Specialized MBA for international tourism sector professionals.",
+      "duration": "Less than two years",
+      "link": "https://www.graduatecenter.org/en/mba-master/mba-international-tourism-management.html"
+    },
+    {
+      "icon": "business_center",
+      "title": "Management - Digitalization and Transformation (M.A.)",
+      "description": "Master's program focused on digital transformation and modern business management.",
+      "duration": "Less than two years",
+      "link": "https://www.graduatecenter.org/en/mba-master/management-digitalization-and-transformation-ma.html"
+    }
+  ],
+  "hanover-university-of-applied-sciences-and-arts": [
+    {
+      "icon": "engineering",
+      "title": "Electrical Engineering and Information Technology (B.Eng.)",
+      "description": "Bachelor's program covering electrical engineering fundamentals and information technology applications.",
+      "link": "https://f1.hs-hannover.de/en/course/degree-courses-and-programmes/bachelors-degree-courses/electrical-engineering-and-information-technology-eit"
+    },
+    {
+      "icon": "design_services",
+      "title": "Product Design (B.A.)",
+      "description": "Bachelor's program in product design combining creative and technical disciplines.",
+      "link": "https://f3.hs-hannover.de/en/courses/bachelor-studiengaenge/product-design-bpd"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business Administration and Mechanical Engineering - Technical Sales (Dual)",
+      "description": "Dual bachelor's program combining business administration and mechanical engineering, with a focus on technical sales.",
+      "link": "https://f2.hs-hannover.de/en/studies/bachelors-degree-courses/business-administration-and-mechanical-engineering-technical-sales-dual-wtd"
+    }
+  ],
+  "th-koln-university-of-applied-sciences": [
+    {
+      "icon": "design_services",
+      "title": "Digital Games (B.A.)",
+      "description": "Bachelor's program with Game Design, Game Arts and Game Informatics specializations, combining technical and creative skills.",
+      "link": "https://www.th-koeln.de/en/academics/digital-games-bachelors-program_7333.php"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Automation & IT (M.Sc.)",
+      "description": "Interdisciplinary master's program combining information technology and automation engineering for international careers.",
+      "link": "https://www.th-koeln.de/en/academics/automation--it-master_6815.php"
+    },
+    {
+      "icon": "business_center",
+      "title": "International Business and Global Transformation (M.Sc.)",
+      "description": "Master's program preparing internationally experienced professionals to address globalization challenges in modern enterprises.",
+      "link": "https://www.th-koeln.de/en/academics/international-business-master_5818.php"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Digital Sciences (M.Sc.)",
+      "description": "Master's covering computer science, business information systems, IT management and data science with three specializations and 60+ modules.",
+      "link": "https://www.th-koeln.de/en/academics/digital-sciences-masters-program_83005.php"
+    }
+  ],
+  "darmstadt-university-of-applied-sciences": [
+    {
+      "icon": "design_services",
+      "title": "Animation and Game (B.A.)",
+      "description": "Bachelor of Arts in animation and game design requiring an aptitude test, starting winter semester.",
+      "duration": "7 semesters",
+      "semesters": "7 semesters",
+      "link": "https://h-da.de/en/studies/study-programmes/study-programmes/architecture-media-and-design/animation-and-game"
+    },
+    {
+      "icon": "design_services",
+      "title": "Augmented and Virtual Reality Design (B.A.)",
+      "description": "Bachelor's program focused on designing immersive AR and VR experiences; aptitude test required.",
+      "duration": "7 semesters",
+      "semesters": "7 semesters",
+      "link": "https://h-da.de/en/studies/study-programmes/study-programmes/architecture-media-and-design/augmented-and-virtual-reality-design-bachelors-degree"
+    },
+    {
+      "icon": "design_services",
+      "title": "Motion Pictures (B.A.)",
+      "description": "Bachelor of Arts in motion pictures; competency assessment required, winter semester start.",
+      "duration": "7 semesters",
+      "semesters": "7 semesters",
+      "link": "https://h-da.de/en/studies/study-programmes/study-programmes/architecture-media-and-design/motion-pictures-bachelors-degree"
+    },
+    {
+      "icon": "design_services",
+      "title": "Animation and Game Direction (M.A.)",
+      "description": "Master of Arts specializing in animation and game direction with flexible semester structure.",
+      "semesters": "2/3/4 semesters",
+      "link": "https://h-da.de/en/studies/study-programmes/study-programmes/architecture-media-and-design/animation-and-game-direction"
+    },
+    {
+      "icon": "engineering",
+      "title": "Electrical Engineering and Information Technology - International (M.Sc.)",
+      "description": "International English-taught master's in electrical engineering and information technology.",
+      "semesters": "3/4 semesters",
+      "link": "https://h-da.de/en/studies/study-programmes/study-programmes/engineering-sciences/electrical-engineering-and-information-technology-international-msc"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master of Business Administration (MBA)",
+      "description": "MBA program focused on general management and business administration, winter semester start.",
+      "semesters": "3/4 semesters",
+      "link": "https://h-da.de/en/studies/study-programmes/study-programmes/economy-and-society/master-of-business-administration-mba"
+    }
+  ],
+  "hochschule-ruhr-west": [
+    {
+      "icon": "computer",
+      "title": "Applied Computer Science (B.Sc.)",
+      "description": "Bachelor's program in computer science with a strong focus on practical applications.",
+      "link": "https://www.hochschule-ruhr-west.de/en/study/degree-programmes/angebote/bachelor/applied-computer-science"
+    },
+    {
+      "icon": "architecture",
+      "title": "Civil Engineering (B.Sc.)",
+      "description": "Bachelor's program covering infrastructure, construction and civil engineering projects.",
+      "link": "https://www.hochschule-ruhr-west.de/en/study/degree-programmes/angebote/bachelor/civil-engineering"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Mechanical Engineering (B.Eng.)",
+      "description": "Bachelor's program with hands-on learning in mechanical engineering, including robotics applications.",
+      "link": "https://www.hochschule-ruhr-west.de/en/study/degree-programmes/angebote/bachelor/mechanical-engineering"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Science (M.Sc.)",
+      "description": "Advanced master's program in computer science with focus on intelligent systems.",
+      "link": "https://www.hochschule-ruhr-west.de/en/study/degree-programmes/angebote/master/computer-science"
+    },
+    {
+      "icon": "architecture",
+      "title": "Civil Engineering (M.Sc.)",
+      "description": "Graduate-level civil engineering program with specialized modules and project work.",
+      "link": "https://www.hochschule-ruhr-west.de/en/study/degree-programmes/angebote/master/civil-engineering"
+    }
+  ],
+  "gisma-university-of-applied-sciences": [
+    {
+      "icon": "query_stats",
+      "title": "MSc Data Science, AI, and Digital Business",
+      "description": "Master of Science combining data science, artificial intelligence and digital business awarded by GISMA University of Applied Sciences.",
+      "link": "https://www.gisma.com/programmes/postgraduate/msc-data-science-ai-and-digital-business"
+    },
+    {
+      "icon": "business_center",
+      "title": "Global MBA",
+      "description": "Global MBA program awarded by GISMA University of Applied Sciences, focused on international business leadership.",
+      "link": "https://www.gisma.com/programmes/postgraduate/global-mba"
+    },
+    {
+      "icon": "business_center",
+      "title": "MSc International Business Management Double Degree",
+      "description": "Double degree master's program awarded by Kingston University London and GISMA University of Applied Sciences.",
+      "link": "https://www.gisma.com/programmes/postgraduate/msc-international-business-management-double-degree"
+    },
+    {
+      "icon": "business_center",
+      "title": "BSc International Business Management",
+      "description": "Bachelor of Science in international business management awarded by GISMA University of Applied Sciences.",
+      "link": "https://www.gisma.com/programmes/undergraduate/bsc-international-business-management"
+    },
+    {
+      "icon": "business_center",
+      "title": "BSc Business Management",
+      "description": "Bachelor of Science in business management awarded by GISMA University of Applied Sciences.",
+      "link": "https://www.gisma.com/programmes/undergraduate/bsc-business-management"
+    }
+  ]
+}

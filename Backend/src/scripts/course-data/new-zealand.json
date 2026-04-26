@@ -1,0 +1,600 @@
+{
+  "university-of-auckland": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Commerce",
+      "description": "Flagship undergraduate business degree from the Auckland Business School with specialisations across accounting, finance, marketing and economics.",
+      "link": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-commerce-bcom.html"
+    },
+    {
+      "icon": "engineering",
+      "title": "Bachelor of Engineering (Honours)",
+      "description": "Four-year honours programme from the Faculty of Engineering and Design covering professional engineering specialisations.",
+      "link": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-engineering-honours-behons.html"
+    },
+    {
+      "icon": "gavel",
+      "title": "Bachelor of Laws",
+      "description": "Professional law degree offered through Auckland Law School, New Zealand's leading law school.",
+      "link": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-laws-llb.html"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+      "description": "Professional medical degree offered by the Faculty of Medical and Health Sciences leading to registration as a medical practitioner.",
+      "link": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master of Business Administration",
+      "description": "Triple-accredited MBA programme for experienced professionals delivered by the Auckland Business School.",
+      "link": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-business-administration-mba.html"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Master of Professional Engineering",
+      "description": "Postgraduate pathway to become a professional engineer for graduates of related science or technology degrees.",
+      "link": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-engineering-mprofeng.html"
+    }
+  ],
+  "auckland-university-of-technology": [
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Undergraduate and postgraduate business qualifications spanning accounting, finance, marketing, management and international business.",
+      "link": "https://www.aut.ac.nz/study/study-options/business"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering, Computer and Mathematical Sciences",
+      "description": "Programmes in engineering, computer and information sciences, data science and mathematics with industry-linked projects.",
+      "link": "https://www.aut.ac.nz/study/study-options/engineering-computer-and-mathematical-sciences"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health Sciences",
+      "description": "Health professional pathways including nursing, paramedicine, physiotherapy, oral health and public health.",
+      "link": "https://www.aut.ac.nz/study/study-options/health-sciences"
+    },
+    {
+      "icon": "design_services",
+      "title": "Art and Design",
+      "description": "Creative degrees across visual arts, design, fashion, digital design and spatial design from AUT's School of Art and Design.",
+      "link": "https://www.aut.ac.nz/study/study-options/art-and-design"
+    },
+    {
+      "icon": "public",
+      "title": "Communication Studies",
+      "description": "Programmes in journalism, public relations, digital communication, screen production and advertising.",
+      "link": "https://www.aut.ac.nz/study/study-options/communication-studies"
+    },
+    {
+      "icon": "school",
+      "title": "Education",
+      "description": "Teacher education qualifications for early childhood, primary and secondary teaching with practicum placements.",
+      "link": "https://www.aut.ac.nz/study/study-options/education"
+    }
+  ],
+  "massey-university": [
+    {
+      "icon": "agriculture",
+      "title": "Agriculture and Horticulture",
+      "description": "Massey's long-standing strengths in agricultural and horticultural science with applied farm and industry learning.",
+      "link": "https://www.massey.ac.nz/study/find-a-subject-course-or-qualification/study-agriculture-and-horticulture/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Aviation",
+      "description": "Professional pilot training and aviation management programmes, including the School of Aviation flight training.",
+      "link": "https://www.massey.ac.nz/study/find-a-subject-course-or-qualification/study-aviation/"
+    },
+    {
+      "icon": "biotech",
+      "title": "Veterinary Science",
+      "description": "New Zealand's only veterinary school, preparing students for registration as veterinarians with globally recognised accreditation.",
+      "link": "https://www.massey.ac.nz/study/find-a-subject-course-or-qualification/study-veterinary-science/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Massey Business School programmes covering accountancy, finance, management, marketing and international business.",
+      "link": "https://www.massey.ac.nz/study/find-a-subject-course-or-qualification/study-business/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Science and Information Technology",
+      "description": "Undergraduate and postgraduate qualifications in computer science, software engineering, data analytics and IT.",
+      "link": "https://www.massey.ac.nz/study/find-a-subject-course-or-qualification/study-computer-science-and-information-technology/"
+    }
+  ],
+  "university-of-waikato": [
+    {
+      "icon": "design_services",
+      "title": "Arts, Design and Communication",
+      "description": "Creative and humanities programmes exploring people, culture and communication through practical and academic study.",
+      "link": "https://www.waikato.ac.nz/study/options/subject-areas/arts/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Management",
+      "description": "Waikato Management School programmes developing leaders in accounting, finance, marketing, management and strategy.",
+      "link": "https://www.waikato.ac.nz/study/options/subject-areas/business/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Science and Mathematics",
+      "description": "Research-led degrees in computer science, software engineering, data science and mathematical sciences.",
+      "link": "https://www.waikato.ac.nz/study/options/subject-areas/computer-science/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Accredited engineering programmes combining hands-on project work with industry partnerships for professional practice.",
+      "link": "https://www.waikato.ac.nz/study/options/subject-areas/engineering/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health",
+      "description": "Qualifications including nursing, health, sport and human development with a focus on community wellbeing.",
+      "link": "https://www.waikato.ac.nz/study/options/subject-areas/health/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law",
+      "description": "Te Piringa Faculty of Law programmes grounded in biculturalism, professionalism and the law in context.",
+      "link": "https://www.waikato.ac.nz/study/options/subject-areas/law/"
+    }
+  ],
+  "victoria-university-of-wellington": [
+    {
+      "icon": "school",
+      "title": "Bachelor of Arts",
+      "description": "Broad humanities and social sciences degree with majors ranging from languages and history to psychology and international relations.",
+      "link": "https://www.wgtn.ac.nz/study/programmes-courses/undergraduate"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Commerce",
+      "description": "Wellington School of Business and Government undergraduate degree with majors across accounting, finance, economics and management.",
+      "link": "https://www.wgtn.ac.nz/study/programmes-courses/undergraduate"
+    },
+    {
+      "icon": "science",
+      "title": "Bachelor of Science",
+      "description": "Science degree with majors across biology, chemistry, physics, computer science, geography and environmental science.",
+      "link": "https://www.wgtn.ac.nz/study/programmes-courses/undergraduate"
+    },
+    {
+      "icon": "school",
+      "title": "Master's Programmes",
+      "description": "Taught and research master's degrees across arts, commerce, science, engineering, design and public policy.",
+      "link": "https://www.wgtn.ac.nz/study/programmes-courses/postgraduate/masters"
+    },
+    {
+      "icon": "science",
+      "title": "Doctor of Philosophy (PhD)",
+      "description": "Research doctorate supervised by leading academics across Victoria's faculties and research centres.",
+      "link": "https://www.wgtn.ac.nz/study/programmes-courses/postgraduate/phds-doctorates"
+    }
+  ],
+  "university-of-canterbury": [
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Professional engineering degrees including civil, mechanical, electrical, software and chemical and process engineering.",
+      "link": "https://www.canterbury.ac.nz/study/academic-study/engineering"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "UC Business School programmes across accounting, finance, marketing, management and information systems.",
+      "link": "https://www.canterbury.ac.nz/study/academic-study/business"
+    },
+    {
+      "icon": "science",
+      "title": "Science",
+      "description": "Comprehensive science offerings including biology, chemistry, physics, data science and environmental science.",
+      "link": "https://www.canterbury.ac.nz/study/academic-study/science"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law",
+      "description": "Bachelor of Laws and postgraduate law qualifications delivered by one of New Zealand's leading law schools.",
+      "link": "https://www.canterbury.ac.nz/study/academic-study/law"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health",
+      "description": "Health sciences programmes preparing graduates for careers across healthcare, public health and health policy.",
+      "link": "https://www.canterbury.ac.nz/study/academic-study/health"
+    },
+    {
+      "icon": "school",
+      "title": "Arts",
+      "description": "Broad Bachelor of Arts offering with more than 30 subjects across humanities, languages and social sciences.",
+      "link": "https://www.canterbury.ac.nz/study/academic-study/arts"
+    }
+  ],
+  "lincoln-university": [],
+  "university-of-otago": [],
+  "ara-institute-of-canterbury": [
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Practical engineering qualifications covering civil, mechanical, electrical and electronic disciplines with industry projects.",
+      "link": "https://www.ara.ac.nz/study-interest-areas/engineering/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Business programmes spanning management, accounting, marketing and international business with applied learning.",
+      "link": "https://www.ara.ac.nz/study-interest-areas/business/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health",
+      "description": "Health qualifications including nursing and allied health pathways with clinical placement experience.",
+      "link": "https://www.ara.ac.nz/study-interest-areas/health/"
+    },
+    {
+      "icon": "computer",
+      "title": "Digital Technologies",
+      "description": "IT and digital study options including software development, networking, cybersecurity and information systems.",
+      "link": "https://www.ara.ac.nz/study-interest-areas/digital-technologies/"
+    },
+    {
+      "icon": "architecture",
+      "title": "Architecture and Construction Management",
+      "description": "Architectural studies and construction management qualifications preparing graduates for the built environment sector.",
+      "link": "https://www.ara.ac.nz/study-interest-areas/architecture-and-construction-management/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Social Work and Human Services",
+      "description": "Qualifications for careers in social work, counselling and human services with supervised fieldwork.",
+      "link": "https://www.ara.ac.nz/study-interest-areas/social-work-and-human-services/"
+    }
+  ],
+  "unitec-institute-of-technology": [
+    {
+      "icon": "architecture",
+      "title": "Construction",
+      "description": "Construction and built environment programmes covering construction management, quantity surveying and trades.",
+      "link": "https://www.unitec.ac.nz/career-and-study-options/construction/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing and Information Technology",
+      "description": "IT study options including networking, software development, cybersecurity and computer systems.",
+      "link": "https://www.unitec.ac.nz/career-and-study-options/computing-and-information-technology/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Applied business qualifications across management, accounting, marketing and international business.",
+      "link": "https://www.unitec.ac.nz/career-and-study-options/business/"
+    },
+    {
+      "icon": "design_services",
+      "title": "Creative Industries",
+      "description": "Creative pathways in design, performing and screen arts, contemporary music and visual communication.",
+      "link": "https://www.unitec.ac.nz/career-and-study-options/creative-industries/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Healthcare",
+      "description": "Health and community pathways including nursing, social practice, community health and related support roles.",
+      "link": "https://www.unitec.ac.nz/career-and-study-options/healthcare/"
+    }
+  ],
+  "manukau-institute-of-technology": [
+    {
+      "icon": "computer",
+      "title": "Digital Technologies",
+      "description": "Information technology programmes preparing graduates for roles in software, networking, cybersecurity and IT support.",
+      "link": "https://www.manukau.ac.nz/areas-of-study/digital-technologies/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Nursing",
+      "description": "Bachelor of Nursing preparing graduates to sit the Nursing Council of New Zealand State Examination for registration.",
+      "link": "https://www.manukau.ac.nz/areas-of-study/nursing/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Practical engineering qualifications providing a faster pathway into industry than traditional four-year degrees.",
+      "link": "https://www.manukau.ac.nz/areas-of-study/engineering/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Business programmes developing skills in management, accounting, marketing and entrepreneurship for career advancement.",
+      "link": "https://www.manukau.ac.nz/areas-of-study/business/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Trades",
+      "description": "Hands-on trades training across automotive, construction, plumbing, electrical and related industry certifications.",
+      "link": "https://www.manukau.ac.nz/areas-of-study/trades/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Health and Counselling",
+      "description": "Health studies and counselling qualifications for rewarding careers helping people and communities.",
+      "link": "https://www.manukau.ac.nz/areas-of-study/health-studies/"
+    }
+  ],
+  "waikato-institute-of-technology": [
+    {
+      "icon": "medical_services",
+      "title": "Nursing",
+      "description": "Programme combining theoretical knowledge with hands-on learning in real healthcare environments.",
+      "link": "https://www.wintec.ac.nz/study-at-wintec/courses/health-and-wellbeing/nursing"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Programmes covering innovation, entrepreneurship, accounting, human resources and finance with industry-respected teaching.",
+      "link": "https://www.wintec.ac.nz/study-at-wintec/courses/business"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering and Built Environment",
+      "description": "Engineering specialisations in civil, electrical, electronic and mechanical disciplines using modern facilities.",
+      "link": "https://www.wintec.ac.nz/study-at-wintec/courses/engineering-and-built-environment"
+    },
+    {
+      "icon": "computer",
+      "title": "Information Technology",
+      "description": "IT programmes preparing programmers, security specialists and developers for in-demand technology roles.",
+      "link": "https://www.wintec.ac.nz/study-at-wintec/courses/information-technology"
+    },
+    {
+      "icon": "psychology",
+      "title": "Health and Wellbeing",
+      "description": "Pathways including nursing, midwifery, physiotherapy and social work for careers supporting communities.",
+      "link": "https://www.wintec.ac.nz/study-at-wintec/courses/health-and-wellbeing"
+    },
+    {
+      "icon": "design_services",
+      "title": "Media Arts",
+      "description": "Creative programmes combining theory with industry-relevant facilities and internship opportunities.",
+      "link": "https://www.wintec.ac.nz/study-at-wintec/faculty/school-of-media-arts"
+    }
+  ],
+  "otago-polytechnic": [
+    {
+      "icon": "medical_services",
+      "title": "Nursing",
+      "description": "Professional nursing qualifications combining theory with clinical placements across health settings.",
+      "link": "https://www.op.ac.nz/study/health/nursing"
+    },
+    {
+      "icon": "architecture",
+      "title": "Carpentry",
+      "description": "Construction trades training preparing students for licensed building practitioner pathways.",
+      "link": "https://www.op.ac.nz/study/architecture-and-construction/carpentry"
+    },
+    {
+      "icon": "engineering",
+      "title": "Civil Engineering",
+      "description": "Engineering programme covering design, construction and management of infrastructure and built environment projects.",
+      "link": "https://www.op.ac.nz/study/engineering/civil-engineering"
+    },
+    {
+      "icon": "business_center",
+      "title": "Accounting",
+      "description": "Business and accounting qualifications building practical skills for finance and commercial roles.",
+      "link": "https://www.op.ac.nz/study/business/accounting"
+    },
+    {
+      "icon": "design_services",
+      "title": "Fashion Design",
+      "description": "Creative design programme developing garment design, construction and collection development skills.",
+      "link": "https://www.op.ac.nz/study/design/fashion-design"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Midwifery",
+      "description": "Midwifery qualification leading to registration and practice supporting women and whānau through pregnancy and birth.",
+      "link": "https://www.op.ac.nz/study/health/midwifery"
+    }
+  ],
+  "southern-institute-of-technology": [
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Nursing",
+      "description": "Registered nursing qualification with a strong recent record of graduate success in State Final Examinations.",
+      "link": "https://www.sit.ac.nz/Courses/Nursing-Health-Science"
+    },
+    {
+      "icon": "science",
+      "title": "Bachelor of Environmental Management",
+      "description": "Environmental programme featuring field trips and practical learning experiences in terrestrial ecology.",
+      "link": "https://www.sit.ac.nz/Courses/Environmental-Management"
+    },
+    {
+      "icon": "design_services",
+      "title": "Bachelor of Screen Arts",
+      "description": "Creative screen arts degree with specialisations in Animation, Film and Game Design.",
+      "link": "https://www.sit.ac.nz/Courses/Film-Animation-Game-Design"
+    },
+    {
+      "icon": "design_services",
+      "title": "Bachelor of Audio Production",
+      "description": "Creative industries degree covering recording, live sound, mixing and music production.",
+      "link": "https://www.sit.ac.nz/Courses/Audio-Production"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Applied Management",
+      "description": "Business management degree with majors including event management and project management.",
+      "link": "https://www.sit.ac.nz/Courses/Business-Commerce"
+    },
+    {
+      "icon": "biotech",
+      "title": "New Zealand Diploma in Veterinary Nursing",
+      "description": "Practical veterinary nursing diploma focused on companion animal care skills and knowledge.",
+      "link": "https://www.sit.ac.nz/Courses/Veterinary-Nursing-Animal-Care-Equine"
+    }
+  ],
+  "eastern-institute-of-technology": [
+    {
+      "icon": "medical_services",
+      "title": "Nursing and Health Science",
+      "description": "Nursing and allied health qualifications featured prominently within EIT's School of Health Professions.",
+      "link": "https://www.eit.ac.nz/subject-areas/health-professions/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Business qualifications spanning degree, diploma and certificate levels with applied industry focus.",
+      "link": "https://www.eit.ac.nz/subject-areas/business/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing",
+      "description": "Technology pathways covering software development, networking and information systems.",
+      "link": "https://www.eit.ac.nz/subject-areas/computing/"
+    },
+    {
+      "icon": "agriculture",
+      "title": "Agriculture",
+      "description": "Rural and agricultural programmes delivered through EIT's dedicated Rural Studies Unit.",
+      "link": "https://www.eit.ac.nz/subject-areas/agriculture/"
+    },
+    {
+      "icon": "school",
+      "title": "Teaching",
+      "description": "Education programmes including Bachelor of Teaching (Primary) preparation courses.",
+      "link": "https://www.eit.ac.nz/subject-areas/education/"
+    },
+    {
+      "icon": "agriculture",
+      "title": "Viticulture and Wine Science",
+      "description": "Specialised wine education with degree and short-course options drawing on the Hawke's Bay wine region.",
+      "link": "https://www.eit.ac.nz/subject-areas/grapegrowing-and-winemaking-2/"
+    }
+  ],
+  "nelson-marlborough-institute-of-technology": [
+    {
+      "icon": "computer",
+      "title": "Computing and Information Technology",
+      "description": "IT programmes covering software development, networking, cybersecurity and systems administration.",
+      "link": "https://www.nmit.ac.nz/study/study-areas/computing-and-it/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering, Construction and Infrastructure",
+      "description": "Applied engineering, construction and infrastructure qualifications linked to regional industry needs.",
+      "link": "https://www.nmit.ac.nz/study/study-areas/engineering-construction-and-infrastructure"
+    },
+    {
+      "icon": "business_center",
+      "title": "Applied Business",
+      "description": "Business qualifications with practical focus on management, accounting and enterprise skills.",
+      "link": "https://www.nmit.ac.nz/study/study-areas/business/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Aviation Engineering",
+      "description": "Specialised aviation maintenance engineering programmes with hands-on training in aircraft systems.",
+      "link": "https://www.nmit.ac.nz/study/study-areas/aviation-engineering/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Nursing, Fitness, Beauty and Social Sciences",
+      "description": "Health, wellbeing and social sciences programmes including nursing and fitness qualifications.",
+      "link": "https://www.nmit.ac.nz/study/study-areas/nursing-fitness-beauty-and-social-sciences"
+    },
+    {
+      "icon": "public",
+      "title": "Maritime",
+      "description": "Maritime qualifications preparing graduates for careers at sea and in the wider maritime industry.",
+      "link": "https://www.nmit.ac.nz/study/our-study-areas/maritime"
+    }
+  ],
+  "toi-ohomai-institute-of-technology": [
+    {
+      "icon": "medical_services",
+      "title": "Nursing",
+      "description": "Nursing programme using advanced simulation including Hololens technology for immersive clinical learning.",
+      "link": "https://www.toiohomai.ac.nz/study/subject/nursing"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing and IT",
+      "description": "Technology programmes focused on digital transformation projects and practical IT skills.",
+      "link": "https://www.toiohomai.ac.nz/study/subject/computing-and-it"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Business programmes covering management, leadership and professional development.",
+      "link": "https://www.toiohomai.ac.nz/study/subject/business"
+    },
+    {
+      "icon": "school",
+      "title": "Culinary, Baking and Hospitality",
+      "description": "Hands-on training in culinary arts, baking and hospitality operations across multiple campuses.",
+      "link": "https://www.toiohomai.ac.nz/study/subject/culinary%2C-baking-and-hospitality"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering and Fabrication",
+      "description": "Technical training including machining, welding and fabrication for engineering trades careers.",
+      "link": "https://www.toiohomai.ac.nz/study/subject/engineering-and-fabrication"
+    },
+    {
+      "icon": "school",
+      "title": "Teaching",
+      "description": "Teacher education programmes emphasising practical classroom experience and early childhood pathways.",
+      "link": "https://www.toiohomai.ac.nz/study/subject/teaching"
+    }
+  ],
+  "northtec": [
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Nursing",
+      "description": "Three-year degree preparing graduates for registration as a registered nurse in New Zealand.",
+      "duration": "3 Years",
+      "link": "https://www.northtec.ac.nz/programmes/bachelor-of-nursing"
+    },
+    {
+      "icon": "medical_services",
+      "title": "New Zealand Diploma in Enrolled Nursing (Level 5)",
+      "description": "Diploma-level pathway to becoming an enrolled nurse with clinical placement experience.",
+      "duration": "18 Months",
+      "link": "https://www.northtec.ac.nz/programmes/new-zealand-diploma-in-enrolled-nursing-level-5"
+    },
+    {
+      "icon": "architecture",
+      "title": "NZ Certificate in Construction Trade Skills (Level 3) - Carpentry",
+      "description": "Entry-level carpentry certificate providing foundation skills for the construction industry.",
+      "duration": "1 Year",
+      "link": "https://www.northtec.ac.nz/programmes/new-zealand-certificate-in-construction-trade-skills-level-3-carpentry"
+    },
+    {
+      "icon": "business_center",
+      "title": "NZ Certificate in Business Administration and Technology (Level 4)",
+      "description": "Online-capable business administration certificate building workplace and technology skills.",
+      "duration": "19 Weeks",
+      "link": "https://www.northtec.ac.nz/programmes/new-zealand-certificate-in-business-administration-and-technology-level-4"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "NZ Certificate in Light Automotive Engineering (Level 4)",
+      "description": "Automotive engineering certificate preparing graduates for work as light vehicle technicians.",
+      "duration": "40 Weeks",
+      "link": "https://www.northtec.ac.nz/programmes/new-zealand-certificate-in-light-automotive-engineering-level-4"
+    },
+    {
+      "icon": "school",
+      "title": "NZ Diploma in Sport, Recreation and Exercise (Level 5)",
+      "description": "Diploma preparing graduates for careers in sport, recreation, coaching and exercise.",
+      "duration": "40 Weeks",
+      "link": "https://www.northtec.ac.nz/programmes/new-zealand-diploma-in-sport-recreation-and-exercise-level-5"
+    }
+  ]
+}

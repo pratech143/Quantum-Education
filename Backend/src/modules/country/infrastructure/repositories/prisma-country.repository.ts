@@ -51,7 +51,7 @@ export class PrismaCountryRepository implements CountryRepository {
 
   async findByName(name: string): Promise<Country | null> {
     return prisma.country.findFirst({
-      where: { name: { equals: name, mode: 'insensitive' } }
+      where: { name: { equals: name } }
     }) as any;
   }
 
@@ -60,7 +60,7 @@ export class PrismaCountryRepository implements CountryRepository {
     const skip = (page - 1) * limit;
 
     const where = search
-      ? { name: { contains: search, mode: 'insensitive' as const } }
+      ? { name: { contains: search } }
       : {};
 
     const [data, total] = await Promise.all([

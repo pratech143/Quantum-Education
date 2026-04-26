@@ -1,0 +1,373 @@
+{
+  "university-of-copenhagen": [
+    {
+      "icon": "biotech",
+      "title": "MSc in Biotechnology",
+      "description": "Two-year research-driven master's programme at the Faculty of Science exploring molecular biology, cell biology and biotechnological applications in industry.",
+      "link": "https://www.ku.dk/studies/masters/biotechnology"
+    },
+    {
+      "icon": "public",
+      "title": "MSc in Global Health",
+      "description": "Interdisciplinary master's programme at the Faculty of Health and Medical Sciences focused on global health challenges, epidemiology and health systems.",
+      "link": "https://www.ku.dk/studies/masters/global-health"
+    },
+    {
+      "icon": "science",
+      "title": "MSc in Environmental Science",
+      "description": "Master's programme addressing environmental challenges through chemistry, ecology and natural resource management.",
+      "link": "https://www.ku.dk/studies/masters/environmental-science"
+    },
+    {
+      "icon": "medical_services",
+      "title": "MSc in Pharmaceutical Sciences",
+      "description": "Research-based master's programme covering drug discovery, pharmacology and pharmaceutical development at the Faculty of Health and Medical Sciences.",
+      "link": "https://www.ku.dk/studies/masters/pharmaceutical-sciences"
+    },
+    {
+      "icon": "engineering",
+      "title": "MSc in Biomedical Engineering",
+      "description": "Joint interdisciplinary programme with DTU combining engineering methods with medical sciences for healthcare innovation.",
+      "link": "https://www.ku.dk/studies/masters/biomedical-engineering"
+    },
+    {
+      "icon": "psychology",
+      "title": "MSc in Neuroscience",
+      "description": "Two-year master's programme covering molecular, cellular and systems neuroscience, from cognition to neurological diseases.",
+      "link": "https://www.ku.dk/studies/masters/neuroscience"
+    }
+  ],
+  "aarhus-university": [
+    {
+      "icon": "business_center",
+      "title": "Master's Degree Programmes at Aarhus BSS",
+      "description": "Aarhus University offers master's programmes across business, economics, law and social sciences through the School of Business and Social Sciences.",
+      "link": "https://masters.au.dk/masters-degree-programmes"
+    },
+    {
+      "icon": "school",
+      "title": "Master's Degree Programmes (Overview)",
+      "description": "Aarhus University's central portal covering master's programmes in humanities, health, science, engineering, business and social sciences.",
+      "link": "https://masters.au.dk"
+    },
+    {
+      "icon": "science",
+      "title": "Bachelor Programmes at Aarhus University",
+      "description": "Aarhus University offers a range of three-year bachelor programmes across humanities, sciences, health, business and engineering.",
+      "link": "https://bachelor.au.dk/en"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering Programmes",
+      "description": "Aarhus University offers engineering bachelor and master programmes including mechanical, electrical, civil, software and biomedical engineering.",
+      "link": "https://eng.au.dk/en/education"
+    }
+  ],
+  "technical-university-of-denmark": [
+    {
+      "icon": "computer",
+      "title": "MSc in Computer Science and Engineering",
+      "description": "A programme concentrated on the design and use of computing components - both software and hardware.",
+      "link": "https://www.dtu.dk/english/education/graduate/msc-programmes/computer-science-and-engineering"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "MSc in Mechanical Engineering",
+      "description": "Covers systematic methods in engineering design, product development and analysis with focus on structural strength and fluid dynamics.",
+      "link": "https://www.dtu.dk/english/education/graduate/msc-programmes/mechanical-engineering"
+    },
+    {
+      "icon": "engineering",
+      "title": "MSc in Electrical Engineering",
+      "description": "Participate in work at all levels, including advanced theories, methods and components for practical electrical systems.",
+      "link": "https://www.dtu.dk/english/education/graduate/msc-programmes/electrical-engineering"
+    },
+    {
+      "icon": "science",
+      "title": "MSc in Sustainable Energy Systems",
+      "description": "Provides knowledge of energy technologies and the optimal operation and coordination of large-scale integrated energy systems.",
+      "link": "https://www.dtu.dk/english/education/graduate/msc-programmes/sustainable-energy-systems"
+    },
+    {
+      "icon": "biotech",
+      "title": "MSc in Biomedical Engineering",
+      "description": "An interdisciplinary programme offered by DTU in collaboration with the Faculty of Health and Medical Sciences at the University of Copenhagen.",
+      "link": "https://www.dtu.dk/english/education/graduate/msc-programmes/biomedical-engineering"
+    },
+    {
+      "icon": "engineering",
+      "title": "BSc Engineering Programmes",
+      "description": "DTU's undergraduate engineering programmes cover general engineering, civil, mechanical, electrical, software and biotechnology fields.",
+      "link": "https://www.dtu.dk/english/education/undergraduate/general-engineering"
+    }
+  ],
+  "aalborg-university": [
+    {
+      "icon": "computer",
+      "title": "Master's Programmes in Aalborg",
+      "description": "Aalborg University offers master's programmes in engineering, computer science, social sciences and humanities at its Aalborg campus with a problem-based learning approach.",
+      "link": "https://www.en.aau.dk/education/master/list/aalborg"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering Programmes",
+      "description": "Full range of engineering programmes including more than 30 MSc specialisations across mechanical, electrical, chemical and software engineering.",
+      "link": "https://www.en.aau.dk/education/study-engineering"
+    },
+    {
+      "icon": "school",
+      "title": "Bachelor Programmes",
+      "description": "Bachelor's degree programmes within technical science, engineering, natural sciences, social sciences and humanities taught with problem-based learning.",
+      "link": "https://www.en.aau.dk/education/bachelor"
+    },
+    {
+      "icon": "science",
+      "title": "Joint Master's Programmes",
+      "description": "International master's programmes and double degree programmes where students rotate between partner universities in Europe.",
+      "link": "https://www.en.aau.dk/education/master"
+    }
+  ],
+  "university-of-southern-denmark": [
+    {
+      "icon": "computer",
+      "title": "MSc in Artificial Intelligence",
+      "description": "Gain expertise in machine learning, ethics and business strategy at SDU's Odense campus.",
+      "link": "https://www.sdu.dk/en/uddannelse/kandidat/artificial-intelligence"
+    },
+    {
+      "icon": "terminal",
+      "title": "MSc in Computer Science",
+      "description": "Graduates develop IT systems that support essential functions across organizations and society.",
+      "link": "https://www.sdu.dk/en/uddannelse/kandidat/datalogi"
+    },
+    {
+      "icon": "query_stats",
+      "title": "MSc in Data Science",
+      "description": "Develops analytical expertise to process and present large datasets for organizational decision-making.",
+      "link": "https://www.sdu.dk/en/uddannelse/kandidat/data-science-kolding"
+    },
+    {
+      "icon": "engineering",
+      "title": "MSc in Software Engineering",
+      "description": "Become a graduate engineer in Software Engineering and help develop intelligent software built on a strong foundation in computer science.",
+      "link": "https://www.sdu.dk/en/uddannelse/kandidat/softwareengineering"
+    },
+    {
+      "icon": "science",
+      "title": "MSc in Chemistry",
+      "description": "Combines analytical and laboratory skills with theoretical knowledge to prepare graduates for scientific innovation careers.",
+      "link": "https://www.sdu.dk/en/uddannelse/kandidat/kemi"
+    }
+  ],
+  "copenhagen-business-school": [
+    {
+      "icon": "business_center",
+      "title": "MSc in Economics and Business Administration - Finance and Investments",
+      "description": "In-depth understanding of the workings of financial markets and institutions, preparing graduates for careers in finance.",
+      "link": "https://www.cbs.dk/en/study-programmes/master-programmes/msc-economics-and-business-administration-finance-and"
+    },
+    {
+      "icon": "query_stats",
+      "title": "MSc in Business Administration and Data Science",
+      "description": "Equips students to combine programming and advanced analytics with solid business understanding.",
+      "link": "https://www.cbs.dk/en/study-programmes/master-programmes/msc-business-administration-and-data-science"
+    },
+    {
+      "icon": "psychology",
+      "title": "MSc in Economics and Business Administration - Strategy, Organisation and Leadership",
+      "description": "Explores how strategy, organisation and leadership shape businesses and society.",
+      "link": "https://www.cbs.dk/en/study-programmes/master-programmes/msc-economics-and-business-administration-strategy-organisation"
+    },
+    {
+      "icon": "computer",
+      "title": "MSc in Business Administration and Digital Business",
+      "description": "Students learn how digital tools like AI, data and new platforms transform companies.",
+      "link": "https://www.cbs.dk/en/study-programmes/master-programmes/msc-business-administration-and-digital-business"
+    },
+    {
+      "icon": "business_center",
+      "title": "MSc in Economics and Business Administration - Supply Chain Management",
+      "description": "Students learn to design and manage supply chains that connect suppliers, businesses and customers.",
+      "link": "https://www.cbs.dk/en/study-programmes/master-programmes/msc-economics-and-business-administration-supply-chain"
+    }
+  ],
+  "roskilde-university": [
+    {
+      "icon": "business_center",
+      "title": "MSc in Business Administration and Leadership",
+      "description": "Graduate programme focusing on business management and organizational leadership skills.",
+      "link": "https://ruc.dk/en/master/business-administration-and-leadership"
+    },
+    {
+      "icon": "computer",
+      "title": "MSc in Computer Science",
+      "description": "Advanced programme in computing technologies and computational methods at Roskilde University.",
+      "link": "https://ruc.dk/en/master/computer-science"
+    },
+    {
+      "icon": "science",
+      "title": "MSc in Environmental Science",
+      "description": "Graduate study addressing environmental challenges and sustainability issues.",
+      "link": "https://ruc.dk/en/master/environmental-science"
+    },
+    {
+      "icon": "public",
+      "title": "MSc in Global and Development Studies",
+      "description": "Programme examining international development and global socioeconomic issues.",
+      "link": "https://ruc.dk/en/master/global-and-development-studies"
+    },
+    {
+      "icon": "psychology",
+      "title": "MSc in Media and Communication",
+      "description": "Advanced education in media studies and communication theory and practice.",
+      "link": "https://ruc.dk/en/master/media-and-communication"
+    },
+    {
+      "icon": "gavel",
+      "title": "MSc in International Politics and Governance",
+      "description": "Graduate programme covering global political systems and international institutional frameworks.",
+      "link": "https://ruc.dk/en/master/international-politics-and-governance"
+    }
+  ],
+  "it-university-of-copenhagen": [],
+  "kea-copenhagen-school-of-design-and-technology": [],
+  "via-university-college": [],
+  "ucl-university-college": [],
+  "university-college-absalon": [
+    {
+      "icon": "biotech",
+      "title": "Bachelor of Engineering in Biotechnology",
+      "description": "Full-degree English-taught bachelor of engineering programme at University College Absalon focused on biotechnology.",
+      "link": "https://en.phabsalon.dk/full-degree/bachelor-engineering-biotechnology"
+    },
+    {
+      "icon": "school",
+      "title": "Professional Bachelor's Degree in Education",
+      "description": "Full-degree programme comprising modules taught in English, preparing students to become qualified teachers.",
+      "link": "https://en.phabsalon.dk/full-degree/professional-bachelors-degree-education"
+    },
+    {
+      "icon": "biotech",
+      "title": "Engineering in Biotechnology (Exchange)",
+      "description": "Exchange programme within engineering and biotechnology offered at University College Absalon.",
+      "link": "https://en.phabsalon.dk/exchange/engineering-biotechnology"
+    }
+  ],
+  "university-college-copenhagen": [],
+  "business-academy-aarhus": [],
+  "zealand-academy-of-technologies-and-business": [
+    {
+      "icon": "business_center",
+      "title": "AP in Commerce Management",
+      "description": "Academy Profession programme equivalent to the first two years of a bachelor degree focused on business and commerce management.",
+      "link": "https://zealand.com/fuldtid/commerce-management/"
+    },
+    {
+      "icon": "computer",
+      "title": "AP in Computer Science",
+      "description": "Technical Academy Profession degree focused on computing and programming skills.",
+      "link": "https://zealand.com/fuldtid/computer-science/"
+    },
+    {
+      "icon": "business_center",
+      "title": "AP in Marketing Management",
+      "description": "Business-focused Academy Profession programme in marketing strategy and communications.",
+      "link": "https://zealand.com/fuldtid/marketing-management/"
+    },
+    {
+      "icon": "design_services",
+      "title": "AP in Multimedia Design and Communication",
+      "description": "Creative Academy Profession programme combining design, communication and digital media.",
+      "link": "https://zealand.com/fuldtid/multimedia-design-and-communication/"
+    },
+    {
+      "icon": "business_center",
+      "title": "AP in Logistics Management",
+      "description": "Supply chain and logistics-focused Academy Profession business programme.",
+      "link": "https://zealand.com/fuldtid/logistics-management/"
+    },
+    {
+      "icon": "terminal",
+      "title": "Top-Up Bachelor in Web Development",
+      "description": "Advanced top-up degree building on AP credentials for web development specialisation.",
+      "link": "https://zealand.com/fuldtid/web-development/"
+    }
+  ],
+  "copenhagen-business-academy": [],
+  "danish-school-of-media-and-journalism": [
+    {
+      "icon": "psychology",
+      "title": "Journalism",
+      "description": "DMJX's flagship journalism programme training professional journalists across print, broadcast and online media.",
+      "link": "https://www.dmjx.dk/uddannelser/journalistuddannelsen/journalistik"
+    },
+    {
+      "icon": "design_services",
+      "title": "Photojournalism",
+      "description": "Specialised photojournalism programme at DMJX training visual storytellers for news and documentary photography.",
+      "link": "https://www.dmjx.dk/uddannelser/fotojournalistuddannelsen/fotojournalistik"
+    },
+    {
+      "icon": "psychology",
+      "title": "Communication",
+      "description": "Programme in communication focusing on strategic communication, media relations and organisational communication.",
+      "link": "https://www.dmjx.dk/uddannelser/kommunikationsuddannelsen/kommunikation"
+    },
+    {
+      "icon": "design_services",
+      "title": "Visual Communication",
+      "description": "Design-focused programme with specialisations in graphic design, creative communication, coded design and interactive design.",
+      "link": "https://www.dmjx.dk/uddannelser/visuel-kommunikation"
+    },
+    {
+      "icon": "design_services",
+      "title": "Media Production and Management",
+      "description": "Programme combining media production skills with management training for the media industry.",
+      "link": "https://www.dmjx.dk/uddannelser/medieproduktion-og-ledelse"
+    },
+    {
+      "icon": "design_services",
+      "title": "TV and Media Direction",
+      "description": "Programme training professionals in TV production and media direction at DMJX.",
+      "link": "https://www.dmjx.dk/uddannelser/tv-og-medietilrettelaeggelse"
+    }
+  ],
+  "international-business-academy": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor in International Business (E-BA Honours)",
+      "description": "Online bachelor honours programme offering flexible international business education for learners worldwide.",
+      "link": "https://iba.dk/international/international-business-e-ba/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master of Science in International Business (E-MSc)",
+      "description": "Online master's degree providing advanced international business education in a flexible format.",
+      "link": "https://iba.dk/international/master/master-of-science-in-international-business-e-msc/"
+    },
+    {
+      "icon": "business_center",
+      "title": "European Executive MBA (E-MBA)",
+      "description": "Online executive MBA programme designed for experienced professionals seeking executive-level education.",
+      "link": "https://iba.dk/international/master/european-executive-mba-e-mba/"
+    },
+    {
+      "icon": "computer",
+      "title": "Master of Science in Cyber Security",
+      "description": "Advanced programme focused on developing expertise in cybersecurity management and practice.",
+      "link": "https://iba.dk/international/master/master-of-science-in-cyber-security/"
+    },
+    {
+      "icon": "business_center",
+      "title": "BSc in International Business Management",
+      "description": "Full-time study option combining business principles with international management perspectives.",
+      "link": "https://iba.dk/international/bachelor/bsc-in-international-business-management/"
+    },
+    {
+      "icon": "public",
+      "title": "Executive MBA in Sustainability",
+      "description": "Online executive MBA emphasising sustainable business practices for senior professionals.",
+      "link": "https://iba.dk/international/master/executive-mba-in-sustainability/"
+    }
+  ]
+}

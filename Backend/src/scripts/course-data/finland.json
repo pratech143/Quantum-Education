@@ -1,0 +1,773 @@
+{
+  "university-of-helsinki": [
+    {
+      "icon": "query_stats",
+      "title": "Master's Programme in Data Science",
+      "description": "Two-year interdisciplinary master's combining computer science and statistics to train students for data-intensive roles, with specialisations in machine learning, algorithms, infrastructure, and applied data science.",
+      "fees": "EUR 15,000/year",
+      "duration": "2 years",
+      "link": "https://www.helsinki.fi/en/degree-programmes/data-science-masters-programme"
+    },
+    {
+      "icon": "computer",
+      "title": "Master's Programme in Computer Science",
+      "description": "Two-year master's covering algorithms, networks, and software tracks, preparing graduates to build secure digital services, develop software, and conduct computer science research.",
+      "fees": "EUR 15,000/year",
+      "duration": "2 years",
+      "link": "https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme"
+    },
+    {
+      "icon": "public",
+      "title": "Master's Programme in Contemporary Societies",
+      "description": "Interdisciplinary social sciences master's with six majors including Social Data Science, Sociology, and Global Development Studies, examining contemporary societal challenges.",
+      "link": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/bachelors-and-masters-programmes"
+    },
+    {
+      "icon": "science",
+      "title": "Master's Programme in Environmental Change and Global Sustainability",
+      "description": "Master's programme integrating natural and social science perspectives to address environmental and sustainability challenges at global and local scales.",
+      "link": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/bachelors-and-masters-programmes"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Master's Programme in Translational Medicine",
+      "description": "Research-focused medical master's preparing students to work at the interface of research, clinic, and industry, with specialisations in cancer, regenerative medicine, or metabolic disorders.",
+      "link": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/bachelors-and-masters-programmes"
+    }
+  ],
+  "aalto-university": [
+    {
+      "icon": "computer",
+      "title": "Master's Programme in Computer, Communication and Information Sciences",
+      "description": "Interdisciplinary ICT master's organised jointly by the Schools of Science and Electrical Engineering, offering nine majors including Computer Science, Machine Learning, HCI, and Game Design.",
+      "fees": "EUR 17,000/year",
+      "duration": "2 years",
+      "link": "https://www.aalto.fi/en/programmes/masters-programme-in-computer-communication-and-information-sciences"
+    },
+    {
+      "icon": "design_services",
+      "title": "Master's Programme in International Design Business Management",
+      "description": "Interdisciplinary master's uniting arts, business, and engineering students through a six-month industry project to develop innovative products, services, and business concepts.",
+      "fees": "EUR 17,000/year",
+      "duration": "2 years",
+      "link": "https://www.aalto.fi/en/programmes/masters-programme-in-international-design-business-management"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master's Programmes in Business",
+      "description": "Aalto School of Business master's portfolio including Economics, Finance, Marketing, and Management, taught in English with a global and interdisciplinary focus.",
+      "fees": "EUR 17,000/year",
+      "link": "https://www.aalto.fi/en/study-at-aalto"
+    },
+    {
+      "icon": "engineering",
+      "title": "Master's Programmes in Engineering and Technology",
+      "description": "Technology master's portfolio across mechanical, electrical, chemical, and energy engineering offered by Aalto's Schools of Engineering, Electrical Engineering, and Chemical Engineering.",
+      "fees": "EUR 17,000/year",
+      "link": "https://www.aalto.fi/en/study-at-aalto"
+    },
+    {
+      "icon": "architecture",
+      "title": "Master's Programmes in Arts, Design and Architecture",
+      "description": "Creative master's programmes offered by Aalto's School of Arts, Design and Architecture covering design, visual culture, architecture, and film.",
+      "fees": "EUR 17,000/year",
+      "link": "https://www.aalto.fi/en/study-at-aalto"
+    }
+  ],
+  "university-of-turku": [
+    {
+      "icon": "query_stats",
+      "title": "Master's Degree Programme in Futures Studies",
+      "description": "Interdisciplinary master's at the Finland Futures Research Centre training students in foresight, scenario planning, and anticipating societal and technological change.",
+      "link": "https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-futures-studies"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master's Degree Programme in Global Innovation Management",
+      "description": "Business-focused master's developing expertise in innovation processes, entrepreneurship, and managing international innovation-driven organisations.",
+      "link": "https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-global-innovation-management"
+    },
+    {
+      "icon": "biotech",
+      "title": "Master's Degree Programme in Biomedical Imaging",
+      "description": "Research-oriented biomedical sciences master's focused on modern imaging techniques and their applications in medicine and life sciences.",
+      "link": "https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-biomedical-sciences-biomedical-imaging"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Master's Degree Programme in Drug Discovery and Development",
+      "description": "Biomedical sciences master's covering molecular pharmacology, medicinal chemistry, and the drug development pipeline from target identification to clinical translation.",
+      "link": "https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-biomedical-sciences-drug-discovery-and-development"
+    },
+    {
+      "icon": "psychology",
+      "title": "Master's Degree Programme in Human Neuroscience",
+      "description": "Research master's examining the structure and function of the human brain, covering cognitive, clinical, and developmental neuroscience.",
+      "link": "https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-human-neuroscience"
+    },
+    {
+      "icon": "public",
+      "title": "Master's Degree Programme in Public Mental Health",
+      "description": "Interdisciplinary master's addressing population-level mental health through epidemiology, policy, and preventive interventions.",
+      "link": "https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-public-mental-health"
+    }
+  ],
+  "tampere-university": [
+    {
+      "icon": "query_stats",
+      "title": "Master's Degree Programme in Data Science",
+      "description": "Two-year Master of Science programme in Computing Sciences covering machine learning, data engineering, statistics, and applied data science methods.",
+      "duration": "2 years",
+      "semesters": "120 ECTS",
+      "link": "https://www.tuni.fi/en/study-with-us/data-science-computing-sciences"
+    },
+    {
+      "icon": "architecture",
+      "title": "Master's Degree Programme in Sustainable Architecture",
+      "description": "Master of Science in Architecture focused on ecologically and socially sustainable building design, cultural heritage, and climate-responsive architecture.",
+      "duration": "2 years",
+      "semesters": "120 ECTS",
+      "link": "https://www.tuni.fi/en/study-with-us/sustainable-architecture"
+    },
+    {
+      "icon": "engineering",
+      "title": "Master's Degree Programme in Environmental Engineering",
+      "description": "Master of Science (Technology) programme covering water and environmental engineering, circular economy, and sustainable resource management.",
+      "duration": "2 years",
+      "semesters": "120 ECTS",
+      "link": "https://www.tuni.fi/en/study-with-us/environmental-engineering-0"
+    },
+    {
+      "icon": "terminal",
+      "title": "Master's Degree Programme in Information Security",
+      "description": "Master of Science (Technology) programme training cybersecurity experts in cryptography, network security, software security, and risk management.",
+      "duration": "2 years",
+      "semesters": "120 ECTS",
+      "link": "https://www.tuni.fi/en/study-with-us/information-security-information-technology"
+    },
+    {
+      "icon": "biotech",
+      "title": "Master's Degree Programme in Biomaterials and Tissue Engineering",
+      "description": "Master of Science (Technology) programme combining biomedical engineering with materials science for applications in regenerative medicine and medical devices.",
+      "duration": "2 years",
+      "semesters": "120 ECTS",
+      "link": "https://www.tuni.fi/en/study-with-us/biomaterials-and-tissue-engineering-biomedical-sciences-and-engineering"
+    },
+    {
+      "icon": "gavel",
+      "title": "Master's Degree Programme in Peace, Mediation and Conflict Research",
+      "description": "Master of Social Sciences programme studying the causes of conflict, peacebuilding, and mediation practices in international and community contexts.",
+      "duration": "2 years",
+      "semesters": "120 ECTS",
+      "link": "https://www.tuni.fi/en/study-with-us/peace-mediation-and-conflict-research"
+    }
+  ],
+  "lut-university": [
+    {
+      "icon": "engineering",
+      "title": "Master's Programme in Electrical Engineering",
+      "description": "Two-year master's at LUT's School of Energy Systems covering electric drives, power electronics, and smart grids for modern electrified industry.",
+      "duration": "2 years",
+      "link": "https://www.lut.fi/en/studies/technology/masters-programmes-technology/masters-programme-electrical-engineering"
+    },
+    {
+      "icon": "terminal",
+      "title": "Master's Programme in Software Engineering",
+      "description": "Master's programme focused on software architecture, development processes, and emerging areas such as AI-driven software systems.",
+      "duration": "2 years",
+      "link": "https://www.lut.fi/en/studies/technology/masters-programmes-technology/masters-programme-software-engineering"
+    },
+    {
+      "icon": "engineering",
+      "title": "Master's Programme in Energy Conversion",
+      "description": "Technology master's addressing the energy transition through efficient energy conversion, thermal systems, and renewable energy technologies.",
+      "duration": "2 years",
+      "link": "https://www.lut.fi/en/studies/technology/masters-programmes-technology/masters-programme-energy-conversion"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master's Programme in Business Analytics",
+      "description": "LUT School of Business master's combining statistics, machine learning, and business knowledge for data-driven decision-making.",
+      "duration": "2 years",
+      "link": "https://www.lut.fi/en/studies/business/masters-programmes-business-administration/masters-programme-business-analytics"
+    },
+    {
+      "icon": "science",
+      "title": "Master's Programme in Sustainable Energy Systems",
+      "description": "Master's programme in renewable energy and sustainable system design, covering solar, wind, and hydrogen technologies alongside policy dimensions.",
+      "duration": "2 years",
+      "link": "https://www.lut.fi/en/studies/technology/masters-programmes-technology/masters-programme-sustainable-energy-systems"
+    }
+  ],
+  "university-of-oulu": [
+    {
+      "icon": "computer",
+      "title": "Master's Programme in Computer Science and Engineering",
+      "description": "Two-year master's delivering core knowledge of methods, tools, and technologies in ICT, with specialisations in software, AI, and systems.",
+      "duration": "2 years",
+      "link": "https://www.oulu.fi/en/apply/masters-computer-science-and-engineering"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master's Programme in Business Analytics",
+      "description": "Oulu Business School master's preparing graduates for data-driven business roles in rapidly changing global markets.",
+      "duration": "2 years",
+      "link": "https://www.oulu.fi/en/apply/masters-business-analytics"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Master's Programme in Electronics",
+      "description": "Engineering master's training specialists in design, production, and research of electronic devices, wireless systems, and embedded technologies.",
+      "duration": "2 years",
+      "link": "https://www.oulu.fi/en/apply/masters-electronics"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master's Programme in Finance",
+      "description": "AACSB-accredited business master's at Oulu Business School focused on financial markets, corporate finance, and quantitative finance.",
+      "duration": "2 years",
+      "link": "https://www.oulu.fi/en/apply/masters-finance"
+    },
+    {
+      "icon": "engineering",
+      "title": "Master's Programme in Environmental Engineering",
+      "description": "Engineering master's covering environmental and product planning, circular economy, and innovation for sustainable development.",
+      "duration": "2 years",
+      "link": "https://www.oulu.fi/en/apply/masters-environmental-engineering"
+    },
+    {
+      "icon": "school",
+      "title": "Master's Programme in Learning, Education and Technology",
+      "description": "Education master's leveraging Finnish pedagogical expertise to prepare graduates for educational research, instructional design, and EdTech roles.",
+      "duration": "2 years",
+      "link": "https://www.oulu.fi/en/apply/masters-learning-education-and-technology"
+    }
+  ],
+  "university-of-vaasa": [
+    {
+      "icon": "business_center",
+      "title": "Master's Programme in Accounting and Auditing",
+      "description": "MSc in Economics and Business Administration specialising in accounting, auditing, and financial reporting standards.",
+      "link": "https://www.uwasa.fi/en/education/masters-programmes/accounting-and-auditing"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master's Programme in Artificial Intelligence for Accounting and Finance",
+      "description": "New master's combining artificial intelligence methods with accounting and finance applications for data-driven financial decision-making.",
+      "link": "https://www.uwasa.fi/en/education/masters-programmes/artificial-intelligence-accounting-and-finance"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master's Programme in Finance",
+      "description": "Business and economics graduate programme specialising in investments, banking, and corporate finance.",
+      "link": "https://www.uwasa.fi/en/education/masters-programmes/finance"
+    },
+    {
+      "icon": "public",
+      "title": "Master's Programme in International Business - Sustainable Global Business",
+      "description": "International business master's preparing students as business leaders and innovators with a sustainability-focused global perspective.",
+      "link": "https://www.uwasa.fi/en/education/masters-programmes/international-business"
+    },
+    {
+      "icon": "science",
+      "title": "Master's Programme in Smart Energy Transition",
+      "description": "Electrical and energy engineering master's training experts in renewable energy, electrification, and sustainability-led industrial transformation.",
+      "link": "https://www.uwasa.fi/en/education/masters-programmes/smart-energy-transition-electrical-and-energy-engineering"
+    },
+    {
+      "icon": "computer",
+      "title": "Master's Programme in Computing Sciences",
+      "description": "Computing master's offering majors in artificial intelligence, automation, and sustainable systems for the technology industry.",
+      "link": "https://www.uwasa.fi/en/education/masters-programmes/computing-sciences"
+    }
+  ],
+  "university-of-jyvaskyla": [
+    {
+      "icon": "business_center",
+      "title": "Master's Degree Programme in Banking and International Finance",
+      "description": "Interdisciplinary, quantitatively oriented master's preparing students for careers in banking, asset management, and international financial markets.",
+      "link": "https://www.jyu.fi/en/study-with-us/masters-degree-programmes/masters-degree-programme-in-banking-and-international-finance"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master's Degree Programme in Artificial Intelligence",
+      "description": "Master's programme covering machine learning, data analytics, and AI engineering to prepare students as leaders in AI-driven innovation.",
+      "link": "https://www.jyu.fi/en/study-with-us/masters-degree-programmes/masters-degree-programme-in-artificial-intelligence"
+    },
+    {
+      "icon": "school",
+      "title": "Master's Degree Programme in Educational Sciences",
+      "description": "Education master's offering theoretical and practical expertise across a broad range of topics in teaching, learning, and education policy.",
+      "link": "https://www.jyu.fi/en/study-with-us/masters-degree-programmes/masters-degree-programme-in-educational-sciences"
+    },
+    {
+      "icon": "biotech",
+      "title": "Master's Degree Programme in Ecology and Evolutionary Biology",
+      "description": "Biological sciences master's exploring interactions between molecules, organisms, and ecosystems through research-led teaching.",
+      "link": "https://www.jyu.fi/en/study-with-us/masters-degree-programmes/masters-degree-programme-in-ecology-and-evolutionary-biology"
+    }
+  ],
+  "university-of-eastern-finland": [
+    {
+      "icon": "business_center",
+      "title": "Master's Degree Programme in Accounting and Finance",
+      "description": "UEF Business School master's combining financial accounting, management accounting, and corporate finance with research skills.",
+      "fees": "EUR 10,000/year",
+      "link": "https://www.uef.fi/en/degree-programme/masters-degree-programme-in-accounting-and-finance"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master's Degree Programme in Digital Marketing and Analytics",
+      "description": "Business master's covering marketing strategy, digital channels, consumer analytics, and data-driven decision-making.",
+      "fees": "EUR 10,000/year",
+      "link": "https://www.uef.fi/en/degree-programme/masters-degree-programme-in-digital-marketing-and-analytics"
+    },
+    {
+      "icon": "public",
+      "title": "Master's Degree Programme in Sustainability Leadership",
+      "description": "Interdisciplinary master's for professionals building expertise in environmental, social, and organisational sustainability leadership.",
+      "fees": "EUR 10,000/year",
+      "link": "https://www.uef.fi/en/degree-programme/masters-degree-programme-in-sustainability-leadership"
+    },
+    {
+      "icon": "psychology",
+      "title": "Master's Degree Programme in Clinical Linguistics",
+      "description": "Research-focused master's on language and communication disorders, including assessment and therapeutic applications in clinical settings.",
+      "fees": "EUR 10,000/year",
+      "link": "https://www.uef.fi/en/degree-programme/masters-degree-programme-in-clinical-linguistics"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Master's Degree Programme in Public Health",
+      "description": "Public health master's preparing graduates for global health leadership, epidemiology, and health policy research.",
+      "fees": "EUR 10,000/year",
+      "link": "https://www.uef.fi/en/degree-programme/masters-degree-programme-in-public-health"
+    },
+    {
+      "icon": "gavel",
+      "title": "Master's Degree Programme in Environmental Policy and Law",
+      "description": "Interdisciplinary master's addressing contemporary environmental challenges through environmental policy frameworks and law.",
+      "fees": "EUR 10,000/year",
+      "link": "https://www.uef.fi/en/degree-programme/masters-degree-programme-in-environmental-policy-and-law"
+    }
+  ],
+  "abo-akademi-university": [
+    {
+      "icon": "medical_services",
+      "title": "Master's Degree Programme in Advanced Practice Nursing",
+      "description": "Master's programme developing advanced clinical competencies for nursing professionals in expanded practice roles.",
+      "link": "https://www.abo.fi/en/study-programme/masters-degree-programme-in-advanced-practice-nursing/"
+    },
+    {
+      "icon": "biotech",
+      "title": "Master's Degree Programme in Biomedical Imaging",
+      "description": "Interdisciplinary master's for students with biosciences or engineering backgrounds, covering imaging technologies for biomedical research.",
+      "link": "https://www.abo.fi/en/study-programme/masters-degree-programme-in-biomedical-imaging/"
+    },
+    {
+      "icon": "computer",
+      "title": "Master's Degree Programme in Information Technology",
+      "description": "Two-year programme providing a solid foundation in computation, communication, and information processing with applied research projects.",
+      "duration": "2 years",
+      "link": "https://www.abo.fi/en/study-programme/masters-degree-programme-in-information-technology/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Master's Degree Programme in International Law and Human Rights",
+      "description": "Law master's preparing graduates for careers in international organisations, NGOs, public administration, and legal practice.",
+      "link": "https://www.abo.fi/en/study-programme/the-masters-degree-programme-in-international-law-and-human-rights/"
+    },
+    {
+      "icon": "public",
+      "title": "Master's Programme in Peace, Mediation and Conflict Research",
+      "description": "Interdisciplinary master's preparing students to analyse and intervene in interpersonal and international conflicts.",
+      "link": "https://www.abo.fi/en/study-programme/masters-programme-in-peace-mediation-and-conflict-research/"
+    },
+    {
+      "icon": "school",
+      "title": "Master's Degree Programme in Teaching and Learning",
+      "description": "Education master's leading to the Finnish Teacher's Certificate, combining educational research with classroom-focused teaching skills.",
+      "link": "https://www.abo.fi/en/study-programme/masters-degree-programme-in-teaching-and-learning/"
+    }
+  ],
+  "metropolia-university-of-applied-sciences": [
+    {
+      "icon": "medical_services",
+      "title": "Master's Degree in Advanced Practice Nursing",
+      "description": "Flexible, internationally oriented master's developing advanced clinical nursing competencies and leadership for healthcare careers.",
+      "link": "https://www.metropolia.fi/en/study-at-metropolia/masters-degrees/advanced-practice-nursing"
+    },
+    {
+      "icon": "psychology",
+      "title": "Master's Degree in Behavioural Design",
+      "description": "One-year master's combining psychology, data, and design to influence behaviour and drive real-world change in services and products.",
+      "duration": "1 year",
+      "link": "https://www.metropolia.fi/en/study-at-metropolia/masters-degrees/behavioural-design"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master's Degree in Business Informatics",
+      "description": "Master's programme for business and engineering professionals deepening skills in the use and management of business information systems.",
+      "link": "https://www.metropolia.fi/en/study-at-metropolia/masters-degrees/business-informatics"
+    },
+    {
+      "icon": "terminal",
+      "title": "Master's Degree in Information Technology: Networking and Services",
+      "description": "English-taught ICT master's covering AI, IoT, and cybersecurity alongside research and professional communication skills.",
+      "link": "https://www.metropolia.fi/en/study-at-metropolia/masters-degrees/information-technology-networking-and-services"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master's Degree in Procurement",
+      "description": "Master's programme designed for working professionals and distance learners focusing on strategic procurement and supply chain management.",
+      "link": "https://www.metropolia.fi/en/study-at-metropolia/masters-degrees/procurement"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Master of Engineering in Smart Industry",
+      "description": "One-year master's in AI, IoT, and digital industrial technologies for leading sustainable, data-driven Industry 5.0 transformation.",
+      "duration": "1 year",
+      "link": "https://www.metropolia.fi/en/study-at-metropolia/masters-degrees/smart-industry"
+    }
+  ],
+  "haaga-helia-university-of-applied-sciences": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Business Administration in Aviation Business",
+      "description": "Full-time BBA at the Porvoo campus preparing specialists for the aviation industry with business, operations, and management skills.",
+      "semesters": "210 ECTS",
+      "link": "https://www.haaga-helia.fi/en/bachelor/degree-programme-aviation-business"
+    },
+    {
+      "icon": "terminal",
+      "title": "Degree Programme in Business Information Technology",
+      "description": "Helsinki-based bachelor's programme combining business and IT skills for careers in digital services, software, and technology management.",
+      "semesters": "210 ECTS",
+      "link": "https://www.haaga-helia.fi/en/bachelor/degree-programme-business-information-technology"
+    },
+    {
+      "icon": "business_center",
+      "title": "Degree Programme in Digital Business Innovations, BBA",
+      "description": "Porvoo-based BBA focusing on digital transformation, innovation processes, and entrepreneurship in modern business.",
+      "semesters": "210 ECTS",
+      "link": "https://www.haaga-helia.fi/en/bachelor/degree-programme-digital-business-innovations"
+    },
+    {
+      "icon": "business_center",
+      "title": "Degree Programme in International Business",
+      "description": "Helsinki-based BBA available full-time or part-time, covering international trade, marketing, and global business operations.",
+      "semesters": "210 ECTS",
+      "link": "https://www.haaga-helia.fi/en/bachelor/degree-programme-international-business"
+    },
+    {
+      "icon": "business_center",
+      "title": "Degree Programme in Hospitality and Tourism Experience Management",
+      "description": "Helsinki-based bachelor's preparing graduates for management roles in hotels, restaurants, and the global tourism and experience industry.",
+      "semesters": "210 ECTS",
+      "link": "https://www.haaga-helia.fi/en/bachelor/degree-programme-hospitality-and-tourism-experience-management"
+    }
+  ],
+  "laurea-university-of-applied-sciences": [
+    {
+      "icon": "terminal",
+      "title": "Bachelor's Degree in Business Information Technology, Developing Digital Services",
+      "description": "Online bachelor's combining IT and business management, focusing on digital service development, requirements analysis, and application design.",
+      "link": "https://www.laurea.fi/en/degree_programmes/business-management-and-information-technology/business-information-technology/"
+    },
+    {
+      "icon": "terminal",
+      "title": "Bachelor's Degree in Business Information Technology, Cyber Security",
+      "description": "Bachelor's programme preparing students to identify, manage, and respond to cyber threats in modern business environments.",
+      "link": "https://www.laurea.fi/en/degree_programmes/business-management-and-information-technology/bit-cyber-security/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor's Degree in Nursing",
+      "description": "Bachelor's programme preparing registered nurses with a holistic focus on the well-being of individuals, families, and communities.",
+      "link": "https://www.laurea.fi/en/degree_programmes/social-services-and-nursing/nursing/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Master's Degree in Technology Law",
+      "description": "Master's programme developing expertise in technology regulation, digital ethics, resilience, and emerging legal frameworks.",
+      "link": "https://www.laurea.fi/en/degree_programmes/business-management-and-information-technology/technology-law/"
+    },
+    {
+      "icon": "design_services",
+      "title": "Master's Degree in Service Innovation and Design",
+      "description": "Master's programme exploring recent developments in service innovation and design with applied research and development projects.",
+      "link": "https://www.laurea.fi/en/degree_programmes/service-industry/service-innovation-and-design/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Master's Degree in Global Health and Crisis Management",
+      "description": "Master's focusing on health care development and management from global health, humanitarian, and crisis-response perspectives.",
+      "link": "https://www.laurea.fi/en/degree_programmes/social-services-and-nursing/global-health-and-Crisis-management/"
+    }
+  ],
+  "tamk-university-of-applied-sciences": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor's Degree in Entrepreneurship and Team Leadership",
+      "description": "TAMK bachelor's programme developing entrepreneurial mindset and team-based leadership skills through real business projects.",
+      "link": "https://www.tuni.fi/en/study-with-us/entrepreneurship-and-team-leadership"
+    },
+    {
+      "icon": "science",
+      "title": "Bachelor's Degree in Environmental Engineering and Green Transition",
+      "description": "Engineering bachelor's focusing on sustainability, circular economy, and the technical skills needed to lead the green transition.",
+      "link": "https://www.tuni.fi/en/study-with-us/environmental-engineering-and-green-transition"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor's Degree in International Business",
+      "description": "Tampere-based BBA programme preparing students for careers in marketing, finance, and management in international companies.",
+      "link": "https://www.tuni.fi/en/study-with-us/international-business"
+    },
+    {
+      "icon": "design_services",
+      "title": "Bachelor's Degree in Media and Arts",
+      "description": "Creative bachelor's programme combining media production, visual storytelling, and contemporary artistic practice.",
+      "link": "https://www.tuni.fi/en/study-with-us/media-and-arts"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor's Degree in Nursing",
+      "description": "TAMK nursing bachelor's preparing registered nurses with clinical, ethical, and communication skills for healthcare roles.",
+      "link": "https://www.tuni.fi/en/study-with-us/nursing"
+    },
+    {
+      "icon": "terminal",
+      "title": "Bachelor's Degree in Software Engineering",
+      "description": "Engineering bachelor's covering software design, development, and modern technologies including cloud, mobile, and AI-driven applications.",
+      "link": "https://www.tuni.fi/en/study-with-us/software-engineering"
+    }
+  ],
+  "jamk-university-of-applied-sciences": [
+    {
+      "icon": "terminal",
+      "title": "Bachelor's Degree in Information and Communication Technology",
+      "description": "JAMK bachelor's offered as engineering or business tracks, with specialisation areas in AI, cybersecurity, and software development.",
+      "link": "https://www.jamk.fi/en/apply-to-jamk/ict"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor's Degree in Business Administration",
+      "description": "JAMK bachelor's programme developing core business competencies for careers in international and digital business environments.",
+      "link": "https://www.jamk.fi/en/apply-to-jamk/business-administration"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor's Degree in Nursing",
+      "description": "Nursing bachelor's taught in English preparing students for registered nurse roles in Finland and internationally.",
+      "link": "https://www.jamk.fi/en/apply-to-jamk/social-services-and-health-care"
+    },
+    {
+      "icon": "school",
+      "title": "International Professional Teacher Education",
+      "description": "Hybrid programme providing the pedagogical qualifications required to teach in Finnish vocational education and higher education.",
+      "link": "https://www.jamk.fi/en/apply-to-jamk/professional-teacher-education"
+    }
+  ],
+  "lab-university-of-applied-sciences": [
+    {
+      "icon": "terminal",
+      "title": "Bachelor of Business Administration in Business Information Systems",
+      "description": "On-campus bachelor's in Lahti combining IT skills with business processes to develop digital business professionals.",
+      "link": "https://lab.fi/en/study/bachelor-business-administration-business-information-systems"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Business Administration in International Business",
+      "description": "On-campus bachelor's at Lappeenranta and Lahti covering international trade, marketing, and cross-cultural management.",
+      "link": "https://lab.fi/en/study/bachelor-business-administration-international-business"
+    },
+    {
+      "icon": "design_services",
+      "title": "Bachelor of Culture and Arts in Sustainable Design Business",
+      "description": "Lahti-based bachelor's combining sustainable design practice with business skills for careers in creative and circular industries.",
+      "link": "https://lab.fi/en/study/bachelor-culture-and-arts-sustainable-design-business"
+    },
+    {
+      "icon": "terminal",
+      "title": "Bachelor of Engineering in Industrial Information Technology",
+      "description": "Lahti-based engineering bachelor's focusing on industrial digitalisation, automation, and IT for smart manufacturing.",
+      "link": "https://lab.fi/en/study/bachelor-engineering-industrial-information-technology"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Bachelor of Engineering in Industrial Mechanical Engineering",
+      "description": "Lappeenranta-based engineering bachelor's covering mechanical design, manufacturing, and industrial production systems.",
+      "link": "https://lab.fi/en/study/bachelor-engineering-industrial-mechanical-engineering"
+    },
+    {
+      "icon": "architecture",
+      "title": "Bachelor of Engineering in Sustainable Construction Technology",
+      "description": "Engineering bachelor's focusing on sustainable materials, energy-efficient buildings, and green construction practices.",
+      "link": "https://lab.fi/en/study/bachelor-engineering-sustainable-construction-technology"
+    }
+  ],
+  "savonia-university-of-applied-sciences": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Business Administration in International Business",
+      "description": "Bachelor's programme training global business experts in foreign trade, international marketing, sales, and customer care.",
+      "link": "https://www.savonia.fi/en/study-with-us/degree-studies/bachelors-in-english/international-business/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Bachelor of Engineering in Industrial Management",
+      "description": "Bachelor's degree preparing technology industry professionals in service-oriented business, supply chain, and project management.",
+      "link": "https://www.savonia.fi/en/study-with-us/degree-studies/bachelors/industrial-management/"
+    },
+    {
+      "icon": "terminal",
+      "title": "Bachelor of Engineering in Information Technology (Internet of Things)",
+      "description": "Engineering bachelor's specialising in IoT and Big Data for digital health and industrial internet applications.",
+      "link": "https://www.savonia.fi/en/study-with-us/degree-studies/bachelors-in-english/internet-of-things/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Bachelor of Engineering in Mechanical Engineering (Intelligent Mechatronics)",
+      "description": "Engineering bachelor's integrating mechanical, electronic, and control systems through hands-on work with robots and heavy equipment.",
+      "link": "https://www.savonia.fi/en/study-with-us/degree-studies/bachelors/mechanical-engineering/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Health Care, Registered Nurse",
+      "description": "Nursing bachelor's with patient-centred care focus and integrated Finnish language studies for practising nurses in Finland.",
+      "link": "https://www.savonia.fi/en/study-with-us/degree-studies/bachelors-in-english/registered-nurse/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Hospitality Management",
+      "description": "Bilingual bachelor's educating tourism and hospitality experts with strong emphasis on Finnish language and industry practice.",
+      "link": "https://www.savonia.fi/en/study-with-us/degree-studies/bachelors/bachelor-of-hospitality-management/"
+    }
+  ],
+  "oulu-university-of-applied-sciences": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Business Administration, International Business",
+      "description": "On-site BBA programme at Oulu UAS focused on international business skills, marketing, and management.",
+      "link": "https://oamk.fi/en/study-at-oamk/bachelor-s-degrees/bba-international-business-2/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Bachelor of Engineering, Mechanical Engineering - Sustainable Product Development",
+      "description": "On-site engineering bachelor's focused on sustainable product design, mechanical systems, and manufacturing.",
+      "link": "https://oamk.fi/en/study-at-oamk/bachelor-s-degrees/bachelor-of-engineering-mechanical-engineering-sustainable-product-development/"
+    },
+    {
+      "icon": "terminal",
+      "title": "Bachelor of Engineering, Information Technology",
+      "description": "On-site IT engineering bachelor's covering software development, networks, and emerging digital technologies.",
+      "link": "https://oamk.fi/en/study-at-oamk/bachelor-s-degrees/beng-information-technology-2/"
+    },
+    {
+      "icon": "science",
+      "title": "Bachelor of Engineering, Energy and Environmental Engineering",
+      "description": "Engineering bachelor's programme focused on renewable energy, environmental technology, and sustainability.",
+      "link": "https://oamk.fi/en/study-at-oamk/bachelor-s-degrees/bachelor-of-engineering-energy-and-environmental-engineering/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Health Care, Nursing",
+      "description": "Nursing bachelor's programme preparing graduates for registered nurse roles in clinical and community healthcare.",
+      "link": "https://oamk.fi/en/study-at-oamk/bachelor-s-degrees/bachelor-of-heath-care-nursing/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Bachelor of Social Services",
+      "description": "Social services bachelor's preparing graduates for roles in social work, social care, and community support.",
+      "link": "https://oamk.fi/en/study-at-oamk/bachelor-s-degrees/bachelor-of-social-services/"
+    }
+  ],
+  "turku-university-of-applied-sciences": [
+    {
+      "icon": "precision_manufacturing",
+      "title": "Bachelor of Engineering in Industrial Management and Engineering",
+      "description": "Four-year engineering bachelor's combining industrial management with engineering expertise for leadership roles in technology industries.",
+      "duration": "4 years",
+      "semesters": "240 ECTS",
+      "link": "https://www.turkuamk.fi/en/studies/industrial-management-and-engineering-bachelor-of-engineering/"
+    },
+    {
+      "icon": "terminal",
+      "title": "Bachelor of Engineering in Information and Communications Technology",
+      "description": "Four-year ICT engineering bachelor's covering software, networks, data, and emerging communication technologies.",
+      "duration": "4 years",
+      "semesters": "240 ECTS",
+      "link": "https://www.turkuamk.fi/en/studies/information-and-communications-technology-bachelor-of-engineering/"
+    },
+    {
+      "icon": "science",
+      "title": "Bachelor of Engineering in Water Engineering and Circular Economy",
+      "description": "Engineering bachelor's focusing on water treatment, sustainable resource management, and circular economy solutions.",
+      "duration": "4 years",
+      "semesters": "240 ECTS",
+      "link": "https://www.turkuamk.fi/en/studies/water-engineering-and-circular-economy-bachelor-of-engineering/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Business Administration in International Operations and Business",
+      "description": "BBA programme preparing students for international business operations, project management, and global trade.",
+      "duration": "3.5 years",
+      "semesters": "210 ECTS",
+      "link": "https://www.turkuamk.fi/en/studies/international-operations-and-business-bachelor-of-business-administration/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Bachelor of Engineering in Mechanical Engineering",
+      "description": "Four-year engineering bachelor's covering mechanical design, manufacturing, and modern industrial production systems.",
+      "duration": "4 years",
+      "semesters": "240 ECTS",
+      "link": "https://www.turkuamk.fi/en/studies/mechanical-engineering-bachelor-of-engineering/"
+    },
+    {
+      "icon": "school",
+      "title": "Bachelor of Social Services in Early Childhood Education",
+      "description": "Bachelor's programme preparing graduates as qualified early childhood educators working in Finnish and international settings.",
+      "duration": "3.5 years",
+      "semesters": "210 ECTS",
+      "link": "https://www.turkuamk.fi/en/studies/early-childhood-education-bachelor-of-social-services/"
+    }
+  ],
+  "vaasa-university-of-applied-sciences": [
+    {
+      "icon": "science",
+      "title": "Bachelor of Engineering in Energy Technology",
+      "description": "Full-time engineering bachelor's focused on energy systems, renewable energy technologies, and sustainable engineering.",
+      "semesters": "240 ECTS",
+      "link": "https://www.vamk.fi/en/tutkinto/energytechnology"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Bachelor of Engineering in Industrial Engineering",
+      "description": "Engineering bachelor's programme combining technology and business management for the manufacturing and energy industries.",
+      "semesters": "240 ECTS",
+      "link": "https://www.vamk.fi/en/tutkinto/industrial-engineering"
+    },
+    {
+      "icon": "terminal",
+      "title": "Bachelor of Engineering in Information Technology",
+      "description": "Full-time IT engineering bachelor's covering software development, networking, and modern digital technologies.",
+      "semesters": "240 ECTS",
+      "link": "https://www.vamk.fi/en/tutkinto/informationtechnology-2"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Business Administration in International Business",
+      "description": "BBA programme at VAMK preparing students for international trade, marketing, and global business management careers.",
+      "semesters": "210 ECTS",
+      "link": "https://www.vamk.fi/en/tutkinto/international-business-bba"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Health Care in Nursing",
+      "description": "Full-time nursing bachelor's preparing graduates for registered nurse roles in clinical and community settings.",
+      "semesters": "210 ECTS",
+      "link": "https://www.vamk.fi/en/tutkinto/nursing"
+    }
+  ]
+}

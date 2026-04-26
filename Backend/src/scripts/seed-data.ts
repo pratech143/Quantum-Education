@@ -1,4 +1,56 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { prisma, connectDatabase, disconnectDatabase } from '../shared/database/prisma.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+type CourseEntry = {
+  icon: string;
+  title: string;
+  description: string;
+  tag?: string;
+  tagStyle?: string;
+  fees?: string;
+  duration?: string;
+  semesters?: string;
+  scope?: string;
+  details?: string;
+  link?: string;
+};
+
+function loadCourseData(countrySlug: string): Record<string, CourseEntry[]> {
+  const file = path.join(__dirname, 'course-data', `${countrySlug}.json`);
+  if (!fs.existsSync(file)) return {};
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const parsed = JSON.parse(raw) as Record<string, CourseEntry[]>;
+    const clean: Record<string, CourseEntry[]> = {};
+    for (const [key, courses] of Object.entries(parsed)) {
+      clean[key] = (courses ?? []).map((c) => {
+        const out: CourseEntry = {
+          icon: c.icon || 'school',
+          title: c.title,
+          description: c.description,
+        };
+        if (c.tag) out.tag = c.tag;
+        if (c.tagStyle) out.tagStyle = c.tagStyle;
+        if (c.fees) out.fees = c.fees;
+        if (c.duration) out.duration = c.duration;
+        if (c.semesters) out.semesters = c.semesters;
+        if (c.scope) out.scope = c.scope;
+        if (c.details) out.details = c.details;
+        if (c.link) out.link = c.link;
+        return out;
+      });
+    }
+    return clean;
+  } catch (err) {
+    console.warn(`Failed to parse course data for ${countrySlug}:`, err);
+    return {};
+  }
+}
 
 type CountrySeed = {
   name: string;
@@ -29,7 +81,7 @@ type InstitutionSeed = {
   website: string;
   fees: string;
   type: 'UNIVERSITY' | 'COLLEGE';
-  courses: { icon: string; title: string; description: string; tag?: string; tagStyle?: string }[];
+  courses: CourseEntry[];
   whyReasons: { icon: string; title: string; description: string }[];
   requirements: { title: string; description: string }[];
 };
@@ -395,12 +447,26 @@ const buildInstitutionSeed = (
   base: InstitutionBase,
   type: 'UNIVERSITY' | 'COLLEGE',
   fees: string,
-  order: number
+  order: number,
+  courseLookup: Record<string, CourseEntry[]>
 ): InstitutionSeed => {
   const isUniversity = type === 'UNIVERSITY';
+  const slug = slugify(base.name);
+  const realCourses = courseLookup[slug];
+  const fallbackCourses: CourseEntry[] = isUniversity
+    ? [
+        { icon: 'school', title: 'Undergraduate Degrees', description: `Broad academic programs available for international students in ${countryName}.`, link: base.website },
+        { icon: 'science', title: 'Graduate Study', description: 'Research, taught masters, and specialist progression opportunities.', link: base.website }
+      ]
+    : [
+        { icon: 'build', title: 'Applied Programs', description: `Practical, industry-oriented study options with strong skills development in ${countryName}.`, link: base.website },
+        { icon: 'work', title: 'Pathways & Diplomas', description: 'Certificates, diplomas, and employment-focused progression routes.', link: base.website }
+      ];
+  const courses = realCourses && realCourses.length > 0 ? realCourses : fallbackCourses;
+
   const seed: InstitutionSeed = {
     name: base.name,
-    slug: slugify(base.name),
+    slug,
     description: isUniversity
       ? `${base.name} is a recognised university in ${countryName}, offering internationally focused academic pathways and student support in ${base.location}.`
       : `${base.name} is a recognised college or applied-sciences institution in ${countryName}, offering practical programs and career-focused learning in ${base.location}.`,
@@ -410,15 +476,7 @@ const buildInstitutionSeed = (
     website: base.website,
     fees,
     type,
-    courses: isUniversity
-      ? [
-          { icon: 'school', title: 'Undergraduate Degrees', description: `Broad academic programs available for international students in ${countryName}.` },
-          { icon: 'science', title: 'Graduate Study', description: 'Research, taught masters, and specialist progression opportunities.' }
-        ]
-      : [
-          { icon: 'build', title: 'Applied Programs', description: `Practical, industry-oriented study options with strong skills development in ${countryName}.` },
-          { icon: 'work', title: 'Pathways & Diplomas', description: 'Certificates, diplomas, and employment-focused progression routes.' }
-        ],
+    courses,
     whyReasons: isUniversity
       ? [
           { icon: 'public', title: 'International Learning', description: `Study in ${base.location} with access to globally recognised higher education opportunities.` },
@@ -677,17 +735,20 @@ const institutionCatalog: Record<string, InstitutionCatalog> = {
 };
 
 const institutionSeeds: Record<string, InstitutionSeed[]> = Object.fromEntries(
-  Object.entries(institutionCatalog).map(([countrySlug, catalog]) => [
-    countrySlug,
-    [
-      ...catalog.universities.map((institution, index) =>
-        buildInstitutionSeed(catalog.countryName, institution, 'UNIVERSITY', catalog.universityFees, index)
-      ),
-      ...catalog.colleges.map((institution, index) =>
-        buildInstitutionSeed(catalog.countryName, institution, 'COLLEGE', catalog.collegeFees, index)
-      )
-    ]
-  ])
+  Object.entries(institutionCatalog).map(([countrySlug, catalog]) => {
+    const courseLookup = loadCourseData(countrySlug);
+    return [
+      countrySlug,
+      [
+        ...catalog.universities.map((institution, index) =>
+          buildInstitutionSeed(catalog.countryName, institution, 'UNIVERSITY', catalog.universityFees, index, courseLookup)
+        ),
+        ...catalog.colleges.map((institution, index) =>
+          buildInstitutionSeed(catalog.countryName, institution, 'COLLEGE', catalog.collegeFees, index, courseLookup)
+        )
+      ]
+    ];
+  })
 );
 
 const alumniSeeds: AlumniSeed[] = [
