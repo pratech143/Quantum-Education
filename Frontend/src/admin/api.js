@@ -89,5 +89,24 @@ export const adminApi = {
   getAlumni: (id) => apiRequest(`/alumni/${id}`),
   createAlumni: (data) => apiRequest('/alumni', { method: 'POST', body: JSON.stringify(data) }),
   updateAlumni: (id, data) => apiRequest(`/alumni/${id}`, { method: 'PATCH', body: JSON.stringify(data) }),
-  deleteAlumni: (id) => apiRequest(`/alumni/${id}`, { method: 'DELETE' })
+  deleteAlumni: (id) => apiRequest(`/alumni/${id}`, { method: 'DELETE' }),
+  
+  // News
+  listNews: (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return apiRequest(`/news${query ? `?${query}` : ''}`);
+  },
+  getNews: (id) => apiRequest(`/news/${id}`),
+  createNews: (data) => apiRequest('/news', { method: 'POST', body: JSON.stringify(data) }),
+  updateNews: (id, data) => apiRequest(`/news/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
+  deleteNews: (id) => apiRequest(`/news/${id}`, { method: 'DELETE' }),
+
+  // Team
+  listTeam: (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return apiRequest(`/team${query ? `?${query}` : ''}`);
+  },
+  createTeam: (data) => apiRequest('/team', { method: 'POST', body: JSON.stringify(data) }),
+  updateTeam: (id, data) => apiRequest(`/team/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
+  deleteTeam: (id) => apiRequest(`/team/${id}`, { method: 'DELETE' })
 };

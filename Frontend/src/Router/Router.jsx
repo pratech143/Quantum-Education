@@ -7,7 +7,10 @@ import Contact from "../Pages/Contact";
 import Alumni from "../Pages/Alumni";
 import Country from "../Pages/Country";
 import UniversityDetails from "../Pages/UniversityDetails";
-import Certifications from "../Pages/Certifications";
+import News from "../Pages/News";
+import NewsDetail from "../Pages/NewsDetail";
+import InterviewPrep from "../Pages/InterviewPrep";
+
 import AdminLayout from "../admin/AdminLayout";
 import Login from "../admin/pages/Login";
 import Dashboard from "../admin/pages/Dashboard";
@@ -17,6 +20,8 @@ import Profile from "../admin/pages/Profile";
 import DestinationsManagement from "../admin/pages/DestinationsManagement";
 import UniversitiesManagement from "../admin/pages/UniversitiesManagement";
 import AlumniManagement from "../admin/pages/AlumniManagement";
+import NewsManagement from "../admin/pages/NewsManagement";
+import TeamManagement from "../admin/pages/TeamManagement";
 import { AuthProvider } from "../admin/AuthContext";
 
 const AdminWrapper = () => (
@@ -43,7 +48,10 @@ export const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "alumni", element: <Alumni /> },
-      { path: "certifications", element: <Certifications /> },
+
+      { path: "news", element: <News /> },
+      { path: "news/:id", element: <NewsDetail /> },
+      { path: "interview-preparation", element: <InterviewPrep /> },
       { path: "universities/:slug", element: <UniversityDetails /> },
     ],
   },
@@ -62,6 +70,8 @@ export const router = createBrowserRouter([
       { path: "destinations", element: <DestinationsManagement /> },
       { path: "universities", element: <UniversitiesManagement /> },
       { path: "alumni", element: <AlumniManagement /> },
+      { path: "news", element: <NewsManagement /> },
+      { path: "team", element: <TeamManagement /> },
       { path: "profile", element: <Profile /> },
     ],
   },

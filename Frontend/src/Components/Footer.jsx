@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
+
 const Footer = () => {
     const navLinks = [
         { name: 'Home', to: '/' },
         { name: 'About Us', to: '/about' },
         { name: 'Destinations', to: '/destinations' },
+        { name: 'Interview Prep', to: '/interview-preparation' },
         { name: 'Contact', to: '/contact' },
     ];
 
@@ -71,7 +73,6 @@ const Footer = () => {
                         <ul className="flex flex-col gap-4 font-body">
                             <li><Link to="/privacy" className="text-gray-300 transition-colors hover:text-primary">Privacy Policy</Link></li>
                             <li><Link to="/terms" className="text-gray-300 transition-colors hover:text-primary">Terms of Service</Link></li>
-                            <li><Link to="/certifications" className="text-gray-300 transition-colors hover:text-primary">Certifications</Link></li>
                         </ul>
                     </div>
 
@@ -109,8 +110,34 @@ const Footer = () => {
                     </div>
                 </div>
 
+                {/* Accreditation Section */}
+                <div className="mt-20 border-t border-white/10 pt-12">
+                    <h4 className="mb-8 text-center font-bold text-xs uppercase tracking-[0.3em] text-primary/60">
+                        Accreditations & Memberships
+                    </h4>
+                    <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
+                        {[
+                            { src: '/assets/accreditation/ecan.webp', title: 'ECAN Membership' },
+                            { src: '/assets/accreditation/icef-logo.webp', title: 'ICEF Certified' },
+                            { src: '/assets/accreditation/qeac-logo.webp', title: 'QEAC Certified' },
+                            { src: '/assets/accreditation/aaeri-logo.webp', title: 'AAERI Member' },
+                            { src: '/assets/accreditation/NZEAC.webp', title: 'NZEAC Certified' },
+                            { src: '/assets/accreditation/AIRC_certified.gif', title: 'AIRC Certified' },
+                            { src: '/assets/accreditation/usatc-logo.webp', title: 'USATC Certified' },
+                        ].map((logo, index) => (
+                            <div key={index} className="flex items-center justify-center" title={logo.title}>
+                                <img 
+                                    src={logo.src} 
+                                    alt={logo.title} 
+                                    className="h-10 md:h-14 w-auto object-contain"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Bottom Bar */}
-                <div className="mt-20 border-t border-white/10 pt-10 text-center font-body">
+                <div className="mt-12 border-t border-white/10 pt-10 text-center font-body">
                     <p className="text-sm font-medium text-gray-500">
                         &copy; {new Date().getFullYear()} Quantum Education. All rights reserved.
                     </p>
