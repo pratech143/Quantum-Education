@@ -1,4 +1,11 @@
-const API_PREFIX = '/api/v1';
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
+const API_PREFIX = `${API_BASE}/api/v1`;
+
+export const assetUrl = (path) => {
+  if (!path) return path;
+  if (/^https?:\/\//i.test(path)) return path;
+  return `${API_BASE}${path.startsWith('/') ? '' : '/'}${path}`;
+};
 
 const fetchJson = async (url) => {
   const response = await fetch(url);
