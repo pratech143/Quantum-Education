@@ -1,4 +1,5 @@
 import React from 'react';
+import { assetUrl } from '../../api';
 
 const ArticleBody = ({ news }) => {
     if (!news) return null;
@@ -41,7 +42,7 @@ const ArticleBody = ({ news }) => {
             {/* Hero Image */}
             <figure className="mb-16">
                 <img 
-                    src={news.image} 
+                    src={assetUrl(news.image)}
                     alt="Hero" 
                     className="w-full h-auto rounded-xl shadow-sm border border-slate-200" 
                 />

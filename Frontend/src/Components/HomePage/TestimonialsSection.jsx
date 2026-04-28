@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { api } from '../../api';
+import { api, assetUrl } from '../../api';
 import Reveal from '../UX/Reveal';
 
 const TestimonialsSection = () => {
@@ -17,7 +17,7 @@ const TestimonialsSection = () => {
             degree: a.degree,
             country: a.country,
             quote: a.quote,
-            img: a.image || ''
+            img: assetUrl(a.image) || ''
           })));
         }
       })

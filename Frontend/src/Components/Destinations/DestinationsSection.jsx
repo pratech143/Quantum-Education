@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { api } from '../../api';
+import { api, assetUrl } from '../../api';
 import DestinationCard from './DestinationCard';
 
 const DestinationsSection = () => {
@@ -19,7 +19,7 @@ const DestinationsSection = () => {
             title: country.name,
             slug: country.slug,
             description: country.description,
-            image: country.heroImage || '',
+            image: assetUrl(country.heroImage) || '',
             labels: []
           }));
           setDestinations(apiDestinations);

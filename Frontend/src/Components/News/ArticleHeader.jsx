@@ -1,4 +1,5 @@
 import React from 'react';
+import { assetUrl } from '../../api';
 
 const ArticleHeader = ({ news }) => {
     if (!news) return null;
@@ -17,7 +18,7 @@ const ArticleHeader = ({ news }) => {
             <div className="flex items-center gap-6 border-y border-slate-100 py-4">
                 <div className="flex items-center gap-3">
                     <img 
-                        src={news.authorImage} 
+                        src={assetUrl(news.authorImage)}
                         alt="Author" 
                         className="w-8 h-8 rounded-full border border-slate-200" 
                     />

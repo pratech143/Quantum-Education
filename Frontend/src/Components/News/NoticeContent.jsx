@@ -1,4 +1,5 @@
 import React from 'react';
+import { assetUrl } from '../../api';
 
 const NoticeContent = ({ news }) => {
     if (!news) return null;
@@ -7,7 +8,7 @@ const NoticeContent = ({ news }) => {
         <div className="mb-xl">
             <figure className="w-full h-[450px] bg-surface-container rounded-xl overflow-hidden mb-8">
                 <img 
-                    src={news.image} 
+                    src={assetUrl(news.image)}
                     alt={news.headTitle} 
                     className="w-full h-full object-cover grayscale-[0.2] contrast-125"
                 />

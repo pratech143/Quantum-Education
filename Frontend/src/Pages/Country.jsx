@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { api } from '../api';
+import { api, assetUrl } from '../api';
 import CountryPage from '../Components/Country/CountryPage';
 import GenericPageSkeleton from '../Components/UX/GenericPageSkeleton';
 import CTASection from '../Components/Destinations/CTASection';
@@ -14,7 +14,7 @@ const mapApiToCountryData = (apiData) => {
     hero: {
       title: `Study in ${country.name}`,
       subtitle: country.heroSubtitle || country.description,
-      image: country.heroImage || '',
+      image: assetUrl(country.heroImage) || '',
       stats: country.heroStats || []
     },
     overview: country.overview || {
@@ -32,8 +32,8 @@ const mapApiToCountryData = (apiData) => {
       location: u.location || '',
       desc: u.description,
       qs: u.qsRanking || `#${u.ranking}`,
-      img: u.image || '',
-      image: u.image || '',
+      img: assetUrl(u.image) || '',
+      image: assetUrl(u.image) || '',
       tagline: u.tagline || ''
     })),
     colleges: colleges.map(c => ({
@@ -41,7 +41,7 @@ const mapApiToCountryData = (apiData) => {
       id: c.slug,
       location: c.location || '',
       desc: c.description,
-      img: c.image || ''
+      img: assetUrl(c.image) || ''
     }))
   };
 };

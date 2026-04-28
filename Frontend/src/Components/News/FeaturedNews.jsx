@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { assetUrl } from '../../api';
 
 const FeaturedNews = ({ news }) => {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const FeaturedNews = ({ news }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
                     <div className="lg:col-span-8 overflow-hidden">
                         <img 
-                            src={news.image} 
+                            src={assetUrl(news.image)}
                             alt={news.headTitle} 
                             className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                         />

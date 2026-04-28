@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Facebook } from 'lucide-react';
-import { api } from '../../api';
+import { api, assetUrl } from '../../api';
 
 const TeamSection = () => {
   const [team, setTeam] = useState([]);
@@ -65,7 +65,7 @@ const TeamSection = () => {
                 <img 
                   alt={member.name} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                  src={member.image || 'https://via.placeholder.com/400x533?text=Team+Member'} 
+                  src={assetUrl(member.image) || 'https://via.placeholder.com/400x533?text=Team+Member'}
                 />
                 <div className="absolute bottom-4 left-4 right-4 glass-effect p-6 rounded-2xl shadow-xl border border-white/20">
                   <div className="flex justify-between items-start">

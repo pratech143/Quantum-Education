@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { api } from '../api';
+import { api, assetUrl } from '../api';
 import AlumniHero from '../Components/Alumni/AlumniHero';
 import FeaturedStories from '../Components/Alumni/FeaturedStories';
 import AlumniGrid from '../Components/Alumni/AlumniGrid';
@@ -44,7 +44,7 @@ const Alumni = () => {
             degree: a.degree,
             country: a.country,
             quote: a.quote,
-            img: a.image || ''
+            img: assetUrl(a.image) || ''
           }));
 
           const countries = [...new Set(apiAlumni.map((a) => a.country))];

@@ -1,6 +1,7 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider      = "prisma-client"
+  output        = "../generated/prisma"
+  binaryTargets = ["native", "debian-openssl-1.0.x"]
 }
 
 datasource db {
@@ -143,16 +144,16 @@ enum NewsLabel {
 
 model News {
   id            String    @id @default(cuid())
-  headTitle     String
-  subtitle      String
+  headTitle     String    @db.Text
+  subtitle      String    @db.Text
   label         NewsLabel @default(news)
-  description   String
-  image         String?
+  description   String    @db.Text
+  image         String?   @db.Text
   date          DateTime  @default(now())
   author        String?
   authorRole    String?
-  authorImage   String?
-  caption       String?
+  authorImage   String?   @db.Text
+  caption       String?   @db.Text
   readTime      String?
   content       Json?     // [{ type: 'paragraph' | 'heading' | 'list', value: string | string[] }]
   phases        Json?     // string[]
@@ -168,8 +169,8 @@ model TeamMember {
   id          String   @id @default(cuid())
   name        String
   role        String
-  description String
-  image       String?
+  description String   @db.Text
+  image       String?  @db.Text
   socials     Json?    // { linkedin, twitter, etc. }
   order       Int      @default(0)
   isActive    Boolean  @default(true)

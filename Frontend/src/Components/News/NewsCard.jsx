@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { assetUrl } from '../../api';
 
 const NewsCard = ({ news }) => {
     if (!news) return null;
@@ -8,7 +9,7 @@ const NewsCard = ({ news }) => {
         <article className="group bg-white border border-slate-100 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-slate-300 hover:shadow-[0_8px_30px_rgba(0,53,68,0.06)]">
             <div className="aspect-[16/10] overflow-hidden">
                 <img 
-                    src={news.image} 
+                    src={assetUrl(news.image)}
                     alt={news.headTitle} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                 />

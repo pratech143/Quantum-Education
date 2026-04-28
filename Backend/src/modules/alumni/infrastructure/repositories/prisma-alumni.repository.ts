@@ -30,9 +30,9 @@ export class PrismaAlumniRepository implements AlumniRepository {
     const where = search
       ? {
           OR: [
-            { name: { contains: search, mode: 'insensitive' as const } },
-            { university: { contains: search, mode: 'insensitive' as const } },
-            { country: { contains: search, mode: 'insensitive' as const } }
+            { name: { contains: search } },
+            { university: { contains: search } },
+            { country: { contains: search } }
           ]
         }
       : {};
