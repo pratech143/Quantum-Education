@@ -1,10 +1,11 @@
 import { useState, useRef } from 'react';
 import { Upload, X, Loader2 } from 'lucide-react';
 import { adminApi } from '../api';
+import { assetUrl } from '../../api';
 
 export const getImageUrl = (url) => {
   if (!url) return null;
-  return url;
+  return assetUrl(url);
 };
 
 const ImageUpload = ({ value, onChange, label = 'Image' }) => {

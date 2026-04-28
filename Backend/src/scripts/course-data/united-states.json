@@ -1,0 +1,759 @@
+{
+  "massachusetts-institute-of-technology": [
+    {
+      "icon": "engineering",
+      "title": "School of Engineering",
+      "description": "MIT's largest school, home to eight departments and two institutes advancing research in AI, climate, health sciences, and design & manufacturing.",
+      "link": "https://engineering.mit.edu/"
+    },
+    {
+      "icon": "computer",
+      "title": "Schwarzman College of Computing",
+      "description": "A cross-cutting college with education and research links across all five MIT schools, providing computing education institution-wide.",
+      "link": "http://computing.mit.edu"
+    },
+    {
+      "icon": "science",
+      "title": "School of Science",
+      "description": "Delivers rigorous scientific training with pioneering faculty research across mathematics, physics, biology, chemistry, and related disciplines.",
+      "link": "https://science.mit.edu/"
+    },
+    {
+      "icon": "business_center",
+      "title": "MIT Sloan School of Management",
+      "description": "Develops principled, innovative leaders through full-time and executive MBA degrees, specialized master's programs, and doctoral studies.",
+      "link": "http://mitsloan.mit.edu/"
+    },
+    {
+      "icon": "architecture",
+      "title": "School of Architecture and Planning",
+      "description": "Combines design thinking with technical expertise for architecture, urban planning, media arts, and real estate professionals.",
+      "link": "http://sap.mit.edu/"
+    },
+    {
+      "icon": "computer",
+      "title": "Electrical Engineering & Computer Science (Course 6)",
+      "description": "MIT's flagship EECS department offering undergraduate majors spanning electrical engineering, computer science, and AI/decision making.",
+      "link": "https://engineering.mit.edu/department/electrical-engineering-computer-science"
+    }
+  ],
+  "stanford-university": [
+    {
+      "icon": "engineering",
+      "title": "School of Engineering",
+      "description": "One of Stanford's seven schools offering specialized technical education, research, and innovation across engineering disciplines.",
+      "link": "https://engineering.stanford.edu/"
+    },
+    {
+      "icon": "business_center",
+      "title": "MBA Program (Stanford GSB)",
+      "description": "Full-time, two-year general management MBA program at Stanford Graduate School of Business, designed for emerging leaders.",
+      "duration": "2 years",
+      "link": "https://www.gsb.stanford.edu/programs/mba"
+    },
+    {
+      "icon": "business_center",
+      "title": "MSx Program",
+      "description": "One-year, full-time master's program at Stanford GSB targeting mid-career professionals with leadership development focus.",
+      "duration": "1 year",
+      "link": "https://www.gsb.stanford.edu/programs/msx"
+    },
+    {
+      "icon": "medical_services",
+      "title": "School of Medicine",
+      "description": "Stanford's medical school offering health sciences education, clinical training, and biomedical research opportunities.",
+      "link": "https://med.stanford.edu/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Stanford Law School",
+      "description": "Graduate legal education and training with JD, JSM, JSD, and MLS programs along with joint degrees.",
+      "link": "https://law.stanford.edu/"
+    },
+    {
+      "icon": "school",
+      "title": "Undergraduate Majors",
+      "description": "Stanford offers 66 major fields of undergraduate study across its seven schools with flexible interdisciplinary options.",
+      "link": "https://majors.stanford.edu/majors"
+    }
+  ],
+  "harvard-university": [
+    {
+      "icon": "computer",
+      "title": "Computer Science",
+      "description": "Harvard College concentration with strong ties to engineering, economics, biology, physics, statistics, mathematics, and linguistics.",
+      "link": "https://seas.harvard.edu/computer-science/undergraduate-program"
+    },
+    {
+      "icon": "business_center",
+      "title": "Economics",
+      "description": "Social science concentration focused on the behavior of markets, corporations, legislatures, families, and other social systems.",
+      "link": "https://economics.harvard.edu/undergraduate"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Mathematics",
+      "description": "The science of order, examining analysis, algebra, and geometry across both theoretical and applied domains.",
+      "link": "https://www.math.harvard.edu/undergraduate/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Harvard School of Engineering and Applied Sciences (SEAS)",
+      "description": "Undergraduate and graduate programs across applied mathematics, bioengineering, computer science, electrical, environmental, materials, and mechanical engineering.",
+      "link": "https://www.seas.harvard.edu/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Harvard MBA Program",
+      "description": "Two-year, full-time residential MBA program with case-based teaching and cohort-based learning at Harvard Business School.",
+      "duration": "2 years",
+      "link": "https://www.hbs.edu/mba/"
+    },
+    {
+      "icon": "science",
+      "title": "Chemistry",
+      "description": "A basic and practical science fundamental to understanding the world, with applications across medicine, materials, and energy.",
+      "link": "https://chemistry.harvard.edu/undergraduate-programs"
+    }
+  ],
+  "university-of-california-berkeley": [
+    {
+      "icon": "business_center",
+      "title": "Haas School of Business",
+      "description": "Offers undergraduate business degrees, MBA programs, and executive education at UC Berkeley's renowned business school.",
+      "link": "https://haas.berkeley.edu/"
+    },
+    {
+      "icon": "engineering",
+      "title": "College of Engineering",
+      "description": "Includes bioengineering, civil, electrical engineering & computer sciences, IEOR, materials, mechanical, and nuclear engineering departments.",
+      "link": "https://engineering.berkeley.edu/"
+    },
+    {
+      "icon": "query_stats",
+      "title": "College of Computing, Data Science, and Society",
+      "description": "Connects data science education, EECS, Statistics, Berkeley Institute for Data Science, and Center for Computational Biology.",
+      "link": "https://data.berkeley.edu/"
+    },
+    {
+      "icon": "architecture",
+      "title": "College of Environmental Design",
+      "description": "Houses the departments of Architecture, Landscape Architecture, and City and Regional Planning.",
+      "link": "https://ced.berkeley.edu/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Berkeley School of Law",
+      "description": "Offers J.D. and J.S.D. programs and the first U.S. M.A./Ph.D. in jurisprudence and social policy.",
+      "link": "https://www.law.berkeley.edu/"
+    },
+    {
+      "icon": "public",
+      "title": "Goldman School of Public Policy",
+      "description": "Richard and Rhoda Goldman School offering master's, doctoral, and undergraduate minor programs in public policy.",
+      "link": "https://gspp.berkeley.edu/"
+    }
+  ],
+  "university-of-california-los-angeles": [
+    {
+      "icon": "business_center",
+      "title": "UCLA Anderson Full-Time MBA",
+      "description": "UCLA Anderson's flagship two-year on-campus MBA program targeting candidates with 3-7 years of typical work experience.",
+      "duration": "22 months",
+      "link": "https://www.anderson.ucla.edu/degrees/full-time-mba"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master of Science in Business Analytics",
+      "description": "15-month specialized master's at UCLA Anderson preparing students for careers in data-driven business decision making.",
+      "duration": "15 months",
+      "link": "https://www.anderson.ucla.edu/degrees/master-of-science-in-business-analytics"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master of Financial Engineering",
+      "description": "15-month program at UCLA Anderson blending finance theory and quantitative methods for financial engineering careers.",
+      "duration": "15 months",
+      "link": "https://www.anderson.ucla.edu/degrees/master-of-financial-engineering"
+    },
+    {
+      "icon": "business_center",
+      "title": "Executive MBA",
+      "description": "22-month weekend-format Executive MBA at UCLA Anderson for professionals with 8-20+ years of managerial experience.",
+      "duration": "22 months",
+      "link": "https://www.anderson.ucla.edu/degrees/executive-mba"
+    },
+    {
+      "icon": "school",
+      "title": "Undergraduate Majors",
+      "description": "UCLA offers over 125 majors across its schools and colleges for undergraduate students in Los Angeles.",
+      "link": "https://www.ucla.edu/academics/programs-and-majors"
+    },
+    {
+      "icon": "psychology",
+      "title": "PhD Program (Anderson)",
+      "description": "Five-year research-oriented doctoral program at UCLA Anderson preparing scholars for careers in academic research and teaching.",
+      "duration": "5 years",
+      "link": "https://www.anderson.ucla.edu/degrees/phd-program"
+    }
+  ],
+  "university-of-michigan": [
+    {
+      "icon": "engineering",
+      "title": "College of Engineering",
+      "description": "University of Michigan's renowned engineering college offering undergraduate and graduate programs across diverse engineering disciplines.",
+      "link": "https://www.engin.umich.edu/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Ross School of Business",
+      "description": "Michigan Ross offers BBA, MBA, specialized masters and doctoral programs focused on action-based business education.",
+      "link": "https://michiganross.umich.edu/"
+    },
+    {
+      "icon": "school",
+      "title": "College of Literature, Science, and the Arts (LSA)",
+      "description": "U-M's largest college offering liberal arts majors across humanities, natural sciences, and social sciences.",
+      "link": "https://lsa.umich.edu/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Medical School",
+      "description": "Michigan Medicine's medical school offering the MD program, dual degrees, and biomedical research training.",
+      "link": "https://medschool.umich.edu/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law School",
+      "description": "University of Michigan Law School offering JD, LLM, SJD, and MJ degrees at a top U.S. law school.",
+      "link": "https://www.law.umich.edu/"
+    },
+    {
+      "icon": "computer",
+      "title": "School of Information",
+      "description": "Offers programs in information, data science, and human-computer interaction, including BSI, MSI, MHI, and PhD degrees.",
+      "link": "https://www.si.umich.edu/"
+    }
+  ],
+  "columbia-university": [
+    {
+      "icon": "computer",
+      "title": "Computer Science",
+      "description": "Common core of fundamental topics with six electives allowing flexibility to specialize across Columbia's CS domains.",
+      "link": "https://bulletin.columbia.edu/columbia-college/departments-instruction/computer-science/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Economics",
+      "description": "Columbia College department examining markets, policy, and human behavior through quantitative and theoretical lenses.",
+      "link": "https://bulletin.columbia.edu/columbia-college/departments-instruction/economics/"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Mathematics",
+      "description": "Columbia College major in pure and applied mathematics with pathways into research, finance, and graduate study.",
+      "link": "https://bulletin.columbia.edu/columbia-college/departments-instruction/mathematics/"
+    },
+    {
+      "icon": "public",
+      "title": "Political Science",
+      "description": "Department offering majors in politics, international relations, and comparative government within Columbia College.",
+      "link": "https://bulletin.columbia.edu/columbia-college/departments-instruction/political-science/"
+    },
+    {
+      "icon": "school",
+      "title": "English and Comparative Literature",
+      "description": "Columbia College department emphasizing literary analysis, rhetoric, and study of literatures in multiple languages.",
+      "link": "https://bulletin.columbia.edu/columbia-college/departments-instruction/english-comparative-literature/"
+    },
+    {
+      "icon": "school",
+      "title": "History",
+      "description": "Columbia College department exploring every dimension of human interaction across social, political, economic, and cultural history.",
+      "link": "https://bulletin.columbia.edu/columbia-college/departments-instruction/history/"
+    }
+  ],
+  "new-york-university": [
+    {
+      "icon": "business_center",
+      "title": "BS in Business (NYU Stern)",
+      "description": "Flagship STEM-eligible undergraduate business degree with 13 concentrations, six interdisciplinary tracks, and 44 elective credits.",
+      "link": "https://www.stern.nyu.edu/programs-admissions/undergraduate"
+    },
+    {
+      "icon": "business_center",
+      "title": "BS in Business and Political Economy",
+      "description": "STEM-eligible Stern program emphasizing global perspective with two semesters abroad studying markets and international economics.",
+      "link": "https://www.stern.nyu.edu/programs-admissions/undergraduate"
+    },
+    {
+      "icon": "engineering",
+      "title": "NYU Tandon School of Engineering",
+      "description": "Offers bachelor's degrees in STEM fields including biomedical, chemical, civil, computer science, electrical, and mechanical engineering.",
+      "link": "https://engineering.nyu.edu/academics/programs"
+    },
+    {
+      "icon": "computer",
+      "title": "BS in Business, Technology and Entrepreneurship",
+      "description": "Anand Khubani STEM-eligible Stern program focused on technology and entrepreneurship for tech, consulting, banking careers.",
+      "link": "https://www.stern.nyu.edu/programs-admissions/undergraduate"
+    },
+    {
+      "icon": "design_services",
+      "title": "Tisch School of the Arts",
+      "description": "NYU's premier school for film, television, performing arts, and new media, offering BFA, MFA and professional training.",
+      "link": "https://tisch.nyu.edu/"
+    },
+    {
+      "icon": "school",
+      "title": "College of Arts and Science",
+      "description": "NYU's flagship liberal arts college offering undergraduate majors in humanities, social sciences, and natural sciences.",
+      "link": "https://cas.nyu.edu/"
+    }
+  ],
+  "carnegie-mellon-university": [
+    {
+      "icon": "computer",
+      "title": "School of Computer Science",
+      "description": "CMU's globally top-ranked School of Computer Science offering undergraduate and graduate programs in CS, AI, and robotics.",
+      "link": "https://www.cs.cmu.edu/"
+    },
+    {
+      "icon": "engineering",
+      "title": "College of Engineering",
+      "description": "Offers BS, MS, and PhD engineering programs across disciplines including ECE, mechanical, civil, chemical, and biomedical.",
+      "link": "https://engineering.cmu.edu/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Tepper School of Business",
+      "description": "Analytics-focused business school offering undergraduate business, MBA, specialized masters, and PhD programs.",
+      "link": "https://www.cmu.edu/tepper"
+    },
+    {
+      "icon": "design_services",
+      "title": "College of Fine Arts",
+      "description": "CMU's fine arts college combining schools of architecture, art, design, drama, and music with technology-driven practice.",
+      "link": "https://www.cmu.edu/cfa/"
+    },
+    {
+      "icon": "public",
+      "title": "Heinz College of Information Systems and Public Policy",
+      "description": "Graduate school combining information systems, public policy, and management with analytics and technology focus.",
+      "link": "https://www.heinz.cmu.edu/"
+    },
+    {
+      "icon": "science",
+      "title": "Mellon College of Science",
+      "description": "CMU's science college with departments in biological sciences, chemistry, mathematics, and physics.",
+      "link": "https://www.cmu.edu/mcs/"
+    }
+  ],
+  "university-of-washington": [
+    {
+      "icon": "computer",
+      "title": "Computer Science",
+      "description": "Appropriate for students primarily interested in the design of software systems and applications at the Allen School.",
+      "link": "https://admit.washington.edu/majors/computer-science/"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biology",
+      "description": "Combines classroom instruction, laboratory work, and field experience for careers in research, education, and health sciences.",
+      "link": "https://admit.washington.edu/majors/biology/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business Administration",
+      "description": "Offers liberal arts curriculum with full spectrum of business disciplines and flexibility to specialize at UW Foster.",
+      "link": "https://admit.washington.edu/majors/business-administration/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology",
+      "description": "Scientific study of the mind, brain, and behavior, with the ultimate goal of promoting healthy minds and society.",
+      "link": "https://admit.washington.edu/majors/psychology/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Mechanical Engineering",
+      "description": "UW engineering major exploring foundational principles and applications through collaborative, interdisciplinary project work.",
+      "link": "https://admit.washington.edu/majors/mechanical-engineering/"
+    },
+    {
+      "icon": "school",
+      "title": "English - Language, Literature & Culture",
+      "description": "Broadly based, historically grounded introduction to literatures of Britain, the U.S., and Anglophone literature worldwide.",
+      "link": "https://admit.washington.edu/majors/english/"
+    }
+  ],
+  "santa-monica-college": [
+    {
+      "icon": "design_services",
+      "title": "Art, Media, and Entertainment",
+      "description": "Programs in fine arts, digital arts, entertainment industry, and cosmetology at Santa Monica College.",
+      "link": "https://www.smc.edu/academics/areas-of-interest/arts-media-entertainment.php"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Area of study at SMC covering business management, entrepreneurship, accounting, and marketing pathways.",
+      "link": "https://www.smc.edu/academics/areas-of-interest/business.php"
+    },
+    {
+      "icon": "science",
+      "title": "STEM",
+      "description": "Science, technology, engineering, and mathematics programs with cutting-edge applications and UC transfer pathways.",
+      "link": "https://www.smc.edu/academics/areas-of-interest/stem.php"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health and Wellness",
+      "description": "Pathways into healthcare, nutrition, fitness, and medical support careers at Santa Monica College.",
+      "link": "https://www.smc.edu/academics/areas-of-interest/health-wellness.php"
+    },
+    {
+      "icon": "school",
+      "title": "Education",
+      "description": "Prepares students for careers in teaching, counseling, and social services through transfer-oriented coursework.",
+      "link": "https://www.smc.edu/academics/areas-of-interest/education.php"
+    },
+    {
+      "icon": "psychology",
+      "title": "People and Society",
+      "description": "Explores human interactions and social impact solutions across psychology, sociology, and related disciplines.",
+      "link": "https://www.smc.edu/academics/areas-of-interest/people-society.php"
+    }
+  ],
+  "de-anza-college": [
+    {
+      "icon": "precision_manufacturing",
+      "title": "Automotive Technology Management (BS)",
+      "description": "Bachelor's program combining business and management skills with technical automotive expertise for industry careers.",
+      "link": "https://www.deanza.edu/autotech/management/"
+    },
+    {
+      "icon": "school",
+      "title": "Transfer Programs",
+      "description": "De Anza is a top Silicon Valley college for transfers to University of California and California State University systems.",
+      "link": "https://www.deanza.edu/transfercenter/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Workforce Education Programs",
+      "description": "More than 25 career training programs with hands-on training including nursing and allied health.",
+      "link": "https://www.deanza.edu/workforceed/"
+    },
+    {
+      "icon": "school",
+      "title": "Degrees and Certificates",
+      "description": "De Anza offers 79 associate degrees and 115 academic certificates across numerous academic and career fields.",
+      "link": "https://www.deanza.edu/academics/degrees-and-certificates.html"
+    }
+  ],
+  "foothill-college": [
+    {
+      "icon": "computer",
+      "title": "Computer Science (AS-T)",
+      "description": "Associate in Science for Transfer preparing students for transfer to four-year institutions in computing fields.",
+      "link": "https://foothill.edu/degrees-certificates/computer-science-ast/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business Administration 2.0 (AS-T)",
+      "description": "Transfer-track associate degree in business studies and management practices at Foothill College.",
+      "link": "https://foothill.edu/degrees-certificates/business-administration-2-ast/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Foundational engineering coursework designed for students pursuing engineering careers or transfer.",
+      "link": "https://foothill.edu/degrees-certificates/engineering/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology (AA-T)",
+      "description": "Associate in Arts for Transfer preparing students to study human behavior and mental processes at universities.",
+      "link": "https://foothill.edu/degrees-certificates/psychology-aat/"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biology (AS-T)",
+      "description": "Transfer-track associate degree in life sciences preparing students for bachelor's completion in biological fields.",
+      "link": "https://foothill.edu/degrees-certificates/biology-ast/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Healthcare Programs",
+      "description": "Options including Dental Hygiene, Radiologic Technology, and Respiratory Care for healthcare careers.",
+      "link": "https://foothill.edu/degrees-certificates/"
+    }
+  ],
+  "pasadena-city-college": [
+    {
+      "icon": "school",
+      "title": "Transfer Degrees & Majors",
+      "description": "Transfer degrees and majors laying the foundation for transferring to a four-year university with adviser support.",
+      "link": "https://pasadena.edu/academics/transfer-center/index.php"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Career Education Programs",
+      "description": "Vocational programs designed for incoming students and current professionals preparing learners for career entry in about a year.",
+      "link": "https://pasadena.edu/academics/career-education.php"
+    },
+    {
+      "icon": "terminal",
+      "title": "Online Learning (PCC Online)",
+      "description": "Distance education courses offered in nearly every subject with the same rigor and structure as in-person classes.",
+      "link": "https://pasadena.edu/academics/pcc-online/index.php"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health Sciences",
+      "description": "Nursing and healthcare-related programs with specialized admission requirements and comprehensive clinical training.",
+      "link": "https://pasadena.edu/academics/divisions/health-sciences/admission.php"
+    },
+    {
+      "icon": "school",
+      "title": "Pre-College Programs",
+      "description": "Opportunities for high school students to start earning college credit while still in high school with transition support.",
+      "link": "https://pasadena.edu/academics/pre-college-programs/index.php"
+    },
+    {
+      "icon": "school",
+      "title": "All Areas of Study",
+      "description": "Pasadena City College offers 82 areas of study helping students explore interests and achieve career goals.",
+      "link": "https://pasadena.edu/academics/all-areas-of-study.php"
+    }
+  ],
+  "orange-coast-college": [
+    {
+      "icon": "school",
+      "title": "Honors Program",
+      "description": "Specialized coursework for high-achieving students seeking enriched educational experiences at Orange Coast College.",
+      "link": "https://orangecoastcollege.edu/academics/honors/index.html"
+    },
+    {
+      "icon": "school",
+      "title": "Transfer Programs",
+      "description": "Lectures and labs transferable to institutions such as University of California and California State University campuses.",
+      "link": "https://orangecoastcollege.edu/services-support/counseling/transfer-center/index.html"
+    },
+    {
+      "icon": "terminal",
+      "title": "Online Classes",
+      "description": "Flexible learning options available through Orange Coast College's digital platform for remote students.",
+      "link": "https://orangecoastcollege.edu/academics/online/online-students.html"
+    },
+    {
+      "icon": "science",
+      "title": "MESA (Math Engineering Science Achievement)",
+      "description": "Enrichment initiative focused on advancing student success in mathematics, engineering, and science disciplines.",
+      "link": "https://orangecoastcollege.edu/academics/mesa/index.html"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Career Education",
+      "description": "Programs designed to prepare students for direct workforce entry with professional credentials and certifications.",
+      "link": "https://orangecoastcollege.edu/academics/career-advantage/index.html"
+    },
+    {
+      "icon": "school",
+      "title": "Adult Education",
+      "description": "Tailored academic pathways for non-traditional learners pursuing personal and professional development.",
+      "link": "https://orangecoastcollege.edu/academics/adult-education/index.html"
+    }
+  ],
+  "valencia-college": [
+    {
+      "icon": "school",
+      "title": "Associate in Arts (A.A. Degree)",
+      "description": "General studies degree that prepares students to transfer to a Florida public university as a junior.",
+      "link": "https://valenciacollege.edu/academics/programs/aa-degree/index.php"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Associate in Science (A.S. Degree)",
+      "description": "Specialized career-focused program offering hands-on training with options to enter the workforce or transfer.",
+      "link": "https://valenciacollege.edu/future-students/associate-in-science-degrees.php"
+    },
+    {
+      "icon": "school",
+      "title": "Bachelor's Degrees (B.A.S. and B.S.)",
+      "description": "Path to continue your education beyond the associate level, including applied science programs at Valencia.",
+      "link": "https://valenciacollege.edu/future-students/bachelors.php"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Certificate Programs",
+      "description": "Increases your skillset and prepares you for immediate entry into an in-demand career with articulated credit options.",
+      "link": "https://valenciacollege.edu/future-students/certificates.php"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Accelerated Skills Training",
+      "description": "Programs designed to help you enter a new career field or advance your current skillset in a short amount of time.",
+      "link": "https://valenciacollege.edu/academics/accelerated-skills-training/index.php"
+    },
+    {
+      "icon": "school",
+      "title": "Continuing Education",
+      "description": "Offerings for personal and professional advancement including classes, seminars, and certification options.",
+      "link": "https://valenciacollege.edu/academics/continuing-education/index.php"
+    }
+  ],
+  "miami-dade-college": [
+    {
+      "icon": "school",
+      "title": "Bachelor Degrees",
+      "description": "Baccalaureate offerings including Business Administration, Computer Information Technology, Nursing, and Psychology.",
+      "link": "https://www.mdc.edu/academics/programs/bachelors.aspx"
+    },
+    {
+      "icon": "school",
+      "title": "Associate Degrees",
+      "description": "Pathway credential preparing students to enter the modern workforce or pursue higher educational goals with transfer options.",
+      "link": "https://www.mdc.edu/academics/programs/associate.aspx"
+    },
+    {
+      "icon": "school",
+      "title": "The Honors College",
+      "description": "Rigorous program granting an Associate in Arts degree with Honors, designed for transfer to prestigious universities.",
+      "link": "https://www.mdc.edu/honorsCollege/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Nursing (Accelerated Track)",
+      "description": "Complete your nursing credential in one year through MDC's accelerated option combining classroom and clinical experience.",
+      "duration": "1 year",
+      "link": "https://www.mdc.edu/nursingrn/program-tracks-options.aspx#accelerated"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Registered Apprenticeships",
+      "description": "Combines classroom instruction and work-based learning to master a skilled occupation under journeyworker guidance.",
+      "link": "https://www.mdc.edu/apprenticeships/"
+    },
+    {
+      "icon": "school",
+      "title": "Continuing Education & Professional Development",
+      "description": "Non-credit programs including adult education, GED preparation, and English as a Second Language instruction.",
+      "link": "https://www.mdc.edu/ce"
+    }
+  ],
+  "austin-community-college": [
+    {
+      "icon": "computer",
+      "title": "Computer Science & Information Technology",
+      "description": "Programs focusing on technical skills for the digital economy and transferable computing foundations.",
+      "link": "https://programs.austincc.edu/computer-science-and-information-technology/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health Sciences",
+      "description": "Prepares students for careers in healthcare professions and medical fields with clinical training.",
+      "link": "https://programs.austincc.edu/health-sciences/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Offers education in business management, entrepreneurship, accounting, and professional development pathways.",
+      "link": "https://programs.austincc.edu/business/"
+    },
+    {
+      "icon": "school",
+      "title": "Liberal Arts",
+      "description": "Provides a broad-based education supporting university transfer pathways across humanities and social sciences.",
+      "link": "https://programs.austincc.edu/liberal-arts/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Design, Manufacturing, Construction & Applied Technologies",
+      "description": "Combines practical skills training with hands-on learning in applied technical and trade fields.",
+      "link": "https://programs.austincc.edu/design-manufacturing-construction-and-applied-technologies/"
+    },
+    {
+      "icon": "school",
+      "title": "Culinary, Hospitality & Tourism",
+      "description": "Prepares students for careers in food service, hospitality management, and tourism industries.",
+      "link": "https://programs.austincc.edu/culinary-hospitality-and-tourism/"
+    }
+  ],
+  "borough-of-manhattan-community-college": [
+    {
+      "icon": "medical_services",
+      "title": "Nursing (A.A.S.)",
+      "description": "Associate in Applied Science in Nursing with evening and weekend options for healthcare training at BMCC.",
+      "link": "https://www.bmcc.cuny.edu/academics/departments/nursing/nursing-program/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Information Systems (A.A.S.)",
+      "description": "Technology-focused associate degree preparing students in systems and computing fundamentals.",
+      "link": "https://www.bmcc.cuny.edu/academics/departments/cis/computer-information-systems-cis/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business Administration (A.S.)",
+      "description": "Associate in Science offering business management training with evening and weekend scheduling options.",
+      "link": "https://www.bmcc.cuny.edu/academics/departments/business-management/business-administration/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Criminal Justice (A.A.)",
+      "description": "Associate in Arts focusing on law enforcement and justice systems, available fully online at BMCC.",
+      "link": "https://www.bmcc.cuny.edu/academics/departments/social-sciences/criminal-justice/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology (A.A.)",
+      "description": "Associate in Arts examining human behavior and mental processes with online availability.",
+      "link": "https://www.bmcc.cuny.edu/academics/departments/social-sciences/psychology/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Science (A.S.)",
+      "description": "Associate in Science preparing students for transfer and technical careers in software development and programming.",
+      "link": "https://www.bmcc.cuny.edu/academics/departments/cis/computer-science/"
+    }
+  ],
+  "houston-community-college": [
+    {
+      "icon": "school",
+      "title": "University Transfer & Degree",
+      "description": "Transfer pathway degrees preparing HCC students for seamless entry to four-year universities.",
+      "link": "https://www.hccs.edu/programs--courses/university-transfer--degree/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Workforce Training & Apprenticeships",
+      "description": "Workforce-focused training and registered apprenticeships preparing students for skilled careers.",
+      "link": "https://www.hccs.edu/programs--courses/workforce-training--apprenticeships/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Continuing Education & Professional Education",
+      "description": "Corporate, continuing and professional education programs designed for career advancement.",
+      "link": "https://www.hccs.edu/programs--courses/corporate-continuing--professional-education/"
+    },
+    {
+      "icon": "school",
+      "title": "Adult Education (GED, ESL & Literacy)",
+      "description": "Programs including GED preparation, English as a Second Language, and adult literacy.",
+      "link": "https://www.hccs.edu/programs--courses/adult-education-txchseged-esl--literacy/"
+    },
+    {
+      "icon": "school",
+      "title": "High School & Early College",
+      "description": "Early college and dual-credit programs enabling high school students to earn HCC credit.",
+      "link": "https://www.hccs.edu/programs--courses/high-school-programs/"
+    },
+    {
+      "icon": "terminal",
+      "title": "Flexible Learning (Online, Hybrid & Weekend)",
+      "description": "Online, hybrid and weekend format programs offering flexible learning pathways at HCC.",
+      "link": "https://www.hccs.edu/programs--courses/flexible-learning-online-hybrid--weekend/"
+    }
+  ]
+}

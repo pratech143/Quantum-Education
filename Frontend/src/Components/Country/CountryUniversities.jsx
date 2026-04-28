@@ -43,21 +43,21 @@ const CountryUniversities = ({ countryName, universities }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredUniversities.length > 0 ? (
           filteredUniversities.map((uni, idx) => (
-            <article key={idx} className="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+            <article key={idx} className="card-content-safe group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
               <div className="h-56 relative overflow-hidden">
                 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={uni.name} src={uni.img} />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-primary">
                   {uni.location}
                 </div>
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="font-headline font-bold text-2xl text-primary mb-2">{uni.name}</h3>
-                <p className="text-on-surface-variant text-sm mb-6 flex-grow leading-relaxed">
+              <div className="card-content-safe p-6 flex flex-col flex-grow">
+                <h3 className="text-wrap-safe font-headline font-bold text-2xl text-primary mb-2">{uni.name}</h3>
+                <p className="text-wrap-safe text-on-surface-variant text-sm mb-6 flex-grow leading-relaxed">
                   {uni.desc}
                 </p>
-                <div className="mt-auto pt-4 flex items-center justify-between">
-                  <span className="text-xs font-semibold text-secondary uppercase tracking-wider">QS Rank: {uni.qs}</span>
-                  <Link to={`/universities/${uni.id}`} className="px-5 py-2.5 bg-surface-container text-primary text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                <div className="mt-auto pt-4 flex flex-wrap items-center justify-between gap-3">
+                  <span className="text-wrap-safe text-xs font-semibold text-secondary uppercase tracking-wider">QS Rank: {uni.qs}</span>
+                  <Link to={`/universities/${uni.id}`} className="shrink-0 px-5 py-2.5 bg-surface-container text-primary text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
                     View Details
                   </Link>
                 </div>

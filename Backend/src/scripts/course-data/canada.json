@@ -1,0 +1,592 @@
+{
+  "university-of-toronto": [
+    {
+      "icon": "computer",
+      "title": "Computer Science",
+      "description": "Honours Bachelor of Science in Computer Science available across all three campuses with specialization, major, and minor options, plus co-op and internship opportunities.",
+      "link": "https://artsci.calendar.utoronto.ca/section/Computer-Science"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology",
+      "description": "Science-focused honours program exploring human behaviour and mental processes, with major or specialist concentrations and internship opportunities at the St. George campus.",
+      "link": "https://artsci.calendar.utoronto.ca/section/Psychology"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biology",
+      "description": "Honours Bachelor of Science offering comprehensive study of living organisms with major, minor, or specialist options across multiple campuses and co-op pathways.",
+      "link": "https://artsci.calendar.utoronto.ca/section/Biology"
+    },
+    {
+      "icon": "business_center",
+      "title": "Commerce",
+      "description": "Bachelor of Commerce combining accounting, finance, and management studies, preparing students for organizational and financial decision-making roles.",
+      "link": "https://utm.calendar.utoronto.ca/section/Commerce"
+    }
+  ],
+  "university-of-british-columbia": [
+    {
+      "icon": "biotech",
+      "title": "Biomedical Engineering",
+      "description": "Undergraduate engineering program combining biology, medicine, and engineering to develop healthcare technologies and solutions.",
+      "link": "https://engineering.ubc.ca/programs/undergraduate/biomedical-engineering"
+    },
+    {
+      "icon": "science",
+      "title": "Chemical Engineering",
+      "description": "Engineering program focused on chemical processes, laboratory analysis, and industrial applications.",
+      "link": "https://engineering.ubc.ca/programs/undergraduate/chemical-engineering"
+    },
+    {
+      "icon": "architecture",
+      "title": "Civil Engineering",
+      "description": "Program developing engineers who design, build, and maintain infrastructure and the built environment.",
+      "link": "https://engineering.ubc.ca/programs/undergraduate/civil-engineering"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Engineering",
+      "description": "Undergraduate engineering program with co-op opportunities focused on computing hardware and software systems.",
+      "link": "https://engineering.ubc.ca/programs/undergraduate/computer-engineering"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Mechanical Engineering",
+      "description": "Engineering program covering design, analysis, and manufacturing with opportunities in autonomous systems and competitions.",
+      "link": "https://engineering.ubc.ca/programs/undergraduate/mechanical-engineering"
+    },
+    {
+      "icon": "public",
+      "title": "Environmental Engineering",
+      "description": "Program combining engineering with environmental fieldwork to address sustainability, water, and ecological challenges.",
+      "link": "https://engineering.ubc.ca/programs/undergraduate/environmental-engineering"
+    }
+  ],
+  "mcgill-university": [
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Design, construct and optimize many aspects of our environment across fields like aeronautics, medicine, and agriculture.",
+      "link": "https://www.mcgill.ca/undergraduate-admissions/programs?f%5B0%5D=field_areas_interest%3A20"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health Sciences",
+      "description": "Explores health as a complex, multi-faceted field from the microbiome to wellness across environmental and societal scales.",
+      "link": "https://www.mcgill.ca/undergraduate-admissions/programs?f%5B0%5D=field_areas_interest%3A22"
+    },
+    {
+      "icon": "computer",
+      "title": "Math, Computing and Technology",
+      "description": "A rapidly evolving field offering challenging career paths with theory and skills applicable across multiple industries.",
+      "link": "https://www.mcgill.ca/undergraduate-admissions/programs?f%5B0%5D=field_areas_interest%3A25"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Economics",
+      "description": "Learn how businesses and economies work with opportunities to specialize in sectors like agriculture, construction, or engineering.",
+      "link": "https://www.mcgill.ca/undergraduate-admissions/programs?f%5B0%5D=field_areas_interest%3A18"
+    },
+    {
+      "icon": "science",
+      "title": "Pure and Applied Sciences",
+      "description": "Investigate the complexity of the world through theoretical research or hands-on problem-solving approaches in the natural sciences.",
+      "link": "https://www.mcgill.ca/undergraduate-admissions/programs?f%5B0%5D=field_areas_interest%3A26"
+    }
+  ],
+  "university-of-alberta": [],
+  "university-of-waterloo": [
+    {
+      "icon": "computer",
+      "title": "Computer Science",
+      "description": "Program focused on computing theory and practical software development skills.",
+      "link": "https://uwaterloo.ca/future-students/programs/computer-science"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Mechanical Engineering",
+      "description": "Engineering specialization within Waterloo's broad offerings including mechanical, electrical, civil, and chemical disciplines.",
+      "link": "https://uwaterloo.ca/future-students/programs/mechanical-engineering"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Mathematics",
+      "description": "Mathematics faculty offering 16 majors, allowing students to specialize in various mathematical fields.",
+      "link": "https://uwaterloo.ca/future-students/programs/mathematics"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Specialized business programs created through employer collaboration to provide competitive career advantages.",
+      "link": "https://uwaterloo.ca/future-students/programs/business"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology (Arts)",
+      "description": "Available as both a Bachelor of Arts and Bachelor of Science, offering different perspectives on psychological study.",
+      "link": "https://uwaterloo.ca/future-students/programs/psychology-arts"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Data Science",
+      "description": "Contemporary program addressing the growing demand for professionals skilled in data analysis and interpretation.",
+      "link": "https://uwaterloo.ca/future-students/programs/data-science"
+    }
+  ],
+  "mcmaster-university": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Commerce (BCom)",
+      "description": "A collaborative approach to business where students develop problem-solving and leadership skills through experiential learning at DeGroote School of Business.",
+      "link": "https://ug.degroote.mcmaster.ca/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master of Business Administration (MBA)",
+      "description": "An MBA combining academics with values, bringing together diverse individuals from varied backgrounds at DeGroote.",
+      "link": "https://mbarecruit.degroote.mcmaster.ca/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Master of Finance (MFin)",
+      "description": "Graduate program challenging students' thinking about finance and emphasizing technical expertise for competitive finance careers.",
+      "link": "https://mfin.degroote.mcmaster.ca/"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Master of Management in AI and Analytics (MMAI&A)",
+      "description": "Full-time program combining artificial intelligence, analytics, and communication training with hands-on industry experience using Python, R, and SQL.",
+      "link": "https://mmai.degroote.mcmaster.ca/full-time-master-of-management-in-ai-and-analytics/"
+    },
+    {
+      "icon": "school",
+      "title": "PhD in Business Administration",
+      "description": "One of Canada's largest business PhD programs, enabling students to conduct research with leading faculty across business disciplines.",
+      "link": "https://phd.degroote.mcmaster.ca/"
+    }
+  ],
+  "universite-de-montreal": [
+    {
+      "icon": "medical_services",
+      "title": "Health Sciences",
+      "description": "Graduate programs across health-related disciplines with 156 offerings at Université de Montréal.",
+      "link": "https://admission.umontreal.ca/en/graduate-programs/health-sciences"
+    },
+    {
+      "icon": "biotech",
+      "title": "Life Sciences",
+      "description": "Graduate programs in life science disciplines, covering 62 offerings at UdeM.",
+      "link": "https://admission.umontreal.ca/en/graduate-programs/life-sciences"
+    },
+    {
+      "icon": "public",
+      "title": "Social Sciences",
+      "description": "80 graduate programs spanning the social sciences, from sociology and economics to political science.",
+      "link": "https://admission.umontreal.ca/en/graduate-programs/social-sciences"
+    },
+    {
+      "icon": "science",
+      "title": "Fundamental and Applied Sciences",
+      "description": "43 graduate programs in fundamental and applied sciences combining research and real-world application.",
+      "link": "https://admission.umontreal.ca/en/graduate-programs/fundamental-and-applied-sciences"
+    },
+    {
+      "icon": "school",
+      "title": "Programs of Study",
+      "description": "Comprehensive catalogue of UdeM's 149 master's degrees and 69 doctoral programs across all disciplines.",
+      "link": "https://admission.umontreal.ca/en/programs-of-study/"
+    }
+  ],
+  "university-of-calgary": [
+    {
+      "icon": "business_center",
+      "title": "Accounting (BComm)",
+      "description": "Bachelor of Commerce in Accounting preparing students for professional accounting and finance careers.",
+      "link": "https://www.ucalgary.ca/future-students/undergraduate/explore-programs/accounting"
+    },
+    {
+      "icon": "science",
+      "title": "Biochemistry (BSc)",
+      "description": "Science-focused program preparing students for careers in research, pharmaceutical development, and healthcare fields.",
+      "link": "https://www.ucalgary.ca/future-students/undergraduate/explore-programs/biochemistry"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biomedical Engineering (BSc in Eng)",
+      "description": "Combines engineering principles with healthcare applications to develop medical technologies and solutions.",
+      "link": "https://www.ucalgary.ca/future-students/undergraduate/explore-programs/biomedical-engineering"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biological Sciences (BSc)",
+      "description": "Comprehensive program covering fundamental life sciences applicable across multiple professional sectors.",
+      "link": "https://www.ucalgary.ca/future-students/undergraduate/explore-programs/biological-sciences"
+    }
+  ],
+  "university-of-ottawa": [
+    {
+      "icon": "business_center",
+      "title": "Honours Bachelor of Commerce (Accounting)",
+      "description": "Professional business program specializing in accounting, preparing graduates for financial reporting and auditing careers.",
+      "link": "https://catalogue.uottawa.ca/en/undergrad/honours-bachelor-commerce-option-accounting/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Honours Bachelor of Science in Nursing",
+      "description": "Nursing program preparing graduates for clinical practice and patient care across healthcare settings.",
+      "link": "https://catalogue.uottawa.ca/en/undergrad/bachelor-science-nursing/"
+    },
+    {
+      "icon": "terminal",
+      "title": "BASc Software Engineering",
+      "description": "Applied science undergraduate program focused on software engineering principles and system design.",
+      "link": "https://catalogue.uottawa.ca/en/undergrad/basc-software-engineering/"
+    },
+    {
+      "icon": "public",
+      "title": "Honours BA Communication",
+      "description": "Arts program studying media, communication theory, and contemporary communications practice.",
+      "link": "https://catalogue.uottawa.ca/en/undergrad/honours-ba-communication/"
+    },
+    {
+      "icon": "computer",
+      "title": "Honours BSc Computer Science",
+      "description": "Science-focused computer science program covering theory, programming, and software development.",
+      "link": "https://catalogue.uottawa.ca/en/undergrad/honours-bsc-computer-science/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Undergraduate Medical Education (MD Program)",
+      "description": "Doctor of Medicine program training future physicians through integrated clinical and academic coursework.",
+      "link": "https://catalogue.uottawa.ca/en/undergrad/undergraduate-medical-education-md-program/"
+    }
+  ],
+  "queen-s-university": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Commerce",
+      "description": "Designed to develop exceptional leaders, valuable team members, and highly effective managers. Offers personalization options including study abroad and social impact certification.",
+      "link": "https://smith.queensu.ca/bcom/index.php"
+    },
+    {
+      "icon": "school",
+      "title": "Concurrent Education",
+      "description": "Five-year program preparing students for teaching careers, earning an Honours Bachelor and a Bachelor of Education simultaneously.",
+      "link": "https://educ.queensu.ca/teacher-education/concurrent"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biology",
+      "description": "Explores fundamental questions about life, from molecular mechanisms to ecosystem interactions, with diverse research opportunities.",
+      "link": "https://biology.queensu.ca/prospective-students/undergraduate-students/degree-plans/biology-major"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Engineering",
+      "description": "Build connections between the virtual and physical worlds through specialization streams including artificial intelligence, software engineering, and mechatronics.",
+      "link": "https://smithengineering.queensu.ca/ece/undergraduate/computer-engineering/"
+    },
+    {
+      "icon": "public",
+      "title": "Environmental Science",
+      "description": "Interdisciplinary program addressing environmental sustainability through natural sciences, planning, and policy perspectives.",
+      "link": "https://www.queensu.ca/ensc/undergraduate/program-overview"
+    },
+    {
+      "icon": "design_services",
+      "title": "Fine Art (Visual Art)",
+      "description": "Intensive training in painting, printmaking, sculpture, and new media with mentorship from practicing artists and international field experiences.",
+      "link": "https://www.queensu.ca/bfa/"
+    }
+  ],
+  "george-brown-college": [],
+  "humber-polytechnic": [],
+  "seneca-polytechnic": [
+    {
+      "icon": "computer",
+      "title": "Bachelor of Computer Science",
+      "description": "PGWP Eligible degree program offering technology education in computer science and software development.",
+      "link": "https://www.senecapolytechnic.ca/programs/fulltime/BCMS.html"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Honours Bachelor of Science - Nursing",
+      "description": "Advanced nursing degree with PGWP Eligible status at the King campus preparing graduates for professional nursing practice.",
+      "link": "https://www.senecapolytechnic.ca/programs/fulltime/BSN.html"
+    },
+    {
+      "icon": "terminal",
+      "title": "Computer Programming & Analysis",
+      "description": "Advanced diploma program in software development focused on programming and systems analysis, PGWP Eligible.",
+      "link": "https://www.senecapolytechnic.ca/programs/fulltime/CPA.html"
+    },
+    {
+      "icon": "school",
+      "title": "Early Childhood Education",
+      "description": "Diploma program available across multiple campuses and online formats, preparing educators for early learning environments.",
+      "link": "https://www.senecapolytechnic.ca/programs/fulltime/ECE.html"
+    },
+    {
+      "icon": "computer",
+      "title": "Cybersecurity & Threat Management",
+      "description": "Graduate certificate focusing on digital security, threat management, and cyber defence. PGWP Eligible.",
+      "link": "https://www.senecapolytechnic.ca/programs/fulltime/CYT.html"
+    }
+  ],
+  "centennial-college": [
+    {
+      "icon": "school",
+      "title": "Full-Time Programs",
+      "description": "Full catalogue of Centennial College full-time programs across business, technology, health, and trades.",
+      "link": "https://www.centennialcollege.ca/programs-and-courses/full-time/"
+    },
+    {
+      "icon": "school",
+      "title": "Degree Programs",
+      "description": "Comprehensive academic offerings leading to recognized bachelor's degrees across Centennial's faculties.",
+      "link": "https://www.centennialcollege.ca/programs-and-courses/degree-programs/"
+    },
+    {
+      "icon": "school",
+      "title": "Graduate Certificate Programs",
+      "description": "Advanced credential options at Centennial College for learners seeking specialized post-graduate expertise.",
+      "link": "https://www.centennialcollege.ca/programs-and-courses/graduate-certificate-programs/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Apprenticeship Programs",
+      "description": "Specialized hands-on trades training opportunities combining classroom instruction with workplace experience.",
+      "link": "https://www.centennialcollege.ca/programs-and-courses/apprenticeship-programs/"
+    },
+    {
+      "icon": "terminal",
+      "title": "Micro-Credentials",
+      "description": "Centennial College's suite of micro-credentials for developing in-demand skills efficiently to propel your career.",
+      "link": "https://www.centennialcollege.ca/programs-and-courses/micro-credentials/"
+    }
+  ],
+  "sheridan-college": [
+    {
+      "icon": "business_center",
+      "title": "Business (Ontario College Diploma)",
+      "description": "Two-year business diploma at the Pilon School of Business covering marketing, HR, finance, accounting, economics, and leadership.",
+      "duration": "2 years",
+      "link": "https://www.sheridancollege.ca/programs/business"
+    },
+    {
+      "icon": "design_services",
+      "title": "Master of Animation, Games, and Immersive Experiences",
+      "description": "Canada's first master's degree bridging animation, games, and immersive media at Sheridan College.",
+      "link": "https://www.sheridancollege.ca/programs/master-of-animation-games-immersive-experiences"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Applied Health & Community Studies Programs",
+      "description": "Faculty of Applied Health & Community Studies at the Davis Campus covering nursing, health, and community fields.",
+      "link": "https://www.sheridancollege.ca/about/faculties/applied-health-community-studies"
+    },
+    {
+      "icon": "business_center",
+      "title": "Pilon School of Business Programs",
+      "description": "Sheridan's business school at the Hazel McCallion Campus offering diplomas and degrees across finance, marketing, and management.",
+      "link": "https://www.sheridancollege.ca/about/faculties/pilon-school-business"
+    },
+    {
+      "icon": "design_services",
+      "title": "Animation, Arts & Design Programs",
+      "description": "Faculty of Animation, Arts & Design at the Trafalgar Campus, renowned for animation, illustration, and design.",
+      "link": "https://www.sheridancollege.ca/about/faculties/animation-arts-design"
+    },
+    {
+      "icon": "engineering",
+      "title": "Applied Science & Technology Programs",
+      "description": "Faculty offerings including mechanical engineering and technology programs combining theory with hands-on labs.",
+      "link": "https://www.sheridancollege.ca/about/faculties/applied-science-technology"
+    }
+  ],
+  "fanshawe-college": [
+    {
+      "icon": "design_services",
+      "title": "3D Animation and Character Design",
+      "description": "Ontario College Graduate Certificate focused on creating characters at the heart of film, video, animation, and games.",
+      "link": "https://www.fanshawec.ca/programs/anc1-3d-animation-and-character-design/next"
+    },
+    {
+      "icon": "design_services",
+      "title": "Acting for Screen and Stage",
+      "description": "Ontario College Diploma inspiring students to develop performing talents through comprehensive training in acting.",
+      "link": "https://www.fanshawec.ca/programs/ats1-acting-screen-and-stage/next"
+    },
+    {
+      "icon": "design_services",
+      "title": "Advanced Filmmaking",
+      "description": "Ontario College Graduate Certificate for storytellers, building on imagination and filmmaking fundamentals.",
+      "link": "https://www.fanshawec.ca/programs/afm2-advanced-filmmaking/next"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Nursing",
+      "description": "School of Nursing programs combining simulation labs and modern technology to prepare nurses across credential levels.",
+      "link": "https://www.fanshawec.ca/programs-and-courses/schools/nursing"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Apprenticeships and Skilled Trades",
+      "description": "In-school and hands-on experience for aspiring tradespeople across various construction and industrial trades.",
+      "link": "https://www.fanshawec.ca/programs-and-courses/programs-type/apprenticeship"
+    }
+  ],
+  "conestoga-college": [
+    {
+      "icon": "engineering",
+      "title": "Bachelor of Engineering - Mechanical Systems Engineering",
+      "description": "Part of Ontario's first college-based accredited engineering degrees, focusing on mechanical systems design and analysis.",
+      "link": "https://www.conestogac.on.ca/fulltime/bachelor-of-engineering-mechanical-systems-engineering"
+    },
+    {
+      "icon": "computer",
+      "title": "Bachelor of Computer Science (Honours)",
+      "description": "Degree-level computer science program offering advanced technical education in programming and computing systems.",
+      "link": "https://www.conestogac.on.ca/fulltime/bachelor-of-computer-science-honours"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Practical Nursing",
+      "description": "Healthcare credential preparing students for careers in patient care and clinical settings.",
+      "link": "https://www.conestogac.on.ca/fulltime/practical-nursing"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business Administration - Accounting",
+      "description": "Foundational business program specializing in accounting principles, financial reporting, and bookkeeping practices.",
+      "link": "https://www.conestogac.on.ca/fulltime/business-administration-accounting"
+    },
+    {
+      "icon": "terminal",
+      "title": "Computer Programming",
+      "description": "Technical diploma focusing on software development and coding fundamentals.",
+      "link": "https://www.conestogac.on.ca/fulltime/computer-programming"
+    },
+    {
+      "icon": "school",
+      "title": "Early Childhood Education",
+      "description": "Professional training for educators working with young children in childcare and educational settings.",
+      "link": "https://www.conestogac.on.ca/fulltime/early-childhood-education"
+    }
+  ],
+  "algonquin-college": [
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Commerce (Marketing) Honours",
+      "description": "Honours degree in marketing preparing graduates for strategic marketing, branding, and consumer analytics careers.",
+      "link": "https://www.algonquincollege.com/business/program/bachelor-of-commerce-marketing-honours/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Commerce (Supply Chain Management) Honours",
+      "description": "Honours degree in supply chain management covering logistics, procurement, and operations.",
+      "link": "https://www.algonquincollege.com/business-hospitality/program/bachelor-of-commerce-supply-chain-management/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Bachelor of Digital Marketing Communication (Honours)",
+      "description": "Four-year honours program focused on digital marketing, media, and communications strategies.",
+      "link": "https://www.algonquincollege.com/business-hospitality/program/bachelor-of-digital-marketing-communication/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Science in Nursing (Honours)",
+      "description": "Four-year honours nursing degree program preparing graduates for professional registered nursing practice.",
+      "link": "https://www.algonquincollege.com/health-studies/program/bachelor-of-science-in-nursing-honours/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Dental Hygiene",
+      "description": "Three-year program preparing students for careers as registered dental hygienists in clinical and community settings.",
+      "link": "https://www.algonquincollege.com/health-studies/program/dental-hygiene-3-years/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Practical Nursing",
+      "description": "Program preparing graduates for careers as Registered Practical Nurses in hospitals, clinics, and long-term care settings.",
+      "link": "https://www.algonquincollege.com/health-studies/program/practical-nursing/"
+    }
+  ],
+  "douglas-college": [
+    {
+      "icon": "medical_services",
+      "title": "Bachelor of Science in Nursing (BSN)",
+      "description": "Comprehensive degree program preparing students for nursing careers with BSN Peer Mentorship and extensive clinical learning at the Mary Gordon Health Sciences Centre.",
+      "link": "https://www.douglascollege.ca/programs-and-courses/areas-study/health-sciences/nursing"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business Administration Degrees",
+      "description": "Multiple pathways in commerce and business with specializations in accounting, management, and finance.",
+      "link": "https://www.douglascollege.ca/programs-courses/explore-programs-courses/faculties/commerce-and-business-administration/business-administration-degrees"
+    },
+    {
+      "icon": "psychology",
+      "title": "Child and Youth Care",
+      "description": "Practical program focused on supporting young people in diverse settings, including applied components.",
+      "link": "https://www.douglascollege.ca/programs-courses/faculties/applied-community-studies/child-and-youth-care"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing Studies and Information Systems",
+      "description": "Technology-focused programming including Post-Degree Diploma in Information and Communication Technology.",
+      "link": "https://www.douglascollege.ca/programs-courses/explore-programs-courses/faculties/commerce-and-business-administration/computing-studies-and-information-systems"
+    },
+    {
+      "icon": "school",
+      "title": "Early Childhood Education",
+      "description": "Prepares professionals to work in early learning environments with dedicated faculty support and practical training.",
+      "link": "https://www.douglascollege.ca/programs-courses/explore-programs-courses/faculties/applied-community-studies/early-childhood-education"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Psychiatric Nursing (BSPN)",
+      "description": "Specialized nursing degree focused on mental health nursing practice with dedicated faculty and employment resources.",
+      "link": "https://www.douglascollege.ca/programs-and-courses/areas-study/health-sciences/psychiatric-nursing"
+    }
+  ],
+  "british-columbia-institute-of-technology": [
+    {
+      "icon": "computer",
+      "title": "Computing & Information Technology",
+      "description": "Become a big player in tech. BCIT grads are shaping the tech industry online and around the world.",
+      "link": "https://www.bcit.ca/study/computing-it/programs/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Empower your future by solving complex problems across exciting industries with practical engineering solutions.",
+      "link": "https://www.bcit.ca/study/engineering/programs/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health Sciences",
+      "description": "Healthcare professionals focused on improving community quality of life and providing essential patient care.",
+      "link": "https://www.bcit.ca/study/health-sciences/programs/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Media",
+      "description": "Success-oriented programs helping students embrace change and adapt in modern business environments.",
+      "link": "https://www.bcit.ca/study/business-media/programs/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Trades & Apprenticeships",
+      "description": "Electrify your career through practical skilled trades training with real-world job experience.",
+      "link": "https://www.bcit.ca/study/trades-apprenticeships/programs/"
+    },
+    {
+      "icon": "science",
+      "title": "Applied and Natural Sciences",
+      "description": "Programs designed to develop leaders finding innovative solutions to complex global challenges.",
+      "link": "https://www.bcit.ca/study/applied-natural-sciences/programs/"
+    }
+  ]
+}

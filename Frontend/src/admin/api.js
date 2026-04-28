@@ -1,3 +1,5 @@
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
+
 const request = async (path, options = {}) => {
   const token = localStorage.getItem('admin_token');
   const headers = { ...options.headers };
@@ -6,7 +8,7 @@ const request = async (path, options = {}) => {
   }
   if (token) headers.Authorization = `Bearer ${token}`;
 
-  const response = await fetch(path, {
+  const response = await fetch(`${API_BASE}${path}`, {
     ...options,
     headers,
     credentials: 'include'

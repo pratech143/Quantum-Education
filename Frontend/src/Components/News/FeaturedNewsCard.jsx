@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { assetUrl } from '../../api';
 
 const FeaturedNewsCard = ({ news }) => {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const FeaturedNewsCard = ({ news }) => {
             <div className="flex flex-col h-full">
                 <div className="h-64 md:h-96 w-full overflow-hidden">
                     <img 
-                        src={news.image} 
+                        src={assetUrl(news.image)}
                         alt={news.headTitle} 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />

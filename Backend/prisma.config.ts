@@ -3,12 +3,24 @@
 import "dotenv/config";
 import { defineConfig } from "prisma/config";
 
+const host = process.env["DB_HOST"] ?? "";
+const port = process.env["DB_PORT"] ?? "3306";
+const user = process.env["DB_USER"] ?? "";
+const password = process.env["DB_PASSWORD"] ?? "";
+const database = process.env["DB_NAME"] ?? "";
+
+const databaseUrl = `mysql://${encodeURIComponent(user)}:${encodeURIComponent(password)}@${host}:${port}/${database}`;
+
+// Prisma's schema parser reads `env("DATABASE_URL")` before our datasource override applies,
+// so synthesize it from the discrete DB_* fields here.
+process.env["DATABASE_URL"] = databaseUrl;
+
 export default defineConfig({
   schema: "prisma/schema.prisma",
   migrations: {
     path: "prisma/migrations",
   },
   datasource: {
-    url: process.env["DATABASE_URL"],
+    url: databaseUrl,
   },
 });

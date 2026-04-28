@@ -1,16 +1,15 @@
-import { PrismaPg } from '@prisma/adapter-pg';
-import { Pool } from 'pg';
+import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 import { PrismaClient } from '../../generated/prisma/client.js';
 import { env } from '../config/env.js';
 
-const needsSsl = env.DATABASE_URL.includes('sslmode=require') || env.DATABASE_URL.includes('aivencloud.com');
-
-const pool = new Pool({
-  connectionString: env.DATABASE_URL,
-  ssl: needsSsl ? { rejectUnauthorized: false } : undefined
+const adapter = new PrismaMariaDb({
+  host: env.DB_HOST,
+  port: env.DB_PORT,
+  user: env.DB_USER,
+  password: env.DB_PASSWORD,
+  database: env.DB_NAME,
+  connectionLimit: 10
 });
-
-const adapter = new PrismaPg(pool);
 
 export const prisma = new PrismaClient({ adapter });
 
@@ -20,5 +19,4 @@ export const connectDatabase = async () => {
 
 export const disconnectDatabase = async () => {
   await prisma.$disconnect();
-  await pool.end();
 };

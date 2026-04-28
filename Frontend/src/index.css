@@ -95,6 +95,15 @@
     background-color: #ffffffcc;
     backdrop-filter: blur(20px);
   }
+
+  .text-wrap-safe {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .card-content-safe {
+    min-width: 0;
+  }
 }
 
 /* Utilities */

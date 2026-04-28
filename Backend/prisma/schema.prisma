@@ -1,10 +1,11 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider      = "prisma-client"
+  output        = "../generated/prisma"
+  binaryTargets = ["native", "debian-openssl-1.0.x"]
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -42,7 +43,7 @@ model ContactRequest {
   email                String
   phoneNumber          String?
   preferredDestination String?
-  message              String
+  message              String   @db.Text
   createdAt            DateTime @default(now())
 
   @@index([email])
@@ -53,15 +54,15 @@ model Country {
   id           String   @id @default(uuid())
   name         String   @unique
   slug         String   @unique
-  description  String
+  description  String   @db.Text
   tuitionFees  Float
-  visaInfo     String
+  visaInfo     String   @db.Text
   livingCost   Float
   currency     String
 
   // Hero section
-  heroImage    String?
-  heroSubtitle String?
+  heroImage    String?  @db.Text
+  heroSubtitle String?  @db.Text
   heroStats    Json?    // [{ label: string, value: string }]
 
   // Overview section
@@ -95,13 +96,13 @@ model University {
   id          String          @id @default(uuid())
   name        String
   slug        String          @unique
-  description String
+  description String          @db.Text
   location    String?
-  image       String?
+  image       String?         @db.Text
   ranking     Int
   qsRanking   String?
-  tagline     String?
-  website     String
+  tagline     String?         @db.Text
+  website     String          @db.Text
   type        InstitutionType @default(UNIVERSITY)
   fees        String?
 
@@ -128,8 +129,8 @@ model Alumni {
   university String
   degree     String
   country    String
-  quote      String
-  image      String?
+  quote      String   @db.Text
+  image      String?  @db.Text
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
@@ -143,16 +144,16 @@ enum NewsLabel {
 
 model News {
   id            String    @id @default(cuid())
-  headTitle     String
-  subtitle      String
+  headTitle     String    @db.Text
+  subtitle      String    @db.Text
   label         NewsLabel @default(news)
-  description   String
-  image         String?
+  description   String    @db.Text
+  image         String?   @db.Text
   date          DateTime  @default(now())
   author        String?
   authorRole    String?
-  authorImage   String?
-  caption       String?
+  authorImage   String?   @db.Text
+  caption       String?   @db.Text
   readTime      String?
   content       Json?     // [{ type: 'paragraph' | 'heading' | 'list', value: string | string[] }]
   phases        Json?     // string[]
@@ -168,8 +169,8 @@ model TeamMember {
   id          String   @id @default(cuid())
   name        String
   role        String
-  description String
-  image       String?
+  description String   @db.Text
+  image       String?  @db.Text
   socials     Json?    // { linkedin, twitter, etc. }
   order       Int      @default(0)
   isActive    Boolean  @default(true)

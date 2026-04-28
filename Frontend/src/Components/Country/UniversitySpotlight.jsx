@@ -16,16 +16,16 @@ const UniversitySpotlight = ({ universities, onViewAll }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {universities.map((uni, index) => (
           <Link to={`/universities/${uni.id}`} key={index}>
-            <div className="group relative aspect-[4/5] overflow-hidden rounded-xl shadow-xl">
+            <div className="card-content-safe group relative aspect-[4/5] overflow-hidden rounded-xl shadow-xl">
               <img 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 alt={uni.name} 
                 src={uni.image}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-0 w-full p-6 bg-tertiary-container/80 backdrop-blur-md transition-colors group-hover:bg-primary-container/90">
-                <h4 className="text-white font-headline font-bold text-xl">{uni.name}</h4>
-                <p className="text-white/80 text-sm">{uni.tagline}</p>
+              <div className="card-content-safe absolute bottom-0 w-full p-6 bg-tertiary-container/80 backdrop-blur-md transition-colors group-hover:bg-primary-container/90">
+                <h4 className="text-wrap-safe text-white font-headline font-bold text-xl">{uni.name}</h4>
+                <p className="text-wrap-safe text-white/80 text-sm">{uni.tagline}</p>
               </div>
             </div>
           </Link>

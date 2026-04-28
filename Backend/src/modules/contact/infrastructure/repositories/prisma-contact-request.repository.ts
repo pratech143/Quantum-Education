@@ -20,8 +20,8 @@ export class PrismaContactRequestRepository implements ContactRequestRepository 
   async findByEmailAndMessage(email: string, message: string): Promise<ContactRequest | null> {
     const result = await prisma.contactRequest.findFirst({
       where: {
-        email: { equals: email, mode: 'insensitive' },
-        message: { equals: message, mode: 'insensitive' }
+        email: { equals: email },
+        message: { equals: message }
       }
     });
 

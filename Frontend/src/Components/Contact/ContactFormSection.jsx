@@ -35,7 +35,7 @@ const ContactFormSection = () => {
     setSubmitting(true);
 
     try {
-      const response = await fetch(`/api/v1/contact-requests`, {
+      const response = await fetch(`${(import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '')}/api/v1/contact-requests`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)

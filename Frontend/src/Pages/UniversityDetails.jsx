@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { api } from '../api';
+import { api, assetUrl } from '../api';
 
 import UniversityHero from '../Components/University/UniversityHero';
 import WhySection from '../Components/University/WhySection';
@@ -25,11 +25,13 @@ const UniversityDetails = () => {
         const uni = res.data;
         // Map API response to component-expected format
         setData({
-          hero: uni.heroData || {
-            title: uni.name,
-            subtitle: uni.description,
-            image: uni.image,
-          },
+          hero: uni.heroData
+            ? { ...uni.heroData, image: assetUrl(uni.heroData.image) }
+            : {
+                title: uni.name,
+                subtitle: uni.description,
+                image: assetUrl(uni.image),
+              },
           website: uni.website || '',
           whyUniversity: uni.whySection || null,
           coursesSection: uni.coursesData || null,

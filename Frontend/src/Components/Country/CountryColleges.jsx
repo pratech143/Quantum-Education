@@ -15,16 +15,16 @@ const CountryColleges = ({ colleges }) => {
       {/* Colleges Bento Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {colleges.map((college, idx) => (
-          <div key={idx} className="bg-surface-container-lowest rounded-3xl overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div key={idx} className="card-content-safe bg-surface-container-lowest rounded-3xl overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="h-48 overflow-hidden relative">
               <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={college.name} src={college.img} />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-primary">{college.location}</span>
               </div>
             </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold text-primary mb-2">{college.name}</h3>
-              <p className="text-on-surface-variant text-sm mb-6 line-clamp-2 flex-grow">{college.desc}</p>
+            <div className="card-content-safe p-6 flex flex-col flex-grow">
+              <h3 className="text-wrap-safe text-xl font-bold text-primary mb-2">{college.name}</h3>
+              <p className="text-wrap-safe text-on-surface-variant text-sm mb-6 line-clamp-3 flex-grow">{college.desc}</p>
               <Link to={`/universities/${college.id || college.name.toLowerCase().replace(/\s+/g, '-')}`} className="w-full mt-auto py-3 px-6 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-semibold text-sm uppercase tracking-wider hover:opacity-90 transition-all active:scale-95 block text-center">
                 View Details
               </Link>

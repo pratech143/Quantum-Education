@@ -44,7 +44,7 @@ export class PrismaUniversityRepository implements UniversityRepository {
 
     const where = {
       countryId,
-      ...(search ? { name: { contains: search, mode: 'insensitive' as const } } : {})
+      ...(search ? { name: { contains: search } } : {})
     };
 
     const [data, total] = await Promise.all([
@@ -74,7 +74,7 @@ export class PrismaUniversityRepository implements UniversityRepository {
 
     const where = {
       type: type as any,
-      ...(search ? { name: { contains: search, mode: 'insensitive' as const } } : {})
+      ...(search ? { name: { contains: search } } : {})
     };
 
     const [data, total] = await Promise.all([
@@ -108,7 +108,7 @@ export class PrismaUniversityRepository implements UniversityRepository {
     const skip = (page - 1) * limit;
 
     const where = search
-      ? { name: { contains: search, mode: 'insensitive' as const } }
+      ? { name: { contains: search } }
       : {};
 
     const [data, total] = await Promise.all([

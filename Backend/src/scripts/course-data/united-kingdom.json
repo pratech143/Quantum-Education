@@ -1,0 +1,608 @@
+{
+  "university-of-oxford": [],
+  "university-of-cambridge": [
+    {
+      "icon": "query_stats",
+      "title": "Mathematics, BA (Hons) and MMath",
+      "description": "Rigorous undergraduate program in mathematical theory and application offered with both BA (Hons) and MMath pathways.",
+      "link": "https://www.undergraduate.study.cam.ac.uk/courses/mathematics-ba-hons-mmath"
+    },
+    {
+      "icon": "science",
+      "title": "Natural Sciences, BA (Hons) and MSci",
+      "description": "Broad scientific program covering more than 65 subject areas across biological and physical sciences.",
+      "link": "https://www.undergraduate.study.cam.ac.uk/courses/natural-sciences-ba-hons-msci"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Science, BA (Hons) and MEng",
+      "description": "Engineering-focused computing degree covering theory, algorithms and systems, with an optional integrated master's.",
+      "link": "https://www.undergraduate.study.cam.ac.uk/courses/computer-science-ba-hons-meng"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering, BA (Hons) and MEng",
+      "description": "Broad engineering curriculum available at undergraduate and integrated master's levels covering core engineering disciplines.",
+      "link": "https://www.undergraduate.study.cam.ac.uk/courses/engineering-ba-hons-meng"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Medicine, MB and BChir",
+      "description": "Cambridge's medical degree program combining preclinical science and clinical training leading to MB BChir qualification.",
+      "link": "https://www.undergraduate.study.cam.ac.uk/courses/medicine-mb-bchir"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law, BA (Hons)",
+      "description": "Undergraduate legal studies degree covering English, European and international legal foundations.",
+      "link": "https://www.undergraduate.study.cam.ac.uk/courses/law-ba-hons"
+    }
+  ],
+  "imperial-college-london": [
+    {
+      "icon": "engineering",
+      "title": "Aeronautical Engineering (MEng)",
+      "description": "Professionally accredited integrated master's exploring how vehicles and structures interact with air.",
+      "link": "https://www.imperial.ac.uk/study/courses/undergraduate/2027/aeronautical-engineering/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Aeronautics with Spacecraft Engineering (MEng)",
+      "description": "Integrated master's specialising in the design and engineering of space technologies and spacecraft systems.",
+      "link": "https://www.imperial.ac.uk/study/courses/undergraduate/2027/aeronautics-spacecraft-engineering/"
+    }
+  ],
+  "ucl": [
+    {
+      "icon": "school",
+      "title": "Ancient History BA",
+      "description": "Faculty of Social and Historical Sciences undergraduate program studying civilisations and historical periods from antiquity.",
+      "link": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/ancient-history-ba"
+    },
+    {
+      "icon": "school",
+      "title": "Archaeology BA",
+      "description": "Undergraduate degree in the Faculty of Social and Historical Sciences exploring human past through material culture.",
+      "link": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/archaeology-ba"
+    },
+    {
+      "icon": "architecture",
+      "title": "Architecture BSc",
+      "description": "Three-year undergraduate degree in UCL's Faculty of the Built Environment focused on architectural design and theory.",
+      "link": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/architecture-bsc"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Applied Medical Sciences BSc",
+      "description": "Faculty of Medical Sciences undergraduate program covering applied biomedical and clinical sciences.",
+      "link": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/applied-medical-sciences-bsc"
+    },
+    {
+      "icon": "biotech",
+      "title": "Arts and Sciences (Health and Environment) BASc",
+      "description": "Interdisciplinary BASc in the Faculty of Arts and Humanities combining health and environmental study.",
+      "link": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/arts-and-sciences-health-and-environment-basc"
+    },
+    {
+      "icon": "design_services",
+      "title": "Art and Technology BA",
+      "description": "Faculty of Arts and Humanities program exploring the intersection of creative practice and emerging technologies.",
+      "link": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/art-and-technology-ba"
+    }
+  ],
+  "king-s-college-london": [
+    {
+      "icon": "business_center",
+      "title": "Accounting & Finance BSc",
+      "description": "Three-year full-time undergraduate business degree in accounting and financial management.",
+      "duration": "3 years",
+      "link": "https://www.kcl.ac.uk/study/undergraduate/courses/accounting-finance-bsc"
+    },
+    {
+      "icon": "psychology",
+      "title": "Artificial Intelligence BSc",
+      "description": "Three-year full-time program studying AI technologies and computational theory.",
+      "duration": "3 years",
+      "link": "https://www.kcl.ac.uk/study/undergraduate/courses/artificial-intelligence-bsc"
+    },
+    {
+      "icon": "biotech",
+      "title": "Biochemistry BSc",
+      "description": "Undergraduate degree exploring molecular processes and biological chemistry with flexible three or four-year study options.",
+      "duration": "3 years (or 4 years with year abroad/extra-mural year)",
+      "link": "https://www.kcl.ac.uk/study/undergraduate/courses/biochemistry-bsc"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Biomedical Science BSc",
+      "description": "Health sciences undergraduate degree with optional international or extra-mural practical year.",
+      "duration": "3 years (or 4 years with year abroad/extra-mural year)",
+      "link": "https://www.kcl.ac.uk/study/undergraduate/courses/biomedical-science-bsc"
+    },
+    {
+      "icon": "school",
+      "title": "Ancient History BA",
+      "description": "Three-year full-time undergraduate program examining civilisations and historical periods of antiquity.",
+      "duration": "3 years",
+      "link": "https://www.kcl.ac.uk/study/undergraduate/courses/ancient-history-ba"
+    }
+  ],
+  "university-of-edinburgh": [
+    {
+      "icon": "terminal",
+      "title": "School of Informatics",
+      "description": "Edinburgh's School of Informatics offers undergraduate programs in computing, AI and data science.",
+      "link": "https://informatics.ed.ac.uk"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Edinburgh Medical School",
+      "description": "Medical education and clinical training within Edinburgh's College of Medicine & Veterinary Medicine.",
+      "link": "https://medicine-vet-medicine.ed.ac.uk/edinburgh-medical-school"
+    },
+    {
+      "icon": "gavel",
+      "title": "School of Law",
+      "description": "Edinburgh Law School offers undergraduate LLB programs and specialist legal study.",
+      "link": "https://law.ed.ac.uk"
+    },
+    {
+      "icon": "business_center",
+      "title": "University of Edinburgh Business School",
+      "description": "Edinburgh Business School delivers undergraduate programs in business, management and finance.",
+      "link": "https://business-school.ed.ac.uk"
+    },
+    {
+      "icon": "engineering",
+      "title": "School of Engineering",
+      "description": "Undergraduate engineering programs covering mechanical, electrical, civil, chemical and structural engineering.",
+      "link": "https://eng.ed.ac.uk"
+    },
+    {
+      "icon": "science",
+      "title": "School of Biological Sciences",
+      "description": "Undergraduate programs in biology, biochemistry, biotechnology and related life sciences.",
+      "link": "https://biology.ed.ac.uk"
+    }
+  ],
+  "university-of-manchester": [],
+  "university-of-bristol": [
+    {
+      "icon": "computer",
+      "title": "Computer Science",
+      "description": "Undergraduate computer science program at Bristol covering mathematics, computing and systems.",
+      "link": "https://www.bristol.ac.uk/study/undergraduate/2027/computer-science/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Medicine",
+      "description": "Bristol's undergraduate medical degree combining biomedical science with clinical training.",
+      "link": "https://www.bristol.ac.uk/study/undergraduate/2027/medicine/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law",
+      "description": "Undergraduate law program at the University of Bristol covering core English and European legal subjects.",
+      "link": "https://www.bristol.ac.uk/study/undergraduate/2027/law/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Management",
+      "description": "Undergraduate degree exploring economics, management, finance, accounting and international business.",
+      "link": "https://www.bristol.ac.uk/study/undergraduate/2027/business-and-management/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology",
+      "description": "Undergraduate psychology degree at Bristol covering biology, sociology and neuroscience foundations.",
+      "link": "https://www.bristol.ac.uk/study/undergraduate/2027/psychology/"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Engineering Mathematics",
+      "description": "Program combining mathematics, physics and engineering to solve applied problems.",
+      "link": "https://www.bristol.ac.uk/study/undergraduate/2027/engineering-maths/"
+    }
+  ],
+  "university-of-glasgow": [
+    {
+      "icon": "medical_services",
+      "title": "Medicine (MBChB)",
+      "description": "Professional medical degree program leading to qualification as a physician.",
+      "link": "https://www.gla.ac.uk/undergraduate/degrees/medicine/"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law - Scots Law (LLB)",
+      "description": "Legal education program focusing on Scottish jurisprudence and common law principles.",
+      "link": "https://www.gla.ac.uk/undergraduate/degrees/scotslaw/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing Science (BSc/MA/MA(SocSci)/MSci)",
+      "description": "Computer science program offering multiple qualification pathways in software development and technology.",
+      "link": "https://www.gla.ac.uk/undergraduate/degrees/computingscience/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology (BSc/MA/MA(SocSci))",
+      "description": "Behavioural sciences program examining human cognition, behaviour and mental processes across multiple degree formats.",
+      "link": "https://www.gla.ac.uk/undergraduate/degrees/psychology/"
+    },
+    {
+      "icon": "engineering",
+      "title": "Mechanical Engineering (BEng/MEng)",
+      "description": "Professional engineering curriculum covering mechanical design, systems and industrial applications.",
+      "link": "https://www.gla.ac.uk/undergraduate/degrees/mechanicalengineering/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business & Management (BSc/MA/LLB/MA(SocSci))",
+      "description": "Versatile business program offering interdisciplinary study options across multiple degree classifications.",
+      "link": "https://www.gla.ac.uk/undergraduate/degrees/businessmanagement/"
+    }
+  ],
+  "university-of-warwick": [
+    {
+      "icon": "computer",
+      "title": "Computer Science (BSc)",
+      "description": "Three-year full-time program offering foundational theoretical and practical computer science training.",
+      "duration": "3 years full-time",
+      "link": "https://warwick.ac.uk/study/undergraduate/courses-2026/bsc-computer-science"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology (BSc)",
+      "description": "Department of Psychology undergraduate program exploring human behaviour and mental processes.",
+      "duration": "3 years full-time (or 4 years with intercalated year)",
+      "link": "https://warwick.ac.uk/study/undergraduate/courses-2026/bsc-psychology"
+    },
+    {
+      "icon": "gavel",
+      "title": "Law (LLB) - 3 Years",
+      "description": "Three-year full-time law program covering core legal principles; a 4-year variant is also available.",
+      "duration": "3 years full-time",
+      "link": "https://warwick.ac.uk/study/undergraduate/courses-2026/llb-law"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Economics (BSc)",
+      "description": "Department of Economics program covering economic theory and policy analysis.",
+      "duration": "3 years full-time (or 4 years with study abroad)",
+      "link": "https://warwick.ac.uk/study/undergraduate/courses-2026/bsc-economics"
+    },
+    {
+      "icon": "business_center",
+      "title": "Management (BSc)",
+      "description": "Warwick Business School program developing business and organisational leadership skills.",
+      "duration": "3 years full-time",
+      "link": "https://warwick.ac.uk/study/undergraduate/courses-2026/bsc-management"
+    },
+    {
+      "icon": "query_stats",
+      "title": "Mathematics (BSc)",
+      "description": "Warwick Mathematics Institute program covering pure and applied mathematical theory.",
+      "duration": "3 years full-time",
+      "link": "https://warwick.ac.uk/study/undergraduate/courses-2026/bsc-mathematics"
+    }
+  ],
+  "university-college-birmingham": [
+    {
+      "icon": "medical_services",
+      "title": "Adult Nursing BSc (Hons)",
+      "description": "Award-winning nursing degree with multiple placements preparing students for careers in adult nursing.",
+      "link": "https://www.ucb.ac.uk/university/undergraduate/courses/adult-nursing-bsc-hons/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business Management BA (Hons) / FdA",
+      "description": "CMI-accredited degree covering business management, analytics, marketing, finance and supply chain.",
+      "link": "https://www.ucb.ac.uk/university/undergraduate/courses/business-management-ba-hons-fda/"
+    },
+    {
+      "icon": "computer",
+      "title": "Computer Science BSc (Hons) / FdSc",
+      "description": "Computer Science degree exploring cutting-edge topics in the modern computing industry.",
+      "link": "https://www.ucb.ac.uk/university/undergraduate/courses/computer-science-bsc-hons-fdsc/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Physiotherapy BSc (Hons)",
+      "description": "Degree providing advanced training to diagnose and rehabilitate across a range of conditions.",
+      "link": "https://www.ucb.ac.uk/university/undergraduate/courses/physiotherapy-bsc-hons/"
+    },
+    {
+      "icon": "psychology",
+      "title": "Psychology BSc (Hons)",
+      "description": "Contemporary psychology curriculum with diverse application of psychology to the modern world.",
+      "link": "https://www.ucb.ac.uk/university/undergraduate/courses/psychology-bsc-hons/"
+    }
+  ],
+  "cardiff-and-vale-college": [
+    {
+      "icon": "school",
+      "title": "A Levels",
+      "description": "Sixth Form program offering A Level qualifications at Cardiff and Vale College.",
+      "link": "https://cavc.ac.uk/en/alevels"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing and IT",
+      "description": "Programs developing knowledge and skills in IT and computing for a wide range of careers.",
+      "link": "https://cavc.ac.uk/en/it"
+    },
+    {
+      "icon": "engineering",
+      "title": "Engineering",
+      "description": "Training to become a skilled and qualified engineer, opening doors to diverse career opportunities.",
+      "link": "https://cavc.ac.uk/en/engineering"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business, Finance, Administration and Accounting",
+      "description": "Professional courses including CIM, CIPD and AAT qualifications.",
+      "link": "https://cavc.ac.uk/en/business"
+    },
+    {
+      "icon": "school",
+      "title": "Sport",
+      "description": "Sport programs based at Cardiff International Sports Campus (CISC).",
+      "link": "https://cavc.ac.uk/en/sport"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Construction",
+      "description": "Training in brickwork, carpentry and joinery, painting and decorating, and plastering.",
+      "link": "https://cavc.ac.uk/en/constructionc"
+    }
+  ],
+  "city-of-glasgow-college": [
+    {
+      "icon": "design_services",
+      "title": "Furniture Craftmanship with Design HND (SCQF level 8)",
+      "description": "Full-time HND program in furniture craftmanship with design at SCQF level 8.",
+      "link": "https://www.cityofglasgowcollege.ac.uk/courses/hnd-furniturehnd-furniture-craftsmanship-with-design-scqf-level-8-2nd-year-applicants-2026"
+    },
+    {
+      "icon": "design_services",
+      "title": "Furniture Restoration HND (SCQF level 8)",
+      "description": "Full-time HND program in furniture restoration at SCQF level 8.",
+      "link": "https://www.cityofglasgowcollege.ac.uk/courses/hnd-furniturehnd-furniture-restoration-scqf-level-8-2026-08-24"
+    },
+    {
+      "icon": "design_services",
+      "title": "3D Design: Model Making for the Creative Industries HND (SCQF level 8)",
+      "description": "Full-time HND in 3D design and model making for the creative industries.",
+      "link": "https://www.cityofglasgowcollege.ac.uk/courses/hnd-3d-designhnd-3d-design-model-making-creative-industries-scqf-level-8-2nd-year-6"
+    },
+    {
+      "icon": "design_services",
+      "title": "Acting and Performance HND (SCQF level 8)",
+      "description": "Full-time HND in acting and performance at SCQF level 8.",
+      "link": "https://www.cityofglasgowcollege.ac.uk/courses/hnd-acting-and-performance-2nd-year-applicants-scqf-level-8-2026-08-24"
+    },
+    {
+      "icon": "design_services",
+      "title": "Modelmaking for TV and Film NQ (SCQF level 6)",
+      "description": "Full-time NQ program in modelmaking for TV and film at SCQF level 6.",
+      "link": "https://www.cityofglasgowcollege.ac.uk/courses/nq-modelmaking-tv-and-film-scqf-level-6-2026-08-24"
+    }
+  ],
+  "nottingham-college": [
+    {
+      "icon": "school",
+      "title": "A Levels",
+      "description": "A Levels study pathway for 16-18 students at Nottingham College.",
+      "link": "https://www.nottinghamcollege.ac.uk/course-areas/a-levels"
+    },
+    {
+      "icon": "computer",
+      "title": "Computing, IT and Esports",
+      "description": "Technology-focused programs including professional gaming equipment training.",
+      "link": "https://www.nottinghamcollege.ac.uk/course-areas/computing-and-it"
+    },
+    {
+      "icon": "school",
+      "title": "Catering and Hospitality",
+      "description": "Training in professional kitchen environments and hospitality services.",
+      "link": "https://www.nottinghamcollege.ac.uk/course-areas/catering-and-hospitality"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Construction",
+      "description": "Hands-on construction trades training with supervised instruction.",
+      "link": "https://www.nottinghamcollege.ac.uk/course-areas/construction"
+    },
+    {
+      "icon": "school",
+      "title": "Early Years and Education",
+      "description": "Preparation for working with children and in educational settings.",
+      "link": "https://www.nottinghamcollege.ac.uk/course-areas/early-years-and-education"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business and Accounts",
+      "description": "Commercial and financial studies programs at Nottingham College.",
+      "link": "https://www.nottinghamcollege.ac.uk/course-areas/business-and-accounts"
+    }
+  ],
+  "leeds-city-college": [
+    {
+      "icon": "design_services",
+      "title": "Acting (BTEC Extended Diploma, Level 3)",
+      "description": "BTEC Extended Diploma, Level 3 program for creative performance students.",
+      "link": "https://leedscitycollege.ac.uk/courses/acting/"
+    },
+    {
+      "icon": "computer",
+      "title": "Access to HE Diploma (Computing)",
+      "description": "Access to HE, Level 3 qualification designed to prepare learners for university study in computing.",
+      "link": "https://leedscitycollege.ac.uk/courses/access-to-he-diploma-computing/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Access to HE Diploma (Health Science)",
+      "description": "Level 3 Access to HE program offering both full-time and part-time two year study options.",
+      "link": "https://leedscitycollege.ac.uk/courses/access-to-he-diploma-health-science/"
+    },
+    {
+      "icon": "design_services",
+      "title": "3D Modelling, Web & Social Media Development (BTEC FD, Level 3)",
+      "description": "Digital creative qualification at Level 3 covering web development and 3D design skills.",
+      "link": "https://leedscitycollege.ac.uk/courses/3d-modelling-web-social-media-development/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Access to HE Diploma (Business)",
+      "description": "Level 3 pathway preparing students for higher education in business studies.",
+      "link": "https://leedscitycollege.ac.uk/courses/access-to-he-diploma-business/"
+    }
+  ],
+  "west-london-college": [
+    {
+      "icon": "computer",
+      "title": "Computing and IT",
+      "description": "Technical training in computing systems and information technology applications.",
+      "link": "https://www.wlc.ac.uk/courses/computing-it/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Health and Social Care",
+      "description": "Preparation for careers supporting individuals and communities in healthcare and social services.",
+      "link": "https://www.wlc.ac.uk/courses/health-social-care/"
+    },
+    {
+      "icon": "school",
+      "title": "Hospitality and Catering",
+      "description": "Professional training in food service, kitchen operations and hospitality management.",
+      "link": "https://www.wlc.ac.uk/courses/hospitality-catering/"
+    },
+    {
+      "icon": "business_center",
+      "title": "Business",
+      "description": "Foundation and advanced study in business principles, management and entrepreneurship.",
+      "link": "https://www.wlc.ac.uk/courses/business/"
+    },
+    {
+      "icon": "design_services",
+      "title": "Hairdressing and Barbering",
+      "description": "Practical training in salon techniques, styling and professional barbering services.",
+      "link": "https://www.wlc.ac.uk/courses/hairdressing-barbering/"
+    },
+    {
+      "icon": "school",
+      "title": "Access to Higher Education",
+      "description": "Pathway program designed to prepare students for university-level study.",
+      "link": "https://www.wlc.ac.uk/courses/access-to-higher-education/"
+    }
+  ],
+  "new-college-durham": [
+    {
+      "icon": "science",
+      "title": "A-Level Biology",
+      "description": "A-Level qualification in Biology at New College Durham.",
+      "link": "https://www.newcollegedurham.ac.uk/courses/a-levels/a-level-biology"
+    },
+    {
+      "icon": "business_center",
+      "title": "A-Level Business Studies",
+      "description": "A-Level qualification in Business Studies at New College Durham.",
+      "link": "https://www.newcollegedurham.ac.uk/courses/a-levels/a-level-business-studies"
+    },
+    {
+      "icon": "science",
+      "title": "A-Level Chemistry",
+      "description": "A-Level qualification in Chemistry at New College Durham.",
+      "link": "https://www.newcollegedurham.ac.uk/courses/a-levels/a-level-chemistry"
+    },
+    {
+      "icon": "query_stats",
+      "title": "A-Level Mathematics",
+      "description": "A-Level qualification in Mathematics at New College Durham.",
+      "link": "https://www.newcollegedurham.ac.uk/courses/a-levels/a-level-mathematics"
+    },
+    {
+      "icon": "science",
+      "title": "A-Level Physics",
+      "description": "A-Level qualification in Physics at New College Durham.",
+      "link": "https://www.newcollegedurham.ac.uk/courses/a-levels/a-level-physics"
+    },
+    {
+      "icon": "psychology",
+      "title": "A-Level Psychology",
+      "description": "A-Level qualification in Psychology at New College Durham.",
+      "link": "https://www.newcollegedurham.ac.uk/courses/a-levels/a-level-psychology"
+    }
+  ],
+  "birmingham-metropolitan-college": [],
+  "coventry-college": [
+    {
+      "icon": "medical_services",
+      "title": "Level 3 Diploma in Adult Care",
+      "description": "Level 3 Diploma preparing students to help adults live with dignity, respect and independence.",
+      "link": "https://www.coventrycollege.ac.uk/courses/level-3-diploma-in-adult-care/"
+    },
+    {
+      "icon": "design_services",
+      "title": "Level 2 Diploma in Beauty Therapy",
+      "description": "Practical Level 2 program training learners in facial treatments, nail care and customer service for careers in beauty therapy.",
+      "link": "https://www.coventrycollege.ac.uk/courses/level-2-diploma-in-beauty-therapy/"
+    },
+    {
+      "icon": "design_services",
+      "title": "Level 2 Diploma in Women's and Men's Hairdressing (VRQ)",
+      "description": "Level 2 hairdressing program developing professional skills in the college's commercial salon environment.",
+      "link": "https://www.coventrycollege.ac.uk/courses/level-2-diploma-in-womens-hairdressing/"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Level 1 Diploma in Brickwork",
+      "description": "Hands-on and theoretical course teaching the basic skills for a career as a bricklayer.",
+      "link": "https://www.coventrycollege.ac.uk/courses/level-1-diploma-in-brickwork/"
+    },
+    {
+      "icon": "medical_services",
+      "title": "Level 3 Access to Higher Education (Nursing and Midwifery)",
+      "description": "Access to HE program preparing learners without traditional qualifications for degree-level study in nursing or midwifery.",
+      "link": "https://www.coventrycollege.ac.uk/courses/level-3-access-to-higher-education-nursing-midwifery/"
+    }
+  ],
+  "south-thames-college": [
+    {
+      "icon": "school",
+      "title": "School Leaver - Full Time Courses",
+      "description": "High quality vocational full-time education at all levels for school leavers at South Thames Colleges Group.",
+      "link": "https://stcg.ac.uk/full-time"
+    },
+    {
+      "icon": "school",
+      "title": "University Centre / Higher Professional / Access",
+      "description": "Higher education and access pathways offered through the South Thames Colleges University Centre.",
+      "link": "https://stcg.ac.uk/undergraduate"
+    },
+    {
+      "icon": "school",
+      "title": "Adult Short Courses",
+      "description": "Short courses for adult learners across a range of subjects at South Thames Colleges.",
+      "link": "https://stcg.ac.uk/adult-education"
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "Apprenticeships",
+      "description": "Work-based apprenticeship programs combining training with paid employment.",
+      "link": "https://stcg.ac.uk/apprenticeships"
+    },
+    {
+      "icon": "school",
+      "title": "T Levels",
+      "description": "Technical T Level qualifications for 16-19 students combining classroom learning with industry placements.",
+      "link": "https://stcg.ac.uk/students/choosing-and-applying-for-the-right-course/what-are-t-levels"
+    },
+    {
+      "icon": "public",
+      "title": "English ESOL / EFL",
+      "description": "English language programs including ESOL and EFL for non-native speakers.",
+      "link": "https://stcg.ac.uk/english-esol-efl"
+    }
+  ]
+}
