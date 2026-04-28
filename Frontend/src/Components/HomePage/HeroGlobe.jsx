@@ -145,17 +145,24 @@ const HeroGlobe = ({ onReady }) => {
       const coords = globe.getCoords(lat, lng, 0)
       const pointNormal = new Vector3(coords.x, coords.y, coords.z).normalize()
       const alignment = pointNormal.dot(cameraDirection)
-      if (alignment < 0) {
-        labelState.element.style.opacity = '0'
-        labelState.element.style.pointerEvents = 'none'
-        return
-      }
-      const targetLabelScale = MathUtils.clamp(0.58 + alignment * 0.62, 0.58, 1.2)
+      
+      // Make labels "visible everytime" by giving them a minimum opacity even when on the back side
+      const isVisible = alignment > -0.4 
+      const targetOpacity = alignment > 0 
+        ? MathUtils.clamp(0.4 + alignment * 0.6, 0.4, 1) 
+        : MathUtils.clamp(0.4 + alignment * 0.4, 0.1, 0.4) // Ghost effect when behind
+      
+      const targetLabelScale = alignment > 0
+        ? MathUtils.clamp(0.6 + alignment * 0.6, 0.6, 1.1)
+        : 0.55
+
       const currentLabelScale = MathUtils.lerp(labelState.currentScale, targetLabelScale, LABEL_LERP)
       labelState.currentScale = currentLabelScale
-      labelState.element.style.opacity = `${MathUtils.clamp(0.35 + alignment * 0.9, 0.35, 1)}`
-      labelState.element.style.pointerEvents = alignment > 0.12 ? 'auto' : 'none'
+      
+      labelState.element.style.opacity = `${targetOpacity}`
+      labelState.element.style.pointerEvents = alignment > 0.1 ? 'auto' : 'none'
       labelState.element.style.transform = `translate(-50%, -112%) scale(${currentLabelScale})`
+      labelState.element.style.zIndex = alignment > 0 ? '10' : '1'
     })
   }
 
@@ -220,7 +227,11 @@ const HeroGlobe = ({ onReady }) => {
             waitForGlobeReady={true}
             onGlobeReady={() => { if (onReady) onReady() }}
             animateIn={false}
+            globeResolution={2} // Optimized resolution for speed vs quality
             globeImageUrl={globeSkin}
+            showAtmosphere={true}
+            atmosphereColor="#3B82F6"
+            atmosphereAltitude={0.15}
             pointsData={globePoints}
             pointLat="lat"
             pointLng="lng"
@@ -248,8 +259,10 @@ const HeroGlobe = ({ onReady }) => {
             htmlAltitude={0.11}
             htmlElement={getOrCreateCountryLabel}
             htmlElementVisibilityModifier={(element, isVisible) => {
+              // We handle visibility in updateLabels for smoother transitions
+              // but we keep this for initial setup
               if (!isVisible) {
-                element.style.opacity = '0'
+                element.style.opacity = '0.1'
                 element.style.pointerEvents = 'none'
               }
             }}

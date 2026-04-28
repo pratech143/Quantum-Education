@@ -11,5 +11,12 @@ export default defineConfig({
       '/uploads': 'http://localhost:4000',
       '/api': 'http://localhost:4000'
     }
+  },
+  build: {
+    minify: false,
+    terserOptions: {
+      compress: false,
+      mangle: false
+    }
   }
 })

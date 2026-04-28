@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Music2, Mail, Phone, MapPin } from 'lucide-react';
 
 
 const Footer = () => {
@@ -13,10 +13,9 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { icon: Facebook, href: '#', label: 'Facebook' },
-        { icon: Instagram, href: '#', label: 'Instagram' },
-        { icon: Linkedin, href: '#', label: 'LinkedIn' },
-        { icon: Twitter, href: '#', label: 'Twitter' },
+        { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61557175556558', label: 'Facebook' },
+        { icon: Instagram, href: 'https://www.instagram.com/quantumeducation1/', label: 'Instagram' },
+        { icon: Music2, href: 'https://www.tiktok.com/@quantum.education6?is_from_webapp=1&sender_device=pc', label: 'TikTok' },
     ];
 
     return (
