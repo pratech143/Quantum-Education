@@ -23,6 +23,7 @@ import AlumniManagement from "../admin/pages/AlumniManagement";
 import NewsManagement from "../admin/pages/NewsManagement";
 import TeamManagement from "../admin/pages/TeamManagement";
 import { AuthProvider } from "../admin/AuthContext";
+import NotFound from "../Pages/NotFound";
 
 const AdminWrapper = () => (
   <AuthProvider>
@@ -53,6 +54,7 @@ export const router = createBrowserRouter([
       { path: "news/:id", element: <NewsDetail /> },
       { path: "interview-preparation", element: <InterviewPrep /> },
       { path: "universities/:slug", element: <UniversityDetails /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
   {
@@ -73,6 +75,11 @@ export const router = createBrowserRouter([
       { path: "news", element: <NewsManagement /> },
       { path: "team", element: <TeamManagement /> },
       { path: "profile", element: <Profile /> },
+      { path: "*", element: <NotFound /> },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
