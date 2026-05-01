@@ -145,17 +145,25 @@ const HeroGlobe = ({ onReady }) => {
       const coords = globe.getCoords(lat, lng, 0)
       const pointNormal = new Vector3(coords.x, coords.y, coords.z).normalize()
       const alignment = pointNormal.dot(cameraDirection)
-      if (alignment < 0) {
-        labelState.element.style.opacity = '0'
-        labelState.element.style.pointerEvents = 'none'
-        return
-      }
-      const targetLabelScale = MathUtils.clamp(0.58 + alignment * 0.62, 0.58, 1.2)
+      
+      // Make labels "visible everytime" by giving them a much higher minimum opacity even when on the back side
+      const targetOpacity = alignment > 0 
+        ? MathUtils.clamp(0.7 + alignment * 0.3, 0.7, 1) // 0.7 to 1.0 when in front
+        : MathUtils.clamp(0.5 + alignment * 0.2, 0.4, 0.7) // 0.4 to 0.7 when behind
+      
+      const targetLabelScale = alignment > 0
+        ? MathUtils.clamp(0.85 + alignment * 0.15, 0.85, 1.0)
+        : 0.75 // Slightly smaller when behind
+
       const currentLabelScale = MathUtils.lerp(labelState.currentScale, targetLabelScale, LABEL_LERP)
       labelState.currentScale = currentLabelScale
-      labelState.element.style.opacity = `${MathUtils.clamp(0.35 + alignment * 0.9, 0.35, 1)}`
-      labelState.element.style.pointerEvents = alignment > 0.12 ? 'auto' : 'none'
+      
+      // Apply styles directly
+      labelState.element.style.opacity = `${targetOpacity}`
+      labelState.element.style.pointerEvents = alignment > 0.1 ? 'auto' : 'none'
       labelState.element.style.transform = `translate(-50%, -112%) scale(${currentLabelScale})`
+      labelState.element.style.zIndex = alignment > 0 ? '30' : '1'
+      labelState.element.style.display = 'block' // Ensure it's never set to 'none' by the library
     })
   }
 
@@ -220,7 +228,11 @@ const HeroGlobe = ({ onReady }) => {
             waitForGlobeReady={true}
             onGlobeReady={() => { if (onReady) onReady() }}
             animateIn={false}
+            globeResolution={2} // Optimized resolution for speed vs quality
             globeImageUrl={globeSkin}
+            showAtmosphere={true}
+            atmosphereColor="#3B82F6"
+            atmosphereAltitude={0.15}
             pointsData={globePoints}
             pointLat="lat"
             pointLng="lng"
@@ -248,9 +260,16 @@ const HeroGlobe = ({ onReady }) => {
             htmlAltitude={0.11}
             htmlElement={getOrCreateCountryLabel}
             htmlElementVisibilityModifier={(element, isVisible) => {
-              if (!isVisible) {
-                element.style.opacity = '0'
-                element.style.pointerEvents = 'none'
+              // Always keep them in the DOM and visible
+              element.style.display = 'block'
+              element.style.visibility = 'visible'
+              
+              // If the animation frame hasn't updated the opacity yet, 
+              // provide a sensible default based on library's visibility hint
+              if (!isVisible && !element.style.opacity) {
+                element.style.opacity = '0.4'
+              } else if (isVisible && element.style.opacity === '0.4') {
+                element.style.opacity = '1'
               }
             }}
             showPointerCursor
