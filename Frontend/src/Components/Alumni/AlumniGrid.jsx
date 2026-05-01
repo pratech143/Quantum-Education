@@ -68,7 +68,7 @@ const AlumniGrid = ({ alumni = [], filters = [] }) => {
                 </p>
                 <div className="border-t border-outline-variant/30 pt-4 flex flex-wrap items-start justify-between gap-3">
                   <div className="card-content-safe min-w-0 flex-1">
-                    <h3 className="text-wrap-safe font-headline font-bold text-base text-primary">{alumni.name}</h3>
+                    <h3 className="text-wrap-safe font-headline font-bold text-base text-primary whitespace-nowrap overflow-hidden text-ellipsis">{alumni.name}</h3>
                     <p className="text-wrap-safe text-xs text-on-surface-variant mt-0.5">{alumni.university}</p>
                   </div>
                   <div className="text-wrap-safe flex items-center gap-1.5 text-xs font-semibold text-primary bg-secondary-container/40 px-3 py-1 rounded-full shrink-0 mt-0.5 max-w-full">
