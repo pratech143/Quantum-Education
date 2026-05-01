@@ -146,23 +146,24 @@ const HeroGlobe = ({ onReady }) => {
       const pointNormal = new Vector3(coords.x, coords.y, coords.z).normalize()
       const alignment = pointNormal.dot(cameraDirection)
       
-      // Make labels "visible everytime" by giving them a minimum opacity even when on the back side
-      const isVisible = alignment > -0.4 
+      // Make labels "visible everytime" by giving them a much higher minimum opacity even when on the back side
       const targetOpacity = alignment > 0 
-        ? MathUtils.clamp(0.4 + alignment * 0.6, 0.4, 1) 
-        : MathUtils.clamp(0.4 + alignment * 0.4, 0.1, 0.4) // Ghost effect when behind
+        ? MathUtils.clamp(0.7 + alignment * 0.3, 0.7, 1) // 0.7 to 1.0 when in front
+        : MathUtils.clamp(0.5 + alignment * 0.2, 0.4, 0.7) // 0.4 to 0.7 when behind
       
       const targetLabelScale = alignment > 0
-        ? MathUtils.clamp(0.6 + alignment * 0.6, 0.6, 1.1)
-        : 0.55
+        ? MathUtils.clamp(0.85 + alignment * 0.15, 0.85, 1.0)
+        : 0.75 // Slightly smaller when behind
 
       const currentLabelScale = MathUtils.lerp(labelState.currentScale, targetLabelScale, LABEL_LERP)
       labelState.currentScale = currentLabelScale
       
+      // Apply styles directly
       labelState.element.style.opacity = `${targetOpacity}`
       labelState.element.style.pointerEvents = alignment > 0.1 ? 'auto' : 'none'
       labelState.element.style.transform = `translate(-50%, -112%) scale(${currentLabelScale})`
-      labelState.element.style.zIndex = alignment > 0 ? '10' : '1'
+      labelState.element.style.zIndex = alignment > 0 ? '30' : '1'
+      labelState.element.style.display = 'block' // Ensure it's never set to 'none' by the library
     })
   }
 
@@ -259,11 +260,16 @@ const HeroGlobe = ({ onReady }) => {
             htmlAltitude={0.11}
             htmlElement={getOrCreateCountryLabel}
             htmlElementVisibilityModifier={(element, isVisible) => {
-              // We handle visibility in updateLabels for smoother transitions
-              // but we keep this for initial setup
-              if (!isVisible) {
-                element.style.opacity = '0.1'
-                element.style.pointerEvents = 'none'
+              // Always keep them in the DOM and visible
+              element.style.display = 'block'
+              element.style.visibility = 'visible'
+              
+              // If the animation frame hasn't updated the opacity yet, 
+              // provide a sensible default based on library's visibility hint
+              if (!isVisible && !element.style.opacity) {
+                element.style.opacity = '0.4'
+              } else if (isVisible && element.style.opacity === '0.4') {
+                element.style.opacity = '1'
               }
             }}
             showPointerCursor

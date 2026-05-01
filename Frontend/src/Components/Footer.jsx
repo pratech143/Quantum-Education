@@ -29,14 +29,16 @@ const Footer = () => {
                             Quantum Education
                         </div>
                         <p className="text-gray-300 text-base leading-relaxed max-w-xs font-body">
-                            Nepal's leading educational consultancy for international admissions and visa services.
+                            Nepal's leading educational consultancy for international admissions and visa services. Helping you achieve global excellence since 2010.
                         </p>
                         <div className="flex gap-4">
                             {socialLinks.map((social, index) => (
                                 <a
                                     key={index}
                                     href={social.href}
-                                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white shadow-sm ring-1 ring-white/10 transition-all hover:bg-primary hover:text-primary-container hover:shadow-lg hover:shadow-primary/20"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white shadow-sm ring-1 ring-white/10 transition-all hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20"
                                     aria-label={social.label}
                                 >
                                     <social.icon size={18} />
@@ -64,14 +66,29 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Legal Links */}
+                    {/* Top Destinations */}
                     <div>
                         <h4 className="mb-6 font-bold text-xs uppercase tracking-[0.2em] text-primary">
-                            Legal
+                            Top Destinations
                         </h4>
                         <ul className="flex flex-col gap-4 font-body">
-                            <li><Link to="/privacy" className="text-gray-300 transition-colors hover:text-primary">Privacy Policy</Link></li>
-                            <li><Link to="/terms" className="text-gray-300 transition-colors hover:text-primary">Terms of Service</Link></li>
+                            {[
+                                { name: 'Australia', slug: 'australia' },
+                                { name: 'Canada', slug: 'canada' },
+                                { name: 'USA', slug: 'usa' },
+                                { name: 'United Kingdom', slug: 'uk' },
+                                { name: 'New Zealand', slug: 'new-zealand' },
+                                { name: 'Denmark', slug: 'denmark' },
+                            ].map((dest) => (
+                                <li key={dest.slug}>
+                                    <Link
+                                        to={`/countries/${dest.slug}`}
+                                        className="text-gray-300 transition-colors hover:text-primary hover:translate-x-1 inline-block"
+                                    >
+                                        Study in {dest.name}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -90,19 +107,19 @@ const Footer = () => {
                                 </span>
                             </div>
                             <a href="tel:+977-9860185949" className="flex items-center gap-4 group">
-                                <div className="rounded-lg bg-primary/10 p-2 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-container">
+                                <div className="rounded-lg bg-primary/10 p-2 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                                     <Phone size={18} />
                                 </div>
                                 <span className="text-gray-300 font-bold transition-colors group-hover:text-primary">
                                     +977-9860185949
                                 </span>
                             </a>
-                            <a href="mailto:info@quantumeducation.com" className="flex items-center gap-4 group">
-                                <div className="rounded-lg bg-primary/10 p-2 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-container">
+                            <a href="mailto:info@quantumeducation.com.np" className="flex items-center gap-4 group">
+                                <div className="rounded-lg bg-primary/10 p-2 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                                     <Mail size={18} />
                                 </div>
                                 <span className="text-gray-300 transition-colors group-hover:text-primary lowercase">
-                                    info@quantumeducation.com
+                                    info@quantumeducation.com.np
                                 </span>
                             </a>
                         </div>
@@ -135,11 +152,14 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="mt-12 border-t border-white/10 pt-10 text-center font-body">
+                <div className="mt-12 border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 font-body">
                     <p className="text-sm font-medium text-gray-500">
                         &copy; {new Date().getFullYear()} Quantum Education. All rights reserved.
                     </p>
+                    <div className="flex gap-8 text-sm font-medium text-gray-500">
+                        <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                        <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+                    </div>
                 </div>
             </div>
         </footer>
